@@ -31,10 +31,11 @@ theorem one_sub_ratio_logConcave
   have hsecond : 0 ≤ x ^ 2 * r * (r - s) := by
     have hx2 : 0 ≤ x ^ 2 := sq_nonneg x
     exact mul_nonneg (mul_nonneg hx2 (by linarith : 0 ≤ r)) (by linarith)
-  calc
+  have hdiff : (1 - r * x) ^ 2 - (1 - x) * (1 - r * s * x) ≥ 0 := by
+    calc
     (1 - r * x) ^ 2 - (1 - x) * (1 - r * s * x) =
         x * (1 - 2 * r + r * s) + x ^ 2 * r * (r - s) := by ring
     _ ≥ 0 := add_nonneg hfirst hsecond
-  
+  exact sub_nonneg.mp hdiff
 end CyclicGeneration
 end MathWiki
