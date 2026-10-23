@@ -1,0 +1,378 @@
+{
+  "implementation": "ratio_search.py + balance.go (Claude)",
+  "rows": [
+    {
+      "kind": "grid",
+      "q": 4,
+      "size": 6,
+      "checked": 70,
+      "worst_ratio": 1.5,
+      "worst_set": [
+        0,
+        0,
+        0,
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "kind": "grid",
+      "q": 4,
+      "size": 7,
+      "checked": 126,
+      "worst_ratio": 1.0,
+      "worst_set": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "kind": "grid",
+      "q": 4,
+      "size": 8,
+      "checked": 210,
+      "worst_ratio": 1.5,
+      "worst_set": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        4,
+        4
+      ]
+    },
+    {
+      "kind": "grid",
+      "q": 6,
+      "size": 6,
+      "checked": 210,
+      "worst_ratio": 1.5,
+      "worst_set": [
+        0,
+        0,
+        0,
+        3,
+        6,
+        6
+      ]
+    },
+    {
+      "kind": "grid",
+      "q": 6,
+      "size": 7,
+      "checked": 462,
+      "worst_ratio": 1.0,
+      "worst_set": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "kind": "random",
+      "n": 4,
+      "trials": 300,
+      "failures": 0,
+      "examples": []
+    },
+    {
+      "kind": "random",
+      "n": 5,
+      "trials": 300,
+      "failures": 0,
+      "examples": []
+    },
+    {
+      "kind": "random",
+      "n": 6,
+      "trials": 300,
+      "failures": 63,
+      "examples": [
+        [
+          1,
+          2,
+          2,
+          500,
+          1000,
+          1000
+        ],
+        [
+          3,
+          12,
+          56,
+          332,
+          534,
+          558
+        ],
+        [
+          1,
+          1,
+          999,
+          1000,
+          1000,
+          1000
+        ]
+      ]
+    },
+    {
+      "kind": "random",
+      "n": 7,
+      "trials": 300,
+      "failures": 0,
+      "examples": []
+    },
+    {
+      "kind": "random",
+      "n": 8,
+      "trials": 300,
+      "failures": 44,
+      "examples": [
+        [
+          1,
+          1,
+          500,
+          999,
+          999,
+          1000,
+          1000,
+          1000
+        ],
+        [
+          1,
+          1,
+          1,
+          2,
+          500,
+          1000,
+          1000,
+          1000
+        ],
+        [
+          1,
+          2,
+          2,
+          500,
+          999,
+          999,
+          999,
+          1000
+        ]
+      ]
+    },
+    {
+      "kind": "random",
+      "n": 9,
+      "trials": 300,
+      "failures": 27,
+      "examples": [
+        [
+          1,
+          1,
+          1,
+          1,
+          2,
+          500,
+          1000,
+          1000,
+          1000
+        ],
+        [
+          1,
+          1,
+          1,
+          2,
+          500,
+          500,
+          1000,
+          1000,
+          1000
+        ],
+        [
+          1,
+          1,
+          1,
+          2,
+          2,
+          500,
+          999,
+          1000,
+          1000
+        ]
+      ]
+    },
+    {
+      "kind": "random",
+      "n": 10,
+      "trials": 120,
+      "failures": 20,
+      "examples": [
+        [
+          1,
+          1,
+          1,
+          500,
+          999,
+          999,
+          999,
+          999,
+          1000,
+          1000
+        ],
+        [
+          1,
+          1,
+          2,
+          500,
+          999,
+          999,
+          999,
+          1000,
+          1000,
+          1000
+        ],
+        [
+          1,
+          1,
+          1,
+          2,
+          2,
+          500,
+          999,
+          999,
+          1000,
+          1000
+        ]
+      ]
+    },
+    {
+      "kind": "random",
+      "n": 11,
+      "trials": 120,
+      "failures": 11,
+      "examples": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1000,
+          1000,
+          1000,
+          1000
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          500,
+          1000,
+          1000,
+          1000,
+          1000
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          500,
+          999,
+          1000,
+          1000
+        ]
+      ]
+    },
+    {
+      "kind": "hill-climb",
+      "n": 8,
+      "seconds": 45.0,
+      "worst_ratio": 1.5,
+      "worst_set": [
+        0,
+        0,
+        0,
+        0,
+        60,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "kind": "hill-climb",
+      "n": 9,
+      "seconds": 45.0,
+      "worst_ratio": 1.5,
+      "worst_set": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        60,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "kind": "hill-climb",
+      "n": 10,
+      "seconds": 45.0,
+      "worst_ratio": 1.5,
+      "worst_set": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        60,
+        120,
+        120,
+        120,
+        120
+      ]
+    },
+    {
+      "kind": "hill-climb",
+      "n": 11,
+      "seconds": 45.0,
+      "worst_ratio": 1.5,
+      "worst_set": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        60,
+        120,
+        120,
+        120
+      ]
+    }
+  ],
+  "scope": "Finite checks only. Hill-climb maxima are lower bounds for the worst ratio at that n."
+}

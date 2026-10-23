@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>추측 위키</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<link rel="stylesheet" id="hl-light" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+<link rel="stylesheet" id="hl-dark" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" disabled>
+<style>
+:root {
+  --bg: #fbfaf7;
+  --panel: #f3f1ea;
+  --surface: #ffffff;
+  --ink: #1f1d1a;
+  --muted: #6b665d;
+  --line: #e2ded3;
+  --accent: #8a4b1f;
+  --accent-soft: #f4e7da;
+  --code-bg: #f3f1ea;
+  --ok: #2f6b3a;
+  --warn: #8a5a00;
+  --shadow: 0 1px 2px rgba(40, 30, 10, .06), 0 4px 16px rgba(40, 30, 10, .05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161513;
+    --panel: #1d1c19;
+    --surface: #22211e;
+    --ink: #ebe7de;
+    --muted: #a39d91;
+    --line: #34322d;
+    --accent: #e0a46e;
+    --accent-soft: #3a2b1e;
+    --code-bg: #1d1c19;
+    --ok: #8cc897;
+    --warn: #e5c06a;
+    --shadow: none;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161513;
+  --panel: #1d1c19;
+  --surface: #22211e;
+  --ink: #ebe7de;
+  --muted: #a39d91;
+  --line: #34322d;
+  --accent: #e0a46e;
+  --accent-soft: #3a2b1e;
+  --code-bg: #1d1c19;
+  --ok: #8cc897;
+  --warn: #e5c06a;
+  --shadow: none;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.75 "Noto Sans KR", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 12px;
+  height: 56px; padding: 0 16px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.brand { font-family: "Noto Serif KR", serif; font-weight: 700; font-size: 18px; color: var(--ink); }
+.brand span { color: var(--accent); }
+.spacer { flex: 1; }
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  cursor: pointer; font-size: 16px;
+}
+#menu-btn { display: none; }
+
+.layout { display: grid; grid-template-columns: 272px minmax(0, 1fr); min-height: calc(100vh - 56px); }
+#nav {
+  position: sticky; top: 56px; align-self: start;
+  height: calc(100vh - 56px); overflow-y: auto;
+  padding: 20px 14px 40px; border-right: 1px solid var(--line); background: var(--panel);
+  font-size: 14px;
+}
+.nav-home { display: block; padding: 6px 10px; border-radius: 6px; color: var(--ink); font-weight: 500; }
+.nav-label { margin: 22px 10px 6px; font-size: 12px; letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
+.nav-group { margin-bottom: 10px; }
+.nav-group-title { display: block; padding: 6px 10px; color: var(--ink); font-weight: 700; line-height: 1.4; }
+.nav-group-title small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+.nav-file { display: block; padding: 4px 10px 4px 22px; border-radius: 6px; color: var(--muted); }
+.nav-file.code { font-family: "JetBrains Mono", monospace; font-size: 12.5px; }
+#nav a:hover { background: var(--accent-soft); text-decoration: none; color: var(--ink); }
+#nav a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+
+main { padding: 28px 40px 80px; min-width: 0; }
+.crumbs { max-width: 780px; margin: 0 auto 8px; font-size: 13px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+.crumbs .raw { margin-left: auto; }
+#doc { max-width: 780px; margin: 0 auto; overflow-wrap: break-word; }
+
+#doc h1, #doc h2, #doc h3 { font-family: "Noto Serif KR", serif; line-height: 1.35; scroll-margin-top: 72px; }
+#doc h1 { font-size: 2rem; margin: .4em 0 .5em; }
+#doc h2 { font-size: 1.45rem; margin: 2.2em 0 .6em; padding-bottom: .3em; border-bottom: 1px solid var(--line); }
+#doc h3 { font-size: 1.15rem; margin: 1.8em 0 .5em; }
+#doc h4 { font-size: 1rem; margin: 1.5em 0 .4em; }
+#doc p, #doc ul, #doc ol { margin: .8em 0; }
+#doc li + li { margin-top: .25em; }
+#doc blockquote {
+  margin: 1.2em 0; padding: .6em 1.1em;
+  border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 8px 8px 0;
+}
+#doc blockquote p { margin: .3em 0; }
+#doc hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+#doc code { font-family: "JetBrains Mono", monospace; font-size: .88em; background: var(--code-bg); padding: .1em .35em; border-radius: 4px; }
+#doc pre { background: var(--code-bg); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; overflow-x: auto; line-height: 1.55; }
+#doc pre code { background: none; padding: 0; font-size: 13px; }
+#doc pre code.hljs { background: none; padding: 0; }
+.table-wrap { overflow-x: auto; margin: 1.1em 0; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+#doc table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+#doc th, #doc td { padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+#doc th { background: var(--panel); text-align: left; font-weight: 600; }
+#doc tr:last-child td { border-bottom: 0; }
+#doc .katex-display { overflow-x: auto; overflow-y: hidden; padding: .3em 0; }
+#doc img { max-width: 100%; }
+
+.nav-file.top { padding-left: 10px; display: flex; gap: 8px; }
+.nav-file.top b { font-family: "JetBrains Mono", monospace; font-weight: 600; color: var(--accent); min-width: 2.4em; text-align: right; }
+.nav-count { float: right; color: var(--muted); font-weight: 400; font-size: 12px; }
+
+.lead { color: var(--muted); }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 1.4em 0 1em; }
+.controls input, .controls select, .more {
+  height: 38px; padding: 0 12px; border: 1px solid var(--line); border-radius: 8px;
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 14px;
+}
+.controls input { flex: 1 1 220px; min-width: 0; }
+.count { color: var(--muted); font-size: 13px; }
+.rank-list { list-style: none; padding: 0 !important; margin: 0 !important; display: grid; gap: 10px; }
+.rank-list li { margin: 0 !important; }
+.card {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 14px; align-items: start;
+  padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--surface); box-shadow: var(--shadow); color: var(--ink);
+}
+.card:hover { border-color: var(--accent); text-decoration: none; }
+.rank-no { font-family: "JetBrains Mono", monospace; font-size: 18px; color: var(--muted); text-align: right; padding-top: 2px; }
+.card-id { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--accent); }
+.card-title { font-family: "Noto Serif KR", serif; font-weight: 700; font-size: 1.1rem; margin: 2px 0 4px; line-height: 1.4; }
+.card-tag {
+  font-size: 14px; color: var(--muted); line-height: 1.6;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.card-status { margin-top: 8px; font-size: 12.5px; color: var(--ink); background: var(--panel); border-radius: 6px; padding: 3px 8px; display: inline-block; }
+.score { min-width: 96px; text-align: right; }
+.score-avg { font-family: "Noto Serif KR", serif; font-weight: 700; font-size: 28px; line-height: 1; }
+.score-avg.none { font-family: inherit; font-weight: 400; font-size: 13px; color: var(--muted); }
+.meter { height: 4px; margin-top: 8px; border-radius: 2px; background: var(--line); overflow: hidden; }
+.meter span { display: block; height: 100%; background: var(--accent); }
+.score-parts { margin-top: 6px; font-size: 12px; color: var(--muted); white-space: nowrap; line-height: 1.5; }
+.stale { color: var(--warn); }
+.more { display: block; margin: 16px auto 0; cursor: pointer; }
+.more[hidden] { display: none; }
+
+.score-hero {
+  margin: 1.2em 0 1.4em; padding: 22px 24px; border: 1px solid var(--line); border-radius: 14px;
+  background: var(--surface); box-shadow: var(--shadow);
+}
+.score-hero p { margin: .4em 0 0; color: var(--muted); font-size: 14px; }
+.hero-num { font-family: "Noto Serif KR", serif; font-weight: 700; font-size: 56px; line-height: 1; }
+.hero-num small { font-size: 18px; color: var(--muted); font-weight: 500; margin-left: 4px; }
+.hero-num.none, .sc-num.none { font-family: inherit; font-size: 22px; font-weight: 500; color: var(--muted); }
+.score-hero .meter { height: 8px; margin: 14px 0 10px; border-radius: 4px; max-width: 420px; }
+.hero-band, .sc-band { display: inline-block; padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600; }
+#doc .gap-warn { color: var(--warn); }
+.score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.score-card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.score-card.empty { border-style: dashed; background: transparent; }
+.score-card.empty p { color: var(--muted); font-size: 14px; }
+.sc-name { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.sc-num { font-family: "Noto Serif KR", serif; font-weight: 700; font-size: 40px; line-height: 1.1; margin: 4px 0 8px; }
+.score-card .meter { margin: 0 0 10px; }
+.sc-meta { margin-top: 8px; font-size: 12.5px; color: var(--muted); }
+#doc .sc-reason { font-size: 14.5px; line-height: 1.75; margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
+
+.notice { padding: 14px 16px; border: 1px dashed var(--line); border-radius: 8px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  #menu-btn { display: inline-flex; }
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  #nav {
+    position: fixed; top: 56px; left: 0; bottom: 0; width: min(300px, 85vw); height: auto; z-index: 15;
+    transform: translateX(-100%); transition: transform .2s ease; box-shadow: var(--shadow);
+  }
+  body.nav-open #nav { transform: none; }
+  main { padding: 20px 16px 64px; }
+  #doc h1 { font-size: 1.6rem; }
+  .card { grid-template-columns: 28px minmax(0, 1fr); gap: 10px; }
+  .score { grid-column: 2; text-align: left; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .score .meter { flex: 1 1 80px; margin-top: 0; }
+  .score-parts { margin-top: 0; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn" id="menu-btn" aria-label="목차 열기">☰</button>
+  <a class="brand" href="#/README.md">추측 <span>위키</span></a>
+  <div class="spacer"></div>
+  <button class="icon-btn" id="theme-btn" aria-label="테마 전환" title="테마 전환">◐</button>
+</header>
+<div class="layout">
+  <nav id="nav" aria-label="위키 목차"></nav>
+  <main>
+    <div class="crumbs" id="crumbs"></div>
+    <article id="doc"><p class="notice">불러오는 중…</p></article>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+const FILE_LABELS = { "conjectures.md": "추측", "discussion.md": "검증 · 토론", "score.json": "점수" };
+const SCORER_LABELS = { claude: "Claude", chatgpt: "ChatGPT" };
+const SORTS = {
+  avg: "종합 점수순",
+  claude: "Claude 점수순",
+  chatgpt: "ChatGPT 점수순",
+  gap: "의견 차이 큰 순",
+  id: "번호순",
+};
+const PAGE = 60;
+const CODE_LANG = { py: "python", go: "go", json: "json", ps1: "powershell", txt: "plaintext" };
+const doc = document.getElementById("doc");
+const nav = document.getElementById("nav");
+const crumbs = document.getElementById("crumbs");
+let tree = null;
+const catalog = { q: "", sort: "avg", shown: PAGE };
+
+/* ---------- theme ---------- */
+function applyTheme(theme) {
+  if (theme) document.documentElement.dataset.theme = theme;
+  else delete document.documentElement.dataset.theme;
+  const dark = theme ? theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.getElementById("hl-light").disabled = dark;
+  document.getElementById("hl-dark").disabled = !dark;
+}
+let savedTheme = null;
+try { savedTheme = localStorage.getItem("wiki-theme"); } catch (e) {}
+applyTheme(savedTheme);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => applyTheme(document.documentElement.dataset.theme));
+document.getElementById("theme-btn").onclick = () => {
+  const cur = document.documentElement.dataset.theme
+    || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const next = cur === "dark" ? "light" : "dark";
+  applyTheme(next);
+  try { localStorage.setItem("wiki-theme", next); } catch (e) {}
+};
+document.getElementById("menu-btn").onclick = () => document.body.classList.toggle("nav-open");
+
+/* ---------- paths ---------- */
+function resolvePath(base, rel) {
+  const parts = base.split("/").slice(0, -1);
+  for (const seg of rel.split("/")) {
+    if (seg === "..") parts.pop();
+    else if (seg && seg !== ".") parts.push(seg);
+  }
+  return parts.join("/");
+}
+const fileUrl = path => "/" + path.split("/").map(encodeURIComponent).join("/");
+const escapeHtml = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+/* ---------- markdown + math ---------- */
+function renderMarkdown(src) {
+  const code = [], math = [];
+  const stash = (list, tag) => m => { list.push(m); return `\u0001${tag}${list.length - 1}\u0001`; };
+  // Code first so `$` inside code is never treated as math.
+  src = src.replace(/^(`{3,}|~{3,})[^\n]*\n[\s\S]*?\n\1[ \t]*$/gm, stash(code, "C"));
+  src = src.replace(/`[^`\n]+`/g, stash(code, "C"));
+  // Math is pulled out before marked so `_`, `\` and `|` inside it survive (tables!).
+  src = src.replace(/\$\$([\s\S]+?)\$\$/g, (_, tex) => { math.push([tex, true]); return `MATHPH${math.length - 1}X`; });
+  src = src.replace(/(^|[^\\$])\$(?!\s)((?:\\.|[^$\\\n])+?)\$/g, (_, pre, tex) => { math.push([tex, false]); return `${pre}MATHPH${math.length - 1}X`; });
+  src = src.replace(/\u0001C(\d+)\u0001/g, (_, i) => code[i]);
+  let html = marked.parse(src, { gfm: true });
+  html = html.replace(/MATHPH(\d+)X/g, (_, i) => {
+    const [tex, display] = math[i];
+    return katex.renderToString(tex, { displayMode: display, throwOnError: false });
+  });
+  return html;
+}
+
+function slugify(text) {
+  return text.trim().toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, "").replace(/\s+/g, "-");
+}
+
+function decorate(path) {
+  const seen = {};
+  doc.querySelectorAll("h1,h2,h3,h4").forEach(h => {
+    let id = slugify(h.textContent) || "section";
+    if (seen[id] !== undefined) id += "-" + (++seen[id]); else seen[id] = 0;
+    h.id = id;
+  });
+  doc.querySelectorAll("a[href]").forEach(a => {
+    const href = a.getAttribute("href");
+    if (/^[a-z][a-z0-9+.-]*:|^\/\//i.test(href)) {
+      a.target = "_blank"; a.rel = "noopener";
+    } else if (href.startsWith("#/")) {
+      // already a viewer route, e.g. #/catalog
+    } else if (href.startsWith("#")) {
+      a.href = `#/${path}${href}`;
+    } else {
+      const [rel, frag] = href.split("#");
+      a.href = `#/${resolvePath(path, rel)}${frag ? "#" + frag : ""}`;
+    }
+  });
+  doc.querySelectorAll("table").forEach(t => {
+    const wrap = document.createElement("div");
+    wrap.className = "table-wrap";
+    t.replaceWith(wrap); wrap.appendChild(t);
+  });
+  doc.querySelectorAll("pre code").forEach(el => {
+    if (!/language-(text|plaintext)/.test(el.className)) hljs.highlightElement(el);
+  });
+}
+
+async function loadTree() {
+  try {
+    const r = await fetch("/api/tree");
+    if (!r.ok) throw new Error();
+    tree = await r.json();
+  } catch (e) {
+    tree = { readme: "README.md", scorers: Object.keys(SCORER_LABELS), conjectures: [] };
+  }
+}
+
+/* ---------- scores ---------- */
+const scoreOf = (c, key) => key === "avg" ? c.average : (c.scores[key] ? c.scores[key].score : null);
+const fmt = v => Number.isInteger(v) ? String(v) : v.toFixed(1);
+const byId = (a, b) => a.id.localeCompare(b.id, undefined, { numeric: true });
+const nullsLast = (x, y) => (x === null) - (y === null);
+
+function gapOf(c) {
+  const vals = tree.scorers.map(k => scoreOf(c, k));
+  return vals.some(v => v === null) ? null : Math.max(...vals) - Math.min(...vals);
+}
+
+function sorted(list, sort) {
+  const key = sort === "gap" ? gapOf : c => scoreOf(c, sort);
+  if (sort === "id") return [...list].sort(byId);
+  return [...list].sort((a, b) => {
+    const x = key(a), y = key(b);
+    return nullsLast(x, y) || (y ?? 0) - (x ?? 0) || byId(a, b);
+  });
+}
+
+/* ---------- navigation ---------- */
+function renderNav(active) {
+  const list = tree.conjectures;
+  let html = `<a class="nav-home" href="#/README.md">대문</a>`
+    + `<a class="nav-home" href="#/catalog">추측 목록<span class="nav-count">${list.length}</span></a>`;
+
+  const current = list.find(c => active.startsWith(c.dir + "/"));
+  if (current) {
+    html += `<div class="nav-label">보고 있는 추측</div><div class="nav-group">`
+      + `<span class="nav-group-title">${escapeHtml(current.id)} · ${escapeHtml(current.title || current.slug)}`
+      + (current.version ? `<small>v${escapeHtml(current.version)}</small>` : "") + `</span>`;
+    for (const f of current.files) {
+      const label = FILE_LABELS[f];
+      html += `<a class="nav-file${label ? "" : " code"}" href="#/${current.dir}/${encodeURIComponent(f)}">${escapeHtml(label || f)}</a>`;
+    }
+    html += `</div>`;
+  }
+
+  const top = sorted(list.filter(c => c.average !== null), "avg").slice(0, 10);
+  if (top.length) {
+    html += `<div class="nav-label">점수 상위</div>`;
+    for (const c of top) {
+      html += `<a class="nav-file top" href="#/${c.dir}/conjectures.md"><b>${fmt(c.average)}</b><span>${escapeHtml(c.id)} · ${escapeHtml(c.title || c.slug)}</span></a>`;
+    }
+  }
+  if (!list.length) html += `<p class="notice">목록을 불러오려면 <code>python serve.py</code>로 여세요.</p>`;
+  nav.innerHTML = html;
+  nav.querySelectorAll("a").forEach(a => {
+    a.classList.toggle("active", decodeURIComponent(a.getAttribute("href").slice(2)) === active);
+  });
+}
+
+/* ---------- catalog ---------- */
+function cardHtml(c, rank) {
+  const avg = c.average;
+  const parts = tree.scorers.map(k => {
+    const s = c.scores[k];
+    if (!s) return `${SCORER_LABELS[k] || k} —`;
+    const stale = s.version && c.version && s.version !== c.version;
+    return `${SCORER_LABELS[k] || k} ${fmt(s.score)}`
+      + (stale ? ` <span class="stale" title="v${escapeHtml(s.version)} 기준 점수">v${escapeHtml(s.version)}</span>` : "");
+  }).join("<br>");
+  return `<li><a class="card" href="#/${c.dir}/conjectures.md">`
+    + `<div class="rank-no">${rank ?? ""}</div>`
+    + `<div><div class="card-id">${escapeHtml(c.id)}${c.version ? " · v" + escapeHtml(c.version) : ""}${c.field ? " · " + escapeHtml(c.field) : ""}</div>`
+    + `<div class="card-title">${escapeHtml(c.title || c.slug)}</div>`
+    + (c.tagline ? `<div class="card-tag">${escapeHtml(c.tagline)}</div>` : "")
+    + (c.status ? `<div class="card-status">${escapeHtml(c.status)}</div>` : "")
+    + `</div><div class="score">`
+    + (avg === null ? `<div class="score-avg none">미채점</div>`
+      : `<div class="score-avg">${fmt(avg)}</div><div class="meter"><span style="width:${Math.max(0, Math.min(100, avg))}%"></span></div>`)
+    + `<div class="score-parts">${parts}</div></div></a></li>`;
+}
+
+function catalogMatches(c, q) {
+  if (!q) return true;
+  const hay = [c.id, c.slug, c.title, c.tagline, c.field, c.status].join(" ").toLowerCase();
+  return q.toLowerCase().split(/\s+/).every(w => hay.includes(w));
+}
+
+function renderCatalogList() {
+  const list = sorted(tree.conjectures.filter(c => catalogMatches(c, catalog.q)), catalog.sort);
+  const ranked = catalog.sort !== "id";
+  let rank = 0;
+  const items = list.slice(0, catalog.shown).map(c => {
+    const scored = catalog.sort === "gap" ? gapOf(c) !== null : scoreOf(c, catalog.sort) !== null;
+    return cardHtml(c, ranked && scored ? ++rank : null);
+  });
+  document.getElementById("rank-list").innerHTML = items.join("")
+    || `<li class="notice">조건에 맞는 추측이 없습니다.</li>`;
+  const scored = tree.conjectures.filter(c => c.average !== null).length;
+  document.getElementById("count").textContent =
+    `${list.length}개 표시 · 전체 ${tree.conjectures.length}개 중 ${scored}개 채점됨`;
+  const more = document.getElementById("more");
+  more.hidden = list.length <= catalog.shown;
+  more.textContent = `더 보기 (${list.length - catalog.shown}개 남음)`;
+}
+
+function syncCatalogUrl() {
+  const params = new URLSearchParams();
+  if (catalog.q) params.set("q", catalog.q);
+  if (catalog.sort !== "avg") params.set("sort", catalog.sort);
+  const qs = params.toString();
+  history.replaceState(null, "", "#/catalog" + (qs ? "?" + qs : ""));
+}
+
+function renderCatalog(query) {
+  const params = new URLSearchParams(query || "");
+  catalog.q = params.get("q") || "";
+  catalog.sort = SORTS[params.get("sort")] ? params.get("sort") : "avg";
+  catalog.shown = PAGE;
+  crumbs.innerHTML = `<a href="#/README.md">대문</a> <span>›</span> <span>추측 목록</span>`;
+  doc.innerHTML = `<h1>추측 목록</h1>`
+    + `<p class="lead">Claude와 ChatGPT가 각자 매긴 0~100점의 평균 순으로 정렬합니다. 채점 기준은 <a href="#/README.md#점수">대문</a>에 있습니다.</p>`
+    + `<div class="controls"><input id="q" type="search" placeholder="번호 · 이름 · 분야 · 상태 검색" autocomplete="off">`
+    + `<select id="sort">${Object.entries(SORTS).map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select>`
+    + `<span class="count" id="count"></span></div>`
+    + `<ol class="rank-list" id="rank-list"></ol><button class="more" id="more" hidden></button>`;
+  const q = document.getElementById("q"), sort = document.getElementById("sort");
+  q.value = catalog.q;
+  sort.value = catalog.sort;
+  q.oninput = () => { catalog.q = q.value.trim(); catalog.shown = PAGE; syncCatalogUrl(); renderCatalogList(); };
+  sort.onchange = () => { catalog.sort = sort.value; catalog.shown = PAGE; syncCatalogUrl(); renderCatalogList(); };
+  document.getElementById("more").onclick = () => { catalog.shown += PAGE; renderCatalogList(); };
+  renderCatalogList();
+  document.title = "추측 목록 · 추측 위키";
+  window.scrollTo(0, 0);
+}
+
+/* ---------- score page ---------- */
+const BANDS = [
+  [80, "밀레니엄급 후보"],
+  [60, "깊은 추측 후보"],
+  [40, "좋은 연구 문제"],
+  [20, "예쁜 퍼즐"],
+  [0, "결함이 있거나 사소함"],
+];
+const bandOf = v => BANDS.find(([floor]) => v >= floor)[1];
+const meter = v => `<div class="meter"><span style="width:${Math.max(0, Math.min(100, v))}%"></span></div>`;
+
+// Returns HTML for a score.json, or null to fall back to the raw file view.
+function renderScorePage(text, path) {
+  let data;
+  try { data = JSON.parse(text); } catch (e) { return null; }
+  if (!data || typeof data !== "object") return null;
+  const dir = path.split("/").slice(0, -1).join("/");
+  const c = tree.conjectures.find(x => x.dir === dir) || {};
+  const entries = tree.scorers.map(k => [k, data[k] && typeof data[k].score === "number" ? data[k] : null]);
+  const values = entries.filter(([, s]) => s).map(([, s]) => s.score);
+  const avg = values.length ? values.reduce((a, b) => a + b, 0) / values.length : null;
+
+  let html = `<h1>점수 · ${escapeHtml(c.id || "")} ${escapeHtml(c.title || "")}</h1>`;
+  html += `<section class="score-hero">`;
+  if (avg === null) {
+    html += `<div class="hero-num none">미채점</div><p>아직 어느 모델도 점수를 매기지 않았습니다.</p>`;
+  } else {
+    html += `<div class="hero-num">${fmt(avg)}<small>/100</small></div>${meter(avg)}`
+      + `<div class="hero-band">${bandOf(avg)}</div>`
+      + `<p>${values.length === tree.scorers.length ? "두 모델 점수의 평균" : `${values.length}개 모델만 채점함`}`
+      + (c.version ? ` · 현재 추측 v${escapeHtml(c.version)}` : "") + `</p>`;
+    if (values.length >= 2) {
+      const gap = Math.max(...values) - Math.min(...values);
+      html += `<p class="${gap >= 20 ? "gap-warn" : "gap"}">두 점수 차이 ${fmt(gap)}점`
+        + (gap >= 20 ? " · 20점 이상이라 토론 파일에서 이유를 다뤄야 합니다" : "") + `</p>`;
+    }
+  }
+  html += `</section><div class="score-grid">`;
+  for (const [key, s] of entries) {
+    const name = SCORER_LABELS[key] || key;
+    if (!s) {
+      html += `<article class="score-card empty"><div class="sc-name">${escapeHtml(name)}</div>`
+        + `<div class="sc-num none">—</div><p>아직 채점하지 않았습니다.</p></article>`;
+      continue;
+    }
+    const stale = s.version && c.version && s.version !== c.version;
+    html += `<article class="score-card"><div class="sc-name">${escapeHtml(name)}</div>`
+      + `<div class="sc-num">${fmt(s.score)}</div>${meter(s.score)}`
+      + `<div class="sc-band">${bandOf(s.score)}</div>`
+      + `<div class="sc-meta">${s.version ? `v${escapeHtml(String(s.version))} 기준` : ""}${s.date ? ` · ${escapeHtml(String(s.date))}` : ""}`
+      + (stale ? ` <span class="stale">· 이전 버전 점수, 재채점 필요</span>` : "") + `</div>`
+      + (s.reason ? `<p class="sc-reason">${escapeHtml(String(s.reason))}</p>` : "")
+      + `</article>`;
+  }
+  html += `</div><p class="lead">채점 기준은 <a href="#/README.md#점수">대문</a>에 있습니다. `
+    + `<a href="#/${dir}/conjectures.md">추측 문서로 돌아가기</a></p>`;
+  return html;
+}
+
+/* ---------- routing ---------- */
+async function route() {
+  const raw = location.hash.replace(/^#\/?/, "");
+  document.body.classList.remove("nav-open");
+  if (!tree) await loadTree();   // a hashchange can arrive before the first load finishes
+  if (raw === "catalog" || raw.startsWith("catalog?")) {
+    await loadTree();   // pick up conjectures and scores added since the page loaded
+    renderNav("catalog");
+    renderCatalog(raw.split("?")[1]);
+    return;
+  }
+  const [encPath, frag] = raw.split("#");
+  const path = decodeURIComponent(encPath || "") || tree.readme;
+  renderNav(path);
+
+  const parts = path.split("/");
+  crumbs.innerHTML = `<a href="#/README.md">대문</a>`
+    + parts.map(p => ` <span>›</span> <span>${escapeHtml(p)}</span>`).join("")
+    + `<a class="raw" href="${fileUrl(path)}" target="_blank" rel="noopener">원본</a>`;
+
+  let text;
+  try {
+    const r = await fetch(fileUrl(path));
+    if (!r.ok) throw new Error(r.status);
+    text = await r.text();
+  } catch (e) {
+    doc.innerHTML = `<h1>문서를 찾을 수 없습니다</h1><p class="notice">${escapeHtml(path)}</p>`;
+    return;
+  }
+
+  const ext = path.split(".").pop().toLowerCase();
+  const scorePage = parts[parts.length - 1] === "score.json" && renderScorePage(text, path);
+  if (scorePage) {
+    doc.innerHTML = scorePage;
+  } else if (ext === "md") {
+    doc.innerHTML = renderMarkdown(text);
+  } else {
+    const lang = CODE_LANG[ext] || "plaintext";
+    const shown = text.length > 400000 ? text.slice(0, 400000) + "\n… (잘림)" : text;
+    doc.innerHTML = `<h1>${escapeHtml(parts[parts.length - 1])}</h1><pre><code class="language-${lang}">${escapeHtml(shown)}</code></pre>`;
+  }
+  decorate(path);
+  const h1 = doc.querySelector("h1");
+  document.title = (h1 && path !== tree.readme ? h1.textContent + " · " : "") + "추측 위키";
+
+  const target = frag && document.getElementById(decodeURIComponent(frag));
+  if (target) target.scrollIntoView();
+  else window.scrollTo(0, 0);
+}
+
+window.addEventListener("hashchange", route);
+loadTree().then(route);
+</script>
+</body>
+</html>

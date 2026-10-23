@@ -1,0 +1,371 @@
+{
+  "implementation": "count.go (Claude)",
+  "results": [
+    {
+      "n": 1,
+      "count": 1,
+      "known_family_solutions": 0,
+      "sporadic_solutions": [
+        [
+          1
+        ]
+      ],
+      "nodes": 2,
+      "seconds": 0
+    },
+    {
+      "n": 2,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 5,
+      "seconds": 0
+    },
+    {
+      "n": 3,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 8,
+      "seconds": 0
+    },
+    {
+      "n": 4,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 19,
+      "seconds": 0
+    },
+    {
+      "n": 5,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 34,
+      "seconds": 0
+    },
+    {
+      "n": 6,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 71,
+      "seconds": 0
+    },
+    {
+      "n": 7,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 132,
+      "seconds": 0
+    },
+    {
+      "n": 8,
+      "count": 8,
+      "known_family_solutions": 4,
+      "sporadic_solutions": [
+        [
+          3,
+          6,
+          5,
+          8,
+          7,
+          2,
+          1,
+          4
+        ],
+        [
+          4,
+          1,
+          2,
+          7,
+          8,
+          5,
+          6,
+          3
+        ],
+        [
+          5,
+          8,
+          7,
+          2,
+          1,
+          4,
+          3,
+          6
+        ],
+        [
+          6,
+          3,
+          4,
+          1,
+          2,
+          7,
+          8,
+          5
+        ]
+      ],
+      "nodes": 267,
+      "seconds": 0
+    },
+    {
+      "n": 9,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 438,
+      "seconds": 0
+    },
+    {
+      "n": 10,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 781,
+      "seconds": 0
+    },
+    {
+      "n": 11,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 1352,
+      "seconds": 0
+    },
+    {
+      "n": 12,
+      "count": 4,
+      "known_family_solutions": 4,
+      "sporadic_solutions": null,
+      "nodes": 2297,
+      "seconds": 0.0005095
+    },
+    {
+      "n": 13,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 3630,
+      "seconds": 0.0005073
+    },
+    {
+      "n": 14,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 5865,
+      "seconds": 0.0005143
+    },
+    {
+      "n": 15,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 9216,
+      "seconds": 0.0005103
+    },
+    {
+      "n": 16,
+      "count": 4,
+      "known_family_solutions": 4,
+      "sporadic_solutions": null,
+      "nodes": 15803,
+      "seconds": 0.0015853
+    },
+    {
+      "n": 17,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 25026,
+      "seconds": 0.002618
+    },
+    {
+      "n": 18,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 40147,
+      "seconds": 0.0045944
+    },
+    {
+      "n": 19,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 63804,
+      "seconds": 0.007683
+    },
+    {
+      "n": 20,
+      "count": 4,
+      "known_family_solutions": 4,
+      "sporadic_solutions": null,
+      "nodes": 100727,
+      "seconds": 0.0125773
+    },
+    {
+      "n": 21,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 152822,
+      "seconds": 0.0214782
+    },
+    {
+      "n": 22,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 233567,
+      "seconds": 0.0317773
+    },
+    {
+      "n": 23,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 345336,
+      "seconds": 0.0498983
+    },
+    {
+      "n": 24,
+      "count": 4,
+      "known_family_solutions": 4,
+      "sporadic_solutions": null,
+      "nodes": 519165,
+      "seconds": 0.0794876
+    },
+    {
+      "n": 25,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 763442,
+      "seconds": 0.1216232
+    },
+    {
+      "n": 26,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 1146489,
+      "seconds": 0.191018
+    },
+    {
+      "n": 27,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 1703608,
+      "seconds": 0.2890379
+    },
+    {
+      "n": 28,
+      "count": 4,
+      "known_family_solutions": 4,
+      "sporadic_solutions": null,
+      "nodes": 2647391,
+      "seconds": 0.4660592
+    },
+    {
+      "n": 29,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 4006754,
+      "seconds": 0.7310946
+    },
+    {
+      "n": 30,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 6056147,
+      "seconds": 1.2259446999999999
+    },
+    {
+      "n": 31,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 9136016,
+      "seconds": 2.5179481
+    },
+    {
+      "n": 32,
+      "count": 4,
+      "known_family_solutions": 4,
+      "sporadic_solutions": null,
+      "nodes": 13967433,
+      "seconds": 3.9421654
+    },
+    {
+      "n": 33,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 20773326,
+      "seconds": 5.933557
+    },
+    {
+      "n": 34,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 32287213,
+      "seconds": 6.9132784
+    },
+    {
+      "n": 35,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 50024632,
+      "seconds": 11.0588142
+    },
+    {
+      "n": 36,
+      "count": 4,
+      "known_family_solutions": 4,
+      "sporadic_solutions": null,
+      "nodes": 77742621,
+      "seconds": 18.2069578
+    },
+    {
+      "n": 37,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 115873754,
+      "seconds": 35.3042127
+    },
+    {
+      "n": 38,
+      "count": 2,
+      "known_family_solutions": 2,
+      "sporadic_solutions": null,
+      "nodes": 171491829,
+      "seconds": 54.7265649
+    },
+    {
+      "n": 39,
+      "count": 0,
+      "known_family_solutions": 0,
+      "sporadic_solutions": null,
+      "nodes": 250371584,
+      "seconds": 66.4697741
+    },
+    {
+      "n": 40,
+      "count": 4,
+      "known_family_solutions": 4,
+      "sporadic_solutions": null,
+      "nodes": 373299439,
+      "seconds": 98.0901183
+    }
+  ],
+  "scope": "Exhaustive enumeration for each listed n."
+}

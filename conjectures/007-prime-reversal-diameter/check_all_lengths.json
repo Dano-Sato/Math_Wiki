@@ -1,0 +1,299 @@
+{
+  "implementation": "bfs.go (Claude)",
+  "lengths_rule": "all",
+  "results": [
+    {
+      "n": 2,
+      "lengths": [
+        2
+      ],
+      "diameter": 1,
+      "farthest_count": 1,
+      "farthest_examples": [
+        [
+          2,
+          1
+        ]
+      ],
+      "level_sizes": [
+        1,
+        1
+      ],
+      "seconds": 0
+    },
+    {
+      "n": 3,
+      "lengths": [
+        2,
+        3
+      ],
+      "diameter": 2,
+      "farthest_count": 2,
+      "farthest_examples": [
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ]
+      ],
+      "level_sizes": [
+        1,
+        3,
+        2
+      ],
+      "seconds": 0
+    },
+    {
+      "n": 4,
+      "lengths": [
+        2,
+        3,
+        4
+      ],
+      "diameter": 3,
+      "farthest_count": 2,
+      "farthest_examples": [
+        [
+          2,
+          4,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          4,
+          2
+        ]
+      ],
+      "level_sizes": [
+        1,
+        6,
+        15,
+        2
+      ],
+      "seconds": 0
+    },
+    {
+      "n": 5,
+      "lengths": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "diameter": 4,
+      "farthest_count": 2,
+      "farthest_examples": [
+        [
+          2,
+          4,
+          1,
+          5,
+          3
+        ],
+        [
+          3,
+          1,
+          5,
+          2,
+          4
+        ]
+      ],
+      "level_sizes": [
+        1,
+        10,
+        52,
+        55,
+        2
+      ],
+      "seconds": 0
+    },
+    {
+      "n": 6,
+      "lengths": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "diameter": 5,
+      "farthest_count": 2,
+      "farthest_examples": [
+        [
+          2,
+          4,
+          1,
+          6,
+          3,
+          5
+        ],
+        [
+          3,
+          1,
+          5,
+          2,
+          6,
+          4
+        ]
+      ],
+      "level_sizes": [
+        1,
+        15,
+        129,
+        389,
+        184,
+        2
+      ],
+      "seconds": 0.0005076
+    },
+    {
+      "n": 7,
+      "lengths": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "diameter": 6,
+      "farthest_count": 2,
+      "farthest_examples": [
+        [
+          2,
+          4,
+          1,
+          6,
+          3,
+          7,
+          5
+        ],
+        [
+          3,
+          1,
+          5,
+          2,
+          7,
+          4,
+          6
+        ]
+      ],
+      "level_sizes": [
+        1,
+        21,
+        266,
+        1563,
+        2539,
+        648,
+        2
+      ],
+      "seconds": 0.0067558
+    },
+    {
+      "n": 8,
+      "lengths": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "diameter": 7,
+      "farthest_count": 2,
+      "farthest_examples": [
+        [
+          2,
+          4,
+          1,
+          6,
+          3,
+          8,
+          5,
+          7
+        ],
+        [
+          3,
+          1,
+          5,
+          2,
+          7,
+          4,
+          8,
+          6
+        ]
+      ],
+      "level_sizes": [
+        1,
+        28,
+        487,
+        4642,
+        16445,
+        16604,
+        2111,
+        2
+      ],
+      "seconds": 0.0907498
+    },
+    {
+      "n": 9,
+      "lengths": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "diameter": 8,
+      "farthest_count": 2,
+      "farthest_examples": [
+        [
+          2,
+          4,
+          1,
+          6,
+          3,
+          8,
+          5,
+          9,
+          7
+        ],
+        [
+          3,
+          1,
+          5,
+          2,
+          7,
+          4,
+          9,
+          6,
+          8
+        ]
+      ],
+      "level_sizes": [
+        1,
+        36,
+        820,
+        11407,
+        69863,
+        169034,
+        105365,
+        6352,
+        2
+      ],
+      "seconds": 1.3015563
+    }
+  ],
+  "scope": "Exact BFS over all of S_n for each listed n."
+}

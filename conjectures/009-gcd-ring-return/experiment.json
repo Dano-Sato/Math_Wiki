@@ -1,0 +1,609 @@
+{
+  "definition_version": "009-0.1",
+  "date": "2026-10-24",
+  "exact_cycles": [
+    {
+      "n": 2,
+      "periodic_state_box": [
+        2,
+        2
+      ],
+      "enumerated_states": 1,
+      "number_of_nonuniform_cycles": 0,
+      "cycles": [],
+      "all_cycles_have_two": true,
+      "all_cycle_supports_gap_free": true
+    },
+    {
+      "n": 3,
+      "periodic_state_box": [
+        2,
+        4
+      ],
+      "enumerated_states": 27,
+      "number_of_nonuniform_cycles": 1,
+      "cycles": [
+        {
+          "period": 3,
+          "minimum": 2,
+          "maximum": 3,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3
+          ],
+          "representative": [
+            2,
+            2,
+            3
+          ]
+        }
+      ],
+      "all_cycles_have_two": true,
+      "all_cycle_supports_gap_free": true
+    },
+    {
+      "n": 4,
+      "periodic_state_box": [
+        2,
+        6
+      ],
+      "enumerated_states": 625,
+      "number_of_nonuniform_cycles": 2,
+      "cycles": [
+        {
+          "period": 8,
+          "minimum": 2,
+          "maximum": 4,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4
+          ],
+          "representative": [
+            3,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "period": 8,
+          "minimum": 2,
+          "maximum": 5,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "representative": [
+            2,
+            2,
+            4,
+            4
+          ]
+        }
+      ],
+      "all_cycles_have_two": true,
+      "all_cycle_supports_gap_free": true
+    },
+    {
+      "n": 5,
+      "periodic_state_box": [
+        2,
+        8
+      ],
+      "enumerated_states": 16807,
+      "number_of_nonuniform_cycles": 3,
+      "cycles": [
+        {
+          "period": 20,
+          "minimum": 2,
+          "maximum": 5,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "representative": [
+            2,
+            2,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "period": 5,
+          "minimum": 2,
+          "maximum": 4,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4
+          ],
+          "representative": [
+            3,
+            3,
+            2,
+            4,
+            2
+          ]
+        },
+        {
+          "period": 20,
+          "minimum": 2,
+          "maximum": 6,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "representative": [
+            3,
+            3,
+            3,
+            5,
+            3
+          ]
+        }
+      ],
+      "all_cycles_have_two": true,
+      "all_cycle_supports_gap_free": true
+    },
+    {
+      "n": 6,
+      "periodic_state_box": [
+        2,
+        10
+      ],
+      "enumerated_states": 531441,
+      "number_of_nonuniform_cycles": 7,
+      "cycles": [
+        {
+          "period": 12,
+          "minimum": 2,
+          "maximum": 6,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "representative": [
+            3,
+            3,
+            3,
+            3,
+            2,
+            2
+          ]
+        },
+        {
+          "period": 12,
+          "minimum": 2,
+          "maximum": 6,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "representative": [
+            3,
+            3,
+            3,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "period": 12,
+          "minimum": 2,
+          "maximum": 5,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "representative": [
+            2,
+            2,
+            2,
+            2,
+            3,
+            3
+          ]
+        },
+        {
+          "period": 12,
+          "minimum": 2,
+          "maximum": 5,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "representative": [
+            2,
+            2,
+            2,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "period": 6,
+          "minimum": 2,
+          "maximum": 6,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "representative": [
+            3,
+            3,
+            3,
+            5,
+            5,
+            3
+          ]
+        },
+        {
+          "period": 6,
+          "minimum": 2,
+          "maximum": 6,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "representative": [
+            5,
+            5,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "period": 3,
+          "minimum": 2,
+          "maximum": 3,
+          "has_two": true,
+          "gap_free_support": true,
+          "support": [
+            2,
+            3
+          ],
+          "representative": [
+            2,
+            2,
+            3,
+            2,
+            2,
+            3
+          ]
+        }
+      ],
+      "all_cycles_have_two": true,
+      "all_cycle_supports_gap_free": true
+    }
+  ],
+  "seed": "20261024+n",
+  "sample_cases_per_size": 100,
+  "step_limit": 20000,
+  "sampled_orbits": [
+    {
+      "n": 7,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 48,
+        "periodic": 52,
+        "step_limit": 0
+      },
+      "periods": [
+        14,
+        28,
+        42
+      ],
+      "largest_periodic_value": 7,
+      "counterexamples": []
+    },
+    {
+      "n": 8,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 35,
+        "periodic": 65,
+        "step_limit": 0
+      },
+      "periods": [
+        8,
+        16,
+        48
+      ],
+      "largest_periodic_value": 8,
+      "counterexamples": []
+    },
+    {
+      "n": 9,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 39,
+        "periodic": 61,
+        "step_limit": 0
+      },
+      "periods": [
+        18,
+        36
+      ],
+      "largest_periodic_value": 9,
+      "counterexamples": []
+    },
+    {
+      "n": 10,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 33,
+        "periodic": 67,
+        "step_limit": 0
+      },
+      "periods": [
+        10,
+        20,
+        60,
+        160
+      ],
+      "largest_periodic_value": 12,
+      "counterexamples": []
+    },
+    {
+      "n": 11,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 26,
+        "periodic": 74,
+        "step_limit": 0
+      },
+      "periods": [
+        44,
+        66,
+        110,
+        132
+      ],
+      "largest_periodic_value": 11,
+      "counterexamples": []
+    },
+    {
+      "n": 12,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 19,
+        "periodic": 81,
+        "step_limit": 0
+      },
+      "periods": [
+        6,
+        24,
+        120,
+        264
+      ],
+      "largest_periodic_value": 13,
+      "counterexamples": []
+    },
+    {
+      "n": 13,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 13,
+        "periodic": 87,
+        "step_limit": 0
+      },
+      "periods": [
+        52,
+        78,
+        130,
+        156,
+        208,
+        260,
+        286,
+        364
+      ],
+      "largest_periodic_value": 13,
+      "counterexamples": []
+    },
+    {
+      "n": 14,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 10,
+        "periodic": 90,
+        "step_limit": 0
+      },
+      "periods": [
+        28,
+        84,
+        112,
+        140,
+        308,
+        504
+      ],
+      "largest_periodic_value": 15,
+      "counterexamples": []
+    },
+    {
+      "n": 15,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 8,
+        "periodic": 92,
+        "step_limit": 0
+      },
+      "periods": [
+        3,
+        20,
+        30,
+        60,
+        240,
+        330,
+        420,
+        660
+      ],
+      "largest_periodic_value": 15,
+      "counterexamples": []
+    },
+    {
+      "n": 16,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 13,
+        "periodic": 87,
+        "step_limit": 0
+      },
+      "periods": [
+        32,
+        96,
+        160,
+        224,
+        352,
+        480
+      ],
+      "largest_periodic_value": 16,
+      "counterexamples": []
+    },
+    {
+      "n": 17,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 13,
+        "periodic": 87,
+        "step_limit": 0
+      },
+      "periods": [
+        68,
+        102,
+        170,
+        204,
+        272,
+        340,
+        374,
+        408,
+        510,
+        1122
+      ],
+      "largest_periodic_value": 17,
+      "counterexamples": []
+    },
+    {
+      "n": 18,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 6,
+        "periodic": 94,
+        "step_limit": 0
+      },
+      "periods": [
+        6,
+        36,
+        72,
+        144,
+        180,
+        252,
+        360,
+        396
+      ],
+      "largest_periodic_value": 18,
+      "counterexamples": []
+    },
+    {
+      "n": 19,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 10,
+        "periodic": 90,
+        "step_limit": 0
+      },
+      "periods": [
+        76,
+        190,
+        228,
+        304,
+        380,
+        418,
+        570,
+        608,
+        760,
+        836,
+        912,
+        1254,
+        1976
+      ],
+      "largest_periodic_value": 21,
+      "counterexamples": []
+    },
+    {
+      "n": 20,
+      "cases": 100,
+      "outcomes": {
+        "uniform": 8,
+        "periodic": 92,
+        "step_limit": 0
+      },
+      "periods": [
+        20,
+        40,
+        80,
+        120,
+        160,
+        440,
+        840,
+        1080,
+        1240,
+        1320
+      ],
+      "largest_periodic_value": 21,
+      "counterexamples": []
+    }
+  ],
+  "scope": "Exact cycle classification only through the stated ring size, using the proved cycle bound; larger sizes use finite seeded orbit tests."
+}

@@ -1,0 +1,126 @@
+{
+  "definition_version": "001-0.1",
+  "terms": 2000000,
+  "prefix_30": [
+    1,
+    2,
+    5,
+    4,
+    7,
+    6,
+    3,
+    8,
+    9,
+    10,
+    11,
+    16,
+    13,
+    12,
+    17,
+    14,
+    15,
+    18,
+    19,
+    20,
+    23,
+    22,
+    29,
+    26,
+    21,
+    24,
+    31,
+    28,
+    25,
+    30
+  ],
+  "checkpoints": [
+    {
+      "terms": 10,
+      "maximum_value": 10,
+      "covered_through": 10,
+      "maximum_absolute_displacement": 4
+    },
+    {
+      "terms": 100,
+      "maximum_value": 100,
+      "covered_through": 100,
+      "maximum_absolute_displacement": 6
+    },
+    {
+      "terms": 1000,
+      "maximum_value": 1004,
+      "covered_through": 998,
+      "maximum_absolute_displacement": 14
+    },
+    {
+      "terms": 10000,
+      "maximum_value": 10000,
+      "covered_through": 10000,
+      "maximum_absolute_displacement": 14
+    },
+    {
+      "terms": 100000,
+      "maximum_value": 100004,
+      "covered_through": 99995,
+      "maximum_absolute_displacement": 16
+    },
+    {
+      "terms": 1000000,
+      "maximum_value": 1000001,
+      "covered_through": 999998,
+      "maximum_absolute_displacement": 20
+    },
+    {
+      "terms": 2000000,
+      "maximum_value": 2000002,
+      "covered_through": 1999997,
+      "maximum_absolute_displacement": 20
+    }
+  ],
+  "displacement_records": [
+    {
+      "index": 3,
+      "value": 5,
+      "displacement": 2
+    },
+    {
+      "index": 7,
+      "value": 3,
+      "displacement": 4
+    },
+    {
+      "index": 23,
+      "value": 29,
+      "displacement": 6
+    },
+    {
+      "index": 132,
+      "value": 142,
+      "displacement": 10
+    },
+    {
+      "index": 749,
+      "value": 735,
+      "displacement": 14
+    },
+    {
+      "index": 26581,
+      "value": 26565,
+      "displacement": 16
+    },
+    {
+      "index": 103175,
+      "value": 103155,
+      "displacement": 20
+    }
+  ],
+  "literal_reference_terms": 10000,
+  "checks": {
+    "unique": true,
+    "positive": true,
+    "parity": true,
+    "coprimality": true,
+    "matches_literal_reference": true
+  },
+  "scope": "Finite computation only; no proof of surjectivity or bounded displacement."
+}

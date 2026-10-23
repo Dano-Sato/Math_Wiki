@@ -1,0 +1,334 @@
+{
+  "a1": 9,
+  "checkpoints": [
+    {
+      "n": 1000,
+      "pi_over_n": 0.164,
+      "q_stats": [
+        {
+          "q": 2,
+          "predicted_K_1_over_q_q_minus_1": 0.5,
+          "K_all": 0.3997900339363755,
+          "K_composite": -0.12107070529189048,
+          "density_among_prime_indices": 1.0121951219512195,
+          "expected_among_primes_1_over_q_minus_1": 1
+        },
+        {
+          "q": 3,
+          "predicted_K_1_over_q_q_minus_1": 0.16666666666666666,
+          "K_all": 0.09155496960375005,
+          "K_composite": -0.06603856652284927,
+          "density_among_prime_indices": 0.4878048780487805,
+          "expected_among_primes_1_over_q_minus_1": 0.5
+        },
+        {
+          "q": 5,
+          "predicted_K_1_over_q_q_minus_1": 0.05,
+          "K_all": -0.02319392563295014,
+          "K_composite": -0.07484370872589596,
+          "density_among_prime_indices": 0.24390243902439024,
+          "expected_among_primes_1_over_q_minus_1": 0.25
+        },
+        {
+          "q": 7,
+          "predicted_K_1_over_q_q_minus_1": 0.023809523809523808,
+          "K_all": -0.028774419018321437,
+          "K_composite": -0.06394210409355247,
+          "density_among_prime_indices": 0.17073170731707318,
+          "expected_among_primes_1_over_q_minus_1": 0.16666666666666666
+        },
+        {
+          "q": 11,
+          "predicted_K_1_over_q_q_minus_1": 0.00909090909090909,
+          "K_all": 0.007213421847568211,
+          "K_composite": -0.004002337365021152,
+          "density_among_prime_indices": 0.10365853658536585,
+          "expected_among_primes_1_over_q_minus_1": 0.1
+        },
+        {
+          "q": 13,
+          "predicted_K_1_over_q_q_minus_1": 0.00641025641025641,
+          "K_all": -0.005164639310980762,
+          "K_composite": -0.006773186310035887,
+          "density_among_prime_indices": 0.07926829268292683,
+          "expected_among_primes_1_over_q_minus_1": 0.08333333333333333
+        }
+      ],
+      "decade": {
+        "From": 101,
+        "To": 1000,
+        "Count": 900,
+        "model_residual_mean": 0.053107236954824576,
+        "model_residual_rms": 0.19043481339371157,
+        "model_residual_max_abs": 1.032051282051282,
+        "unmodeled_residual_mean": -0.5104508490030446,
+        "unmodeled_residual_rms": 0.7212629299809712,
+        "unmodeled_residual_max_abs": 2.0705128205128203
+      }
+    },
+    {
+      "n": 10000,
+      "pi_over_n": 0.1225,
+      "q_stats": [
+        {
+          "q": 2,
+          "predicted_K_1_over_q_q_minus_1": 0.5,
+          "K_all": 0.4984171886576414,
+          "K_composite": -0.0018616340492865972,
+          "density_among_prime_indices": 1.0016326530612245,
+          "expected_among_primes_1_over_q_minus_1": 1
+        },
+        {
+          "q": 3,
+          "predicted_K_1_over_q_q_minus_1": 0.16666666666666666,
+          "K_all": 0.1208284093715494,
+          "K_composite": -0.04964357464764682,
+          "density_among_prime_indices": 0.4987755102040816,
+          "expected_among_primes_1_over_q_minus_1": 0.5
+        },
+        {
+          "q": 5,
+          "predicted_K_1_over_q_q_minus_1": 0.05,
+          "K_all": 0.08425332329151274,
+          "K_composite": 0.04002513205966524,
+          "density_among_prime_indices": 0.24979591836734694,
+          "expected_among_primes_1_over_q_minus_1": 0.25
+        },
+        {
+          "q": 7,
+          "predicted_K_1_over_q_q_minus_1": 0.023809523809523808,
+          "K_all": -0.026474950702067325,
+          "K_composite": -0.05571604761793951,
+          "density_among_prime_indices": 0.1657142857142857,
+          "expected_among_primes_1_over_q_minus_1": 0.16666666666666666
+        },
+        {
+          "q": 11,
+          "predicted_K_1_over_q_q_minus_1": 0.00909090909090909,
+          "K_all": 0.037554775885751866,
+          "K_composite": 0.03046310262469249,
+          "density_among_prime_indices": 0.10204081632653061,
+          "expected_among_primes_1_over_q_minus_1": 0.1
+        },
+        {
+          "q": 13,
+          "predicted_K_1_over_q_q_minus_1": 0.00641025641025641,
+          "K_all": -0.008289682971436875,
+          "K_composite": -0.013604248821711021,
+          "density_among_prime_indices": 0.08081632653061224,
+          "expected_among_primes_1_over_q_minus_1": 0.08333333333333333
+        }
+      ],
+      "decade": {
+        "From": 1001,
+        "To": 10000,
+        "Count": 9000,
+        "model_residual_mean": 0.030155492735518943,
+        "model_residual_rms": 0.08212267647871739,
+        "model_residual_max_abs": 0.8786337209302325,
+        "unmodeled_residual_mean": -0.5218052794890818,
+        "unmodeled_residual_rms": 0.6868125794885104,
+        "unmodeled_residual_max_abs": 1.235581395348837
+      }
+    },
+    {
+      "n": 100000,
+      "pi_over_n": 0.09588,
+      "q_stats": [
+        {
+          "q": 2,
+          "predicted_K_1_over_q_q_minus_1": 0.5,
+          "K_all": 0.4711665806687269,
+          "K_composite": -0.0318981173991835,
+          "density_among_prime_indices": 1.0002085940759282,
+          "expected_among_primes_1_over_q_minus_1": 1
+        },
+        {
+          "q": 3,
+          "predicted_K_1_over_q_q_minus_1": 0.16666666666666666,
+          "K_all": 0.16979727577834822,
+          "K_composite": 0.004768374391197953,
+          "density_among_prime_indices": 0.49895702962035876,
+          "expected_among_primes_1_over_q_minus_1": 0.5
+        },
+        {
+          "q": 5,
+          "predicted_K_1_over_q_q_minus_1": 0.05,
+          "K_all": 0.05060542887448039,
+          "K_composite": 0.0019150406829163546,
+          "density_among_prime_indices": 0.2489570296203588,
+          "expected_among_primes_1_over_q_minus_1": 0.25
+        },
+        {
+          "q": 7,
+          "predicted_K_1_over_q_q_minus_1": 0.023809523809523808,
+          "K_all": 0.04875190297883068,
+          "K_composite": 0.028231193544200964,
+          "density_among_prime_indices": 0.16614518147684607,
+          "expected_among_primes_1_over_q_minus_1": 0.16666666666666666
+        },
+        {
+          "q": 11,
+          "predicted_K_1_over_q_q_minus_1": 0.00909090909090909,
+          "K_all": 0.015872271591074003,
+          "K_composite": 0.00913472308225836,
+          "density_among_prime_indices": 0.09856070087609511,
+          "expected_among_primes_1_over_q_minus_1": 0.1
+        },
+        {
+          "q": 13,
+          "predicted_K_1_over_q_q_minus_1": 0.00641025641025641,
+          "K_all": 0.002166190911933152,
+          "K_composite": -0.004543562695335049,
+          "density_among_prime_indices": 0.08322903629536921,
+          "expected_among_primes_1_over_q_minus_1": 0.08333333333333333
+        }
+      ],
+      "decade": {
+        "From": 10001,
+        "To": 100000,
+        "Count": 90000,
+        "model_residual_mean": 0.046370961518912804,
+        "model_residual_rms": 0.06912868092718576,
+        "model_residual_max_abs": 0.2760753383329025,
+        "unmodeled_residual_mean": -0.5040078751101433,
+        "unmodeled_residual_rms": 0.6537013645767294,
+        "unmodeled_residual_max_abs": 1.05323093220339
+      }
+    },
+    {
+      "n": 1000000,
+      "pi_over_n": 0.078494,
+      "q_stats": [
+        {
+          "q": 2,
+          "predicted_K_1_over_q_q_minus_1": 0.5,
+          "K_all": 0.5052939035154232,
+          "K_composite": 0.005744321733259817,
+          "density_among_prime_indices": 1.0000254796544958,
+          "expected_among_primes_1_over_q_minus_1": 1
+        },
+        {
+          "q": 3,
+          "predicted_K_1_over_q_q_minus_1": 0.16666666666666666,
+          "K_all": 0.16173226864489923,
+          "K_composite": -0.005115280484490401,
+          "density_among_prime_indices": 0.49979616276403294,
+          "expected_among_primes_1_over_q_minus_1": 0.5
+        },
+        {
+          "q": 5,
+          "predicted_K_1_over_q_q_minus_1": 0.05,
+          "K_all": 0.04902545224098447,
+          "K_composite": -0.0009566957014236613,
+          "density_among_prime_indices": 0.24991719112288838,
+          "expected_among_primes_1_over_q_minus_1": 0.25
+        },
+        {
+          "q": 7,
+          "predicted_K_1_over_q_q_minus_1": 0.023809523809523808,
+          "K_all": 0.026944761574160113,
+          "K_composite": 0.0036774719158771674,
+          "density_among_prime_indices": 0.16642036333987312,
+          "expected_among_primes_1_over_q_minus_1": 0.16666666666666666
+        },
+        {
+          "q": 11,
+          "predicted_K_1_over_q_q_minus_1": 0.00909090909090909,
+          "K_all": 0.015963019504691423,
+          "K_composite": 0.007343632400707551,
+          "density_among_prime_indices": 0.10010956251433231,
+          "expected_among_primes_1_over_q_minus_1": 0.1
+        },
+        {
+          "q": 13,
+          "predicted_K_1_over_q_q_minus_1": 0.00641025641025641,
+          "K_all": 0.005605529594624237,
+          "K_composite": -0.0008390761543168189,
+          "density_among_prime_indices": 0.08330573037429613,
+          "expected_among_primes_1_over_q_minus_1": 0.08333333333333333
+        }
+      ],
+      "decade": {
+        "From": 100001,
+        "To": 1000000,
+        "Count": 900000,
+        "model_residual_mean": -0.003293615342884028,
+        "model_residual_rms": 0.01117043292615187,
+        "model_residual_max_abs": 0.10225001289590407,
+        "unmodeled_residual_mean": -0.5534641559247773,
+        "unmodeled_residual_rms": 0.7206107930467924,
+        "unmodeled_residual_max_abs": 1.0675984549019368
+      }
+    },
+    {
+      "n": 10000000,
+      "pi_over_n": 0.0664575,
+      "q_stats": [
+        {
+          "q": 2,
+          "predicted_K_1_over_q_q_minus_1": 0.5,
+          "K_all": 0.5022781979161924,
+          "K_composite": 0.0024403269358759454,
+          "density_among_prime_indices": 1.0000030094421246,
+          "expected_among_primes_1_over_q_minus_1": 1
+        },
+        {
+          "q": 3,
+          "predicted_K_1_over_q_q_minus_1": 0.16666666666666666,
+          "K_all": 0.1640642679957884,
+          "K_composite": -0.002634822389594235,
+          "density_among_prime_indices": 0.49985930858067185,
+          "expected_among_primes_1_over_q_minus_1": 0.5
+        },
+        {
+          "q": 5,
+          "predicted_K_1_over_q_q_minus_1": 0.05,
+          "K_all": 0.0446017424130011,
+          "K_composite": -0.005717199234844833,
+          "density_among_prime_indices": 0.24994018733777226,
+          "expected_among_primes_1_over_q_minus_1": 0.25
+        },
+        {
+          "q": 7,
+          "predicted_K_1_over_q_q_minus_1": 0.023809523809523808,
+          "K_all": 0.02435799707254407,
+          "K_composite": 0.0007649335800135157,
+          "density_among_prime_indices": 0.16650189971034118,
+          "expected_among_primes_1_over_q_minus_1": 0.16666666666666666
+        },
+        {
+          "q": 11,
+          "predicted_K_1_over_q_q_minus_1": 0.00909090909090909,
+          "K_all": 0.0100126885356807,
+          "K_composite": 0.001103231746140023,
+          "density_among_prime_indices": 0.09989241244404319,
+          "expected_among_primes_1_over_q_minus_1": 0.1
+        },
+        {
+          "q": 13,
+          "predicted_K_1_over_q_q_minus_1": 0.00641025641025641,
+          "K_all": 0.006788260382106614,
+          "K_composite": 0.00041387111634759715,
+          "density_among_prime_indices": 0.08332543354775608,
+          "expected_among_primes_1_over_q_minus_1": 0.08333333333333333
+        }
+      ],
+      "decade": {
+        "From": 1000001,
+        "To": 10000000,
+        "Count": 9000000,
+        "model_residual_mean": 0.001054517834376575,
+        "model_residual_rms": 0.004668049258721933,
+        "model_residual_max_abs": 0.034462957180286975,
+        "unmodeled_residual_mean": -0.5490899221327643,
+        "unmodeled_residual_rms": 0.7155876285570012,
+        "unmodeled_residual_max_abs": 1.0344725942483053
+      }
+    }
+  ],
+  "implementation": "bias.go (Claude, D007)",
+  "model": "C_d(n) ~ (n-1-pi)/d + pi/phi(d); pred(n) = (n-1-pi) phi(n)/n + pi prod_{q|n}(q-2)/(q-1)",
+  "scope": "Finite computation only. K = (density - 1/q)/(pi(N)/N); residuals are normalized by phi(n) pi(n)/n.",
+  "terms_so_far": 10000000
+}

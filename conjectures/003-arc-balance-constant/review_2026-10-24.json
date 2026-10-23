@@ -1,0 +1,1017 @@
+{
+  "reviewer": "Codex / ChatGPT",
+  "date": "2026-10-24",
+  "universal_rank_certificates": [
+    {
+      "n": 2,
+      "rank_zero_based": [
+        0,
+        1
+      ],
+      "threshold_checks": [
+        {
+          "threshold": 1,
+          "binary_word": [
+            0,
+            1
+          ],
+          "cost": 1
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "rank_zero_based": [
+        0,
+        1,
+        2
+      ],
+      "threshold_checks": [
+        {
+          "threshold": 1,
+          "binary_word": [
+            0,
+            1,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 2,
+          "binary_word": [
+            0,
+            0,
+            1
+          ],
+          "cost": 1
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "rank_zero_based": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "threshold_checks": [
+        {
+          "threshold": 1,
+          "binary_word": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 2,
+          "binary_word": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 3,
+          "binary_word": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "cost": 1
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "rank_zero_based": [
+        0,
+        2,
+        3,
+        1,
+        4
+      ],
+      "threshold_checks": [
+        {
+          "threshold": 1,
+          "binary_word": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 2,
+          "binary_word": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 3,
+          "binary_word": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 4,
+          "binary_word": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "cost": 1
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "rank_zero_based": [
+        0,
+        3,
+        5,
+        1,
+        4,
+        2,
+        6
+      ],
+      "threshold_checks": [
+        {
+          "threshold": 1,
+          "binary_word": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 2,
+          "binary_word": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 3,
+          "binary_word": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 4,
+          "binary_word": [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 5,
+          "binary_word": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "cost": 1
+        },
+        {
+          "threshold": 6,
+          "binary_word": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "cost": 1
+        }
+      ]
+    }
+  ],
+  "sharp_example": {
+    "2": {
+      "status": "infeasible",
+      "nodes": 20
+    },
+    "3": {
+      "status": "feasible",
+      "nodes": 12,
+      "witness": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "cost": 3
+    }
+  },
+  "universal_convex_nine": {
+    "n": 9,
+    "rank_zero_based": [
+      0,
+      3,
+      6,
+      2,
+      7,
+      4,
+      5,
+      1,
+      8
+    ],
+    "ramp_checks": [
+      {
+        "tail_length": 1,
+        "ramp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "cost": 1,
+        "width": 1
+      },
+      {
+        "tail_length": 2,
+        "ramp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2
+        ],
+        "cost": 2,
+        "width": 2
+      },
+      {
+        "tail_length": 3,
+        "ramp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          3
+        ],
+        "cost": 3,
+        "width": 3
+      },
+      {
+        "tail_length": 4,
+        "ramp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "cost": 4,
+        "width": 4
+      },
+      {
+        "tail_length": 5,
+        "ramp": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cost": 5,
+        "width": 5
+      },
+      {
+        "tail_length": 6,
+        "ramp": [
+          0,
+          0,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "cost": 6,
+        "width": 6
+      },
+      {
+        "tail_length": 7,
+        "ramp": [
+          0,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "cost": 7,
+        "width": 7
+      },
+      {
+        "tail_length": 8,
+        "ramp": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "cost": 8,
+        "width": 8
+      }
+    ]
+  },
+  "no_universal_convex_eight": {
+    "n": 8,
+    "circular_rank_orders_checked": 2520,
+    "universal_order_exists": false,
+    "scope": "No single order works for every convex input; this does NOT refute adaptive arrangements in 003-1."
+  },
+  "literal_comparisons": [
+    {
+      "values": [
+        0,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        4,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        3,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        2,
+        2,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        2,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        1,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        2,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        1,
+        2,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        2,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        2,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        2,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        3,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        1,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 5
+    },
+    {
+      "values": [
+        0,
+        1,
+        1,
+        2,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        1,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        3,
+        4,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        1,
+        3,
+        4,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        2,
+        3,
+        4,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        1,
+        1,
+        4,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        1,
+        3,
+        4,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        2,
+        2,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        3,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        2,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    },
+    {
+      "values": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "literal_optimum": 4
+    }
+  ],
+  "grid_checks": [
+    {
+      "n": 10,
+      "grid_denominator": 4,
+      "counts": {
+        "feasible": 495,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "maximum_nodes": 214,
+      "exceptions": []
+    },
+    {
+      "n": 12,
+      "grid_denominator": 4,
+      "counts": {
+        "feasible": 1001,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "maximum_nodes": 806,
+      "exceptions": []
+    },
+    {
+      "n": 14,
+      "grid_denominator": 4,
+      "counts": {
+        "feasible": 1820,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "maximum_nodes": 2989,
+      "exceptions": []
+    }
+  ],
+  "convex_checks": [
+    {
+      "n": 6,
+      "counts": {
+        "feasible": 20,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "exceptions": []
+    },
+    {
+      "n": 7,
+      "counts": {
+        "feasible": 20,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "exceptions": []
+    },
+    {
+      "n": 8,
+      "counts": {
+        "feasible": 20,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "exceptions": []
+    },
+    {
+      "n": 9,
+      "counts": {
+        "feasible": 20,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "exceptions": []
+    },
+    {
+      "n": 10,
+      "counts": {
+        "feasible": 20,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "exceptions": []
+    },
+    {
+      "n": 11,
+      "counts": {
+        "feasible": 20,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "exceptions": []
+    },
+    {
+      "n": 12,
+      "counts": {
+        "feasible": 20,
+        "infeasible": 0,
+        "cutoff": 0
+      },
+      "exceptions": []
+    }
+  ],
+  "original_witnesses_rechecked": 54,
+  "scope": "Finite integer tests and exact rank certificates. Grid checks do not prove the bound for all reals or all n. Cutoffs are unresolved."
+}

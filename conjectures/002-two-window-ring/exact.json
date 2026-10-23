@@ -1,0 +1,739 @@
+{
+  "implementation": "exact.go (Claude, independent of verify.py)",
+  "rows": [
+    {
+      "n": 3,
+      "status": "exact",
+      "optimum": 2,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        2,
+        3
+      ],
+      "widths": [
+        2,
+        0
+      ],
+      "trials": [
+        {
+          "bound": 1,
+          "found": false,
+          "timed_out": false,
+          "nodes": 2,
+          "seconds": 0
+        },
+        {
+          "bound": 2,
+          "found": true,
+          "timed_out": false,
+          "nodes": 2,
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "status": "exact",
+      "optimum": 3,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        3,
+        2,
+        4
+      ],
+      "widths": [
+        2,
+        3
+      ],
+      "trials": [
+        {
+          "bound": 2,
+          "found": false,
+          "timed_out": false,
+          "nodes": 5,
+          "seconds": 0
+        },
+        {
+          "bound": 3,
+          "found": true,
+          "timed_out": false,
+          "nodes": 4,
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "status": "exact",
+      "optimum": 2,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        4,
+        3,
+        2,
+        5
+      ],
+      "widths": [
+        2,
+        2
+      ],
+      "trials": [
+        {
+          "bound": 2,
+          "found": true,
+          "timed_out": false,
+          "nodes": 5,
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "status": "exact",
+      "optimum": 3,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        5,
+        3,
+        4,
+        2,
+        6
+      ],
+      "widths": [
+        2,
+        3
+      ],
+      "trials": [
+        {
+          "bound": 3,
+          "found": true,
+          "timed_out": false,
+          "nodes": 13,
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "status": "exact",
+      "optimum": 4,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        6,
+        3,
+        4,
+        5,
+        2,
+        7
+      ],
+      "widths": [
+        2,
+        4
+      ],
+      "trials": [
+        {
+          "bound": 3,
+          "found": false,
+          "timed_out": false,
+          "nodes": 33,
+          "seconds": 0
+        },
+        {
+          "bound": 4,
+          "found": true,
+          "timed_out": false,
+          "nodes": 55,
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "status": "exact",
+      "optimum": 4,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        6,
+        5,
+        2,
+        7,
+        4,
+        3,
+        8
+      ],
+      "widths": [
+        4,
+        3
+      ],
+      "trials": [
+        {
+          "bound": 4,
+          "found": true,
+          "timed_out": false,
+          "nodes": 58,
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "status": "exact",
+      "optimum": 5,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        7,
+        4,
+        6,
+        2,
+        8,
+        5,
+        3,
+        9
+      ],
+      "widths": [
+        5,
+        5
+      ],
+      "trials": [
+        {
+          "bound": 4,
+          "found": false,
+          "timed_out": false,
+          "nodes": 199,
+          "seconds": 0
+        },
+        {
+          "bound": 5,
+          "found": true,
+          "timed_out": false,
+          "nodes": 274,
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "status": "exact",
+      "optimum": 5,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        7,
+        6,
+        4,
+        9,
+        2,
+        8,
+        5,
+        3,
+        10
+      ],
+      "widths": [
+        5,
+        5
+      ],
+      "trials": [
+        {
+          "bound": 5,
+          "found": true,
+          "timed_out": false,
+          "nodes": 330,
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "status": "exact",
+      "optimum": 6,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        8,
+        6,
+        4,
+        10,
+        2,
+        9,
+        5,
+        7,
+        3,
+        11
+      ],
+      "widths": [
+        5,
+        6
+      ],
+      "trials": [
+        {
+          "bound": 5,
+          "found": false,
+          "timed_out": false,
+          "nodes": 1490,
+          "seconds": 0
+        },
+        {
+          "bound": 6,
+          "found": true,
+          "timed_out": false,
+          "nodes": 2096,
+          "seconds": 0.0005084
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "status": "exact",
+      "optimum": 7,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        8,
+        7,
+        5,
+        9,
+        3,
+        11,
+        2,
+        10,
+        6,
+        4,
+        12
+      ],
+      "widths": [
+        7,
+        7
+      ],
+      "trials": [
+        {
+          "bound": 6,
+          "found": false,
+          "timed_out": false,
+          "nodes": 14401,
+          "seconds": 0.0005081
+        },
+        {
+          "bound": 7,
+          "found": true,
+          "timed_out": false,
+          "nodes": 9225,
+          "seconds": 0.0005472
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "status": "exact",
+      "optimum": 6,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        10,
+        7,
+        4,
+        13,
+        2,
+        9,
+        8,
+        3,
+        11,
+        6,
+        5,
+        12
+      ],
+      "widths": [
+        6,
+        6
+      ],
+      "trials": [
+        {
+          "bound": 6,
+          "found": true,
+          "timed_out": false,
+          "nodes": 6332,
+          "seconds": 0.0005277
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "status": "exact",
+      "optimum": 8,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        10,
+        7,
+        6,
+        12,
+        5,
+        9,
+        4,
+        13,
+        2,
+        11,
+        8,
+        3,
+        14
+      ],
+      "widths": [
+        8,
+        8
+      ],
+      "trials": [
+        {
+          "bound": 7,
+          "found": false,
+          "timed_out": false,
+          "nodes": 166191,
+          "seconds": 0.0055727
+        },
+        {
+          "bound": 8,
+          "found": true,
+          "timed_out": false,
+          "nodes": 154734,
+          "seconds": 0.0056229
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "status": "exact",
+      "optimum": 8,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        10,
+        9,
+        4,
+        15,
+        2,
+        11,
+        8,
+        6,
+        13,
+        3,
+        12,
+        7,
+        5,
+        14
+      ],
+      "widths": [
+        8,
+        8
+      ],
+      "trials": [
+        {
+          "bound": 7,
+          "found": false,
+          "timed_out": false,
+          "nodes": 175423,
+          "seconds": 0.0046677
+        },
+        {
+          "bound": 8,
+          "found": true,
+          "timed_out": false,
+          "nodes": 171166,
+          "seconds": 0.0055934
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "status": "exact",
+      "optimum": 8,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        12,
+        9,
+        4,
+        10,
+        11,
+        2,
+        15,
+        6,
+        7,
+        14,
+        3,
+        13,
+        8,
+        5,
+        16
+      ],
+      "widths": [
+        8,
+        8
+      ],
+      "trials": [
+        {
+          "bound": 8,
+          "found": true,
+          "timed_out": false,
+          "nodes": 597886,
+          "seconds": 0.0166385
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "status": "exact",
+      "optimum": 8,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        14,
+        8,
+        7,
+        13,
+        3,
+        15,
+        5,
+        11,
+        10,
+        4,
+        17,
+        2,
+        12,
+        9,
+        6,
+        16
+      ],
+      "widths": [
+        8,
+        8
+      ],
+      "trials": [
+        {
+          "bound": 8,
+          "found": true,
+          "timed_out": false,
+          "nodes": 1292569,
+          "seconds": 0.0325708
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "status": "exact",
+      "optimum": 9,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        13,
+        10,
+        4,
+        17,
+        3,
+        11,
+        12,
+        6,
+        15,
+        8,
+        7,
+        16,
+        2,
+        14,
+        9,
+        5,
+        18
+      ],
+      "widths": [
+        9,
+        9
+      ],
+      "trials": [
+        {
+          "bound": 9,
+          "found": true,
+          "timed_out": false,
+          "nodes": 6458811,
+          "seconds": 0.1722032
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "status": "exact",
+      "optimum": 10,
+      "excess_over_floor_half": 1,
+      "witness": [
+        1,
+        13,
+        11,
+        4,
+        18,
+        3,
+        14,
+        10,
+        6,
+        17,
+        2,
+        16,
+        7,
+        12,
+        8,
+        15,
+        9,
+        5,
+        19
+      ],
+      "widths": [
+        10,
+        10
+      ],
+      "trials": [
+        {
+          "bound": 9,
+          "found": false,
+          "timed_out": false,
+          "nodes": 34110795,
+          "seconds": 0.845902
+        },
+        {
+          "bound": 10,
+          "found": true,
+          "timed_out": false,
+          "nodes": 49166548,
+          "seconds": 1.3515876
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "status": "exact",
+      "optimum": 10,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        15,
+        10,
+        6,
+        17,
+        9,
+        7,
+        18,
+        2,
+        16,
+        8,
+        12,
+        13,
+        4,
+        19,
+        3,
+        14,
+        11,
+        5,
+        20
+      ],
+      "widths": [
+        10,
+        10
+      ],
+      "trials": [
+        {
+          "bound": 10,
+          "found": true,
+          "timed_out": false,
+          "nodes": 135538483,
+          "seconds": 3.4962252
+        }
+      ]
+    },
+    {
+      "n": 21,
+      "status": "exact",
+      "optimum": 10,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        16,
+        11,
+        6,
+        13,
+        14,
+        3,
+        21,
+        5,
+        12,
+        15,
+        4,
+        18,
+        9,
+        8,
+        19,
+        2,
+        17,
+        10,
+        7,
+        20
+      ],
+      "widths": [
+        10,
+        10
+      ],
+      "trials": [
+        {
+          "bound": 10,
+          "found": true,
+          "timed_out": false,
+          "nodes": 188226539,
+          "seconds": 4.5187992999999995
+        }
+      ]
+    },
+    {
+      "n": 22,
+      "status": "exact",
+      "optimum": 11,
+      "excess_over_floor_half": 0,
+      "witness": [
+        1,
+        16,
+        12,
+        5,
+        21,
+        3,
+        14,
+        13,
+        7,
+        20,
+        2,
+        18,
+        10,
+        9,
+        19,
+        4,
+        17,
+        8,
+        15,
+        11,
+        6,
+        22
+      ],
+      "widths": [
+        11,
+        11
+      ],
+      "trials": [
+        {
+          "bound": 11,
+          "found": true,
+          "timed_out": false,
+          "nodes": 2013240039,
+          "seconds": 49.9579885
+        }
+      ]
+    }
+  ],
+  "scope": "Exact minima for the listed n only; no general proof."
+}

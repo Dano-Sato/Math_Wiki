@@ -1,0 +1,72 @@
+{
+  "implementation": "reverse_distance.py (Claude)",
+  "rows": [
+    {
+      "n": 2,
+      "n_is_prime": true,
+      "distance_of_reverse": 1,
+      "seconds": 0.0
+    },
+    {
+      "n": 3,
+      "n_is_prime": true,
+      "distance_of_reverse": 1,
+      "seconds": 0.0
+    },
+    {
+      "n": 4,
+      "n_is_prime": false,
+      "distance_of_reverse": 4,
+      "seconds": 0.0
+    },
+    {
+      "n": 5,
+      "n_is_prime": true,
+      "distance_of_reverse": 1,
+      "seconds": 0.0
+    },
+    {
+      "n": 6,
+      "n_is_prime": false,
+      "distance_of_reverse": 6,
+      "seconds": 0.0
+    },
+    {
+      "n": 7,
+      "n_is_prime": true,
+      "distance_of_reverse": 1,
+      "seconds": 0.0
+    },
+    {
+      "n": 8,
+      "n_is_prime": false,
+      "distance_of_reverse": 8,
+      "seconds": 0.01
+    },
+    {
+      "n": 9,
+      "n_is_prime": false,
+      "distance_of_reverse": 4,
+      "seconds": 0.0
+    },
+    {
+      "n": 10,
+      "n_is_prime": false,
+      "distance_of_reverse": 10,
+      "seconds": 0.5
+    },
+    {
+      "n": 11,
+      "n_is_prime": true,
+      "distance_of_reverse": 1,
+      "seconds": 0.0
+    },
+    {
+      "n": 12,
+      "n_is_prime": false,
+      "distance_of_reverse": 12,
+      "seconds": 52.78
+    }
+  ],
+  "scope": "Exact distances for the listed n."
+}
