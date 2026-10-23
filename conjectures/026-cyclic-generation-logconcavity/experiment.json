@@ -1,0 +1,4497 @@
+{
+  "scope": "all cyclic groups C_n for 2 <= n <= 300",
+  "method": "exact integer coefficients from sum_{d|n} mu(d) * binomial(n/d,k), followed by exact adjacent log-concavity differences",
+  "checked_inequalities": 44551,
+  "all_strictly_positive": true,
+  "globally_smallest_slack_in_scope": 7,
+  "location_of_smallest_slack": {
+    "n": 3,
+    "k": 2
+  },
+  "per_order_summary": [
+    {
+      "n": 2,
+      "coefficients_first_three": [
+        1,
+        1
+      ],
+      "coefficients_last_three": [
+        1,
+        1
+      ],
+      "minimum_slack": null,
+      "minimum_slack_k": null
+    },
+    {
+      "n": 3,
+      "coefficients_first_three": [
+        2,
+        3,
+        1
+      ],
+      "coefficients_last_three": [
+        2,
+        3,
+        1
+      ],
+      "minimum_slack": 7,
+      "minimum_slack_k": 2
+    },
+    {
+      "n": 4,
+      "coefficients_first_three": [
+        2,
+        5,
+        4
+      ],
+      "coefficients_last_three": [
+        5,
+        4,
+        1
+      ],
+      "minimum_slack": 11,
+      "minimum_slack_k": 3
+    },
+    {
+      "n": 5,
+      "coefficients_first_three": [
+        4,
+        10,
+        10
+      ],
+      "coefficients_last_three": [
+        10,
+        5,
+        1
+      ],
+      "minimum_slack": 15,
+      "minimum_slack_k": 4
+    },
+    {
+      "n": 6,
+      "coefficients_first_three": [
+        2,
+        11,
+        19
+      ],
+      "coefficients_last_three": [
+        15,
+        6,
+        1
+      ],
+      "minimum_slack": 21,
+      "minimum_slack_k": 5
+    },
+    {
+      "n": 7,
+      "coefficients_first_three": [
+        6,
+        21,
+        35
+      ],
+      "coefficients_last_three": [
+        21,
+        7,
+        1
+      ],
+      "minimum_slack": 28,
+      "minimum_slack_k": 6
+    },
+    {
+      "n": 8,
+      "coefficients_first_three": [
+        4,
+        22,
+        52
+      ],
+      "coefficients_last_three": [
+        28,
+        8,
+        1
+      ],
+      "minimum_slack": 36,
+      "minimum_slack_k": 7
+    },
+    {
+      "n": 9,
+      "coefficients_first_three": [
+        6,
+        33,
+        83
+      ],
+      "coefficients_last_three": [
+        36,
+        9,
+        1
+      ],
+      "minimum_slack": 45,
+      "minimum_slack_k": 8
+    },
+    {
+      "n": 10,
+      "coefficients_first_three": [
+        4,
+        34,
+        110
+      ],
+      "coefficients_last_three": [
+        45,
+        10,
+        1
+      ],
+      "minimum_slack": 55,
+      "minimum_slack_k": 9
+    },
+    {
+      "n": 11,
+      "coefficients_first_three": [
+        10,
+        55,
+        165
+      ],
+      "coefficients_last_three": [
+        55,
+        11,
+        1
+      ],
+      "minimum_slack": 66,
+      "minimum_slack_k": 10
+    },
+    {
+      "n": 12,
+      "coefficients_first_three": [
+        4,
+        46,
+        196
+      ],
+      "coefficients_last_three": [
+        66,
+        12,
+        1
+      ],
+      "minimum_slack": 78,
+      "minimum_slack_k": 11
+    },
+    {
+      "n": 13,
+      "coefficients_first_three": [
+        12,
+        78,
+        286
+      ],
+      "coefficients_last_three": [
+        78,
+        13,
+        1
+      ],
+      "minimum_slack": 91,
+      "minimum_slack_k": 12
+    },
+    {
+      "n": 14,
+      "coefficients_first_three": [
+        6,
+        69,
+        329
+      ],
+      "coefficients_last_three": [
+        91,
+        14,
+        1
+      ],
+      "minimum_slack": 105,
+      "minimum_slack_k": 13
+    },
+    {
+      "n": 15,
+      "coefficients_first_three": [
+        8,
+        92,
+        444
+      ],
+      "coefficients_last_three": [
+        105,
+        15,
+        1
+      ],
+      "minimum_slack": 120,
+      "minimum_slack_k": 14
+    },
+    {
+      "n": 16,
+      "coefficients_first_three": [
+        8,
+        92,
+        504
+      ],
+      "coefficients_last_three": [
+        120,
+        16,
+        1
+      ],
+      "minimum_slack": 136,
+      "minimum_slack_k": 15
+    },
+    {
+      "n": 17,
+      "coefficients_first_three": [
+        16,
+        136,
+        680
+      ],
+      "coefficients_last_three": [
+        136,
+        17,
+        1
+      ],
+      "minimum_slack": 153,
+      "minimum_slack_k": 16
+    },
+    {
+      "n": 18,
+      "coefficients_first_three": [
+        6,
+        105,
+        713
+      ],
+      "coefficients_last_three": [
+        153,
+        18,
+        1
+      ],
+      "minimum_slack": 171,
+      "minimum_slack_k": 17
+    },
+    {
+      "n": 19,
+      "coefficients_first_three": [
+        18,
+        171,
+        969
+      ],
+      "coefficients_last_three": [
+        171,
+        19,
+        1
+      ],
+      "minimum_slack": 190,
+      "minimum_slack_k": 18
+    },
+    {
+      "n": 20,
+      "coefficients_first_three": [
+        8,
+        140,
+        1016
+      ],
+      "coefficients_last_three": [
+        190,
+        20,
+        1
+      ],
+      "minimum_slack": 210,
+      "minimum_slack_k": 19
+    },
+    {
+      "n": 21,
+      "coefficients_first_three": [
+        12,
+        186,
+        1294
+      ],
+      "coefficients_last_three": [
+        210,
+        21,
+        1
+      ],
+      "minimum_slack": 231,
+      "minimum_slack_k": 20
+    },
+    {
+      "n": 22,
+      "coefficients_first_three": [
+        10,
+        175,
+        1375
+      ],
+      "coefficients_last_three": [
+        231,
+        22,
+        1
+      ],
+      "minimum_slack": 253,
+      "minimum_slack_k": 21
+    },
+    {
+      "n": 23,
+      "coefficients_first_three": [
+        22,
+        253,
+        1771
+      ],
+      "coefficients_last_three": [
+        253,
+        23,
+        1
+      ],
+      "minimum_slack": 276,
+      "minimum_slack_k": 22
+    },
+    {
+      "n": 24,
+      "coefficients_first_three": [
+        8,
+        188,
+        1752
+      ],
+      "coefficients_last_three": [
+        276,
+        24,
+        1
+      ],
+      "minimum_slack": 300,
+      "minimum_slack_k": 23
+    },
+    {
+      "n": 25,
+      "coefficients_first_three": [
+        20,
+        290,
+        2290
+      ],
+      "coefficients_last_three": [
+        300,
+        25,
+        1
+      ],
+      "minimum_slack": 325,
+      "minimum_slack_k": 24
+    },
+    {
+      "n": 26,
+      "coefficients_first_three": [
+        12,
+        246,
+        2314
+      ],
+      "coefficients_last_three": [
+        325,
+        26,
+        1
+      ],
+      "minimum_slack": 351,
+      "minimum_slack_k": 25
+    },
+    {
+      "n": 27,
+      "coefficients_first_three": [
+        18,
+        315,
+        2841
+      ],
+      "coefficients_last_three": [
+        351,
+        27,
+        1
+      ],
+      "minimum_slack": 378,
+      "minimum_slack_k": 26
+    },
+    {
+      "n": 28,
+      "coefficients_first_three": [
+        12,
+        282,
+        2908
+      ],
+      "coefficients_last_three": [
+        378,
+        28,
+        1
+      ],
+      "minimum_slack": 406,
+      "minimum_slack_k": 27
+    },
+    {
+      "n": 29,
+      "coefficients_first_three": [
+        28,
+        406,
+        3654
+      ],
+      "coefficients_last_three": [
+        406,
+        29,
+        1
+      ],
+      "minimum_slack": 435,
+      "minimum_slack_k": 28
+    },
+    {
+      "n": 30,
+      "coefficients_first_three": [
+        8,
+        284,
+        3476
+      ],
+      "coefficients_last_three": [
+        435,
+        30,
+        1
+      ],
+      "minimum_slack": 465,
+      "minimum_slack_k": 29
+    },
+    {
+      "n": 31,
+      "coefficients_first_three": [
+        30,
+        465,
+        4495
+      ],
+      "coefficients_last_three": [
+        465,
+        31,
+        1
+      ],
+      "minimum_slack": 496,
+      "minimum_slack_k": 30
+    },
+    {
+      "n": 32,
+      "coefficients_first_three": [
+        16,
+        376,
+        4400
+      ],
+      "coefficients_last_three": [
+        496,
+        32,
+        1
+      ],
+      "minimum_slack": 528,
+      "minimum_slack_k": 31
+    },
+    {
+      "n": 33,
+      "coefficients_first_three": [
+        20,
+        470,
+        5290
+      ],
+      "coefficients_last_three": [
+        528,
+        33,
+        1
+      ],
+      "minimum_slack": 561,
+      "minimum_slack_k": 32
+    },
+    {
+      "n": 34,
+      "coefficients_first_three": [
+        16,
+        424,
+        5304
+      ],
+      "coefficients_last_three": [
+        561,
+        34,
+        1
+      ],
+      "minimum_slack": 595,
+      "minimum_slack_k": 33
+    },
+    {
+      "n": 35,
+      "coefficients_first_three": [
+        24,
+        564,
+        6500
+      ],
+      "coefficients_last_three": [
+        595,
+        35,
+        1
+      ],
+      "minimum_slack": 630,
+      "minimum_slack_k": 34
+    },
+    {
+      "n": 36,
+      "coefficients_first_three": [
+        12,
+        426,
+        6124
+      ],
+      "coefficients_last_three": [
+        630,
+        36,
+        1
+      ],
+      "minimum_slack": 666,
+      "minimum_slack_k": 35
+    },
+    {
+      "n": 37,
+      "coefficients_first_three": [
+        36,
+        666,
+        7770
+      ],
+      "coefficients_last_three": [
+        666,
+        37,
+        1
+      ],
+      "minimum_slack": 703,
+      "minimum_slack_k": 36
+    },
+    {
+      "n": 38,
+      "coefficients_first_three": [
+        18,
+        531,
+        7467
+      ],
+      "coefficients_last_three": [
+        703,
+        38,
+        1
+      ],
+      "minimum_slack": 741,
+      "minimum_slack_k": 37
+    },
+    {
+      "n": 39,
+      "coefficients_first_three": [
+        24,
+        660,
+        8852
+      ],
+      "coefficients_last_three": [
+        741,
+        39,
+        1
+      ],
+      "minimum_slack": 780,
+      "minimum_slack_k": 38
+    },
+    {
+      "n": 40,
+      "coefficients_first_three": [
+        16,
+        568,
+        8688
+      ],
+      "coefficients_last_three": [
+        780,
+        40,
+        1
+      ],
+      "minimum_slack": 820,
+      "minimum_slack_k": 39
+    },
+    {
+      "n": 41,
+      "coefficients_first_three": [
+        40,
+        820,
+        10660
+      ],
+      "coefficients_last_three": [
+        820,
+        41,
+        1
+      ],
+      "minimum_slack": 861,
+      "minimum_slack_k": 40
+    },
+    {
+      "n": 42,
+      "coefficients_first_three": [
+        12,
+        570,
+        9802
+      ],
+      "coefficients_last_three": [
+        861,
+        42,
+        1
+      ],
+      "minimum_slack": 903,
+      "minimum_slack_k": 41
+    },
+    {
+      "n": 43,
+      "coefficients_first_three": [
+        42,
+        903,
+        12341
+      ],
+      "coefficients_last_three": [
+        903,
+        43,
+        1
+      ],
+      "minimum_slack": 946,
+      "minimum_slack_k": 42
+    },
+    {
+      "n": 44,
+      "coefficients_first_three": [
+        20,
+        710,
+        11700
+      ],
+      "coefficients_last_three": [
+        946,
+        44,
+        1
+      ],
+      "minimum_slack": 990,
+      "minimum_slack_k": 43
+    },
+    {
+      "n": 45,
+      "coefficients_first_three": [
+        24,
+        852,
+        13652
+      ],
+      "coefficients_last_three": [
+        990,
+        45,
+        1
+      ],
+      "minimum_slack": 1035,
+      "minimum_slack_k": 44
+    },
+    {
+      "n": 46,
+      "coefficients_first_three": [
+        22,
+        781,
+        13409
+      ],
+      "coefficients_last_three": [
+        1035,
+        46,
+        1
+      ],
+      "minimum_slack": 1081,
+      "minimum_slack_k": 45
+    },
+    {
+      "n": 47,
+      "coefficients_first_three": [
+        46,
+        1081,
+        16215
+      ],
+      "coefficients_last_three": [
+        1081,
+        47,
+        1
+      ],
+      "minimum_slack": 1128,
+      "minimum_slack_k": 46
+    },
+    {
+      "n": 48,
+      "coefficients_first_three": [
+        16,
+        760,
+        14768
+      ],
+      "coefficients_last_three": [
+        1128,
+        48,
+        1
+      ],
+      "minimum_slack": 1176,
+      "minimum_slack_k": 47
+    },
+    {
+      "n": 49,
+      "coefficients_first_three": [
+        42,
+        1155,
+        18389
+      ],
+      "coefficients_last_three": [
+        1176,
+        49,
+        1
+      ],
+      "minimum_slack": 1225,
+      "minimum_slack_k": 48
+    },
+    {
+      "n": 50,
+      "coefficients_first_three": [
+        20,
+        890,
+        17190
+      ],
+      "coefficients_last_three": [
+        1225,
+        50,
+        1
+      ],
+      "minimum_slack": 1275,
+      "minimum_slack_k": 49
+    },
+    {
+      "n": 51,
+      "coefficients_first_three": [
+        32,
+        1136,
+        20144
+      ],
+      "coefficients_last_three": [
+        1275,
+        51,
+        1
+      ],
+      "minimum_slack": 1326,
+      "minimum_slack_k": 50
+    },
+    {
+      "n": 52,
+      "coefficients_first_three": [
+        24,
+        996,
+        19496
+      ],
+      "coefficients_last_three": [
+        1326,
+        52,
+        1
+      ],
+      "minimum_slack": 1378,
+      "minimum_slack_k": 51
+    },
+    {
+      "n": 53,
+      "coefficients_first_three": [
+        52,
+        1378,
+        23426
+      ],
+      "coefficients_last_three": [
+        1378,
+        53,
+        1
+      ],
+      "minimum_slack": 1431,
+      "minimum_slack_k": 52
+    },
+    {
+      "n": 54,
+      "coefficients_first_three": [
+        18,
+        963,
+        21147
+      ],
+      "coefficients_last_three": [
+        1431,
+        54,
+        1
+      ],
+      "minimum_slack": 1485,
+      "minimum_slack_k": 53
+    },
+    {
+      "n": 55,
+      "coefficients_first_three": [
+        40,
+        1420,
+        26060
+      ],
+      "coefficients_last_three": [
+        1485,
+        55,
+        1
+      ],
+      "minimum_slack": 1540,
+      "minimum_slack_k": 54
+    },
+    {
+      "n": 56,
+      "coefficients_first_three": [
+        24,
+        1140,
+        24392
+      ],
+      "coefficients_last_three": [
+        1540,
+        56,
+        1
+      ],
+      "minimum_slack": 1596,
+      "minimum_slack_k": 55
+    },
+    {
+      "n": 57,
+      "coefficients_first_three": [
+        36,
+        1422,
+        28290
+      ],
+      "coefficients_last_three": [
+        1596,
+        57,
+        1
+      ],
+      "minimum_slack": 1653,
+      "minimum_slack_k": 56
+    },
+    {
+      "n": 58,
+      "coefficients_first_three": [
+        28,
+        1246,
+        27202
+      ],
+      "coefficients_last_three": [
+        1653,
+        58,
+        1
+      ],
+      "minimum_slack": 1711,
+      "minimum_slack_k": 57
+    },
+    {
+      "n": 59,
+      "coefficients_first_three": [
+        58,
+        1711,
+        32509
+      ],
+      "coefficients_last_three": [
+        1711,
+        59,
+        1
+      ],
+      "minimum_slack": 1770,
+      "minimum_slack_k": 58
+    },
+    {
+      "n": 60,
+      "coefficients_first_three": [
+        16,
+        1144,
+        28944
+      ],
+      "coefficients_last_three": [
+        1770,
+        60,
+        1
+      ],
+      "minimum_slack": 1830,
+      "minimum_slack_k": 59
+    },
+    {
+      "n": 61,
+      "coefficients_first_three": [
+        60,
+        1830,
+        35990
+      ],
+      "coefficients_last_three": [
+        1830,
+        61,
+        1
+      ],
+      "minimum_slack": 1891,
+      "minimum_slack_k": 60
+    },
+    {
+      "n": 62,
+      "coefficients_first_three": [
+        30,
+        1425,
+        33325
+      ],
+      "coefficients_last_three": [
+        1891,
+        62,
+        1
+      ],
+      "minimum_slack": 1953,
+      "minimum_slack_k": 61
+    },
+    {
+      "n": 63,
+      "coefficients_first_three": [
+        36,
+        1710,
+        38298
+      ],
+      "coefficients_last_three": [
+        1953,
+        63,
+        1
+      ],
+      "minimum_slack": 2016,
+      "minimum_slack_k": 62
+    },
+    {
+      "n": 64,
+      "coefficients_first_three": [
+        32,
+        1520,
+        36704
+      ],
+      "coefficients_last_three": [
+        2016,
+        64,
+        1
+      ],
+      "minimum_slack": 2080,
+      "minimum_slack_k": 63
+    },
+    {
+      "n": 65,
+      "coefficients_first_three": [
+        48,
+        1992,
+        43384
+      ],
+      "coefficients_last_three": [
+        2080,
+        65,
+        1
+      ],
+      "minimum_slack": 2145,
+      "minimum_slack_k": 64
+    },
+    {
+      "n": 66,
+      "coefficients_first_three": [
+        20,
+        1430,
+        38910
+      ],
+      "coefficients_last_three": [
+        2145,
+        66,
+        1
+      ],
+      "minimum_slack": 2211,
+      "minimum_slack_k": 65
+    },
+    {
+      "n": 67,
+      "coefficients_first_three": [
+        66,
+        2211,
+        47905
+      ],
+      "coefficients_last_three": [
+        2211,
+        67,
+        1
+      ],
+      "minimum_slack": 2278,
+      "minimum_slack_k": 66
+    },
+    {
+      "n": 68,
+      "coefficients_first_three": [
+        32,
+        1712,
+        44128
+      ],
+      "coefficients_last_three": [
+        2278,
+        68,
+        1
+      ],
+      "minimum_slack": 2346,
+      "minimum_slack_k": 67
+    },
+    {
+      "n": 69,
+      "coefficients_first_three": [
+        44,
+        2090,
+        50622
+      ],
+      "coefficients_last_three": [
+        2346,
+        69,
+        1
+      ],
+      "minimum_slack": 2415,
+      "minimum_slack_k": 68
+    },
+    {
+      "n": 70,
+      "coefficients_first_three": [
+        24,
+        1716,
+        47756
+      ],
+      "coefficients_last_three": [
+        2415,
+        70,
+        1
+      ],
+      "minimum_slack": 2485,
+      "minimum_slack_k": 69
+    },
+    {
+      "n": 71,
+      "coefficients_first_three": [
+        70,
+        2485,
+        57155
+      ],
+      "coefficients_last_three": [
+        2485,
+        71,
+        1
+      ],
+      "minimum_slack": 2556,
+      "minimum_slack_k": 70
+    },
+    {
+      "n": 72,
+      "coefficients_first_three": [
+        24,
+        1716,
+        50696
+      ],
+      "coefficients_last_three": [
+        2556,
+        72,
+        1
+      ],
+      "minimum_slack": 2628,
+      "minimum_slack_k": 71
+    },
+    {
+      "n": 73,
+      "coefficients_first_three": [
+        72,
+        2628,
+        62196
+      ],
+      "coefficients_last_three": [
+        2628,
+        73,
+        1
+      ],
+      "minimum_slack": 2701,
+      "minimum_slack_k": 72
+    },
+    {
+      "n": 74,
+      "coefficients_first_three": [
+        36,
+        2034,
+        57054
+      ],
+      "coefficients_last_three": [
+        2701,
+        74,
+        1
+      ],
+      "minimum_slack": 2775,
+      "minimum_slack_k": 73
+    },
+    {
+      "n": 75,
+      "coefficients_first_three": [
+        40,
+        2380,
+        64780
+      ],
+      "coefficients_last_three": [
+        2775,
+        75,
+        1
+      ],
+      "minimum_slack": 2850,
+      "minimum_slack_k": 74
+    },
+    {
+      "n": 76,
+      "coefficients_first_three": [
+        36,
+        2142,
+        61860
+      ],
+      "coefficients_last_three": [
+        2850,
+        76,
+        1
+      ],
+      "minimum_slack": 2926,
+      "minimum_slack_k": 75
+    },
+    {
+      "n": 77,
+      "coefficients_first_three": [
+        60,
+        2850,
+        72950
+      ],
+      "coefficients_last_three": [
+        2926,
+        77,
+        1
+      ],
+      "minimum_slack": 3003,
+      "minimum_slack_k": 76
+    },
+    {
+      "n": 78,
+      "coefficients_first_three": [
+        24,
+        2004,
+        64604
+      ],
+      "coefficients_last_three": [
+        3003,
+        78,
+        1
+      ],
+      "minimum_slack": 3081,
+      "minimum_slack_k": 77
+    },
+    {
+      "n": 79,
+      "coefficients_first_three": [
+        78,
+        3081,
+        79079
+      ],
+      "coefficients_last_three": [
+        3081,
+        79,
+        1
+      ],
+      "minimum_slack": 3160,
+      "minimum_slack_k": 78
+    },
+    {
+      "n": 80,
+      "coefficients_first_three": [
+        32,
+        2288,
+        71776
+      ],
+      "coefficients_last_three": [
+        3160,
+        80,
+        1
+      ],
+      "minimum_slack": 3240,
+      "minimum_slack_k": 79
+    },
+    {
+      "n": 81,
+      "coefficients_first_three": [
+        54,
+        2889,
+        82395
+      ],
+      "coefficients_last_three": [
+        3240,
+        81,
+        1
+      ],
+      "minimum_slack": 3321,
+      "minimum_slack_k": 80
+    },
+    {
+      "n": 82,
+      "coefficients_first_three": [
+        40,
+        2500,
+        77900
+      ],
+      "coefficients_last_three": [
+        3321,
+        82,
+        1
+      ],
+      "minimum_slack": 3403,
+      "minimum_slack_k": 81
+    },
+    {
+      "n": 83,
+      "coefficients_first_three": [
+        82,
+        3403,
+        91881
+      ],
+      "coefficients_last_three": [
+        3403,
+        83,
+        1
+      ],
+      "minimum_slack": 3486,
+      "minimum_slack_k": 82
+    },
+    {
+      "n": 84,
+      "coefficients_first_three": [
+        24,
+        2292,
+        80696
+      ],
+      "coefficients_last_three": [
+        3486,
+        84,
+        1
+      ],
+      "minimum_slack": 3570,
+      "minimum_slack_k": 83
+    },
+    {
+      "n": 85,
+      "coefficients_first_three": [
+        64,
+        3424,
+        98080
+      ],
+      "coefficients_last_three": [
+        3570,
+        85,
+        1
+      ],
+      "minimum_slack": 3655,
+      "minimum_slack_k": 84
+    },
+    {
+      "n": 86,
+      "coefficients_first_three": [
+        42,
+        2751,
+        89999
+      ],
+      "coefficients_last_three": [
+        3655,
+        86,
+        1
+      ],
+      "minimum_slack": 3741,
+      "minimum_slack_k": 85
+    },
+    {
+      "n": 87,
+      "coefficients_first_three": [
+        56,
+        3332,
+        102340
+      ],
+      "coefficients_last_three": [
+        3741,
+        87,
+        1
+      ],
+      "minimum_slack": 3828,
+      "minimum_slack_k": 86
+    },
+    {
+      "n": 88,
+      "coefficients_first_three": [
+        40,
+        2860,
+        96440
+      ],
+      "coefficients_last_three": [
+        3828,
+        88,
+        1
+      ],
+      "minimum_slack": 3916,
+      "minimum_slack_k": 87
+    },
+    {
+      "n": 89,
+      "coefficients_first_three": [
+        88,
+        3916,
+        113564
+      ],
+      "coefficients_last_three": [
+        3916,
+        89,
+        1
+      ],
+      "minimum_slack": 4005,
+      "minimum_slack_k": 88
+    },
+    {
+      "n": 90,
+      "coefficients_first_three": [
+        24,
+        2580,
+        98972
+      ],
+      "coefficients_last_three": [
+        4005,
+        90,
+        1
+      ],
+      "minimum_slack": 4095,
+      "minimum_slack_k": 89
+    },
+    {
+      "n": 91,
+      "coefficients_first_three": [
+        72,
+        3996,
+        121164
+      ],
+      "coefficients_last_three": [
+        4095,
+        91,
+        1
+      ],
+      "minimum_slack": 4186,
+      "minimum_slack_k": 90
+    },
+    {
+      "n": 92,
+      "coefficients_first_three": [
+        44,
+        3146,
+        110396
+      ],
+      "coefficients_last_three": [
+        4186,
+        92,
+        1
+      ],
+      "minimum_slack": 4278,
+      "minimum_slack_k": 91
+    },
+    {
+      "n": 93,
+      "coefficients_first_three": [
+        60,
+        3810,
+        125270
+      ],
+      "coefficients_last_three": [
+        4278,
+        93,
+        1
+      ],
+      "minimum_slack": 4371,
+      "minimum_slack_k": 92
+    },
+    {
+      "n": 94,
+      "coefficients_first_three": [
+        46,
+        3289,
+        117829
+      ],
+      "coefficients_last_three": [
+        4371,
+        94,
+        1
+      ],
+      "minimum_slack": 4465,
+      "minimum_slack_k": 93
+    },
+    {
+      "n": 95,
+      "coefficients_first_three": [
+        72,
+        4284,
+        137436
+      ],
+      "coefficients_last_three": [
+        4465,
+        95,
+        1
+      ],
+      "minimum_slack": 4560,
+      "minimum_slack_k": 94
+    },
+    {
+      "n": 96,
+      "coefficients_first_three": [
+        32,
+        3056,
+        121184
+      ],
+      "coefficients_last_three": [
+        4560,
+        96,
+        1
+      ],
+      "minimum_slack": 4656,
+      "minimum_slack_k": 95
+    },
+    {
+      "n": 97,
+      "coefficients_first_three": [
+        96,
+        4656,
+        147440
+      ],
+      "coefficients_last_three": [
+        4656,
+        97,
+        1
+      ],
+      "minimum_slack": 4753,
+      "minimum_slack_k": 96
+    },
+    {
+      "n": 98,
+      "coefficients_first_three": [
+        42,
+        3507,
+        133343
+      ],
+      "coefficients_last_three": [
+        4753,
+        98,
+        1
+      ],
+      "minimum_slack": 4851,
+      "minimum_slack_k": 97
+    },
+    {
+      "n": 99,
+      "coefficients_first_three": [
+        60,
+        4290,
+        151310
+      ],
+      "coefficients_last_three": [
+        4851,
+        99,
+        1
+      ],
+      "minimum_slack": 4950,
+      "minimum_slack_k": 98
+    },
+    {
+      "n": 100,
+      "coefficients_first_three": [
+        40,
+        3580,
+        141080
+      ],
+      "coefficients_last_three": [
+        4950,
+        100,
+        1
+      ],
+      "minimum_slack": 5050,
+      "minimum_slack_k": 99
+    },
+    {
+      "n": 101,
+      "coefficients_first_three": [
+        100,
+        5050,
+        166650
+      ],
+      "coefficients_last_three": [
+        5050,
+        101,
+        1
+      ],
+      "minimum_slack": 5151,
+      "minimum_slack_k": 100
+    },
+    {
+      "n": 102,
+      "coefficients_first_three": [
+        32,
+        3440,
+        145552
+      ],
+      "coefficients_last_three": [
+        5151,
+        102,
+        1
+      ],
+      "minimum_slack": 5253,
+      "minimum_slack_k": 101
+    },
+    {
+      "n": 103,
+      "coefficients_first_three": [
+        102,
+        5253,
+        176851
+      ],
+      "coefficients_last_three": [
+        5253,
+        103,
+        1
+      ],
+      "minimum_slack": 5356,
+      "minimum_slack_k": 102
+    },
+    {
+      "n": 104,
+      "coefficients_first_three": [
+        48,
+        4008,
+        159952
+      ],
+      "coefficients_last_three": [
+        5356,
+        104,
+        1
+      ],
+      "minimum_slack": 5460,
+      "minimum_slack_k": 103
+    },
+    {
+      "n": 105,
+      "coefficients_first_three": [
+        48,
+        4584,
+        179176
+      ],
+      "coefficients_last_three": [
+        5460,
+        105,
+        1
+      ],
+      "minimum_slack": 5565,
+      "minimum_slack_k": 104
+    },
+    {
+      "n": 106,
+      "coefficients_first_three": [
+        52,
+        4186,
+        169494
+      ],
+      "coefficients_last_three": [
+        5565,
+        106,
+        1
+      ],
+      "minimum_slack": 5671,
+      "minimum_slack_k": 105
+    },
+    {
+      "n": 107,
+      "coefficients_first_three": [
+        106,
+        5671,
+        198485
+      ],
+      "coefficients_last_three": [
+        5671,
+        107,
+        1
+      ],
+      "minimum_slack": 5778,
+      "minimum_slack_k": 106
+    },
+    {
+      "n": 108,
+      "coefficients_first_three": [
+        36,
+        3870,
+        173028
+      ],
+      "coefficients_last_three": [
+        5778,
+        108,
+        1
+      ],
+      "minimum_slack": 5886,
+      "minimum_slack_k": 107
+    },
+    {
+      "n": 109,
+      "coefficients_first_three": [
+        108,
+        5886,
+        209934
+      ],
+      "coefficients_last_three": [
+        5886,
+        109,
+        1
+      ],
+      "minimum_slack": 5995,
+      "minimum_slack_k": 108
+    },
+    {
+      "n": 110,
+      "coefficients_first_three": [
+        40,
+        4300,
+        188100
+      ],
+      "coefficients_last_three": [
+        5995,
+        110,
+        1
+      ],
+      "minimum_slack": 6105,
+      "minimum_slack_k": 109
+    },
+    {
+      "n": 111,
+      "coefficients_first_three": [
+        72,
+        5436,
+        214044
+      ],
+      "coefficients_last_three": [
+        6105,
+        111,
+        1
+      ],
+      "minimum_slack": 6216,
+      "minimum_slack_k": 110
+    },
+    {
+      "n": 112,
+      "coefficients_first_three": [
+        48,
+        4584,
+        199696
+      ],
+      "coefficients_last_three": [
+        6216,
+        112,
+        1
+      ],
+      "minimum_slack": 6328,
+      "minimum_slack_k": 111
+    },
+    {
+      "n": 113,
+      "coefficients_first_three": [
+        112,
+        6328,
+        234136
+      ],
+      "coefficients_last_three": [
+        6328,
+        113,
+        1
+      ],
+      "minimum_slack": 6441,
+      "minimum_slack_k": 112
+    },
+    {
+      "n": 114,
+      "coefficients_first_three": [
+        36,
+        4302,
+        203718
+      ],
+      "coefficients_last_three": [
+        6441,
+        114,
+        1
+      ],
+      "minimum_slack": 6555,
+      "minimum_slack_k": 113
+    },
+    {
+      "n": 115,
+      "coefficients_first_three": [
+        88,
+        6292,
+        245124
+      ],
+      "coefficients_last_three": [
+        6555,
+        115,
+        1
+      ],
+      "minimum_slack": 6670,
+      "minimum_slack_k": 114
+    },
+    {
+      "n": 116,
+      "coefficients_first_three": [
+        56,
+        5012,
+        222600
+      ],
+      "coefficients_last_three": [
+        6670,
+        116,
+        1
+      ],
+      "minimum_slack": 6786,
+      "minimum_slack_k": 115
+    },
+    {
+      "n": 117,
+      "coefficients_first_three": [
+        72,
+        6012,
+        250908
+      ],
+      "coefficients_last_three": [
+        6786,
+        117,
+        1
+      ],
+      "minimum_slack": 6903,
+      "minimum_slack_k": 116
+    },
+    {
+      "n": 118,
+      "coefficients_first_three": [
+        58,
+        5191,
+        234407
+      ],
+      "coefficients_last_three": [
+        6903,
+        118,
+        1
+      ],
+      "minimum_slack": 7021,
+      "minimum_slack_k": 117
+    },
+    {
+      "n": 119,
+      "coefficients_first_three": [
+        96,
+        6864,
+        273104
+      ],
+      "coefficients_last_three": [
+        7021,
+        119,
+        1
+      ],
+      "minimum_slack": 7140,
+      "minimum_slack_k": 118
+    },
+    {
+      "n": 120,
+      "coefficients_first_three": [
+        32,
+        4592,
+        236128
+      ],
+      "coefficients_last_three": [
+        7140,
+        120,
+        1
+      ],
+      "minimum_slack": 7260,
+      "minimum_slack_k": 119
+    },
+    {
+      "n": 121,
+      "coefficients_first_three": [
+        110,
+        7205,
+        287815
+      ],
+      "coefficients_last_three": [
+        7260,
+        121,
+        1
+      ],
+      "minimum_slack": 7381,
+      "minimum_slack_k": 120
+    },
+    {
+      "n": 122,
+      "coefficients_first_three": [
+        60,
+        5550,
+        259250
+      ],
+      "coefficients_last_three": [
+        7381,
+        122,
+        1
+      ],
+      "minimum_slack": 7503,
+      "minimum_slack_k": 121
+    },
+    {
+      "n": 123,
+      "coefficients_first_three": [
+        80,
+        6680,
+        291960
+      ],
+      "coefficients_last_three": [
+        7503,
+        123,
+        1
+      ],
+      "minimum_slack": 7626,
+      "minimum_slack_k": 122
+    },
+    {
+      "n": 124,
+      "coefficients_first_three": [
+        60,
+        5730,
+        272300
+      ],
+      "coefficients_last_three": [
+        7626,
+        124,
+        1
+      ],
+      "minimum_slack": 7750,
+      "minimum_slack_k": 123
+    },
+    {
+      "n": 125,
+      "coefficients_first_three": [
+        100,
+        7450,
+        315450
+      ],
+      "coefficients_last_three": [
+        7750,
+        125,
+        1
+      ],
+      "minimum_slack": 7875,
+      "minimum_slack_k": 124
+    },
+    {
+      "n": 126,
+      "coefficients_first_three": [
+        36,
+        5166,
+        274926
+      ],
+      "coefficients_last_three": [
+        7875,
+        126,
+        1
+      ],
+      "minimum_slack": 8001,
+      "minimum_slack_k": 125
+    },
+    {
+      "n": 127,
+      "coefficients_first_three": [
+        126,
+        8001,
+        333375
+      ],
+      "coefficients_last_three": [
+        8001,
+        127,
+        1
+      ],
+      "minimum_slack": 8128,
+      "minimum_slack_k": 126
+    },
+    {
+      "n": 128,
+      "coefficients_first_three": [
+        64,
+        6112,
+        299712
+      ],
+      "coefficients_last_three": [
+        8128,
+        128,
+        1
+      ],
+      "minimum_slack": 8256,
+      "minimum_slack_k": 127
+    },
+    {
+      "n": 129,
+      "coefficients_first_three": [
+        84,
+        7350,
+        337162
+      ],
+      "coefficients_last_three": [
+        8256,
+        129,
+        1
+      ],
+      "minimum_slack": 8385,
+      "minimum_slack_k": 128
+    },
+    {
+      "n": 130,
+      "coefficients_first_three": [
+        48,
+        6024,
+        311656
+      ],
+      "coefficients_last_three": [
+        8385,
+        130,
+        1
+      ],
+      "minimum_slack": 8515,
+      "minimum_slack_k": 129
+    },
+    {
+      "n": 131,
+      "coefficients_first_three": [
+        130,
+        8515,
+        366145
+      ],
+      "coefficients_last_three": [
+        8515,
+        131,
+        1
+      ],
+      "minimum_slack": 8646,
+      "minimum_slack_k": 130
+    },
+    {
+      "n": 132,
+      "coefficients_first_three": [
+        40,
+        5740,
+        317000
+      ],
+      "coefficients_last_three": [
+        8646,
+        132,
+        1
+      ],
+      "minimum_slack": 8778,
+      "minimum_slack_k": 131
+    },
+    {
+      "n": 133,
+      "coefficients_first_three": [
+        108,
+        8586,
+        382302
+      ],
+      "coefficients_last_three": [
+        8778,
+        133,
+        1
+      ],
+      "minimum_slack": 8911,
+      "minimum_slack_k": 132
+    },
+    {
+      "n": 134,
+      "coefficients_first_three": [
+        66,
+        6699,
+        344179
+      ],
+      "coefficients_last_three": [
+        8911,
+        134,
+        1
+      ],
+      "minimum_slack": 9045,
+      "minimum_slack_k": 133
+    },
+    {
+      "n": 135,
+      "coefficients_first_three": [
+        72,
+        7740,
+        383964
+      ],
+      "coefficients_last_three": [
+        9045,
+        135,
+        1
+      ],
+      "minimum_slack": 9180,
+      "minimum_slack_k": 134
+    },
+    {
+      "n": 136,
+      "coefficients_first_three": [
+        64,
+        6880,
+        359872
+      ],
+      "coefficients_last_three": [
+        9180,
+        136,
+        1
+      ],
+      "minimum_slack": 9316,
+      "minimum_slack_k": 135
+    },
+    {
+      "n": 137,
+      "coefficients_first_three": [
+        136,
+        9316,
+        419220
+      ],
+      "coefficients_last_three": [
+        9316,
+        137,
+        1
+      ],
+      "minimum_slack": 9453,
+      "minimum_slack_k": 136
+    },
+    {
+      "n": 138,
+      "coefficients_first_three": [
+        44,
+        6314,
+        362714
+      ],
+      "coefficients_last_three": [
+        9453,
+        138,
+        1
+      ],
+      "minimum_slack": 9591,
+      "minimum_slack_k": 137
+    },
+    {
+      "n": 139,
+      "coefficients_first_three": [
+        138,
+        9591,
+        437989
+      ],
+      "coefficients_last_three": [
+        9591,
+        139,
+        1
+      ],
+      "minimum_slack": 9730,
+      "minimum_slack_k": 138
+    },
+    {
+      "n": 140,
+      "coefficients_first_three": [
+        48,
+        6888,
+        388912
+      ],
+      "coefficients_last_three": [
+        9730,
+        140,
+        1
+      ],
+      "minimum_slack": 9870,
+      "minimum_slack_k": 139
+    },
+    {
+      "n": 141,
+      "coefficients_first_three": [
+        92,
+        8786,
+        441094
+      ],
+      "coefficients_last_three": [
+        9870,
+        141,
+        1
+      ],
+      "minimum_slack": 10011,
+      "minimum_slack_k": 140
+    },
+    {
+      "n": 142,
+      "coefficients_first_three": [
+        70,
+        7525,
+        410025
+      ],
+      "coefficients_last_three": [
+        10011,
+        142,
+        1
+      ],
+      "minimum_slack": 10153,
+      "minimum_slack_k": 141
+    },
+    {
+      "n": 143,
+      "coefficients_first_three": [
+        120,
+        10020,
+        476740
+      ],
+      "coefficients_last_three": [
+        10153,
+        143,
+        1
+      ],
+      "minimum_slack": 10296,
+      "minimum_slack_k": 142
+    },
+    {
+      "n": 144,
+      "coefficients_first_three": [
+        48,
+        6888,
+        412432
+      ],
+      "coefficients_last_three": [
+        10296,
+        144,
+        1
+      ],
+      "minimum_slack": 10440,
+      "minimum_slack_k": 143
+    },
+    {
+      "n": 145,
+      "coefficients_first_three": [
+        112,
+        10024,
+        493976
+      ],
+      "coefficients_last_three": [
+        10440,
+        145,
+        1
+      ],
+      "minimum_slack": 10585,
+      "minimum_slack_k": 144
+    },
+    {
+      "n": 146,
+      "coefficients_first_three": [
+        72,
+        7956,
+        445884
+      ],
+      "coefficients_last_three": [
+        10585,
+        146,
+        1
+      ],
+      "minimum_slack": 10731,
+      "minimum_slack_k": 145
+    },
+    {
+      "n": 147,
+      "coefficients_first_three": [
+        84,
+        9366,
+        498946
+      ],
+      "coefficients_last_three": [
+        10731,
+        147,
+        1
+      ],
+      "minimum_slack": 10878,
+      "minimum_slack_k": 146
+    },
+    {
+      "n": 148,
+      "coefficients_first_three": [
+        72,
+        8172,
+        464568
+      ],
+      "coefficients_last_three": [
+        10878,
+        148,
+        1
+      ],
+      "minimum_slack": 11026,
+      "minimum_slack_k": 147
+    },
+    {
+      "n": 149,
+      "coefficients_first_three": [
+        148,
+        11026,
+        540274
+      ],
+      "coefficients_last_three": [
+        11026,
+        149,
+        1
+      ],
+      "minimum_slack": 11175,
+      "minimum_slack_k": 148
+    },
+    {
+      "n": 150,
+      "coefficients_first_three": [
+        40,
+        7180,
+        462980
+      ],
+      "coefficients_last_three": [
+        11175,
+        150,
+        1
+      ],
+      "minimum_slack": 11325,
+      "minimum_slack_k": 149
+    },
+    {
+      "n": 151,
+      "coefficients_first_three": [
+        150,
+        11325,
+        562475
+      ],
+      "coefficients_last_three": [
+        11325,
+        151,
+        1
+      ],
+      "minimum_slack": 11476,
+      "minimum_slack_k": 150
+    },
+    {
+      "n": 152,
+      "coefficients_first_three": [
+        72,
+        8604,
+        503448
+      ],
+      "coefficients_last_three": [
+        11476,
+        152,
+        1
+      ],
+      "minimum_slack": 11628,
+      "minimum_slack_k": 151
+    },
+    {
+      "n": 153,
+      "coefficients_first_three": [
+        96,
+        10320,
+        564368
+      ],
+      "coefficients_last_three": [
+        11628,
+        153,
+        1
+      ],
+      "minimum_slack": 11781,
+      "minimum_slack_k": 152
+    },
+    {
+      "n": 154,
+      "coefficients_first_three": [
+        60,
+        8610,
+        522050
+      ],
+      "coefficients_last_three": [
+        11781,
+        154,
+        1
+      ],
+      "minimum_slack": 11935,
+      "minimum_slack_k": 153
+    },
+    {
+      "n": 155,
+      "coefficients_first_three": [
+        120,
+        11460,
+        604180
+      ],
+      "coefficients_last_three": [
+        11935,
+        155,
+        1
+      ],
+      "minimum_slack": 12090,
+      "minimum_slack_k": 154
+    },
+    {
+      "n": 156,
+      "coefficients_first_three": [
+        48,
+        8040,
+        524848
+      ],
+      "coefficients_last_three": [
+        12090,
+        156,
+        1
+      ],
+      "minimum_slack": 12246,
+      "minimum_slack_k": 155
+    },
+    {
+      "n": 157,
+      "coefficients_first_three": [
+        156,
+        12246,
+        632710
+      ],
+      "coefficients_last_three": [
+        12246,
+        157,
+        1
+      ],
+      "minimum_slack": 12403,
+      "minimum_slack_k": 156
+    },
+    {
+      "n": 158,
+      "coefficients_first_three": [
+        78,
+        9321,
+        565877
+      ],
+      "coefficients_last_three": [
+        12403,
+        158,
+        1
+      ],
+      "minimum_slack": 12561,
+      "minimum_slack_k": 157
+    },
+    {
+      "n": 159,
+      "coefficients_first_three": [
+        104,
+        11180,
+        633932
+      ],
+      "coefficients_last_three": [
+        12561,
+        159,
+        1
+      ],
+      "minimum_slack": 12720,
+      "minimum_slack_k": 158
+    },
+    {
+      "n": 160,
+      "coefficients_first_three": [
+        64,
+        9184,
+        583360
+      ],
+      "coefficients_last_three": [
+        12720,
+        160,
+        1
+      ],
+      "minimum_slack": 12880,
+      "minimum_slack_k": 159
+    },
+    {
+      "n": 161,
+      "coefficients_first_three": [
+        132,
+        12606,
+        680834
+      ],
+      "coefficients_last_three": [
+        12880,
+        161,
+        1
+      ],
+      "minimum_slack": 13041,
+      "minimum_slack_k": 160
+    },
+    {
+      "n": 162,
+      "coefficients_first_three": [
+        54,
+        8721,
+        588321
+      ],
+      "coefficients_last_three": [
+        13041,
+        162,
+        1
+      ],
+      "minimum_slack": 13203,
+      "minimum_slack_k": 161
+    },
+    {
+      "n": 163,
+      "coefficients_first_three": [
+        162,
+        13203,
+        708561
+      ],
+      "coefficients_last_three": [
+        13203,
+        163,
+        1
+      ],
+      "minimum_slack": 13366,
+      "minimum_slack_k": 162
+    },
+    {
+      "n": 164,
+      "coefficients_first_three": [
+        80,
+        10040,
+        633200
+      ],
+      "coefficients_last_three": [
+        13366,
+        164,
+        1
+      ],
+      "minimum_slack": 13530,
+      "minimum_slack_k": 163
+    },
+    {
+      "n": 165,
+      "coefficients_first_three": [
+        80,
+        11480,
+        703160
+      ],
+      "coefficients_last_three": [
+        13530,
+        165,
+        1
+      ],
+      "minimum_slack": 13695,
+      "minimum_slack_k": 164
+    },
+    {
+      "n": 166,
+      "coefficients_first_three": [
+        82,
+        10291,
+        656779
+      ],
+      "coefficients_last_three": [
+        13695,
+        166,
+        1
+      ],
+      "minimum_slack": 13861,
+      "minimum_slack_k": 165
+    },
+    {
+      "n": 167,
+      "coefficients_first_three": [
+        166,
+        13861,
+        762355
+      ],
+      "coefficients_last_three": [
+        13861,
+        167,
+        1
+      ],
+      "minimum_slack": 14028,
+      "minimum_slack_k": 166
+    },
+    {
+      "n": 168,
+      "coefficients_first_three": [
+        48,
+        9192,
+        654736
+      ],
+      "coefficients_last_three": [
+        14028,
+        168,
+        1
+      ],
+      "minimum_slack": 14196,
+      "minimum_slack_k": 167
+    },
+    {
+      "n": 169,
+      "coefficients_first_three": [
+        156,
+        14118,
+        789958
+      ],
+      "coefficients_last_three": [
+        14196,
+        169,
+        1
+      ],
+      "minimum_slack": 14365,
+      "minimum_slack_k": 168
+    },
+    {
+      "n": 170,
+      "coefficients_first_three": [
+        64,
+        10336,
+        700256
+      ],
+      "coefficients_last_three": [
+        14365,
+        170,
+        1
+      ],
+      "minimum_slack": 14535,
+      "minimum_slack_k": 169
+    },
+    {
+      "n": 171,
+      "coefficients_first_three": [
+        108,
+        12906,
+        789462
+      ],
+      "coefficients_last_three": [
+        14535,
+        171,
+        1
+      ],
+      "minimum_slack": 14706,
+      "minimum_slack_k": 170
+    },
+    {
+      "n": 172,
+      "coefficients_first_three": [
+        84,
+        11046,
+        730996
+      ],
+      "coefficients_last_three": [
+        14706,
+        172,
+        1
+      ],
+      "minimum_slack": 14878,
+      "minimum_slack_k": 171
+    },
+    {
+      "n": 173,
+      "coefficients_first_three": [
+        172,
+        14878,
+        848046
+      ],
+      "coefficients_last_three": [
+        14878,
+        173,
+        1
+      ],
+      "minimum_slack": 15051,
+      "minimum_slack_k": 172
+    },
+    {
+      "n": 174,
+      "coefficients_first_three": [
+        56,
+        10052,
+        729708
+      ],
+      "coefficients_last_three": [
+        15051,
+        174,
+        1
+      ],
+      "minimum_slack": 15225,
+      "minimum_slack_k": 173
+    },
+    {
+      "n": 175,
+      "coefficients_first_three": [
+        120,
+        14340,
+        869140
+      ],
+      "coefficients_last_three": [
+        15225,
+        175,
+        1
+      ],
+      "minimum_slack": 15400,
+      "minimum_slack_k": 174
+    },
+    {
+      "n": 176,
+      "coefficients_first_three": [
+        80,
+        11480,
+        782960
+      ],
+      "coefficients_last_three": [
+        15400,
+        176,
+        1
+      ],
+      "minimum_slack": 15576,
+      "minimum_slack_k": 175
+    },
+    {
+      "n": 177,
+      "coefficients_first_three": [
+        116,
+        13862,
+        876090
+      ],
+      "coefficients_last_three": [
+        15576,
+        177,
+        1
+      ],
+      "minimum_slack": 15753,
+      "minimum_slack_k": 176
+    },
+    {
+      "n": 178,
+      "coefficients_first_three": [
+        88,
+        11836,
+        810612
+      ],
+      "coefficients_last_three": [
+        15753,
+        178,
+        1
+      ],
+      "minimum_slack": 15931,
+      "minimum_slack_k": 177
+    },
+    {
+      "n": 179,
+      "coefficients_first_three": [
+        178,
+        15931,
+        939929
+      ],
+      "coefficients_last_three": [
+        15931,
+        179,
+        1
+      ],
+      "minimum_slack": 16110,
+      "minimum_slack_k": 178
+    },
+    {
+      "n": 180,
+      "coefficients_first_three": [
+        48,
+        10344,
+        802096
+      ],
+      "coefficients_last_three": [
+        16110,
+        180,
+        1
+      ],
+      "minimum_slack": 16290,
+      "minimum_slack_k": 179
+    },
+    {
+      "n": 181,
+      "coefficients_first_three": [
+        180,
+        16290,
+        971970
+      ],
+      "coefficients_last_three": [
+        16290,
+        181,
+        1
+      ],
+      "minimum_slack": 16471,
+      "minimum_slack_k": 180
+    },
+    {
+      "n": 182,
+      "coefficients_first_three": [
+        72,
+        12060,
+        864132
+      ],
+      "coefficients_last_three": [
+        16471,
+        182,
+        1
+      ],
+      "minimum_slack": 16653,
+      "minimum_slack_k": 181
+    },
+    {
+      "n": 183,
+      "coefficients_first_three": [
+        120,
+        14820,
+        968740
+      ],
+      "coefficients_last_three": [
+        16653,
+        183,
+        1
+      ],
+      "minimum_slack": 16836,
+      "minimum_slack_k": 182
+    },
+    {
+      "n": 184,
+      "coefficients_first_three": [
+        88,
+        12628,
+        895752
+      ],
+      "coefficients_last_three": [
+        16836,
+        184,
+        1
+      ],
+      "minimum_slack": 17020,
+      "minimum_slack_k": 183
+    },
+    {
+      "n": 185,
+      "coefficients_first_three": [
+        144,
+        16344,
+        1030440
+      ],
+      "coefficients_last_three": [
+        17020,
+        185,
+        1
+      ],
+      "minimum_slack": 17205,
+      "minimum_slack_k": 184
+    },
+    {
+      "n": 186,
+      "coefficients_first_three": [
+        60,
+        11490,
+        892130
+      ],
+      "coefficients_last_three": [
+        17205,
+        186,
+        1
+      ],
+      "minimum_slack": 17391,
+      "minimum_slack_k": 185
+    },
+    {
+      "n": 187,
+      "coefficients_first_three": [
+        160,
+        17200,
+        1071600
+      ],
+      "coefficients_last_three": [
+        17391,
+        187,
+        1
+      ],
+      "minimum_slack": 17578,
+      "minimum_slack_k": 186
+    },
+    {
+      "n": 188,
+      "coefficients_first_three": [
+        92,
+        13202,
+        955788
+      ],
+      "coefficients_last_three": [
+        17578,
+        188,
+        1
+      ],
+      "minimum_slack": 17766,
+      "minimum_slack_k": 187
+    },
+    {
+      "n": 189,
+      "coefficients_first_three": [
+        108,
+        15498,
+        1064862
+      ],
+      "coefficients_last_three": [
+        17766,
+        189,
+        1
+      ],
+      "minimum_slack": 17955,
+      "minimum_slack_k": 188
+    },
+    {
+      "n": 190,
+      "coefficients_first_three": [
+        72,
+        12924,
+        979188
+      ],
+      "coefficients_last_three": [
+        17955,
+        190,
+        1
+      ],
+      "minimum_slack": 18145,
+      "minimum_slack_k": 189
+    },
+    {
+      "n": 191,
+      "coefficients_first_three": [
+        190,
+        18145,
+        1143135
+      ],
+      "coefficients_last_three": [
+        18145,
+        191,
+        1
+      ],
+      "minimum_slack": 18336,
+      "minimum_slack_k": 190
+    },
+    {
+      "n": 192,
+      "coefficients_first_three": [
+        64,
+        12256,
+        981696
+      ],
+      "coefficients_last_three": [
+        18336,
+        192,
+        1
+      ],
+      "minimum_slack": 18528,
+      "minimum_slack_k": 191
+    },
+    {
+      "n": 193,
+      "coefficients_first_three": [
+        192,
+        18528,
+        1179616
+      ],
+      "coefficients_last_three": [
+        18528,
+        193,
+        1
+      ],
+      "minimum_slack": 18721,
+      "minimum_slack_k": 192
+    },
+    {
+      "n": 194,
+      "coefficients_first_three": [
+        96,
+        14064,
+        1050704
+      ],
+      "coefficients_last_three": [
+        18721,
+        194,
+        1
+      ],
+      "minimum_slack": 18915,
+      "minimum_slack_k": 193
+    },
+    {
+      "n": 195,
+      "coefficients_first_three": [
+        96,
+        16080,
+        1163888
+      ],
+      "coefficients_last_three": [
+        18915,
+        195,
+        1
+      ],
+      "minimum_slack": 19110,
+      "minimum_slack_k": 194
+    },
+    {
+      "n": 196,
+      "coefficients_first_three": [
+        84,
+        14070,
+        1080772
+      ],
+      "coefficients_last_three": [
+        19110,
+        196,
+        1
+      ],
+      "minimum_slack": 19306,
+      "minimum_slack_k": 195
+    },
+    {
+      "n": 197,
+      "coefficients_first_three": [
+        196,
+        19306,
+        1254890
+      ],
+      "coefficients_last_three": [
+        19306,
+        197,
+        1
+      ],
+      "minimum_slack": 19503,
+      "minimum_slack_k": 196
+    },
+    {
+      "n": 198,
+      "coefficients_first_three": [
+        60,
+        12930,
+        1076330
+      ],
+      "coefficients_last_three": [
+        19503,
+        198,
+        1
+      ],
+      "minimum_slack": 19701,
+      "minimum_slack_k": 197
+    },
+    {
+      "n": 199,
+      "coefficients_first_three": [
+        198,
+        19701,
+        1293699
+      ],
+      "coefficients_last_three": [
+        19701,
+        199,
+        1
+      ],
+      "minimum_slack": 19900,
+      "minimum_slack_k": 198
+    },
+    {
+      "n": 200,
+      "coefficients_first_three": [
+        80,
+        14360,
+        1142960
+      ],
+      "coefficients_last_three": [
+        19900,
+        200,
+        1
+      ],
+      "minimum_slack": 20100,
+      "minimum_slack_k": 199
+    },
+    {
+      "n": 201,
+      "coefficients_first_three": [
+        132,
+        17886,
+        1285394
+      ],
+      "coefficients_last_three": [
+        20100,
+        201,
+        1
+      ],
+      "minimum_slack": 20301,
+      "minimum_slack_k": 200
+    },
+    {
+      "n": 202,
+      "coefficients_first_three": [
+        100,
+        15250,
+        1186750
+      ],
+      "coefficients_last_three": [
+        20301,
+        202,
+        1
+      ],
+      "minimum_slack": 20503,
+      "minimum_slack_k": 201
+    },
+    {
+      "n": 203,
+      "coefficients_first_three": [
+        168,
+        20076,
+        1370012
+      ],
+      "coefficients_last_three": [
+        20503,
+        203,
+        1
+      ],
+      "minimum_slack": 20706,
+      "minimum_slack_k": 202
+    },
+    {
+      "n": 204,
+      "coefficients_first_three": [
+        64,
+        13792,
+        1178176
+      ],
+      "coefficients_last_three": [
+        20706,
+        204,
+        1
+      ],
+      "minimum_slack": 20910,
+      "minimum_slack_k": 203
+    },
+    {
+      "n": 205,
+      "coefficients_first_three": [
+        160,
+        20080,
+        1404240
+      ],
+      "coefficients_last_three": [
+        20910,
+        205,
+        1
+      ],
+      "minimum_slack": 21115,
+      "minimum_slack_k": 204
+    },
+    {
+      "n": 206,
+      "coefficients_first_three": [
+        102,
+        15861,
+        1258969
+      ],
+      "coefficients_last_three": [
+        21115,
+        206,
+        1
+      ],
+      "minimum_slack": 21321,
+      "minimum_slack_k": 205
+    },
+    {
+      "n": 207,
+      "coefficients_first_three": [
+        132,
+        18942,
+        1404458
+      ],
+      "coefficients_last_three": [
+        21321,
+        207,
+        1
+      ],
+      "minimum_slack": 21528,
+      "minimum_slack_k": 206
+    },
+    {
+      "n": 208,
+      "coefficients_first_three": [
+        96,
+        16080,
+        1295648
+      ],
+      "coefficients_last_three": [
+        21528,
+        208,
+        1
+      ],
+      "minimum_slack": 21736,
+      "minimum_slack_k": 207
+    },
+    {
+      "n": 209,
+      "coefficients_first_three": [
+        180,
+        21510,
+        1498650
+      ],
+      "coefficients_last_three": [
+        21736,
+        209,
+        1
+      ],
+      "minimum_slack": 21945,
+      "minimum_slack_k": 208
+    },
+    {
+      "n": 210,
+      "coefficients_first_three": [
+        48,
+        13800,
+        1272568
+      ],
+      "coefficients_last_three": [
+        21945,
+        210,
+        1
+      ],
+      "minimum_slack": 22155,
+      "minimum_slack_k": 209
+    },
+    {
+      "n": 211,
+      "coefficients_first_three": [
+        210,
+        22155,
+        1543465
+      ],
+      "coefficients_last_three": [
+        22155,
+        211,
+        1
+      ],
+      "minimum_slack": 22366,
+      "minimum_slack_k": 210
+    },
+    {
+      "n": 212,
+      "coefficients_first_three": [
+        104,
+        16796,
+        1372696
+      ],
+      "coefficients_last_three": [
+        22366,
+        212,
+        1
+      ],
+      "minimum_slack": 22578,
+      "minimum_slack_k": 211
+    },
+    {
+      "n": 213,
+      "coefficients_first_three": [
+        140,
+        20090,
+        1530830
+      ],
+      "coefficients_last_three": [
+        22578,
+        213,
+        1
+      ],
+      "minimum_slack": 22791,
+      "minimum_slack_k": 212
+    },
+    {
+      "n": 214,
+      "coefficients_first_three": [
+        106,
+        17119,
+        1412079
+      ],
+      "coefficients_last_three": [
+        22791,
+        214,
+        1
+      ],
+      "minimum_slack": 23005,
+      "minimum_slack_k": 213
+    },
+    {
+      "n": 215,
+      "coefficients_first_three": [
+        168,
+        22092,
+        1621004
+      ],
+      "coefficients_last_three": [
+        23005,
+        215,
+        1
+      ],
+      "minimum_slack": 23220,
+      "minimum_slack_k": 214
+    },
+    {
+      "n": 216,
+      "coefficients_first_three": [
+        72,
+        15516,
+        1399704
+      ],
+      "coefficients_last_three": [
+        23220,
+        216,
+        1
+      ],
+      "minimum_slack": 23436,
+      "minimum_slack_k": 215
+    },
+    {
+      "n": 217,
+      "coefficients_first_three": [
+        180,
+        22950,
+        1675050
+      ],
+      "coefficients_last_three": [
+        23436,
+        217,
+        1
+      ],
+      "minimum_slack": 23653,
+      "minimum_slack_k": 216
+    },
+    {
+      "n": 218,
+      "coefficients_first_three": [
+        108,
+        17766,
+        1493082
+      ],
+      "coefficients_last_three": [
+        23653,
+        218,
+        1
+      ],
+      "minimum_slack": 23871,
+      "minimum_slack_k": 217
+    },
+    {
+      "n": 219,
+      "coefficients_first_three": [
+        144,
+        21240,
+        1664472
+      ],
+      "coefficients_last_three": [
+        23871,
+        219,
+        1
+      ],
+      "minimum_slack": 24090,
+      "minimum_slack_k": 218
+    },
+    {
+      "n": 220,
+      "coefficients_first_three": [
+        80,
+        17240,
+        1522000
+      ],
+      "coefficients_last_three": [
+        24090,
+        220,
+        1
+      ],
+      "minimum_slack": 24310,
+      "minimum_slack_k": 219
+    },
+    {
+      "n": 221,
+      "coefficients_first_three": [
+        192,
+        24096,
+        1773664
+      ],
+      "coefficients_last_three": [
+        24310,
+        221,
+        1
+      ],
+      "minimum_slack": 24531,
+      "minimum_slack_k": 220
+    },
+    {
+      "n": 222,
+      "coefficients_first_three": [
+        72,
+        16380,
+        1520052
+      ],
+      "coefficients_last_three": [
+        24531,
+        222,
+        1
+      ],
+      "minimum_slack": 24753,
+      "minimum_slack_k": 221
+    },
+    {
+      "n": 223,
+      "coefficients_first_three": [
+        222,
+        24753,
+        1823471
+      ],
+      "coefficients_last_three": [
+        24753,
+        223,
+        1
+      ],
+      "minimum_slack": 24976,
+      "minimum_slack_k": 222
+    },
+    {
+      "n": 224,
+      "coefficients_first_three": [
+        96,
+        18384,
+        1615904
+      ],
+      "coefficients_last_three": [
+        24976,
+        224,
+        1
+      ],
+      "minimum_slack": 25200,
+      "minimum_slack_k": 223
+    },
+    {
+      "n": 225,
+      "coefficients_first_three": [
+        120,
+        21540,
+        1791940
+      ],
+      "coefficients_last_three": [
+        25200,
+        225,
+        1
+      ],
+      "minimum_slack": 25425,
+      "minimum_slack_k": 224
+    },
+    {
+      "n": 226,
+      "coefficients_first_three": [
+        112,
+        19096,
+        1664264
+      ],
+      "coefficients_last_three": [
+        25425,
+        226,
+        1
+      ],
+      "minimum_slack": 25651,
+      "minimum_slack_k": 225
+    },
+    {
+      "n": 227,
+      "coefficients_first_three": [
+        226,
+        25651,
+        1923825
+      ],
+      "coefficients_last_three": [
+        25651,
+        227,
+        1
+      ],
+      "minimum_slack": 25878,
+      "minimum_slack_k": 226
+    },
+    {
+      "n": 228,
+      "coefficients_first_three": [
+        72,
+        17244,
+        1646952
+      ],
+      "coefficients_last_three": [
+        25878,
+        228,
+        1
+      ],
+      "minimum_slack": 26106,
+      "minimum_slack_k": 227
+    },
+    {
+      "n": 229,
+      "coefficients_first_three": [
+        228,
+        26106,
+        1975354
+      ],
+      "coefficients_last_three": [
+        26106,
+        229,
+        1
+      ],
+      "minimum_slack": 26335,
+      "minimum_slack_k": 228
+    },
+    {
+      "n": 230,
+      "coefficients_first_three": [
+        88,
+        18964,
+        1741036
+      ],
+      "coefficients_last_three": [
+        26335,
+        230,
+        1
+      ],
+      "minimum_slack": 26565,
+      "minimum_slack_k": 229
+    },
+    {
+      "n": 231,
+      "coefficients_first_three": [
+        120,
+        22980,
+        1948060
+      ],
+      "coefficients_last_three": [
+        26565,
+        231,
+        1
+      ],
+      "minimum_slack": 26796,
+      "minimum_slack_k": 230
+    },
+    {
+      "n": 232,
+      "coefficients_first_three": [
+        112,
+        20104,
+        1800848
+      ],
+      "coefficients_last_three": [
+        26796,
+        232,
+        1
+      ],
+      "minimum_slack": 27028,
+      "minimum_slack_k": 231
+    },
+    {
+      "n": 233,
+      "coefficients_first_three": [
+        232,
+        27028,
+        2081156
+      ],
+      "coefficients_last_three": [
+        27028,
+        233,
+        1
+      ],
+      "minimum_slack": 27261,
+      "minimum_slack_k": 232
+    },
+    {
+      "n": 234,
+      "coefficients_first_three": [
+        72,
+        18108,
+        1780404
+      ],
+      "coefficients_last_three": [
+        27261,
+        234,
+        1
+      ],
+      "minimum_slack": 27495,
+      "minimum_slack_k": 233
+    },
+    {
+      "n": 235,
+      "coefficients_first_three": [
+        184,
+        26404,
+        2119220
+      ],
+      "coefficients_last_three": [
+        27495,
+        235,
+        1
+      ],
+      "minimum_slack": 27730,
+      "minimum_slack_k": 234
+    },
+    {
+      "n": 236,
+      "coefficients_first_three": [
+        116,
+        20822,
+        1896020
+      ],
+      "coefficients_last_three": [
+        27730,
+        236,
+        1
+      ],
+      "minimum_slack": 27966,
+      "minimum_slack_k": 235
+    },
+    {
+      "n": 237,
+      "coefficients_first_three": [
+        156,
+        24882,
+        2111590
+      ],
+      "coefficients_last_three": [
+        27966,
+        237,
+        1
+      ],
+      "minimum_slack": 28203,
+      "minimum_slack_k": 236
+    },
+    {
+      "n": 238,
+      "coefficients_first_three": [
+        96,
+        20688,
+        1939184
+      ],
+      "coefficients_last_three": [
+        28203,
+        238,
+        1
+      ],
+      "minimum_slack": 28441,
+      "minimum_slack_k": 237
+    },
+    {
+      "n": 239,
+      "coefficients_first_three": [
+        238,
+        28441,
+        2246839
+      ],
+      "coefficients_last_three": [
+        28441,
+        239,
+        1
+      ],
+      "minimum_slack": 28680,
+      "minimum_slack_k": 238
+    },
+    {
+      "n": 240,
+      "coefficients_first_three": [
+        64,
+        18400,
+        1907392
+      ],
+      "coefficients_last_three": [
+        28680,
+        240,
+        1
+      ],
+      "minimum_slack": 28920,
+      "minimum_slack_k": 239
+    },
+    {
+      "n": 241,
+      "coefficients_first_three": [
+        240,
+        28920,
+        2303960
+      ],
+      "coefficients_last_three": [
+        28920,
+        241,
+        1
+      ],
+      "minimum_slack": 29161,
+      "minimum_slack_k": 240
+    },
+    {
+      "n": 242,
+      "coefficients_first_three": [
+        110,
+        21725,
+        2043525
+      ],
+      "coefficients_last_three": [
+        29161,
+        242,
+        1
+      ],
+      "minimum_slack": 29403,
+      "minimum_slack_k": 241
+    },
+    {
+      "n": 243,
+      "coefficients_first_three": [
+        162,
+        26163,
+        2276721
+      ],
+      "coefficients_last_three": [
+        29403,
+        243,
+        1
+      ],
+      "minimum_slack": 29646,
+      "minimum_slack_k": 242
+    },
+    {
+      "n": 244,
+      "coefficients_first_three": [
+        120,
+        22260,
+        2096200
+      ],
+      "coefficients_last_three": [
+        29646,
+        244,
+        1
+      ],
+      "minimum_slack": 29890,
+      "minimum_slack_k": 243
+    },
+    {
+      "n": 245,
+      "coefficients_first_three": [
+        168,
+        28140,
+        2396156
+      ],
+      "coefficients_last_three": [
+        29890,
+        245,
+        1
+      ],
+      "minimum_slack": 30135,
+      "minimum_slack_k": 244
+    },
+    {
+      "n": 246,
+      "coefficients_first_three": [
+        80,
+        20120,
+        2070440
+      ],
+      "coefficients_last_three": [
+        30135,
+        246,
+        1
+      ],
+      "minimum_slack": 30381,
+      "minimum_slack_k": 245
+    },
+    {
+      "n": 247,
+      "coefficients_first_three": [
+        216,
+        30132,
+        2479860
+      ],
+      "coefficients_last_three": [
+        30381,
+        247,
+        1
+      ],
+      "minimum_slack": 30628,
+      "minimum_slack_k": 246
+    },
+    {
+      "n": 248,
+      "coefficients_first_three": [
+        120,
+        22980,
+        2201320
+      ],
+      "coefficients_last_three": [
+        30628,
+        248,
+        1
+      ],
+      "minimum_slack": 30876,
+      "minimum_slack_k": 247
+    },
+    {
+      "n": 249,
+      "coefficients_first_three": [
+        164,
+        27470,
+        2450242
+      ],
+      "coefficients_last_three": [
+        30876,
+        249,
+        1
+      ],
+      "minimum_slack": 31125,
+      "minimum_slack_k": 248
+    },
+    {
+      "n": 250,
+      "coefficients_first_three": [
+        100,
+        22450,
+        2237950
+      ],
+      "coefficients_last_three": [
+        31125,
+        250,
+        1
+      ],
+      "minimum_slack": 31375,
+      "minimum_slack_k": 249
+    },
+    {
+      "n": 251,
+      "coefficients_first_three": [
+        250,
+        31375,
+        2604125
+      ],
+      "coefficients_last_three": [
+        31375,
+        251,
+        1
+      ],
+      "minimum_slack": 31626,
+      "minimum_slack_k": 250
+    },
+    {
+      "n": 252,
+      "coefficients_first_three": [
+        72,
+        20700,
+        2220072
+      ],
+      "coefficients_last_three": [
+        31626,
+        252,
+        1
+      ],
+      "minimum_slack": 31878,
+      "minimum_slack_k": 251
+    },
+    {
+      "n": 253,
+      "coefficients_first_three": [
+        220,
+        31570,
+        2665190
+      ],
+      "coefficients_last_three": [
+        31878,
+        253,
+        1
+      ],
+      "minimum_slack": 32131,
+      "minimum_slack_k": 252
+    },
+    {
+      "n": 254,
+      "coefficients_first_three": [
+        126,
+        24129,
+        2365629
+      ],
+      "coefficients_last_three": [
+        32131,
+        254,
+        1
+      ],
+      "minimum_slack": 32385,
+      "minimum_slack_k": 253
+    },
+    {
+      "n": 255,
+      "coefficients_first_three": [
+        128,
+        27584,
+        2611776
+      ],
+      "coefficients_last_three": [
+        32385,
+        255,
+        1
+      ],
+      "minimum_slack": 32640,
+      "minimum_slack_k": 254
+    },
+    {
+      "n": 256,
+      "coefficients_first_three": [
+        128,
+        24512,
+        2422144
+      ],
+      "coefficients_last_three": [
+        32640,
+        256,
+        1
+      ],
+      "minimum_slack": 32896,
+      "minimum_slack_k": 255
+    },
+    {
+      "n": 257,
+      "coefficients_first_three": [
+        256,
+        32896,
+        2796160
+      ],
+      "coefficients_last_three": [
+        32896,
+        257,
+        1
+      ],
+      "minimum_slack": 33153,
+      "minimum_slack_k": 256
+    },
+    {
+      "n": 258,
+      "coefficients_first_three": [
+        84,
+        22134,
+        2389534
+      ],
+      "coefficients_last_three": [
+        33153,
+        258,
+        1
+      ],
+      "minimum_slack": 33411,
+      "minimum_slack_k": 257
+    },
+    {
+      "n": 259,
+      "coefficients_first_three": [
+        216,
+        32724,
+        2854404
+      ],
+      "coefficients_last_three": [
+        33411,
+        259,
+        1
+      ],
+      "minimum_slack": 33670,
+      "minimum_slack_k": 258
+    },
+    {
+      "n": 260,
+      "coefficients_first_three": [
+        96,
+        24144,
+        2517344
+      ],
+      "coefficients_last_three": [
+        33670,
+        260,
+        1
+      ],
+      "minimum_slack": 33930,
+      "minimum_slack_k": 259
+    },
+    {
+      "n": 261,
+      "coefficients_first_three": [
+        168,
+        30156,
+        2823212
+      ],
+      "coefficients_last_three": [
+        33930,
+        261,
+        1
+      ],
+      "minimum_slack": 34191,
+      "minimum_slack_k": 260
+    },
+    {
+      "n": 262,
+      "coefficients_first_three": [
+        130,
+        25675,
+        2597075
+      ],
+      "coefficients_last_three": [
+        34191,
+        262,
+        1
+      ],
+      "minimum_slack": 34453,
+      "minimum_slack_k": 261
+    },
+    {
+      "n": 263,
+      "coefficients_first_three": [
+        262,
+        34453,
+        2997411
+      ],
+      "coefficients_last_three": [
+        34453,
+        263,
+        1
+      ],
+      "minimum_slack": 34716,
+      "minimum_slack_k": 262
+    },
+    {
+      "n": 264,
+      "coefficients_first_three": [
+        80,
+        23000,
+        2558960
+      ],
+      "coefficients_last_three": [
+        34716,
+        264,
+        1
+      ],
+      "minimum_slack": 34980,
+      "minimum_slack_k": 263
+    },
+    {
+      "n": 265,
+      "coefficients_first_three": [
+        208,
+        33592,
+        3043144
+      ],
+      "coefficients_last_three": [
+        34980,
+        265,
+        1
+      ],
+      "minimum_slack": 35245,
+      "minimum_slack_k": 264
+    },
+    {
+      "n": 266,
+      "coefficients_first_three": [
+        108,
+        25866,
+        2710458
+      ],
+      "coefficients_last_three": [
+        35245,
+        266,
+        1
+      ],
+      "minimum_slack": 35511,
+      "minimum_slack_k": 265
+    },
+    {
+      "n": 267,
+      "coefficients_first_three": [
+        176,
+        31592,
+        3023240
+      ],
+      "coefficients_last_three": [
+        35511,
+        267,
+        1
+      ],
+      "minimum_slack": 35778,
+      "minimum_slack_k": 266
+    },
+    {
+      "n": 268,
+      "coefficients_first_three": [
+        132,
+        26862,
+        2780228
+      ],
+      "coefficients_last_three": [
+        35778,
+        268,
+        1
+      ],
+      "minimum_slack": 36046,
+      "minimum_slack_k": 267
+    },
+    {
+      "n": 269,
+      "coefficients_first_three": [
+        268,
+        36046,
+        3208094
+      ],
+      "coefficients_last_three": [
+        36046,
+        269,
+        1
+      ],
+      "minimum_slack": 36315,
+      "minimum_slack_k": 268
+    },
+    {
+      "n": 270,
+      "coefficients_first_three": [
+        72,
+        23292,
+        2718708
+      ],
+      "coefficients_last_three": [
+        36315,
+        270,
+        1
+      ],
+      "minimum_slack": 36585,
+      "minimum_slack_k": 269
+    },
+    {
+      "n": 271,
+      "coefficients_first_three": [
+        270,
+        36585,
+        3280455
+      ],
+      "coefficients_last_three": [
+        36585,
+        271,
+        1
+      ],
+      "minimum_slack": 36856,
+      "minimum_slack_k": 270
+    },
+    {
+      "n": 272,
+      "coefficients_first_three": [
+        128,
+        27584,
+        2906496
+      ],
+      "coefficients_last_three": [
+        36856,
+        272,
+        1
+      ],
+      "minimum_slack": 37128,
+      "minimum_slack_k": 271
+    },
+    {
+      "n": 273,
+      "coefficients_first_three": [
+        144,
+        32184,
+        3222264
+      ],
+      "coefficients_last_three": [
+        37128,
+        273,
+        1
+      ],
+      "minimum_slack": 37401,
+      "minimum_slack_k": 272
+    },
+    {
+      "n": 274,
+      "coefficients_first_three": [
+        136,
+        28084,
+        2971804
+      ],
+      "coefficients_last_three": [
+        37401,
+        274,
+        1
+      ],
+      "minimum_slack": 37675,
+      "minimum_slack_k": 273
+    },
+    {
+      "n": 275,
+      "coefficients_first_three": [
+        200,
+        35900,
+        3399900
+      ],
+      "coefficients_last_three": [
+        37675,
+        275,
+        1
+      ],
+      "minimum_slack": 37950,
+      "minimum_slack_k": 274
+    },
+    {
+      "n": 276,
+      "coefficients_first_three": [
+        88,
+        25300,
+        2926968
+      ],
+      "coefficients_last_three": [
+        37950,
+        276,
+        1
+      ],
+      "minimum_slack": 38226,
+      "minimum_slack_k": 275
+    },
+    {
+      "n": 277,
+      "coefficients_first_three": [
+        276,
+        38226,
+        3504050
+      ],
+      "coefficients_last_three": [
+        38226,
+        277,
+        1
+      ],
+      "minimum_slack": 38503,
+      "minimum_slack_k": 276
+    },
+    {
+      "n": 278,
+      "coefficients_first_three": [
+        138,
+        28911,
+        3104287
+      ],
+      "coefficients_last_three": [
+        38503,
+        278,
+        1
+      ],
+      "minimum_slack": 38781,
+      "minimum_slack_k": 277
+    },
+    {
+      "n": 279,
+      "coefficients_first_three": [
+        180,
+        34470,
+        3450930
+      ],
+      "coefficients_last_three": [
+        38781,
+        279,
+        1
+      ],
+      "minimum_slack": 39060,
+      "minimum_slack_k": 278
+    },
+    {
+      "n": 280,
+      "coefficients_first_three": [
+        96,
+        27600,
+        3138848
+      ],
+      "coefficients_last_three": [
+        39060,
+        280,
+        1
+      ],
+      "minimum_slack": 39340,
+      "minimum_slack_k": 279
+    },
+    {
+      "n": 281,
+      "coefficients_first_three": [
+        280,
+        39340,
+        3658620
+      ],
+      "coefficients_last_three": [
+        39340,
+        281,
+        1
+      ],
+      "minimum_slack": 39621,
+      "minimum_slack_k": 280
+    },
+    {
+      "n": 282,
+      "coefficients_first_three": [
+        92,
+        26450,
+        3122802
+      ],
+      "coefficients_last_three": [
+        39621,
+        282,
+        1
+      ],
+      "minimum_slack": 39903,
+      "minimum_slack_k": 281
+    },
+    {
+      "n": 283,
+      "coefficients_first_three": [
+        282,
+        39903,
+        3737581
+      ],
+      "coefficients_last_three": [
+        39903,
+        283,
+        1
+      ],
+      "minimum_slack": 40186,
+      "minimum_slack_k": 282
+    },
+    {
+      "n": 284,
+      "coefficients_first_three": [
+        140,
+        30170,
+        3310300
+      ],
+      "coefficients_last_three": [
+        40186,
+        284,
+        1
+      ],
+      "minimum_slack": 40470,
+      "minimum_slack_k": 283
+    },
+    {
+      "n": 285,
+      "coefficients_first_three": [
+        144,
+        34488,
+        3650520
+      ],
+      "coefficients_last_three": [
+        40470,
+        285,
+        1
+      ],
+      "minimum_slack": 40755,
+      "minimum_slack_k": 284
+    },
+    {
+      "n": 286,
+      "coefficients_first_three": [
+        120,
+        30180,
+        3377260
+      ],
+      "coefficients_last_three": [
+        40755,
+        286,
+        1
+      ],
+      "minimum_slack": 41041,
+      "minimum_slack_k": 285
+    },
+    {
+      "n": 287,
+      "coefficients_first_three": [
+        240,
+        40200,
+        3888200
+      ],
+      "coefficients_last_three": [
+        41041,
+        287,
+        1
+      ],
+      "minimum_slack": 41328,
+      "minimum_slack_k": 286
+    },
+    {
+      "n": 288,
+      "coefficients_first_three": [
+        96,
+        27600,
+        3327008
+      ],
+      "coefficients_last_three": [
+        41328,
+        288,
+        1
+      ],
+      "minimum_slack": 41616,
+      "minimum_slack_k": 287
+    },
+    {
+      "n": 289,
+      "coefficients_first_three": [
+        272,
+        41480,
+        3980584
+      ],
+      "coefficients_last_three": [
+        41616,
+        289,
+        1
+      ],
+      "minimum_slack": 41905,
+      "minimum_slack_k": 288
+    },
+    {
+      "n": 290,
+      "coefficients_first_three": [
+        112,
+        30184,
+        3497928
+      ],
+      "coefficients_last_three": [
+        41905,
+        290,
+        1
+      ],
+      "minimum_slack": 42195,
+      "minimum_slack_k": 289
+    },
+    {
+      "n": 291,
+      "coefficients_first_three": [
+        192,
+        37536,
+        3917344
+      ],
+      "coefficients_last_three": [
+        42195,
+        291,
+        1
+      ],
+      "minimum_slack": 42486,
+      "minimum_slack_k": 290
+    },
+    {
+      "n": 292,
+      "coefficients_first_three": [
+        144,
+        31896,
+        3598896
+      ],
+      "coefficients_last_three": [
+        42486,
+        292,
+        1
+      ],
+      "minimum_slack": 42778,
+      "minimum_slack_k": 291
+    },
+    {
+      "n": 293,
+      "coefficients_first_three": [
+        292,
+        42778,
+        4149466
+      ],
+      "coefficients_last_three": [
+        42778,
+        293,
+        1
+      ],
+      "minimum_slack": 43071,
+      "minimum_slack_k": 292
+    },
+    {
+      "n": 294,
+      "coefficients_first_three": [
+        84,
+        28182,
+        3530086
+      ],
+      "coefficients_last_three": [
+        43071,
+        294,
+        1
+      ],
+      "minimum_slack": 43365,
+      "minimum_slack_k": 293
+    },
+    {
+      "n": 295,
+      "coefficients_first_three": [
+        232,
+        41644,
+        4202796
+      ],
+      "coefficients_last_three": [
+        43365,
+        295,
+        1
+      ],
+      "minimum_slack": 43660,
+      "minimum_slack_k": 294
+    },
+    {
+      "n": 296,
+      "coefficients_first_three": [
+        144,
+        32760,
+        3749232
+      ],
+      "coefficients_last_three": [
+        43660,
+        296,
+        1
+      ],
+      "minimum_slack": 43956,
+      "minimum_slack_k": 295
+    },
+    {
+      "n": 297,
+      "coefficients_first_three": [
+        180,
+        38790,
+        4162650
+      ],
+      "coefficients_last_three": [
+        43956,
+        297,
+        1
+      ],
+      "minimum_slack": 44253,
+      "minimum_slack_k": 296
+    },
+    {
+      "n": 298,
+      "coefficients_first_three": [
+        148,
+        33226,
+        3826022
+      ],
+      "coefficients_last_three": [
+        44253,
+        298,
+        1
+      ],
+      "minimum_slack": 44551,
+      "minimum_slack_k": 297
+    },
+    {
+      "n": 299,
+      "coefficients_first_three": [
+        264,
+        44220,
+        4408492
+      ],
+      "coefficients_last_three": [
+        44551,
+        299,
+        1
+      ],
+      "minimum_slack": 44850,
+      "minimum_slack_k": 298
+    },
+    {
+      "n": 300,
+      "coefficients_first_three": [
+        80,
+        28760,
+        3732560
+      ],
+      "coefficients_last_three": [
+        44850,
+        300,
+        1
+      ],
+      "minimum_slack": 45150,
+      "minimum_slack_k": 299
+    }
+  ],
+  "limitation": "finite computation only; this does not prove the conjecture for n > 300"
+}

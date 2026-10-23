@@ -1,0 +1,13 @@
+{
+  "grid": "{0,1,2,3} x {0,1,2,3}",
+  "distance_comparison": "exact squared Euclidean distances",
+  "method": "enumerate every even-size point subset and every perfect matching; maximize the number of distinct edge lengths",
+  "results": {
+    "4": {"subsets": 1820, "minimum_slack": 0},
+    "6": {"subsets": 8008, "minimum_slack": 0},
+    "8": {"subsets": 12870, "minimum_slack": 0},
+    "10": {"subsets": 8008, "minimum_slack": 1}
+  },
+  "total_subsets": 30706,
+  "limitation": "Finite search on one small integer grid; no evidence for arbitrary planar point sets beyond these instances."
+}

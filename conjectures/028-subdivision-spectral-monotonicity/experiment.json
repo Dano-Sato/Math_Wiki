@@ -1,0 +1,48 @@
+{
+  "method": "NetworkX graph atlas, all non-isomorphic connected simple graphs of orders 2 through 6; dense symmetric adjacency eigensolver",
+  "orders_checked": {
+    "2": 1,
+    "3": 2,
+    "4": 6,
+    "5": 21,
+    "6": 112
+  },
+  "graphs_checked": 142,
+  "max_edge_path_length": 16,
+  "parity_tail_rule": "each finite parity sequence must have a monotone tail of at least three values",
+  "floating_point_tolerance": 1e-09,
+  "all_graphs_passed_finite_tail_check": true,
+  "largest_observed_tail_start_index_within_parity_sequence": 2,
+  "example_of_nonmonotonicity_across_all_t": {
+    "order": 4,
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "rho_t_for_t_1_through_8": [
+      2.170086486626034,
+      2.1357792050698574,
+      2.124436508294028,
+      2.1210595877055414,
+      2.1204551450003706,
+      2.1206134878112386,
+      2.120868514762613,
+      2.1210595877055427
+    ]
+  },
+  "interpretation": "finite numerical evidence only; it does not prove eventual monotonicity for any graph"
+}

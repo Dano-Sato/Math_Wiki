@@ -1,0 +1,57 @@
+{
+  "method": "all non-isomorphic biconnected simple graphs in NetworkX graph atlas (orders 3 through 7); all vertex subsets enumerated",
+  "checked_graphs": 538,
+  "orders": {
+    "3": {
+      "biconnected_graphs": 1,
+      "minimum_connected_bipartitions_by_subset_size": {
+        "1": 3,
+        "2": 3
+      },
+      "cycle_attains_n_for_all_k": true
+    },
+    "4": {
+      "biconnected_graphs": 3,
+      "minimum_connected_bipartitions_by_subset_size": {
+        "1": 4,
+        "2": 4,
+        "3": 4
+      },
+      "cycle_attains_n_for_all_k": true
+    },
+    "5": {
+      "biconnected_graphs": 10,
+      "minimum_connected_bipartitions_by_subset_size": {
+        "1": 5,
+        "2": 5,
+        "3": 5,
+        "4": 5
+      },
+      "cycle_attains_n_for_all_k": true
+    },
+    "6": {
+      "biconnected_graphs": 56,
+      "minimum_connected_bipartitions_by_subset_size": {
+        "1": 6,
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 6
+      },
+      "cycle_attains_n_for_all_k": true
+    },
+    "7": {
+      "biconnected_graphs": 468,
+      "minimum_connected_bipartitions_by_subset_size": {
+        "1": 7,
+        "2": 7,
+        "3": 7,
+        "4": 7,
+        "5": 7,
+        "6": 7
+      },
+      "cycle_attains_n_for_all_k": true
+    }
+  },
+  "interpretation": "finite verification only; the atlas is not a proof for arbitrary order"
+}

@@ -1,0 +1,911 @@
+{
+  "range": [
+    2,
+    100
+  ],
+  "method": "complete exact search over sorted a<=b<=c; c is forced by each a,b pair",
+  "count": 99,
+  "worst_D_over_n2": {
+    "n": 2,
+    "D": 2,
+    "ratio": "1/2",
+    "solution": [
+      1,
+      2,
+      2
+    ]
+  },
+  "rows": [
+    {
+      "n": 2,
+      "solution": [
+        1,
+        2,
+        2
+      ],
+      "max_denominator": 2
+    },
+    {
+      "n": 3,
+      "solution": [
+        2,
+        2,
+        3
+      ],
+      "max_denominator": 3
+    },
+    {
+      "n": 4,
+      "solution": [
+        3,
+        3,
+        3
+      ],
+      "max_denominator": 3
+    },
+    {
+      "n": 5,
+      "solution": [
+        2,
+        5,
+        10
+      ],
+      "max_denominator": 10
+    },
+    {
+      "n": 6,
+      "solution": [
+        3,
+        6,
+        6
+      ],
+      "max_denominator": 6
+    },
+    {
+      "n": 7,
+      "solution": [
+        3,
+        6,
+        14
+      ],
+      "max_denominator": 14
+    },
+    {
+      "n": 8,
+      "solution": [
+        6,
+        6,
+        6
+      ],
+      "max_denominator": 6
+    },
+    {
+      "n": 9,
+      "solution": [
+        6,
+        6,
+        9
+      ],
+      "max_denominator": 9
+    },
+    {
+      "n": 10,
+      "solution": [
+        5,
+        10,
+        10
+      ],
+      "max_denominator": 10
+    },
+    {
+      "n": 11,
+      "solution": [
+        4,
+        12,
+        33
+      ],
+      "max_denominator": 33
+    },
+    {
+      "n": 12,
+      "solution": [
+        9,
+        9,
+        9
+      ],
+      "max_denominator": 9
+    },
+    {
+      "n": 13,
+      "solution": [
+        4,
+        26,
+        52
+      ],
+      "max_denominator": 52
+    },
+    {
+      "n": 14,
+      "solution": [
+        7,
+        14,
+        14
+      ],
+      "max_denominator": 14
+    },
+    {
+      "n": 15,
+      "solution": [
+        10,
+        12,
+        12
+      ],
+      "max_denominator": 12
+    },
+    {
+      "n": 16,
+      "solution": [
+        12,
+        12,
+        12
+      ],
+      "max_denominator": 12
+    },
+    {
+      "n": 17,
+      "solution": [
+        6,
+        17,
+        102
+      ],
+      "max_denominator": 102
+    },
+    {
+      "n": 18,
+      "solution": [
+        9,
+        18,
+        18
+      ],
+      "max_denominator": 18
+    },
+    {
+      "n": 19,
+      "solution": [
+        6,
+        38,
+        57
+      ],
+      "max_denominator": 57
+    },
+    {
+      "n": 20,
+      "solution": [
+        15,
+        15,
+        15
+      ],
+      "max_denominator": 15
+    },
+    {
+      "n": 21,
+      "solution": [
+        14,
+        14,
+        21
+      ],
+      "max_denominator": 21
+    },
+    {
+      "n": 22,
+      "solution": [
+        11,
+        22,
+        22
+      ],
+      "max_denominator": 22
+    },
+    {
+      "n": 23,
+      "solution": [
+        7,
+        42,
+        138
+      ],
+      "max_denominator": 138
+    },
+    {
+      "n": 24,
+      "solution": [
+        18,
+        18,
+        18
+      ],
+      "max_denominator": 18
+    },
+    {
+      "n": 25,
+      "solution": [
+        10,
+        25,
+        50
+      ],
+      "max_denominator": 50
+    },
+    {
+      "n": 26,
+      "solution": [
+        13,
+        26,
+        26
+      ],
+      "max_denominator": 26
+    },
+    {
+      "n": 27,
+      "solution": [
+        18,
+        18,
+        27
+      ],
+      "max_denominator": 27
+    },
+    {
+      "n": 28,
+      "solution": [
+        21,
+        21,
+        21
+      ],
+      "max_denominator": 21
+    },
+    {
+      "n": 29,
+      "solution": [
+        8,
+        116,
+        232
+      ],
+      "max_denominator": 232
+    },
+    {
+      "n": 30,
+      "solution": [
+        20,
+        24,
+        24
+      ],
+      "max_denominator": 24
+    },
+    {
+      "n": 31,
+      "solution": [
+        9,
+        72,
+        248
+      ],
+      "max_denominator": 248
+    },
+    {
+      "n": 32,
+      "solution": [
+        24,
+        24,
+        24
+      ],
+      "max_denominator": 24
+    },
+    {
+      "n": 33,
+      "solution": [
+        22,
+        22,
+        33
+      ],
+      "max_denominator": 33
+    },
+    {
+      "n": 34,
+      "solution": [
+        17,
+        34,
+        34
+      ],
+      "max_denominator": 34
+    },
+    {
+      "n": 35,
+      "solution": [
+        21,
+        30,
+        30
+      ],
+      "max_denominator": 30
+    },
+    {
+      "n": 36,
+      "solution": [
+        27,
+        27,
+        27
+      ],
+      "max_denominator": 27
+    },
+    {
+      "n": 37,
+      "solution": [
+        10,
+        185,
+        370
+      ],
+      "max_denominator": 370
+    },
+    {
+      "n": 38,
+      "solution": [
+        19,
+        38,
+        38
+      ],
+      "max_denominator": 38
+    },
+    {
+      "n": 39,
+      "solution": [
+        26,
+        26,
+        39
+      ],
+      "max_denominator": 39
+    },
+    {
+      "n": 40,
+      "solution": [
+        30,
+        30,
+        30
+      ],
+      "max_denominator": 30
+    },
+    {
+      "n": 41,
+      "solution": [
+        12,
+        123,
+        164
+      ],
+      "max_denominator": 164
+    },
+    {
+      "n": 42,
+      "solution": [
+        30,
+        30,
+        35
+      ],
+      "max_denominator": 35
+    },
+    {
+      "n": 43,
+      "solution": [
+        12,
+        172,
+        258
+      ],
+      "max_denominator": 258
+    },
+    {
+      "n": 44,
+      "solution": [
+        33,
+        33,
+        33
+      ],
+      "max_denominator": 33
+    },
+    {
+      "n": 45,
+      "solution": [
+        30,
+        36,
+        36
+      ],
+      "max_denominator": 36
+    },
+    {
+      "n": 46,
+      "solution": [
+        23,
+        46,
+        46
+      ],
+      "max_denominator": 46
+    },
+    {
+      "n": 47,
+      "solution": [
+        14,
+        94,
+        329
+      ],
+      "max_denominator": 329
+    },
+    {
+      "n": 48,
+      "solution": [
+        36,
+        36,
+        36
+      ],
+      "max_denominator": 36
+    },
+    {
+      "n": 49,
+      "solution": [
+        18,
+        63,
+        98
+      ],
+      "max_denominator": 98
+    },
+    {
+      "n": 50,
+      "solution": [
+        25,
+        50,
+        50
+      ],
+      "max_denominator": 50
+    },
+    {
+      "n": 51,
+      "solution": [
+        34,
+        34,
+        51
+      ],
+      "max_denominator": 51
+    },
+    {
+      "n": 52,
+      "solution": [
+        39,
+        39,
+        39
+      ],
+      "max_denominator": 39
+    },
+    {
+      "n": 53,
+      "solution": [
+        14,
+        371,
+        742
+      ],
+      "max_denominator": 742
+    },
+    {
+      "n": 54,
+      "solution": [
+        27,
+        54,
+        54
+      ],
+      "max_denominator": 54
+    },
+    {
+      "n": 55,
+      "solution": [
+        40,
+        40,
+        44
+      ],
+      "max_denominator": 44
+    },
+    {
+      "n": 56,
+      "solution": [
+        42,
+        42,
+        42
+      ],
+      "max_denominator": 42
+    },
+    {
+      "n": 57,
+      "solution": [
+        38,
+        38,
+        57
+      ],
+      "max_denominator": 57
+    },
+    {
+      "n": 58,
+      "solution": [
+        29,
+        58,
+        58
+      ],
+      "max_denominator": 58
+    },
+    {
+      "n": 59,
+      "solution": [
+        16,
+        240,
+        885
+      ],
+      "max_denominator": 885
+    },
+    {
+      "n": 60,
+      "solution": [
+        45,
+        45,
+        45
+      ],
+      "max_denominator": 45
+    },
+    {
+      "n": 61,
+      "solution": [
+        18,
+        122,
+        549
+      ],
+      "max_denominator": 549
+    },
+    {
+      "n": 62,
+      "solution": [
+        31,
+        62,
+        62
+      ],
+      "max_denominator": 62
+    },
+    {
+      "n": 63,
+      "solution": [
+        36,
+        56,
+        56
+      ],
+      "max_denominator": 56
+    },
+    {
+      "n": 64,
+      "solution": [
+        48,
+        48,
+        48
+      ],
+      "max_denominator": 48
+    },
+    {
+      "n": 65,
+      "solution": [
+        39,
+        52,
+        60
+      ],
+      "max_denominator": 60
+    },
+    {
+      "n": 66,
+      "solution": [
+        33,
+        66,
+        66
+      ],
+      "max_denominator": 66
+    },
+    {
+      "n": 67,
+      "solution": [
+        18,
+        402,
+        603
+      ],
+      "max_denominator": 603
+    },
+    {
+      "n": 68,
+      "solution": [
+        51,
+        51,
+        51
+      ],
+      "max_denominator": 51
+    },
+    {
+      "n": 69,
+      "solution": [
+        46,
+        46,
+        69
+      ],
+      "max_denominator": 69
+    },
+    {
+      "n": 70,
+      "solution": [
+        42,
+        60,
+        60
+      ],
+      "max_denominator": 60
+    },
+    {
+      "n": 71,
+      "solution": [
+        20,
+        284,
+        355
+      ],
+      "max_denominator": 355
+    },
+    {
+      "n": 72,
+      "solution": [
+        54,
+        54,
+        54
+      ],
+      "max_denominator": 54
+    },
+    {
+      "n": 73,
+      "solution": [
+        20,
+        292,
+        730
+      ],
+      "max_denominator": 730
+    },
+    {
+      "n": 74,
+      "solution": [
+        37,
+        74,
+        74
+      ],
+      "max_denominator": 74
+    },
+    {
+      "n": 75,
+      "solution": [
+        50,
+        60,
+        60
+      ],
+      "max_denominator": 60
+    },
+    {
+      "n": 76,
+      "solution": [
+        57,
+        57,
+        57
+      ],
+      "max_denominator": 57
+    },
+    {
+      "n": 77,
+      "solution": [
+        42,
+        66,
+        77
+      ],
+      "max_denominator": 77
+    },
+    {
+      "n": 78,
+      "solution": [
+        52,
+        60,
+        65
+      ],
+      "max_denominator": 65
+    },
+    {
+      "n": 79,
+      "solution": [
+        21,
+        474,
+        1106
+      ],
+      "max_denominator": 1106
+    },
+    {
+      "n": 80,
+      "solution": [
+        60,
+        60,
+        60
+      ],
+      "max_denominator": 60
+    },
+    {
+      "n": 81,
+      "solution": [
+        54,
+        54,
+        81
+      ],
+      "max_denominator": 81
+    },
+    {
+      "n": 82,
+      "solution": [
+        41,
+        82,
+        82
+      ],
+      "max_denominator": 82
+    },
+    {
+      "n": 83,
+      "solution": [
+        22,
+        462,
+        1743
+      ],
+      "max_denominator": 1743
+    },
+    {
+      "n": 84,
+      "solution": [
+        63,
+        63,
+        63
+      ],
+      "max_denominator": 63
+    },
+    {
+      "n": 85,
+      "solution": [
+        40,
+        68,
+        136
+      ],
+      "max_denominator": 136
+    },
+    {
+      "n": 86,
+      "solution": [
+        43,
+        86,
+        86
+      ],
+      "max_denominator": 86
+    },
+    {
+      "n": 87,
+      "solution": [
+        58,
+        58,
+        87
+      ],
+      "max_denominator": 87
+    },
+    {
+      "n": 88,
+      "solution": [
+        66,
+        66,
+        66
+      ],
+      "max_denominator": 66
+    },
+    {
+      "n": 89,
+      "solution": [
+        24,
+        534,
+        712
+      ],
+      "max_denominator": 712
+    },
+    {
+      "n": 90,
+      "solution": [
+        63,
+        70,
+        70
+      ],
+      "max_denominator": 70
+    },
+    {
+      "n": 91,
+      "solution": [
+        65,
+        70,
+        70
+      ],
+      "max_denominator": 70
+    },
+    {
+      "n": 92,
+      "solution": [
+        69,
+        69,
+        69
+      ],
+      "max_denominator": 69
+    },
+    {
+      "n": 93,
+      "solution": [
+        62,
+        62,
+        93
+      ],
+      "max_denominator": 93
+    },
+    {
+      "n": 94,
+      "solution": [
+        47,
+        94,
+        94
+      ],
+      "max_denominator": 94
+    },
+    {
+      "n": 95,
+      "solution": [
+        42,
+        105,
+        114
+      ],
+      "max_denominator": 114
+    },
+    {
+      "n": 96,
+      "solution": [
+        72,
+        72,
+        72
+      ],
+      "max_denominator": 72
+    },
+    {
+      "n": 97,
+      "solution": [
+        28,
+        194,
+        2716
+      ],
+      "max_denominator": 2716
+    },
+    {
+      "n": 98,
+      "solution": [
+        49,
+        98,
+        98
+      ],
+      "max_denominator": 98
+    },
+    {
+      "n": 99,
+      "solution": [
+        66,
+        72,
+        88
+      ],
+      "max_denominator": 88
+    },
+    {
+      "n": 100,
+      "solution": [
+        75,
+        75,
+        75
+      ],
+      "max_denominator": 75
+    }
+  ]
+}

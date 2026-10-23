@@ -1,0 +1,45 @@
+{
+  "scope": "all labelled simple graphs of orders 3 through 6",
+  "method": "edge-mask enumeration; test connectivity after deleting each single vertex; count connected induced vertex sets of each size 2 through n-1",
+  "results": [
+    {
+      "n": 3,
+      "labelled_2_connected_graphs": 1,
+      "minimum_connected_induced_sets_by_size": {
+        "2": 3
+      },
+      "conjecture_holds": true
+    },
+    {
+      "n": 4,
+      "labelled_2_connected_graphs": 10,
+      "minimum_connected_induced_sets_by_size": {
+        "2": 4,
+        "3": 4
+      },
+      "conjecture_holds": true
+    },
+    {
+      "n": 5,
+      "labelled_2_connected_graphs": 238,
+      "minimum_connected_induced_sets_by_size": {
+        "2": 5,
+        "3": 5,
+        "4": 5
+      },
+      "conjecture_holds": true
+    },
+    {
+      "n": 6,
+      "labelled_2_connected_graphs": 11368,
+      "minimum_connected_induced_sets_by_size": {
+        "2": 6,
+        "3": 6,
+        "4": 6,
+        "5": 6
+      },
+      "conjecture_holds": true
+    }
+  ],
+  "limitation": "finite verification only; no claim for orders greater than 6"
+}

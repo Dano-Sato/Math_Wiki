@@ -1,0 +1,182 @@
+{
+  "seed": 20261024,
+  "samples_per_n": 30,
+  "method": "independent fair tournaments; exact subset DP counts every ordered-endpoint Hamilton path",
+  "cycle_edge_mapping": "cycles through arc u->v correspond to paths starting at v and ending at u",
+  "conditional_mean": "(n-2)! / 2^(n-1) for each present arc",
+  "fixed_arc_second_moment_method": "exact weighted-permutation DP; reports Var(C_e/mu_n) conditional on a fixed arc",
+  "fixed_arc_variance_rows": [
+    {
+      "n": 3,
+      "variance": 3.0,
+      "n_times_variance": 9.0
+    },
+    {
+      "n": 4,
+      "variance": 3.0,
+      "n_times_variance": 12.0
+    },
+    {
+      "n": 5,
+      "variance": 2.3333333333333335,
+      "n_times_variance": 11.666666666666668
+    },
+    {
+      "n": 6,
+      "variance": 1.6666666666666665,
+      "n_times_variance": 10.0
+    },
+    {
+      "n": 7,
+      "variance": 1.2166666666666668,
+      "n_times_variance": 8.516666666666667
+    },
+    {
+      "n": 8,
+      "variance": 0.9388888888888889,
+      "n_times_variance": 7.511111111111111
+    },
+    {
+      "n": 9,
+      "variance": 0.7611111111111111,
+      "n_times_variance": 6.85
+    },
+    {
+      "n": 10,
+      "variance": 0.6395833333333334,
+      "n_times_variance": 6.395833333333334
+    },
+    {
+      "n": 11,
+      "variance": 0.5515046296296295,
+      "n_times_variance": 6.066550925925925
+    },
+    {
+      "n": 12,
+      "variance": 0.4847376543209876,
+      "n_times_variance": 5.816851851851851
+    },
+    {
+      "n": 13,
+      "variance": 0.43237884800384796,
+      "n_times_variance": 5.620925024050024
+    },
+    {
+      "n": 14,
+      "variance": 0.3902199742130297,
+      "n_times_variance": 5.463079638982416
+    },
+    {
+      "n": 15,
+      "variance": 0.35554698291677456,
+      "n_times_variance": 5.333204743751619
+    },
+    {
+      "n": 16,
+      "variance": 0.32652997002079354,
+      "n_times_variance": 5.224479520332697
+    },
+    {
+      "n": 17,
+      "variance": 0.30189016717348394,
+      "n_times_variance": 5.132132841949227
+    },
+    {
+      "n": 18,
+      "variance": 0.28070705115346417,
+      "n_times_variance": 5.052726920762355
+    }
+  ],
+  "rows": [
+    {
+      "n": 4,
+      "arcs_per_tournament": 6,
+      "mean_max_abs_relative_error": 1.8666666666666667,
+      "q90_max_abs_relative_error": 3.0,
+      "worst_max_abs_relative_error": 3.0,
+      "mean_rms_relative_error": 1.657198307316886,
+      "pooled_arc_ratio_mean": 1.1555555555555554,
+      "pooled_arc_ratio_sd": 1.8129847159441013
+    },
+    {
+      "n": 5,
+      "arcs_per_tournament": 10,
+      "mean_max_abs_relative_error": 1.9555555555555555,
+      "q90_max_abs_relative_error": 4.333333333333333,
+      "worst_max_abs_relative_error": 7.0,
+      "mean_rms_relative_error": 1.4601031979489079,
+      "pooled_arc_ratio_mean": 1.2,
+      "pooled_arc_ratio_sd": 1.5568248789455106
+    },
+    {
+      "n": 6,
+      "arcs_per_tournament": 15,
+      "mean_max_abs_relative_error": 1.9777777777777776,
+      "q90_max_abs_relative_error": 4.333333333333333,
+      "worst_max_abs_relative_error": 4.333333333333333,
+      "mean_rms_relative_error": 1.153728423954938,
+      "pooled_arc_ratio_mean": 0.9422222222222222,
+      "pooled_arc_ratio_sd": 1.2143666743422623
+    },
+    {
+      "n": 7,
+      "arcs_per_tournament": 21,
+      "mean_max_abs_relative_error": 2.4844444444444442,
+      "q90_max_abs_relative_error": 3.8,
+      "worst_max_abs_relative_error": 4.866666666666666,
+      "mean_rms_relative_error": 1.1259142645298792,
+      "pooled_arc_ratio_mean": 1.125925925925926,
+      "pooled_arc_ratio_sd": 1.153350222288864
+    },
+    {
+      "n": 8,
+      "arcs_per_tournament": 28,
+      "mean_max_abs_relative_error": 2.031111111111111,
+      "q90_max_abs_relative_error": 3.977777777777778,
+      "worst_max_abs_relative_error": 4.333333333333333,
+      "mean_rms_relative_error": 0.9589655317591985,
+      "pooled_arc_ratio_mean": 0.8804232804232804,
+      "pooled_arc_ratio_sd": 0.9775871913938142
+    },
+    {
+      "n": 9,
+      "arcs_per_tournament": 36,
+      "mean_max_abs_relative_error": 2.2103703703703705,
+      "q90_max_abs_relative_error": 3.114285714285714,
+      "worst_max_abs_relative_error": 4.587301587301587,
+      "mean_rms_relative_error": 0.8490581551996874,
+      "pooled_arc_ratio_mean": 1.147936507936508,
+      "pooled_arc_ratio_sd": 0.8722606278377998
+    },
+    {
+      "n": 10,
+      "arcs_per_tournament": 45,
+      "mean_max_abs_relative_error": 2.255873015873016,
+      "q90_max_abs_relative_error": 3.177777777777778,
+      "worst_max_abs_relative_error": 5.082539682539682,
+      "mean_rms_relative_error": 0.7762356760056577,
+      "pooled_arc_ratio_mean": 1.0428689006466785,
+      "pooled_arc_ratio_sd": 0.7897183586816799
+    },
+    {
+      "n": 11,
+      "arcs_per_tournament": 55,
+      "mean_max_abs_relative_error": 1.7441740152851264,
+      "q90_max_abs_relative_error": 2.880070546737213,
+      "worst_max_abs_relative_error": 3.893121693121693,
+      "mean_rms_relative_error": 0.6883321826843276,
+      "pooled_arc_ratio_mean": 0.8953227513227513,
+      "pooled_arc_ratio_sd": 0.69984328887077
+    },
+    {
+      "n": 12,
+      "arcs_per_tournament": 66,
+      "mean_max_abs_relative_error": 1.8742904174015285,
+      "q90_max_abs_relative_error": 2.838306878306878,
+      "worst_max_abs_relative_error": 3.5426455026455024,
+      "mean_rms_relative_error": 0.674076169997067,
+      "pooled_arc_ratio_mean": 0.9866418684196462,
+      "pooled_arc_ratio_sd": 0.6942108001034848
+    }
+  ]
+}

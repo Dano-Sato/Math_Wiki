@@ -67,7 +67,8 @@ python serve.py
 
 ## 관리 규칙
 
-- 본 추측은 등록 순서대로 `001`, `002`, `003`처럼 세 자리 번호를 붙인다. 다음 본 추측 번호는 `010`이다.
+- 여러 에이전트의 작업 규칙은 [AGENTS.md](AGENTS.md), 공유 점유표는 [OCCUPANCY.md](OCCUPANCY.md)에 있다. 검토 전에 `python coordination.py claim`으로 번호를 점유하고 완료 후 해제한다. 새 추측은 `python coordination.py new`로 번호 예약과 점유를 동시에 한다.
+- 본 추측은 등록 순서대로 `001`, `002`, `003`처럼 세 자리 번호를 붙인다. 다음 사용 번호는 `python coordination.py status`로 확인한다. 동시에 생성 중인 예약과 취소된 예약도 고려하므로 직접 번호를 정하지 않는다.
 - 추측마다 `conjectures/<번호>-<slug>/` 폴더를 만든다. 번호는 고정하며, 삭제되거나 반박된 뒤에도 재사용하지 않는다.
 - 파생 추측은 본 추측 번호에 접미 번호를 붙인다. 예: `001`의 파생 추측은 `001-1`, `001-2`다.
 - `conjectures.md`: 정의, 현재 명제, 파생 관계, 증명된 보조정리, 상태를 관리한다. 맨 위 표에 `버전`, `상태`, `분야` 행을 둔다. 추정 깊이는 `깊이` 행(0~4)에 적는다. 뷰어는 첫 제목, 첫 인용문, 그리고 이 행들을 읽어 카드를 만든다.
@@ -106,5 +107,6 @@ math_wiki/
     ├── 006-prime-sum-difference/
     ├── 007-prime-reversal-diameter/
     ├── 008-integer-mean-free-rows/
-    └── 009-gcd-ring-return/
+    ├── 009-gcd-ring-return/
+    └── 010-circle-star-balance/
 ```

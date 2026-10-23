@@ -1,0 +1,38 @@
+{
+  "claim_id": "030",
+  "definition": "c(n,k) counts ordered compositions of n into exactly k odd primes (2 excluded)",
+  "max_n": 2000,
+  "arithmetic": "exact integer dynamic programming: c(n,k)=sum_{p odd prime <= n} c(n-p,k-1)",
+  "n_values_with_nonempty_support_checked": 1997,
+  "log_concavity_inequalities_checked": 328649,
+  "minimum_positive_slack": {
+    "value": "76",
+    "n": 17,
+    "k": 3
+  },
+  "largest_coefficient_bit_length": 748,
+  "support_interval_checked": true,
+  "sample_support_endpoints": {
+    "3": [
+      1,
+      1
+    ],
+    "11": [
+      1,
+      3
+    ],
+    "17": [
+      1,
+      5
+    ],
+    "100": [
+      2,
+      32
+    ],
+    "2000": [
+      2,
+      666
+    ]
+  },
+  "scope_warning": "Finite computation only; it is not a proof for all n."
+}
