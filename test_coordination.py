@@ -80,6 +80,42 @@ class CoordinationTests(unittest.TestCase):
         self.call('claim','ROOT','--owner','other','--task','collision',expected=2)
         self.assertEqual(len(self.call('status')['claims']),2)
 
+    def test_lean_is_exclusive_and_does_not_affect_number_reservations(self):
+        lean = self.claim('lean',owner='formalizer')
+        self.assertEqual(lean['resources'],['LEAN'])
+        self.claim('ROOT',owner='shared-writer')
+        self.claim('005',owner='reviewer')
+        self.call('claim','LEAN','--owner','other','--task','collision',expected=2)
+        status = self.call('status')
+        self.assertEqual(status['next_number'],'009')
+        self.assertEqual({r['resource'] for r in status['claims']},{'005','ROOT','LEAN'})
+        self.assertEqual(next(r['mode'] for r in status['claims']
+                              if r['resource'] == 'LEAN'),'formalize')
+        self.assertIn('Lean 형식화중',(self.root/'OCCUPANCY.md').read_text(encoding='utf-8'))
+        self.assertNotIn(lean['token'],json.dumps(status))
+        self.assertNotIn(lean['token'],(self.root/'OCCUPANCY.md').read_text(encoding='utf-8'))
+        self.assertEqual(self.call('new','--owner','creator','--task','new')['resources'],['009'])
+
+    def test_formalization_batch_conflicts_and_tokens(self):
+        lean = self.claim('LEAN',owner='first')
+        self.call('claim','005','LEAN','--mode','formalize',
+                  '--owner','second','--task','formalize source',expected=2)
+        self.assertEqual([r['resource'] for r in self.call('status')['claims']],['LEAN'])
+        self.call('release','LEAN','--token',lean['token'])
+        batch = self.call('claim','005','LEAN','--mode','formalize',
+                          '--owner','second','--task','formalize source')
+        status = self.call('status')
+        self.assertEqual({r['mode'] for r in status['claims']},{'formalize'})
+        self.call('heartbeat','005','LEAN','--token',lean['token'],expected=2)
+        self.call('heartbeat','005','LEAN','--token',batch['token'])
+        self.call('release','005','LEAN','--token',batch['token'],'--note','verified')
+        self.assertEqual(self.call('status')['claims'],[])
+
+    def test_shared_setup_batch_does_not_leave_root_claim_on_lean_conflict(self):
+        self.claim('LEAN',owner='formalizer')
+        self.call('claim','ROOT','LEAN','--owner','installer','--task','toolchain',expected=2)
+        self.assertEqual([r['resource'] for r in self.call('status')['claims']],['LEAN'])
+
     def test_old_claim_is_not_expired_and_recovery_is_audited(self):
         self.claim('005')
         with sqlite3.connect(self.root/'.coordination'/'state.sqlite3') as db:

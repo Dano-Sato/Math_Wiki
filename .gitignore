@@ -3,3 +3,5 @@ __pycache__/
 *.exe
 .coordination/
 .occupancy-*.tmp
+.lake/
+.tools/

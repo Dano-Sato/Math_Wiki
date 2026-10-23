@@ -65,9 +65,16 @@ python serve.py
 
 브라우저에서 `http://127.0.0.1:8770/`가 열린다. 파일을 고친 뒤 새로고침하면 바로 반영된다. 뷰어는 `conjectures/` 폴더를 읽어 목차와 추측 목록을 자동으로 만든다.
 
+## Lean 라이브러리
+
+증명된 결과를 모으는 Lean 4·Mathlib 기반 `MathWiki` 라이브러리를 함께 관리한다.
+설치·빌드·편집 방법과 형식화 원칙은 [Lean 안내](docs/lean.md)를 따른다.
+Windows에서 빌드하려면 최초 한 번 `powershell -ExecutionPolicy Bypass -File .\scripts\setup_lean.ps1`을 실행하고,
+이후 `.\scripts\lake.ps1 build`를 사용한다.
+
 ## 관리 규칙
 
-- 여러 에이전트의 작업 규칙은 [AGENTS.md](AGENTS.md), 공유 점유표는 [OCCUPANCY.md](OCCUPANCY.md)에 있다. 검토 전에 `python coordination.py claim`으로 번호를 점유하고 완료 후 해제한다. 새 추측은 `python coordination.py new`로 번호 예약과 점유를 동시에 한다.
+- 여러 에이전트의 작업 규칙과 세 작업 방향(추측 생성·검토 및 발전·Lean 형식화)은 [AGENTS.md](AGENTS.md), 공유 점유표는 [OCCUPANCY.md](OCCUPANCY.md)에 있다. 검토 전에 `python coordination.py claim`으로 번호를 점유하고 완료 후 해제한다. 새 추측은 `python coordination.py new`로 번호 예약과 점유를 동시에 한다. Lean 형식화는 원본 번호와 `LEAN`을 함께 점유하며, 도구·의존성·Lean CI 변경에는 `ROOT`와 `LEAN`이 모두 필요하다.
 - 본 추측은 등록 순서대로 `001`, `002`, `003`처럼 세 자리 번호를 붙인다. 다음 사용 번호는 `python coordination.py status`로 확인한다. 동시에 생성 중인 예약과 취소된 예약도 고려하므로 직접 번호를 정하지 않는다.
 - 추측마다 `conjectures/<번호>-<slug>/` 폴더를 만든다. 번호는 고정하며, 삭제되거나 반박된 뒤에도 재사용하지 않는다.
 - 파생 추측은 본 추측 번호에 접미 번호를 붙인다. 예: `001`의 파생 추측은 `001-1`, `001-2`다.

@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DEFAULT_ROOT = Path(__file__).resolve().parent
+SHARED_MODES = {'ROOT': 'shared', 'LEAN': 'formalize'}
 
 
 class Conflict(Exception):
@@ -23,10 +24,10 @@ def now():
 
 
 def resource(value):
-    if value.upper() == 'ROOT':
-        return 'ROOT'
+    if value.upper() in SHARED_MODES:
+        return value.upper()
     if not re.fullmatch(r'\d{1,3}', value) or not 1 <= int(value) <= 999:
-        raise argparse.ArgumentTypeError('Use 001..999 or ROOT.')
+        raise argparse.ArgumentTypeError('Use 001..999, ROOT, or LEAN.')
     return f'{int(value):03d}'
 
 
@@ -41,8 +42,8 @@ def existing_numbers(root):
 def next_number(db, root):
     numbers = existing_numbers(root)
     numbers.update(r[0] for r in db.execute('SELECT number FROM reservations'))
-    numbers.update(int(r[0]) for r in db.execute(
-        "SELECT resource FROM claims WHERE resource != 'ROOT'"))
+    numbers.update(int(r[0]) for r in db.execute('SELECT resource FROM claims')
+                   if r[0].isdigit())
     number = max(numbers, default=0) + 1
     if number > 999:
         raise Conflict('IDs exhausted; extend the numbering format before creating more.')
@@ -103,14 +104,17 @@ def refresh_board(db, root):
                  '| --- | --- | --- | --- | --- | --- |']
         for row in rows:
             mode = {'review':'검토중', 'edit':'수정중', 'create':'생성중',
-                    'shared':'공용 수정중', 'hold':'보류 · 점유 유지'}.get(row['mode'],row['mode'])
+                    'formalize':'Lean 형식화중', 'shared':'공용 수정중',
+                    'hold':'보류 · 점유 유지'}.get(row['mode'],row['mode'])
             values = (row['resource'],row['owner'],mode,row['task'],row['started_at'],row['updated_at'])
             lines.append('| ' + ' | '.join(escape(value) for value in values) + ' |')
         if not rows:
             lines.append('| — | — | — | 현재 등록된 점유 없음 | — | — |')
         lines += ['', '## 사용법', '',
                   '규칙과 명령 예시는 [AGENTS.md](AGENTS.md)를 읽는다. '
-                  '`ROOT`는 README·뷰어·공용 코드 등 공용 파일의 편집 점유다.', '',
+                  '`ROOT`는 README·뷰어·공용 코드 등 공용 파일, '
+                  '`LEAN`은 MathWiki 라이브러리 전체의 점유다. '
+                  '특정 추측을 형식화할 때는 원본 번호와 `LEAN`을 함께 점유한다.', '',
                   '새 에이전트도 점유표 열람만으로 작업을 시작하지 않는다. '
                   '`claim` 또는 `new`의 성공 응답을 받은 뒤 작업한다.', '',
                   '이미 실행 중이던 에이전트의 작업은 자동 감지되지 않는다. '
@@ -149,11 +153,11 @@ def execute(db, root, args):
                 occupied = db.execute('SELECT * FROM claims WHERE resource=?', (item,)).fetchone()
                 if occupied:
                     raise Conflict(f'{item} is occupied by {occupied["owner"]}: {occupied["task"]}')
-                if command != 'new' and item != 'ROOT' and int(item) not in existing:
+                if command != 'new' and item not in SHARED_MODES and int(item) not in existing:
                     raise Conflict(f'{item} has no conjecture folder. Use new to reserve a fresh ID.')
             token, at = secrets.token_hex(16), now()
             for item in items:
-                item_mode = 'shared' if item == 'ROOT' else mode
+                item_mode = SHARED_MODES.get(item, mode)
                 db.execute('INSERT INTO claims VALUES(?,?,?,?,?,?,?)',
                            (item,args.owner,item_mode,args.task,token,at,at))
                 if command == 'new':
@@ -201,7 +205,8 @@ def parser():
         command = sub.add_parser(name)
         if name == 'claim':
             command.add_argument('resources', nargs='+', type=resource)
-            command.add_argument('--mode', choices=('review','edit','hold'), default='review')
+            command.add_argument('--mode', choices=('review','edit','formalize','hold'), default='review',
+                                 help='Task mode for numbered claims; ROOT and LEAN have fixed modes.')
         command.add_argument('--owner', required=True, help='Unique agent/session label.')
         command.add_argument('--task', required=True)
     for name in ('heartbeat','release','force-release'):
