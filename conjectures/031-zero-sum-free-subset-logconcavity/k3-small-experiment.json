@@ -1,0 +1,580 @@
+{
+  "max_group_order": 29,
+  "isomorphism_types_checked": 45,
+  "subset_sizes_enumerated": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "all_k3_inequalities_passed": true,
+  "minimum_k3_margin": 0,
+  "all_k4_inequalities_passed": true,
+  "minimum_k4_margin": 0,
+  "groups": [
+    {
+      "invariant_factors": [
+        2
+      ],
+      "group_order": 2,
+      "z2": 0,
+      "z3": 0,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 0,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        3
+      ],
+      "group_order": 3,
+      "z2": 0,
+      "z3": 0,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 0,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        2,
+        2
+      ],
+      "group_order": 4,
+      "z2": 3,
+      "z3": 0,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 0,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        4
+      ],
+      "group_order": 4,
+      "z2": 2,
+      "z3": 0,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 0,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        5
+      ],
+      "group_order": 5,
+      "z2": 4,
+      "z3": 0,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 0,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        6
+      ],
+      "group_order": 6,
+      "z2": 8,
+      "z3": 2,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 4,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        7
+      ],
+      "group_order": 7,
+      "z2": 12,
+      "z3": 6,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 36,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        2
+      ],
+      "group_order": 8,
+      "z2": 21,
+      "z3": 28,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 784,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        2,
+        4
+      ],
+      "group_order": 8,
+      "z2": 19,
+      "z3": 20,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 400,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        8
+      ],
+      "group_order": 8,
+      "z2": 18,
+      "z3": 16,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 256,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        3,
+        3
+      ],
+      "group_order": 9,
+      "z2": 24,
+      "z3": 24,
+      "z4": 0,
+      "z5": 0,
+      "k3_margin": 576,
+      "k4_margin": 0
+    },
+    {
+      "invariant_factors": [
+        9
+      ],
+      "group_order": 9,
+      "z2": 24,
+      "z3": 26,
+      "z4": 2,
+      "z5": 0,
+      "k3_margin": 628,
+      "k4_margin": 4
+    },
+    {
+      "invariant_factors": [
+        10
+      ],
+      "group_order": 10,
+      "z2": 32,
+      "z3": 48,
+      "z4": 12,
+      "z5": 0,
+      "k3_margin": 1920,
+      "k4_margin": 144
+    },
+    {
+      "invariant_factors": [
+        11
+      ],
+      "group_order": 11,
+      "z2": 40,
+      "z3": 70,
+      "z4": 30,
+      "z5": 0,
+      "k3_margin": 3700,
+      "k4_margin": 900
+    },
+    {
+      "invariant_factors": [
+        2,
+        6
+      ],
+      "group_order": 12,
+      "z2": 51,
+      "z3": 114,
+      "z4": 78,
+      "z5": 0,
+      "k3_margin": 9018,
+      "k4_margin": 6084
+    },
+    {
+      "invariant_factors": [
+        12
+      ],
+      "group_order": 12,
+      "z2": 50,
+      "z3": 106,
+      "z4": 68,
+      "z5": 0,
+      "k3_margin": 7836,
+      "k4_margin": 4624
+    },
+    {
+      "invariant_factors": [
+        13
+      ],
+      "group_order": 13,
+      "z2": 60,
+      "z3": 144,
+      "z4": 120,
+      "z5": 0,
+      "k3_margin": 13536,
+      "k4_margin": 14400
+    },
+    {
+      "invariant_factors": [
+        14
+      ],
+      "group_order": 14,
+      "z2": 72,
+      "z3": 200,
+      "z4": 216,
+      "z5": 12,
+      "k3_margin": 24448,
+      "k4_margin": 44256
+    },
+    {
+      "invariant_factors": [
+        15
+      ],
+      "group_order": 15,
+      "z2": 84,
+      "z3": 256,
+      "z4": 322,
+      "z5": 40,
+      "k3_margin": 38488,
+      "k4_margin": 93444
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "group_order": 16,
+      "z2": 105,
+      "z3": 420,
+      "z4": 840,
+      "z5": 0,
+      "k3_margin": 88200,
+      "k4_margin": 705600
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        4
+      ],
+      "group_order": 16,
+      "z2": 101,
+      "z3": 372,
+      "z4": 648,
+      "z5": 96,
+      "k3_margin": 72936,
+      "k4_margin": 384192
+    },
+    {
+      "invariant_factors": [
+        2,
+        8
+      ],
+      "group_order": 16,
+      "z2": 99,
+      "z3": 348,
+      "z4": 558,
+      "z5": 118,
+      "k3_margin": 65862,
+      "k4_margin": 270300
+    },
+    {
+      "invariant_factors": [
+        4,
+        4
+      ],
+      "group_order": 16,
+      "z2": 99,
+      "z3": 348,
+      "z4": 564,
+      "z5": 120,
+      "k3_margin": 65268,
+      "k4_margin": 276336
+    },
+    {
+      "invariant_factors": [
+        16
+      ],
+      "group_order": 16,
+      "z2": 98,
+      "z3": 336,
+      "z4": 516,
+      "z5": 120,
+      "k3_margin": 62328,
+      "k4_margin": 225936
+    },
+    {
+      "invariant_factors": [
+        17
+      ],
+      "group_order": 17,
+      "z2": 112,
+      "z3": 416,
+      "z4": 720,
+      "z5": 256,
+      "k3_margin": 92416,
+      "k4_margin": 411904
+    },
+    {
+      "invariant_factors": [
+        3,
+        6
+      ],
+      "group_order": 18,
+      "z2": 128,
+      "z3": 520,
+      "z4": 1016,
+      "z5": 496,
+      "k3_margin": 140352,
+      "k4_margin": 774336
+    },
+    {
+      "invariant_factors": [
+        18
+      ],
+      "group_order": 18,
+      "z2": 128,
+      "z3": 522,
+      "z4": 1036,
+      "z5": 500,
+      "k3_margin": 139876,
+      "k4_margin": 812296
+    },
+    {
+      "invariant_factors": [
+        19
+      ],
+      "group_order": 19,
+      "z2": 144,
+      "z3": 630,
+      "z4": 1386,
+      "z5": 864,
+      "k3_margin": 197316,
+      "k4_margin": 1376676
+    },
+    {
+      "invariant_factors": [
+        2,
+        10
+      ],
+      "group_order": 20,
+      "z2": 163,
+      "z3": 784,
+      "z4": 1980,
+      "z5": 1516,
+      "k3_margin": 291916,
+      "k4_margin": 2731856
+    },
+    {
+      "invariant_factors": [
+        20
+      ],
+      "group_order": 20,
+      "z2": 162,
+      "z3": 768,
+      "z4": 1896,
+      "z5": 1456,
+      "k3_margin": 282672,
+      "k4_margin": 2476608
+    },
+    {
+      "invariant_factors": [
+        21
+      ],
+      "group_order": 21,
+      "z2": 180,
+      "z3": 906,
+      "z4": 2418,
+      "z5": 2232,
+      "k3_margin": 385596,
+      "k4_margin": 3824532
+    },
+    {
+      "invariant_factors": [
+        22
+      ],
+      "group_order": 22,
+      "z2": 200,
+      "z3": 1080,
+      "z4": 3180,
+      "z5": 3452,
+      "k3_margin": 530400,
+      "k4_margin": 6384240
+    },
+    {
+      "invariant_factors": [
+        23
+      ],
+      "group_order": 23,
+      "z2": 220,
+      "z3": 1254,
+      "z4": 3960,
+      "z5": 4928,
+      "k3_margin": 701316,
+      "k4_margin": 9501888
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        6
+      ],
+      "group_order": 24,
+      "z2": 245,
+      "z3": 1526,
+      "z4": 5460,
+      "z5": 7938,
+      "k3_margin": 990976,
+      "k4_margin": 17698212
+    },
+    {
+      "invariant_factors": [
+        2,
+        12
+      ],
+      "group_order": 24,
+      "z2": 243,
+      "z3": 1486,
+      "z4": 5164,
+      "z5": 7398,
+      "k3_margin": 953344,
+      "k4_margin": 15673468
+    },
+    {
+      "invariant_factors": [
+        24
+      ],
+      "group_order": 24,
+      "z2": 242,
+      "z3": 1466,
+      "z4": 5016,
+      "z5": 7112,
+      "k3_margin": 935284,
+      "k4_margin": 14734064
+    },
+    {
+      "invariant_factors": [
+        5,
+        5
+      ],
+      "group_order": 25,
+      "z2": 264,
+      "z3": 1680,
+      "z4": 6120,
+      "z5": 9600,
+      "k3_margin": 1206720,
+      "k4_margin": 21326400
+    },
+    {
+      "invariant_factors": [
+        25
+      ],
+      "group_order": 25,
+      "z2": 264,
+      "z3": 1680,
+      "z4": 6120,
+      "z5": 9664,
+      "k3_margin": 1206720,
+      "k4_margin": 21218880
+    },
+    {
+      "invariant_factors": [
+        26
+      ],
+      "group_order": 26,
+      "z2": 288,
+      "z3": 1936,
+      "z4": 7572,
+      "z5": 13344,
+      "k3_margin": 1567360,
+      "k4_margin": 31501200
+    },
+    {
+      "invariant_factors": [
+        3,
+        3,
+        3
+      ],
+      "group_order": 27,
+      "z2": 312,
+      "z3": 2184,
+      "z4": 8892,
+      "z5": 16848,
+      "k3_margin": 1995552,
+      "k4_margin": 42271632
+    },
+    {
+      "invariant_factors": [
+        3,
+        9
+      ],
+      "group_order": 27,
+      "z2": 312,
+      "z3": 2190,
+      "z4": 9006,
+      "z5": 17280,
+      "k3_margin": 1986228,
+      "k4_margin": 43264836
+    },
+    {
+      "invariant_factors": [
+        27
+      ],
+      "group_order": 27,
+      "z2": 312,
+      "z3": 2192,
+      "z4": 9044,
+      "z5": 17424,
+      "k3_margin": 1983136,
+      "k4_margin": 43600528
+    },
+    {
+      "invariant_factors": [
+        2,
+        14
+      ],
+      "group_order": 28,
+      "z2": 339,
+      "z3": 2520,
+      "z4": 11202,
+      "z5": 23922,
+      "k3_margin": 2552922,
+      "k4_margin": 65201364
+    },
+    {
+      "invariant_factors": [
+        28
+      ],
+      "group_order": 28,
+      "z2": 338,
+      "z3": 2496,
+      "z4": 10980,
+      "z5": 23256,
+      "k3_margin": 2518776,
+      "k4_margin": 62513424
+    },
+    {
+      "invariant_factors": [
+        29
+      ],
+      "group_order": 29,
+      "z2": 364,
+      "z3": 2800,
+      "z4": 12936,
+      "z5": 29568,
+      "k3_margin": 3131296,
+      "k4_margin": 84549696
+    }
+  ],
+  "scope": "Exact enumeration of 3- and 4-element subsets for every nontrivial finite abelian group of order at most 29."
+}
