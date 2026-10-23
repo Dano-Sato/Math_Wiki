@@ -1,0 +1,54 @@
+{
+  "method": "exact Pr\u00fcfer-code enumeration and exact integer inequalities",
+  "exhaustive": [
+    {
+      "n": 2,
+      "checked_connected_graphs": 1,
+      "spanning_trees_per_graph_universe": 1,
+      "counterexample": null
+    },
+    {
+      "n": 3,
+      "checked_connected_graphs": 4,
+      "spanning_trees_per_graph_universe": 3,
+      "counterexample": null
+    },
+    {
+      "n": 4,
+      "checked_connected_graphs": 38,
+      "spanning_trees_per_graph_universe": 16,
+      "counterexample": null
+    },
+    {
+      "n": 5,
+      "checked_connected_graphs": 728,
+      "spanning_trees_per_graph_universe": 125,
+      "counterexample": null
+    },
+    {
+      "n": 6,
+      "checked_connected_graphs": 26704,
+      "spanning_trees_per_graph_universe": 1296,
+      "counterexample": null
+    }
+  ],
+  "random_samples": [
+    {
+      "n": 7,
+      "generated_graphs": 1000,
+      "checked_connected_graphs": 763,
+      "seed": 20261024,
+      "spanning_trees_per_graph_universe": 16807,
+      "counterexample": null
+    },
+    {
+      "n": 8,
+      "generated_graphs": 200,
+      "checked_connected_graphs": 157,
+      "seed": 20261025,
+      "spanning_trees_per_graph_universe": 262144,
+      "counterexample": null
+    }
+  ],
+  "warning": "Finite checks do not imply the conjecture for all graphs."
+}

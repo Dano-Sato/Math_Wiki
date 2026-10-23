@@ -1,0 +1,14 @@
+{
+  "n": 7,
+  "all_labeled_graph_masks": 2097152,
+  "trees_enumerated": 16807,
+  "inequality_indices_checked": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "all_graph_masks_checked_per_inequality": 2097152,
+  "counterexample": null,
+  "method": "exact Pr\u00fcfer enumeration + subset zeta transform; integer arithmetic"
+}

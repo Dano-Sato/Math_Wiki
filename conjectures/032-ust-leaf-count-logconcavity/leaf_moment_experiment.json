@@ -1,0 +1,58 @@
+{
+  "method": "induced-subgraph matrix-tree determinants + exact binomial-moment inversion",
+  "formula_cross_check": {
+    "graphs_cross_checked": 771,
+    "passed": true
+  },
+  "random_search": [
+    {
+      "n": 9,
+      "generated": 300,
+      "connected_checked": 186,
+      "p_set": [
+        0.15,
+        0.2,
+        0.25,
+        0.35,
+        0.5,
+        0.7,
+        0.9
+      ],
+      "seed": 20261026,
+      "counterexample": null
+    },
+    {
+      "n": 10,
+      "generated": 100,
+      "connected_checked": 68,
+      "p_set": [
+        0.15,
+        0.2,
+        0.25,
+        0.35,
+        0.5,
+        0.7,
+        0.9
+      ],
+      "seed": 20261027,
+      "counterexample": null
+    },
+    {
+      "n": 12,
+      "generated": 30,
+      "connected_checked": 24,
+      "p_set": [
+        0.15,
+        0.2,
+        0.25,
+        0.35,
+        0.5,
+        0.7,
+        0.9
+      ],
+      "seed": 20261028,
+      "counterexample": null
+    }
+  ],
+  "warning": "These are exact counts on finite samples, not a general proof."
+}

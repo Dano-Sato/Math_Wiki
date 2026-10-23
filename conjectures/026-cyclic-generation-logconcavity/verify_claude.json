@@ -1,0 +1,16 @@
+{
+  "implementation": "verify_claude.py (Claude, independent of explore.py)",
+  "checked_n": [
+    2,
+    1000
+  ],
+  "brute_force_formula_check_n": [
+    2,
+    14
+  ],
+  "inequalities_checked": 498501,
+  "failures_026": [],
+  "failures_026_1": [],
+  "equalities_in_026_1": 333223,
+  "scope": "Exact finite verification for 2 <= n <= max."
+}

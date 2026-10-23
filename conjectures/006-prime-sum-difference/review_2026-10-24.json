@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-24",
+  "definition_version": "006-0.1",
+  "all_sizes": [
+    4,
+    30000
+  ],
+  "all_sizes_count": 29997,
+  "failed_sizes_including_out_of_domain": [
+    2,
+    3
+  ],
+  "independent_kappa_dp_sizes": 30000,
+  "previous_rows_agree": 111,
+  "saved_witnesses_checked": 28,
+  "saved_pairs_trial_division_checked": 117497,
+  "static_algorithm_cross_checks": [
+    {
+      "n": 101,
+      "maximum": 101
+    },
+    {
+      "n": 137,
+      "maximum": 137
+    },
+    {
+      "n": 503,
+      "maximum": 503
+    },
+    {
+      "n": 1009,
+      "maximum": 1009
+    },
+    {
+      "n": 3001,
+      "maximum": 3001
+    }
+  ],
+  "greedy_internal_counterexample": {
+    "n": 4,
+    "pairs": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "blocked_vertex": 6
+  },
+  "single_prime_residue_bijections_checked": [
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47,
+    53,
+    59,
+    61,
+    67,
+    71,
+    73,
+    79,
+    83,
+    89,
+    97,
+    101
+  ]
+}

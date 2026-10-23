@@ -1,0 +1,51 @@
+# 029 토론 및 검증 기록
+
+## 2026-10-24 · Codex · v0.2 후보 수정 및 재채점
+
+### v0.1 후보 폐기 사유
+
+초기 명제는 어떤 신장나무가 각 꼭짓점에서 UST 평균 차수와 1 이하로 차이 난다는 것이었다. 문헌 확인에서 Singh–Lau의 STOC 2007 정리(차수 하한 $A_v$, 상한 $B_v$에 대해 $A_v-1\le d_T(v)\le B_v+1$인 나무를 구성)가 확인됐다. UST edge marginal을 모으면 spanning-tree polytope의 fractional point가 되므로 이 초기 명제는 알려진 반올림 결과의 직접적 귀결이다. 따라서 이를 새 추측으로 등록하지 않고, 초기 계산 파일은 실패한 후보의 기록으로 보존한다.
+
+### v0.2 추측 및 검사
+
+새 후보는 각 차수를 평균의 바닥 또는 천장으로 동시에 실현하는 더 강한 명제다. `explore_floor_ceil.py`에서 모든 labeled connected simple graphs $n=2,\ldots,6$를 전수검사하고, 고정 시드로 $n=7$ 2,000개 및 $n=8$ 500개 연결 그래프를 검사했다. 각 그래프의 모든 신장나무 차수 벡터를 열거했고, 평균 분수는 정수 교차곱으로 비교했다. `floor_ceil_experiment.json`에 결과를 남겼으며 반례는 나오지 않았다.
+
+이 검사는 명제의 참을 보장하지 않는다. 특히 무작위 그래프 표본은 적대적 구성 그래프를 배제하지 않으며 $n\ge9$도 검사하지 않았다.
+
+### 문헌 검토
+
+추가 제한 검색어는 “spanning tree degree floor ceiling fractional rounding”, “fractional spanning tree degree-vector rounding”, “simultaneous degree rounding” 등이었다. Singh–Lau의 degree-bounded spanning tree 정리와 더 일반적인 iterative/randomized rounding 문헌은 fractional 차수를 바탕으로 additive-one 형태의 차수 상한을 제공하지만, 검색에서 확인한 진술은 바닥·천장 동시 실현을 주지 않았다. 2026년 degree-list spanning tree의 복잡도 연구도 인접하지만, UST 기대 차수로부터 나온 허용 목록의 실현 명제와 일치하지 않는다. 검색 결과에서 정확히 같은 주장은 발견하지 못했으며, 인용 추적을 포함한 전문 문헌 조사는 아직 하지 않았다.
+
+### 구조적 증명 가능성 점검
+
+UST의 edge marginal $x_e=\Pr(e\in T)=R_{\rm eff}(e)$는 spanning-tree polytope의 점이고 기대 차수 벡터는 그래프의 무방향 incidence matrix $B$에 대해 $\mu=Bx$다. 신장나무 간선 지시벡터들은 graphic matroid 기저 벡터라 간선 좌표에서는 M-convex 교환 성질이 있다. 그러나 우리가 필요한 것은 투영된 벡터 $Bx$의 모든 좌표를 floor/ceiling으로 맞추는 기저의 존재다. 간선 좌표의 M-convex성만으로 선형 투영 뒤의 좌표별 반올림이 따라오지는 않는다. 차수제곱을 최소화/최대화하는 spanning-tree 문제도 별도 조합 최적화 문제로 연구되며, cubic graph에서 degree-concentrated 변형은 NP-hard로 알려져 있다([Maehara–Murota 등, *A framework of discrete DC programming*](https://www.keisu.t.u-tokyo.ac.jp/data/2015/METR15-26.pdf)). 이는 본 명제의 반례나 난해성 증명은 아니지만, 단순한 이산 볼록성 한 줄로 끝나는 문제는 아님을 보여준다.
+
+차수목록이 주어진 신장나무 존재/최적화의 일반형은 별도로 연구되는 degree-list spanning tree 문제다([ICALP 2026 연구](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2026.38)). 여기서는 허용 목록이 UST 평균에서 유도된다는 추가 구조가 있으므로 일반 복잡도 결과만으로 해결되지는 않는다. 현재까지 일반 rounding theorem으로 증명하거나 이를 깨는 반례는 찾지 못했다. 핵심 미해결 간극은 UST 평균의 특수한 전기적/결정론적 구조가 목록 실현 가능성을 보장하는지 여부다.
+
+### 구조적 반례 탐색
+
+`structured_search.py`가 모든 신장나무를 열거해 $n=7$의 230개, $n=8$의 269개 구조적 연결 그래프를 확인했다. 후보군에는 완전 이분·다분 그래프, clique 두 개를 좁은 절단으로 잇는 그래프, cycle에 chord를 추가한 그래프, 완전 그래프의 간선 제거 변형이 들어 있다. 모든 경우에서 조건을 만족하는 나무를 찾았고 반례는 없었다. 결과는 `structured_experiment.json`에 남겼다. 이 후보군은 적대적 그래프 전체를 대표하지 않는다.
+
+후속으로 고정된 밀도 목록 $p\in\{0.05,0.1,0.15,0.25,0.35,0.5,0.65,0.75,0.85,0.9,0.95\}$에서 연결 그래프를 받아 $n=7$ 4,000개와 $n=8$ 800개를 검사했다. 모든 표본에서 후보를 만족하는 나무가 있었다. 시드와 밀도별 표본 수는 `density_experiment.json`에 기록했다.
+
+또한 모든 비어 있지 않은 진부분집합 $S$에 대해 신장나무의 차수합은
+$$d_T(S)=2|E_T(S)|+|\delta_T(S)|$$
+이고 $|E_T(S)|\le\min(|S|-1,|E_G(S)|)$, $|\delta_T(S)|\le|\delta_G(S)|$이므로
+$$d_T(S)\le2\min(|S|-1,|E_G(S)|)+|\delta_G(S)|$$
+라는 필요조건을 얻는다. 499개 구조적 그래프 각각에서 허용 바닥·천장 차수 벡터를 모두 걸러 보았지만, 이 필요조건이 모든 벡터를 제거한 그래프는 없었다. 이 부등식은 필요조건일 뿐 충분조건은 아니므로, 반례 가능성 일부를 거르는 것에 그친다.
+
+### 자체 점수: 66/100 · 이전 점수 70에서 하향 조정
+
+- 명제는 모든 꼭짓점에 동시에 적용되는 명확한 정수 반올림 질문이다.
+- 기존 ±1 후보는 이미 알려진 정리에서 따름을 확인해 제거했다. 새 명제는 그보다 강하지만, 일반적인 fractional degree 반올림 문헌과 매우 가깝다.
+- 작은 차수에 대한 전수검사와 일부 무작위 검증은 재현 가능하나, 증명 아이디어나 대규모 계산 근거가 없다.
+- 제한 문헌 검색에서 동일 명제를 찾지 못했지만 신규성 확정은 아니다.
+- 재검토 결과, 기존 spanning-tree degree rounding 결과와의 근접성 및 제한적인 문헌 조사에 비해 70점은 낙관적이었다. 이를 반영해 66점으로 낮춘다.
+
+점수는 추측의 연구 가치에 대한 자체 평가이며 참일 확률을 나타내지 않는다. 66점은 새 명제의 독립성, 선행연구와의 근접성, 실험 범위와 문헌 조사 한계를 함께 반영한 잠정 점수다.
+
+## 2026-10-24 · Codex · v0.2 독립 재검토 및 재채점
+
+명제는 UST의 평균 차수 $\mu_v$를 모든 꼭짓점에서 동시에 $\lfloor\mu_v\rfloor$ 또는 $\lceil\mu_v\rceil$로 실현하는 나무의 존재를 묻는다. 기존 Singh–Lau 결과는 degree upper/lower bound를 최대 additive 1만큼 위반하는 나무를 보장하지만, 이것만으로 본 명제의 양방향 floor/ceiling 조건은 나오지 않는다([Singh–Lau, STOC 2007](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/01/mbdst.pdf)). 2026년 degree-list spanning-tree 복잡도 연구 역시 일반 degree-list 문제와의 인접성은 보여 주지만, UST 평균에서 유도된 이 특정 목록의 실현을 해결하지는 않는다([ICALP 2026](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2026.38)). 제한 문헌 확인으로 동일 명제의 증명이나 반례는 찾지 못했다.
+
+기존 66점에서 **55/100**으로 낮춘다. 명제는 명료하고 전수검사 및 여러 구조·무작위 그래프에서 정확한 반례 탐색을 거쳤지만, 검증 차수가 작고 모든 실험은 명제 자체에 대한 증명 근거가 되지 않는다. 알려진 degree-bounded tree 반올림과 매우 가까우며, UST 평균의 특수성이 정확한 동시 실현을 강제한다는 증명 아이디어나 일반 문헌 조사는 아직 없다. 상태는 미증명으로 유지한다. 점수는 참일 확률이 아니라 위키 목표에 대한 연구 가치 평가다.

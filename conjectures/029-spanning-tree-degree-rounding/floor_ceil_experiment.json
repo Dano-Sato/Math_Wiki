@@ -1,0 +1,48 @@
+{
+  "claim": "A spanning tree has every vertex degree in the floor/ceiling of the UST expected degree.",
+  "method": "Exact spanning-tree enumeration with integer cross multiplication; all labeled connected simple graphs for n=2..6, then seeded random connected graphs for n=7,8.",
+  "exhaustive": [
+    {
+      "n": 2,
+      "all_pass": true,
+      "connected_graphs_checked": 1
+    },
+    {
+      "n": 3,
+      "all_pass": true,
+      "connected_graphs_checked": 4
+    },
+    {
+      "n": 4,
+      "all_pass": true,
+      "connected_graphs_checked": 38
+    },
+    {
+      "n": 5,
+      "all_pass": true,
+      "connected_graphs_checked": 728
+    },
+    {
+      "n": 6,
+      "all_pass": true,
+      "connected_graphs_checked": 26704
+    }
+  ],
+  "random_samples": [
+    {
+      "n": 7,
+      "all_pass": true,
+      "connected_graphs_checked": 2000,
+      "attempts": 2645,
+      "seed": 2941
+    },
+    {
+      "n": 8,
+      "all_pass": true,
+      "connected_graphs_checked": 500,
+      "attempts": 621,
+      "seed": 2942
+    }
+  ],
+  "scope": "Finite checks only; they do not establish the claim for arbitrary n."
+}

@@ -1,0 +1,24 @@
+{
+  "method": "Exact enumeration of all spanning trees for generated structured graphs; exact integer comparison of UST mean degree with floor/ceiling candidate degrees.",
+  "families": [
+    "complete bipartite/multipartite",
+    "clique sums with 1-3 edge cuts",
+    "cycles with seeded random chord sets",
+    "complete graphs with one edge or one star deleted"
+  ],
+  "results": [
+    {
+      "n": 7,
+      "structured_connected_graphs_checked": 230,
+      "all_pass": true,
+      "graphs_where_necessary_cut_capacity_eliminated_all_rounded_vectors": 0
+    },
+    {
+      "n": 8,
+      "structured_connected_graphs_checked": 269,
+      "all_pass": true,
+      "graphs_where_necessary_cut_capacity_eliminated_all_rounded_vectors": 0
+    }
+  ],
+  "scope": "This is a targeted finite search, not proof. It is not a systematic census of all graphs of these orders."
+}

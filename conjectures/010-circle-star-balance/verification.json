@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-24",
+  "definition_version": "010-0.1",
+  "checked_witnesses": {
+    "exact_grid": 1211,
+    "additional_search": 400
+  },
+  "initial_search_unresolved": 24,
+  "refined_successes": 24,
+  "remaining_unresolved": 0,
+  "independent_grid_optimum_checks": 52,
+  "universal_real_rank_certificates": [
+    7,
+    9,
+    11,
+    13
+  ],
+  "binary_exact_checks": [
+    {
+      "n": 3,
+      "minority": 1,
+      "optimum": 1
+    },
+    {
+      "n": 5,
+      "minority": 1,
+      "optimum": 1
+    },
+    {
+      "n": 5,
+      "minority": 2,
+      "optimum": 2
+    },
+    {
+      "n": 7,
+      "minority": 1,
+      "optimum": 1
+    },
+    {
+      "n": 7,
+      "minority": 2,
+      "optimum": 2
+    },
+    {
+      "n": 7,
+      "minority": 3,
+      "optimum": 2
+    },
+    {
+      "n": 9,
+      "minority": 1,
+      "optimum": 1
+    },
+    {
+      "n": 9,
+      "minority": 2,
+      "optimum": 2
+    },
+    {
+      "n": 9,
+      "minority": 3,
+      "optimum": 1
+    },
+    {
+      "n": 9,
+      "minority": 4,
+      "optimum": 2
+    },
+    {
+      "n": 11,
+      "minority": 1,
+      "optimum": 1
+    },
+    {
+      "n": 11,
+      "minority": 2,
+      "optimum": 2
+    },
+    {
+      "n": 11,
+      "minority": 3,
+      "optimum": 2
+    },
+    {
+      "n": 11,
+      "minority": 4,
+      "optimum": 2
+    },
+    {
+      "n": 11,
+      "minority": 5,
+      "optimum": 2
+    }
+  ],
+  "sharp_example": {
+    "values": [
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "optimum": 2
+  }
+}

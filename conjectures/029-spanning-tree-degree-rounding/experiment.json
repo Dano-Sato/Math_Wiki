@@ -1,0 +1,51 @@
+{
+  "conjecture": "Every finite connected simple graph has a spanning tree T with |deg_T(v)-E[deg_UST(v)]|<=1 for every vertex v.",
+  "method": "Enumerate all labelled simple graphs for each n=2..6; generate spanning trees by Pr\u00fcfer codes and compute exact rational means.",
+  "results": [
+    {
+      "n": 2,
+      "connected_graphs_checked": 1,
+      "all_have_tree_with_each_degree_within_1_of_uniform_mean": true,
+      "counterexample": null
+    },
+    {
+      "n": 3,
+      "connected_graphs_checked": 4,
+      "all_have_tree_with_each_degree_within_1_of_uniform_mean": true,
+      "counterexample": null
+    },
+    {
+      "n": 4,
+      "connected_graphs_checked": 38,
+      "all_have_tree_with_each_degree_within_1_of_uniform_mean": true,
+      "counterexample": null
+    },
+    {
+      "n": 5,
+      "connected_graphs_checked": 728,
+      "all_have_tree_with_each_degree_within_1_of_uniform_mean": true,
+      "counterexample": null
+    },
+    {
+      "n": 6,
+      "connected_graphs_checked": 26704,
+      "all_have_tree_with_each_degree_within_1_of_uniform_mean": true,
+      "counterexample": null
+    }
+  ],
+  "random_graph_samples": [
+    {
+      "n": 7,
+      "connected_graphs_checked": 500,
+      "attempts": 659,
+      "counterexample": null
+    },
+    {
+      "n": 8,
+      "connected_graphs_checked": 100,
+      "attempts": 115,
+      "counterexample": null
+    }
+  ],
+  "scope": "Finite exact enumeration only; it proves nothing for n>=7."
+}

@@ -1,0 +1,212 @@
+{
+  "conjecture": "040",
+  "equivalence": "translations only; rotations and reflections counted separately",
+  "perimeter": "number of unit boundary edges; holes allowed",
+  "max_n": 12,
+  "fixed_polyomino_counts": [
+    1,
+    2,
+    6,
+    19,
+    63,
+    216,
+    760,
+    2725,
+    9910,
+    36446,
+    135268,
+    505861
+  ],
+  "first_failure": null,
+  "rows": {
+    "1": {
+      "fixed_polyomino_count": 1,
+      "perimeters": [
+        4
+      ],
+      "coefficients": [
+        1
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "2": {
+      "fixed_polyomino_count": 2,
+      "perimeters": [
+        6
+      ],
+      "coefficients": [
+        2
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "3": {
+      "fixed_polyomino_count": 6,
+      "perimeters": [
+        8
+      ],
+      "coefficients": [
+        6
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "4": {
+      "fixed_polyomino_count": 19,
+      "perimeters": [
+        8,
+        10
+      ],
+      "coefficients": [
+        1,
+        18
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "5": {
+      "fixed_polyomino_count": 63,
+      "perimeters": [
+        10,
+        12
+      ],
+      "coefficients": [
+        8,
+        55
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "6": {
+      "fixed_polyomino_count": 216,
+      "perimeters": [
+        10,
+        12,
+        14
+      ],
+      "coefficients": [
+        2,
+        40,
+        174
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "7": {
+      "fixed_polyomino_count": 760,
+      "perimeters": [
+        12,
+        14,
+        16
+      ],
+      "coefficients": [
+        22,
+        168,
+        570
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "8": {
+      "fixed_polyomino_count": 2725,
+      "perimeters": [
+        12,
+        14,
+        16,
+        18
+      ],
+      "coefficients": [
+        6,
+        134,
+        677,
+        1908
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "9": {
+      "fixed_polyomino_count": 9910,
+      "perimeters": [
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "coefficients": [
+        1,
+        72,
+        656,
+        2708,
+        6473
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "10": {
+      "fixed_polyomino_count": 36446,
+      "perimeters": [
+        14,
+        16,
+        18,
+        20,
+        22
+      ],
+      "coefficients": [
+        30,
+        482,
+        3008,
+        10724,
+        22202
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "11": {
+      "fixed_polyomino_count": 135268,
+      "perimeters": [
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ],
+      "coefficients": [
+        8,
+        310,
+        2596,
+        13456,
+        42012,
+        76886
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "12": {
+      "fixed_polyomino_count": 505861,
+      "perimeters": [
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26
+      ],
+      "coefficients": [
+        2,
+        151,
+        2086,
+        13034,
+        58742,
+        163494,
+        268352
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    }
+  },
+  "scope": "Exact exhaustive finite computation; no claim beyond max_n."
+}
