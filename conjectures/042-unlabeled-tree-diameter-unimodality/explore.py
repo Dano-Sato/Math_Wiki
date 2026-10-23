@@ -38,7 +38,7 @@ def tree_diameter(tree: nx.Graph) -> int:
 
 def main() -> None:
     rows = []
-    for n in range(2, 21):
+    for n in range(2, 22):
         counts = collections.Counter(
             tree_diameter(tree) for tree in nx.nonisomorphic_trees(n)
         )
@@ -55,14 +55,14 @@ def main() -> None:
 
     result = {
         "conjecture": "042",
-        "range": [2, 20],
+        "range": [2, 21],
         "generator": "networkx.generators.nonisomorphic_trees",
         "networkx_version": nx.__version__,
         "python_version": platform.python_version(),
         "total_trees_checked": sum(row["tree_count"] for row in rows),
         "all_unimodal": all(row["unimodal"] for row in rows),
         "rows": rows,
-        "scope_note": "Exact finite enumeration only; not a proof for n > 20.",
+        "scope_note": "Exact finite enumeration only; not a proof for n > 21.",
     }
     output = Path(__file__).with_name("experiment.json")
     output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

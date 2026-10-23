@@ -1,3 +1,5 @@
+module
+
 import Mathlib.Data.Rat.Defs
 import Mathlib.Tactic.Ring
 import Mathlib.Tactic.Linarith
@@ -9,6 +11,8 @@ Source: conjecture 026, version 0.2, L1, `conjectures/026-cyclic-generation-logc
 This module formalizes the algebraic inequality at the core of the prime-power argument.
 It does not formalize the subgroup-counting interpretation or the binomial-ratio bounds.
 -/
+
+@[expose] public section
 
 namespace MathWiki
 namespace CyclicGeneration
