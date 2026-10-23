@@ -1,0 +1,43 @@
+{
+  "claim_checked": "For every vertex v and 2 <= k <= n-2, at least k k-sets S containing v have both G[S] and G[V\\S] connected.",
+  "method": "All non-isomorphic biconnected simple graphs in NetworkX graph atlas (orders 3 through 7); all vertex subsets enumerated exactly.",
+  "checked_graphs": 538,
+  "orders": {
+    "3": {
+      "graphs": 1,
+      "minimum_local_slack_by_k": {}
+    },
+    "4": {
+      "graphs": 3,
+      "minimum_local_slack_by_k": {
+        "2": 0
+      }
+    },
+    "5": {
+      "graphs": 10,
+      "minimum_local_slack_by_k": {
+        "2": 0,
+        "3": 0
+      }
+    },
+    "6": {
+      "graphs": 56,
+      "minimum_local_slack_by_k": {
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
+    },
+    "7": {
+      "graphs": 468,
+      "minimum_local_slack_by_k": {
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    }
+  },
+  "violations": [],
+  "interpretation": "Finite verification only; it does not prove the local strengthening or conjecture 025 for arbitrary order."
+}

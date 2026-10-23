@@ -1,0 +1,72 @@
+{
+  "claim_checked": "For every vertex v and 2 <= k <= n-2, at least k k-sets S containing v have both G[S] and G[V\\S] connected.",
+  "method": "Seeded G(n,p) sampling; seed 250; 2000 attempts at each order n=8,...,12; retain only 2-connected graphs and enumerate all subsets exactly.",
+  "checked_graphs": 4085,
+  "minimum_local_slack": 0,
+  "minimum_witness": {
+    "n": 8,
+    "k": 2,
+    "vertex": 5,
+    "local_count": 2,
+    "edges": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ]
+  },
+  "violations": [],
+  "interpretation": "Random finite search only; no failure was found, which is not a proof."
+}

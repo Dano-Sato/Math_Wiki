@@ -1,0 +1,15 @@
+{
+  "graph": "C_8 with one pendant vertex attached to each of four consecutive cycle vertices 0,1,2,3",
+  "vertices": 12,
+  "spanning_trees": 8,
+  "nonzero_leaf_coefficients": {
+    "4": 3,
+    "5": 2,
+    "6": 3
+  },
+  "failed_log_concavity_indices": [
+    5
+  ],
+  "witness": "a_5^2 = 2^2 = 4 < 3*3 = a_4*a_6",
+  "verification": "Enumerated every (n-1)-edge subset and retained exactly the connected ones."
+}
