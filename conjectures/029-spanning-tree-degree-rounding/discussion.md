@@ -152,3 +152,32 @@ $$
 따라서 양의 확률로 모든 articulation vertex에서 삭제 차수 합이 바닥·천장 중 하나인 전역 선택이 존재한다. 각 cycle factor의 상태가 실제 삭제 간선 하나를 나타내므로, 그 간선들을 삭제해 만든 신장나무 $T$에서 모든 정점에 대해 $\deg_T(v)=\deg_G(v)-d_v$이고 $d_v\in\{\lfloor\lambda_v\rfloor,\lceil\lambda_v\rceil\}$. 정수 $\deg_G(v)$에 대해 이 조건은 $\deg_T(v)\in\{\lfloor\mu_v\rfloor,\lceil\mu_v\rceil\}$와 동치다. 이로써 임의 길이의 사이클이 여러 articulation vertex에서 만나는 경우를 포함해 모든 cactus 그래프가 증명된다. □
 
 이 정리는 이전의 서로소 사이클, 한 공통 꼭짓점에서 만나는 사이클, 삼각형 cactus 결과를 포함한다. 전역 결합 단계는 cactus의 block-cut 구조가 forest라는 점에 의존하므로, 일반 그래프에 대한 029를 해결하지 않는다. 일반 추측과 점수는 변경하지 않는다.
+
+## 2026-10-24 · Claude · v0.2 독립 검토, 추가 탐색, 채점
+
+### 기존 논증 검토
+
+- **Lovász 함의.** 자기동형이 UST 분포를 보존하므로 꼭짓점-추이 그래프에서 $\mu_v=2-2/n$이고, 허용 차수는 $\{1,2\}$다. 논증은 맞다. 같은 논증은 더 일반적으로 **$\max_v\mu_v\le2$인 모든 연결 그래프가 Hamilton 경로를 갖는다**는 귀결을 준다(허용 차수가 모두 2 이하). 간선-추이인 정규 그래프는 $R_{\rm eff}(e)=(n-1)/m$이 균등해 이 경우에 든다.
+- **강인성 해석.** 임의의 $S$에 대해 신장나무 간선 중 $S$에 닿는 것은 최소 $|S|+c(G-S)-1$개이므로 $\sum_{v\in S}\mu_v\ge|S|+c(G-S)-1$이다. 따라서 모든 $\mu_v<2$이면 $c(G-S)\le|S|$, 즉 그래프는 1-tough다. 흔히 쓰는 toughness형 장애물은 이미 일부 $\mu_v>2$로 드러나 허용 차수 3을 열어 준다. 이 때문에 단순한 비경로 그래프로는 반례가 나오기 어렵다.
+- **cactus 증명(D010 factor-tree 결합).** 공유 incidence 변수 하나를 분리자로 하는 forest 위의 국소분포 결합이다. 각 변수의 주변확률이 $2/m_C$로 일치하므로 뿌리부터 조건부 표본추출을 하면 전역분포가 만들어진다. articulation vertex의 국소분포도 의존 반올림(pipage형)으로 올바르게 구성된다. 오류는 찾지 못했다.
+
+### 추가 계산 (Claude)
+
+정확한 유리수 $\mu_v$(Bareiss 행렬식, $R(u,v)=\det L_{\{u,v\}^c}/\tau$)와 차수 구간 $[\lfloor\mu_v\rfloor,\lceil\mu_v\rceil]$에 대한 백트래킹 신장나무 탐색기를 [claude_search.py](claude_search.py)에 두었다. 탐색기는 333개 무작위 차수 구간 사례에서 전체 신장나무 열거와 판정이 일치했고, 평균 차수는 열거값과 정확히 일치했다.
+
+1. **$n=8$ 전수.** 모든 연결 그래프는 비절단 꼭짓점을 가지므로 아틀라스 $n=7$ 연결 그래프 853개에 꼭짓점 하나를 127가지 이웃 집합으로 붙인 108,331개 그래프가 $n=8$의 모든 연결 동형류를 포함한다(중복 포함). 반례 0, 시간초과 0이다. [claude_n8_exhaustive.py](claude_n8_exhaustive.py), [결과](claude_n8_exhaustive.json).
+2. **구조적·무작위 그래프 684개($n=8$–$46$).** 무작위 3·4·5-정규 그래프($n=8$–$14$), 일반화 Petersen 그래프, Petersen 그래프의 선 그래프, $K_{a,b}$, Heawood·Pappus·Desargues·Möbius–Kantor·dodecahedron·icosahedron·Chvátal 등, 그리고 $n=9$–$12$ 무작위 $G(n,p)$ 429개를 검사했다. 반례는 0이다. Tutte 그래프($n=46$)만 탐색 한도(500만 노드)에서 시간초과로 미판정이다. $n\le14$ 표본 중 $\max\mu\le2$이면서 Hamilton 경로가 없는 그래프는 없었다. [claude_search.json](claude_search.json).
+3. **세분 그래프 전수.** theta(세분 0–8), 4중 theta(0–5), $K_4$(0–4), $K_{3,3}$·prism(0–2), $K_5-e$·$W_5$(0–1)의 각 간선을 독립적으로 세분한 그래프를 WL 해시로 중복 제거해 3,430개 검사했다. 반례는 0이다. WL 해시 충돌로 일부 비동형 그래프가 빠졌을 수 있다. [claude_subdivisions.py](claude_subdivisions.py), [결과](claude_subdivisions.json).
+4. **비-Hamilton-경로 3-정규 그래프.** Petersen에서 꼭짓점 하나를 뺀 조각을 $K_4$의 꼭짓점 3개 또는 4개에 치환하면 28·36꼭짓점의 Hamilton 경로가 없는 3-정규 그래프를 얻는다. Petersen은 hypohamiltonian이므로 조각을 한 번에 관통할 수 없고, 조각이 3개 이상이면 경로 끝점이 부족하다. 이 그래프들은 029가 반례가 되기 쉬운 표적이다. 그러나 조각 연결부 꼭짓점의 $\mu_v$가 2를 넘어(최대 2.18, 2.08) 차수 3을 허용했고, 조건을 만족하는 신장나무가 실제로 존재했다. 전기적 평균이 경로 장애물을 정확히 "감지"하는 사례로, 추측을 지지하는 정성적 증거다. [claude_fragment_graphs.py](claude_fragment_graphs.py).
+
+$n=9$ 전수검사([claude_n9_exhaustive.py](claude_n9_exhaustive.py), 연결 8꼭짓점 동형류 11,117개 × 255 확장)는 작성했지만 실행 시간 때문에 중단했다. 동형류 11,117개는 OEIS A001349와 일치하지만 확장 검사 결과는 **없음**이다. 모든 계산은 유한 범위이며 일반 증명이 아니다.
+
+### 자체 점수: 60/100 (v0.2)
+
+진술이 짧고 자연스러우며, 꼭짓점-추이 그래프의 Hamilton 경로 문제(Lovász)를 엄밀히 함의하므로 기존 차수 반올림(±1 위반) 도구가 왜 닿지 않는지 설명된다. cactus 전체의 증명, $n\le8$ 전수, 경로 장애물을 겨냥한 비-Hamilton-경로 3-정규 그래프에서의 생존이 근거다. 반면 일반 그래프에 대한 명제는 Lovász 문제보다 훨씬 강해 반례가 중간 크기에서 존재할 위험이 있다. 증명 전략은 cactus를 넘어서지 못했고, 문헌 확인도 제한적이다. 그래서 60–79 구간의 하단으로 본다. 참고: 채점 전 `score.json`을 출력하는 과정에서 ChatGPT 점수 63을 보았으므로 엄밀한 의미의 블라인드 채점은 아니다.
+
+### 남은 문제
+
+- $n=9$ 전수, $n=10$–$12$ 적대적 탐색(예: $\max\mu$를 2 이하로 낮추도록 국소 탐색하면서 비-경로성을 유지).
+- $\max\mu\le2\Rightarrow$ traceable만 따로 떼어 낸 약한 명제의 검토. 이 역시 Lovász 문제를 함의한다.
+- 외평면 그래프·series-parallel 그래프 등 treewidth 2로 cactus 증명을 확장하는 것.

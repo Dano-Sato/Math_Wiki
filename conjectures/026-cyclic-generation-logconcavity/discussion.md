@@ -182,3 +182,21 @@ $$
 
 
 검증 범위는 정확한 이항계수 비율의 점화식, $0\le r_2\le r_1\le1/2$에 해당하는 유리수 부등식, $k=m+1$ 경계, $k>m+1$ 꼬리, 이항계수열의 엄격 로그오목성, 그리고 두 수열을 곱하는 마지막 단계를 포함한다. 남은 형식화 항목은 $C_{p^a}$의 유일한 극대 진부분군이 크기 $m=p^{a-1}$이고, 생성 집합이 아닌 모든 $k$원소 집합이 그 안에 놓인다는 유한군 계수 대응이다. 따라서 Lean에서 실제 군론 정의로 $g_k(p^a)=\binom{p^a}{k}-\binom{p^{a-1}}{k}$를 연결하지는 않았지만, 그 공식에 대한 엄격 로그오목성은 증명했다. `MathWiki.lean` 공개 진입점을 포함한 전체 `lake build`가 성공했다.
+
+## D014 / Codex / 026 / 2026-10-24 / 유한집합 개수와 이항계수 차이의 연결
+
+`MathWiki/Combinatorics/CyclicGeneration.lean`에 `notContainedKSubsets`를 추가해 유한 타입 $\alpha$의 고정된 부분집합 $S$ 안에 포함되지 않는 $k$원소 부분집합들을 정의했다. 공개 정리 `notContainedKSubsets_card`는 이 집합의 크기가
+
+$$
+\binom{|\alpha|}{k}-\binom{|S|}{k}
+$$
+
+임을 증명한다. 이어 `notContainedKSubsets_strictLogConcave`는 $1\le |S|$ 및 $2|S|\le|\alpha|$ 아래에서 이 실제 유한집합 개수 수열이 모든 내부 인덱스 $2\le k<|\alpha|$에서 엄격 로그오목함을 보인다. 따라서 이전의 산술 프록시 정리는 임의의 고정 금지 부분집합에 대한 실제 부분집합 계수 정리로 연결되었다.
+
+Mathlib의 `Finset.powersetCard`, `Finset.card_powersetCard`, `Finset.card_sdiff_of_subset`를 사용했다. 검증은 저장소 루트의 `scripts/lake.ps1 build` 전체 빌드로 완료했다(1057개 작업 성공). 원본의 cyclic-group 주장을 완전히 형식화하려면 여전히 $C_{p^a}$의 유일한 극대 진부분군 및 생성 집합 판정과 이 고정 부분집합 계수를 연결해야 한다. 이 변경은 그 군론 단계를 증명하지 않는다.
+
+## D015 / Codex / 026 / 2026-10-24 / 소수 차수 덧셈군의 생성 계수열 형식화
+
+`MathWiki/Combinatorics/CyclicGeneration.lean`에 세 공개 결과를 추가했다. `closure_eq_top_iff_exists_ne_zero`는 유한 소수 차수 덧셈군에서 유한집합이 전체 군을 생성할 필요충분조건이 그 집합에 0이 아닌 원소가 있는 것임을 보인다. 증명은 Mathlib의 `AddSubgroup.eq_bot_or_eq_top_of_prime_card`를 사용한다. `generatingKSubsets_eq_notContained`는 이 군의 생성 $k$-부분집합족이 금지 부분집합 $\{0\}$을 벗어나는 $k$-부분집합족과 같음을 증명한다. 앞서 형식화한 개수 정리와 결합한 `generatingKSubsets_strictLogConcave`는 모든 유한 소수 차수 덧셈군에서 실제 생성 부분집합 개수열이 내부에서 엄격 로그오목함을 보인다.
+
+저장소 루트의 `scripts/lake.ps1 build`가 1495개 작업으로 성공했다. 새 cyclic-subgroup import 때문에 Mathlib의 전이 의존성들을 최초 한 번 컴파일하여 빌드가 길어졌다. 이 형식화는 소수 차수의 순환군 경우를 실제 군 생성으로 연결하지만, $p^a$ ($a>1$)의 유일한 극대 진부분군을 특정하고 그 바깥 원소 수로 계수를 환원하는 단계는 아직 남아 있다.

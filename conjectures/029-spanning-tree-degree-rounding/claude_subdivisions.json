@@ -1,0 +1,65 @@
+{
+ "theta": {
+  "subdivision_range": [
+   0,
+   8
+  ],
+  "classes_checked": 147,
+  "counterexamples": [],
+  "timeouts": 0
+ },
+ "theta4": {
+  "subdivision_range": [
+   0,
+   5
+  ],
+  "classes_checked": 105,
+  "counterexamples": [],
+  "timeouts": 0
+ },
+ "K4": {
+  "subdivision_range": [
+   0,
+   4
+  ],
+  "classes_checked": 830,
+  "counterexamples": [],
+  "timeouts": 0
+ },
+ "K33": {
+  "subdivision_range": [
+   0,
+   2
+  ],
+  "classes_checked": 438,
+  "counterexamples": [],
+  "timeouts": 0
+ },
+ "prism": {
+  "subdivision_range": [
+   0,
+   2
+  ],
+  "classes_checked": 1700,
+  "counterexamples": [],
+  "timeouts": 0
+ },
+ "K5-e": {
+  "subdivision_range": [
+   0,
+   1
+  ],
+  "classes_checked": 74,
+  "counterexamples": [],
+  "timeouts": 0
+ },
+ "W5": {
+  "subdivision_range": [
+   0,
+   1
+  ],
+  "classes_checked": 136,
+  "counterexamples": [],
+  "timeouts": 0
+ }
+}

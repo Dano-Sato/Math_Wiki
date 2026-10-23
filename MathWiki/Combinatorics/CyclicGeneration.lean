@@ -2,6 +2,9 @@ module
 
 public import Mathlib.Data.Rat.Defs
 public import Mathlib.Data.Nat.Choose.Basic
+public import Mathlib.Data.Finset.Powerset
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.GroupTheory.SpecificGroups.Cyclic.Subgroup
 import Mathlib.Data.Nat.Cast.Order.Ring
 import Mathlib.Algebra.Order.GroupWithZero.Basic
 import Mathlib.Tactic.FieldSimp
@@ -357,6 +360,136 @@ theorem generatingCountProxy_strictLogConcave
     (fun j => (Nat.choose n j : ℚ)) (escapeProbability n m) k
     hchoose hprob hprobPrev hprobNext
   simpa [generatingCountProxy] using hproduct
+
+/-- The `k`-element subsets of a finite type that are not contained in a
+fixed forbidden finset. -/
+def notContainedKSubsets {α : Type*} [Fintype α] [DecidableEq α]
+    (S : Finset α) (k : ℕ) : Finset (Finset α) :=
+  Finset.univ.powersetCard k \ S.powersetCard k
+
+/-- Counting `k`-subsets outside a fixed forbidden finset gives the difference
+of the two corresponding binomial coefficients. This identifies the arithmetic
+proxy above with an actual finite-set count. -/
+theorem notContainedKSubsets_card {α : Type*} [Fintype α] [DecidableEq α]
+    (S : Finset α) (k : ℕ) :
+    (notContainedKSubsets S k).card =
+      Nat.choose (Fintype.card α) k - Nat.choose S.card k := by
+  have hsub : S.powersetCard k ⊆ Finset.univ.powersetCard k :=
+    Finset.powersetCard_mono (Finset.subset_univ S)
+  rw [notContainedKSubsets, Finset.card_sdiff_of_subset hsub,
+    Finset.card_powersetCard, Finset.card_powersetCard]
+  simp
+
+private theorem notContainedKSubsets_card_cast_eq_proxy
+    {α : Type*} [Fintype α] [DecidableEq α]
+    (S : Finset α) (k : ℕ) (hkn : k ≤ Fintype.card α) :
+    ((notContainedKSubsets S k).card : ℚ) =
+      generatingCountProxy (Fintype.card α) S.card k := by
+  rw [notContainedKSubsets_card,
+    generatingCountProxy_eq_choose_sub (Fintype.card α) S.card k hkn]
+  have hchoose : Nat.choose S.card k ≤ Nat.choose (Fintype.card α) k :=
+    Nat.choose_le_choose k (Finset.card_le_univ S)
+  rw [Nat.cast_sub hchoose]
+
+/-- For a fixed forbidden set of size `m`, the number of `k`-subsets that
+escape it is strictly log-concave when `m ≥ 1` and `2m ≤ |α|`. -/
+theorem notContainedKSubsets_strictLogConcave
+    {α : Type*} [Fintype α] [DecidableEq α] (S : Finset α)
+    (hm : 1 ≤ S.card) (h2m : 2 * S.card ≤ Fintype.card α) :
+    ∀ k, 2 ≤ k → k < Fintype.card α →
+      ((notContainedKSubsets S k).card : ℚ) ^ 2 >
+        ((notContainedKSubsets S (k - 1)).card : ℚ) *
+          ((notContainedKSubsets S (k + 1)).card : ℚ) := by
+  intro k hk2 hkn
+  have hproxy := generatingCountProxy_strictLogConcave
+    (Fintype.card α) S.card hm h2m k hk2 hkn
+  have hcurr := notContainedKSubsets_card_cast_eq_proxy S k (by omega)
+  have hprev := notContainedKSubsets_card_cast_eq_proxy S (k - 1) (by omega)
+  have hnext := notContainedKSubsets_card_cast_eq_proxy S (k + 1) (by omega)
+  calc
+    ((notContainedKSubsets S k).card : ℚ) ^ 2 =
+        generatingCountProxy (Fintype.card α) S.card k ^ 2 := by rw [hcurr]
+    _ > generatingCountProxy (Fintype.card α) S.card (k - 1) *
+        generatingCountProxy (Fintype.card α) S.card (k + 1) := hproxy
+    _ = ((notContainedKSubsets S (k - 1)).card : ℚ) *
+        ((notContainedKSubsets S (k + 1)).card : ℚ) := by rw [hprev, hnext]
+
+/-- In a finite additive group of prime cardinality, a finite set generates
+the whole group exactly when it contains a nonzero element. -/
+theorem closure_eq_top_iff_exists_ne_zero
+    {G : Type*} [AddCommGroup G] [Nontrivial G]
+    [Fact (Nat.card G).Prime] (S : Finset G) :
+    AddSubgroup.closure (S : Set G) = ⊤ ↔ ∃ x ∈ S, x ≠ 0 := by
+  constructor
+  · intro htop
+    by_contra h
+    have hzero : ∀ x ∈ S, x = 0 := by
+      intro x hx
+      by_contra hx0
+      exact h ⟨x, hx, hx0⟩
+    have hle : AddSubgroup.closure (S : Set G) ≤ ⊥ := by
+      apply (AddSubgroup.closure_le (⊥ : AddSubgroup G)).2
+      intro x hx
+      simpa using hzero x hx
+    rw [htop] at hle
+    have htopbot : (⊤ : AddSubgroup G) ≤ ⊥ := by
+      exact hle
+    exact (bot_ne_top : (⊥ : AddSubgroup G) ≠ ⊤) (le_antisymm bot_le htopbot)
+  · rintro ⟨x, hx, hx0⟩
+    have hxclosure : x ∈ AddSubgroup.closure (S : Set G) :=
+      AddSubgroup.subset_closure hx
+    have hne : AddSubgroup.closure (S : Set G) ≠ ⊥ := by
+      intro hbot
+      have : x = 0 := by simpa [hbot] using hxclosure
+      exact hx0 this
+    rcases AddSubgroup.eq_bot_or_eq_top_of_prime_card
+        (AddSubgroup.closure (S : Set G)) with hbot | htop
+    · exact (hne hbot).elim
+    · exact htop
+
+/-- The `k`-element generating subsets of a finite group of prime order are
+exactly the `k`-subsets not contained in `{0}`. -/
+noncomputable def generatingKSubsets
+    {G : Type*} [AddCommGroup G] [Fintype G] [DecidableEq G] (k : ℕ) :
+    Finset (Finset G) := by
+  classical
+  exact (Finset.univ.powersetCard k).filter
+    (fun A : Finset G => AddSubgroup.closure (A : Set G) = ⊤)
+
+theorem generatingKSubsets_eq_notContained
+    {G : Type*} [AddCommGroup G] [Fintype G] [DecidableEq G] [Nontrivial G]
+    [Fact (Nat.card G).Prime] (k : ℕ) :
+    generatingKSubsets (G := G) k =
+      notContainedKSubsets ({0} : Finset G) k := by
+  classical
+  ext A
+  simp [generatingKSubsets, notContainedKSubsets,
+    closure_eq_top_iff_exists_ne_zero, Finset.subset_iff]
+  intro hcard
+  constructor
+  · rintro ⟨x, hx, hx0⟩ hall
+    simpa [hcard] using hx0 (hall hx)
+  · intro hnot
+    by_contra hno
+    have hall : ∀ ⦃x : G⦄, x ∈ A → x = 0 := by
+      intro x hx
+      by_contra hx0
+      exact hno ⟨x, hx, hx0⟩
+    exact (hnot hall) hcard
+
+/-- The generating-subset counts of a finite additive group of prime
+cardinality are strictly log-concave at every internal index. -/
+theorem generatingKSubsets_strictLogConcave
+    {G : Type*} [AddCommGroup G] [Fintype G] [DecidableEq G] [Nontrivial G]
+    [Fact (Nat.card G).Prime] (hcard : 2 ≤ Fintype.card G) :
+    ∀ k, 2 ≤ k → k < Fintype.card G →
+      ((generatingKSubsets (G := G) k).card : ℚ) ^ 2 >
+        ((generatingKSubsets (G := G) (k - 1)).card : ℚ) *
+          ((generatingKSubsets (G := G) (k + 1)).card : ℚ) := by
+  have hlog := notContainedKSubsets_strictLogConcave
+    ({0} : Finset G) (by simp) (by simpa using hcard)
+  intro k hk2 hkn
+  simpa only [generatingKSubsets_eq_notContained] using hlog k hk2 hkn
 
 end CyclicGeneration
 end MathWiki
