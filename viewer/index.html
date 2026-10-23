@@ -103,6 +103,16 @@ a:hover { text-decoration: underline; }
 .nav-group-title small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
 .nav-file { display: block; padding: 4px 10px 4px 22px; border-radius: 6px; color: var(--muted); }
 .nav-file.code { font-family: "JetBrains Mono", monospace; font-size: 12.5px; }
+.nav-ref summary {
+  display: block; padding: 4px 10px 4px 22px; border-radius: 6px; color: var(--muted);
+  cursor: pointer; list-style: none; user-select: none;
+}
+.nav-ref summary::-webkit-details-marker { display: none; }
+.nav-ref summary::before { content: "▸"; display: inline-block; width: 1em; margin-left: -1em; transition: transform .15s; }
+.nav-ref[open] summary::before { transform: rotate(90deg); }
+.nav-ref summary:hover { background: var(--accent-soft); color: var(--ink); }
+.nav-ref .nav-count { float: none; margin-left: 6px; }
+.nav-ref .nav-file { padding-left: 34px; }
 #nav a:hover { background: var(--accent-soft); text-decoration: none; color: var(--ink); }
 #nav a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 
@@ -377,9 +387,18 @@ function renderNav(active) {
     html += `<div class="nav-label">보고 있는 추측</div><div class="nav-group">`
       + `<span class="nav-group-title">${escapeHtml(current.id)} · ${escapeHtml(current.title || current.slug)}`
       + (current.version ? `<small>v${escapeHtml(current.version)}</small>` : "") + `</span>`;
-    for (const f of current.files) {
-      const label = FILE_LABELS[f];
-      html += `<a class="nav-file${label ? "" : " code"}" href="#/${current.dir}/${encodeURIComponent(f)}">${escapeHtml(label || f)}</a>`;
+    // documents stay visible; code and data files fold into "참고 자료"
+    const link = (f, cls) => `<a class="nav-file${cls}" href="#/${current.dir}/${encodeURIComponent(f)}">${escapeHtml(FILE_LABELS[f] || f)}</a>`;
+    const main = current.files.filter(f => FILE_LABELS[f] || f.endsWith(".md"));
+    const refs = current.files.filter(f => !main.includes(f));
+    for (const f of main) html += link(f, "");
+    if (refs.length) {
+      const viewing = refs.some(f => active === `${current.dir}/${f}`);
+      let remembered = false;
+      try { remembered = localStorage.getItem("wiki-refs-open") === "1"; } catch (e) {}
+      html += `<details class="nav-ref"${viewing || remembered ? " open" : ""}>`
+        + `<summary>참고 자료 <span class="nav-count">${refs.length}</span></summary>`
+        + refs.map(f => link(f, " code")).join("") + `</details>`;
     }
     html += `</div>`;
   }
@@ -393,6 +412,10 @@ function renderNav(active) {
   }
   if (!list.length) html += `<p class="notice">목록을 불러오려면 <code>python serve.py</code>로 여세요.</p>`;
   nav.innerHTML = html;
+  const refs = nav.querySelector(".nav-ref");
+  if (refs) refs.addEventListener("toggle", () => {
+    try { localStorage.setItem("wiki-refs-open", refs.open ? "1" : "0"); } catch (e) {}
+  });
   nav.querySelectorAll("a").forEach(a => {
     a.classList.toggle("active", decodeURIComponent(a.getAttribute("href").slice(2)) === active);
   });
