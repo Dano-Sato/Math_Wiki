@@ -1,0 +1,70 @@
+{
+  "method": "Pruefer enumeration; exact integer polynomial DP at every root",
+  "results": [
+    {
+      "n": 1,
+      "labeled_trees_expected": 1,
+      "labeled_trees_tested": 1,
+      "first_tree_with_no_good_root": null,
+      "first_tree_with_a_bad_root": null,
+      "first_tree_where_a_center_fails": null
+    },
+    {
+      "n": 2,
+      "labeled_trees_expected": 1,
+      "labeled_trees_tested": 1,
+      "first_tree_with_no_good_root": null,
+      "first_tree_with_a_bad_root": null,
+      "first_tree_where_a_center_fails": null
+    },
+    {
+      "n": 3,
+      "labeled_trees_expected": 3,
+      "labeled_trees_tested": 3,
+      "first_tree_with_no_good_root": null,
+      "first_tree_with_a_bad_root": null,
+      "first_tree_where_a_center_fails": null
+    },
+    {
+      "n": 4,
+      "labeled_trees_expected": 16,
+      "labeled_trees_tested": 16,
+      "first_tree_with_no_good_root": null,
+      "first_tree_with_a_bad_root": null,
+      "first_tree_where_a_center_fails": null
+    },
+    {
+      "n": 5,
+      "labeled_trees_expected": 125,
+      "labeled_trees_tested": 125,
+      "first_tree_with_no_good_root": null,
+      "first_tree_with_a_bad_root": null,
+      "first_tree_where_a_center_fails": null
+    },
+    {
+      "n": 6,
+      "labeled_trees_expected": 1296,
+      "labeled_trees_tested": 1296,
+      "first_tree_with_no_good_root": null,
+      "first_tree_with_a_bad_root": null,
+      "first_tree_where_a_center_fails": null
+    },
+    {
+      "n": 7,
+      "labeled_trees_expected": 16807,
+      "labeled_trees_tested": 16807,
+      "first_tree_with_no_good_root": null,
+      "first_tree_with_a_bad_root": null,
+      "first_tree_where_a_center_fails": null
+    },
+    {
+      "n": 8,
+      "labeled_trees_expected": 262144,
+      "labeled_trees_tested": 262144,
+      "first_tree_with_no_good_root": null,
+      "first_tree_with_a_bad_root": null,
+      "first_tree_where_a_center_fails": null
+    }
+  ],
+  "scope": "All labeled trees at each completed size; finite computation only."
+}

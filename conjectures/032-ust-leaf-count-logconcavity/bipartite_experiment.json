@@ -1,0 +1,12 @@
+{
+  "family": "complete bipartite graphs K_{a,b}",
+  "side_sizes": [
+    1,
+    40
+  ],
+  "unordered_parameter_pairs_checked": 820,
+  "spanning_tree_totals_checked": 820,
+  "log_concavity_failures": [],
+  "method": "exact integer degree-sequence formula from bipartite Prüfer codes",
+  "scope": "Finite formula check; the class-wide proof is recorded in discussion.md."
+}

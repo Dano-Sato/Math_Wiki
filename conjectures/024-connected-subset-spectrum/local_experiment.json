@@ -1,0 +1,103 @@
+{
+  "strengthening": "Every vertex of every 2-connected graph belongs to at least k connected induced k-sets, for 2 <= k < n.",
+  "scope": "all labelled simple 2-connected graphs with 3 <= n <= 6",
+  "results": [
+    {
+      "n": 3,
+      "labelled_2_connected_graphs": 1,
+      "minimum_connected_k_sets_containing_a_vertex": {
+        "2": 2
+      },
+      "strengthening_holds": true,
+      "minimum_witnesses": {
+        "2": {
+          "edge_mask": 7,
+          "vertex": 0,
+          "participation": 2
+        }
+      }
+    },
+    {
+      "n": 4,
+      "labelled_2_connected_graphs": 10,
+      "minimum_connected_k_sets_containing_a_vertex": {
+        "2": 2,
+        "3": 3
+      },
+      "strengthening_holds": true,
+      "minimum_witnesses": {
+        "2": {
+          "edge_mask": 30,
+          "vertex": 0,
+          "participation": 2
+        },
+        "3": {
+          "edge_mask": 30,
+          "vertex": 0,
+          "participation": 3
+        }
+      }
+    },
+    {
+      "n": 5,
+      "labelled_2_connected_graphs": 238,
+      "minimum_connected_k_sets_containing_a_vertex": {
+        "2": 2,
+        "3": 3,
+        "4": 4
+      },
+      "strengthening_holds": true,
+      "minimum_witnesses": {
+        "2": {
+          "edge_mask": 126,
+          "vertex": 2,
+          "participation": 2
+        },
+        "3": {
+          "edge_mask": 220,
+          "vertex": 0,
+          "participation": 3
+        },
+        "4": {
+          "edge_mask": 126,
+          "vertex": 0,
+          "participation": 4
+        }
+      }
+    },
+    {
+      "n": 6,
+      "labelled_2_connected_graphs": 11368,
+      "minimum_connected_k_sets_containing_a_vertex": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      },
+      "strengthening_holds": true,
+      "minimum_witnesses": {
+        "2": {
+          "edge_mask": 510,
+          "vertex": 2,
+          "participation": 2
+        },
+        "3": {
+          "edge_mask": 1880,
+          "vertex": 0,
+          "participation": 3
+        },
+        "4": {
+          "edge_mask": 1880,
+          "vertex": 0,
+          "participation": 4
+        },
+        "5": {
+          "edge_mask": 510,
+          "vertex": 0,
+          "participation": 5
+        }
+      }
+    }
+  ],
+  "limitation": "finite verification only"
+}

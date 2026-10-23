@@ -1,0 +1,127 @@
+{
+  "claim": "Every vertex belongs to at least k connected induced k-sets.",
+  "scope": "all labelled 2-connected simple graphs on 7 vertices with 7, 8, or 9 edges",
+  "results": [
+    {
+      "n": 7,
+      "edges": 7,
+      "labelled_2_connected_graphs_checked": 360,
+      "minimum_participation_by_k": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6
+      },
+      "witnesses": {
+        "2": {
+          "edge_mask": 1642627,
+          "vertex": 0,
+          "participation": 2
+        },
+        "3": {
+          "edge_mask": 1642627,
+          "vertex": 0,
+          "participation": 3
+        },
+        "4": {
+          "edge_mask": 1642627,
+          "vertex": 0,
+          "participation": 4
+        },
+        "5": {
+          "edge_mask": 1642627,
+          "vertex": 0,
+          "participation": 5
+        },
+        "6": {
+          "edge_mask": 1642627,
+          "vertex": 0,
+          "participation": 6
+        }
+      },
+      "counterexample": null
+    },
+    {
+      "n": 7,
+      "edges": 8,
+      "labelled_2_connected_graphs_checked": 7560,
+      "minimum_participation_by_k": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6
+      },
+      "witnesses": {
+        "2": {
+          "edge_mask": 1638727,
+          "vertex": 2,
+          "participation": 2
+        },
+        "3": {
+          "edge_mask": 1638727,
+          "vertex": 2,
+          "participation": 3
+        },
+        "4": {
+          "edge_mask": 1638727,
+          "vertex": 2,
+          "participation": 4
+        },
+        "5": {
+          "edge_mask": 1638727,
+          "vertex": 2,
+          "participation": 5
+        },
+        "6": {
+          "edge_mask": 1638727,
+          "vertex": 0,
+          "participation": 6
+        }
+      },
+      "counterexample": null
+    },
+    {
+      "n": 7,
+      "edges": 9,
+      "labelled_2_connected_graphs_checked": 46830,
+      "minimum_participation_by_k": {
+        "2": 2,
+        "3": 3,
+        "4": 5,
+        "5": 8,
+        "6": 6
+      },
+      "witnesses": {
+        "2": {
+          "edge_mask": 1573583,
+          "vertex": 2,
+          "participation": 2
+        },
+        "3": {
+          "edge_mask": 1573583,
+          "vertex": 6,
+          "participation": 3
+        },
+        "4": {
+          "edge_mask": 1507655,
+          "vertex": 2,
+          "participation": 5
+        },
+        "5": {
+          "edge_mask": 1581263,
+          "vertex": 3,
+          "participation": 8
+        },
+        "6": {
+          "edge_mask": 1573583,
+          "vertex": 0,
+          "participation": 6
+        }
+      },
+      "counterexample": null
+    }
+  ],
+  "limitation": "This does not check 7-vertex graphs with 10 or more edges or any larger order."
+}

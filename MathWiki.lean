@@ -1,6 +1,7 @@
 module
 
 public import MathWiki.Basic
+public import MathWiki.Combinatorics.CyclicCorrelation
 
 /-!
 # MathWiki

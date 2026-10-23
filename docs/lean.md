@@ -52,6 +52,8 @@ lake build
 - `MathWiki.lean`: 외부에서 `import MathWiki`로 사용하는 공개 진입점.
 - `MathWiki/Basic.lean`: 유한 집합에서 조건을 만족하는 원소 수와 기본 성질.
   Mathlib 결과를 감싼 기반 코드이며 저장소의 독창적인 정리로 주장하지 않는다.
+- `MathWiki/Combinatorics/CyclicCorrelation.lean`: 013 v0.1의 총 자기상관 항등식,
+  반대 이동 대칭, 중심화 순열의 음의 이동 존재. 유한 가환군으로 일반화한 보조정리도 제공한다.
 - `.github/workflows/lean.yml`: Lean 소스·의존성 변경 시 GitHub에서 빌드.
 - `.tools/`, `.lake/`: 로컬 도구와 빌드 산출물. Git에 포함하지 않는다.
 
@@ -74,7 +76,12 @@ python coordination.py claim 005 LEAN --mode formalize --owner codex-lean-worker
 미해결 명제는 필요하면 `def ... : Prop`으로 진술하고 미해결임을 문서화한다.
 유한 검산에는 범위를 정리의 가정에 명시한다.
 
-현재는 기반 모듈만 있으며, 개별 추측의 결과를 옮기는 작업은 별도로 진행한다.
+첫 원본 연계 모듈은 013의 L1·L2 보조 결과다. 본 추측의 모든 이동 동시 비양성은 미증명이다.
+원본의 정수 라벨과 공개 API를 대조하는 검증은 다음으로 재현한다.
+
+```powershell
+.\scripts\lake.ps1 env lean -DwarningAsError=true conjectures/013-nonpositive-cyclic-correlation/check_lean.lean
+```
 
 ## 의존성 변경
 

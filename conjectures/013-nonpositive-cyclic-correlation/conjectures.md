@@ -70,6 +70,19 @@ $$
 
 곱셈의 교환법칙과 지표 치환으로 $C_{n-k}=C_k$다. 따라서 추측에 적은 이동 범위는 모든 비자명한 이동을 대표한다. □
 
+### Lean 형식화 (2026-10-24)
+
+[CyclicCorrelation.lean](../../MathWiki/Combinatorics/CyclicCorrelation.lean)에 L1의 합 항등식·음의 이동 존재와 L2의 대칭 등식을 형식화했다. 공개 진입점은 `import MathWiki`, 이름공간은 `MathWiki.CyclicCorrelation`이다.
+
+- `sum_autocorrelation`: 총 상관은 신호 합의 제곱이다.
+- `sum_nonzero_autocorrelation`: 영합 신호의 비자명 상관 합은 제곱합의 음수다.
+- `autocorrelation_neg`: 반대 이동의 상관은 같다.
+- `sum_centeredPermutation`, `centeredPermutation_nonzero_sum_neg`, `centeredPermutation_exists_negative`: 원본의 정수 중심화 순열에 대한 영합·음의 총합·음의 이동 존재를 증명한다. 마지막 두 결과는 모든 $n\ge2$에 성립한다.
+
+일반 항등식은 유한 가환군과 가환환으로 확장했다. 음의 이동 존재 결과는 선형 순서가 있는 가환환에서 영합과 영수열이 아니라는 가정을 사용한다. 원본 순열은 `Fin n`의 순열로 표현하며, Lean의 값 $p_i$는 원본의 라벨 $p_i+1$에 대응한다. 따라서 Lean의 $2p_i+1-n$은 원본의 $2(p_i+1)-(n+1)$과 같다. **본 추측의 모든 이동 동시 비양성은 계속 미증명**이다.
+
+빌드와 원본 $n=5$ 예제의 $C_1=-12$, $C_2=-8$ 대조를 완료했다. 재현 코드는 [check_lean.lean](check_lean.lean), 검증 범위는 토론의 D004에 기록했다.
+
 ## 4. 문헌 범위와 미해결점
 
 주기 자기상관은 신호·수열 이론의 표준 개념이다([MathWorld의 정의](https://mathworld.wolfram.com/PeriodicAutocorrelation.html)). 이번 제한적 검색에서는 알파벳이 정확히 $\{1,\dots,n\}$인 순열을 재배열해 모든 비자명한 주기 자기상관을 비양수로 만드는 존재 명제와 직접 일치하는 자료를 찾지 못했다. 이는 문헌상 최초라는 주장이 아니며, 체계적인 논문 검색도 아니다.

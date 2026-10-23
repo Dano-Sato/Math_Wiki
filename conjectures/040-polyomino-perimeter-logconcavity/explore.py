@@ -6,34 +6,48 @@ import json
 from collections import Counter
 from pathlib import Path
 
-NEIGHBORS = ((1, 0), (-1, 0), (0, 1), (0, -1))
+BOARD_WIDTH = 16
+LEFT_EDGE = sum(1 << (y * BOARD_WIDTH) for y in range(BOARD_WIDTH))
+RIGHT_EDGE = sum(1 << (y * BOARD_WIDTH + BOARD_WIDTH - 1) for y in range(BOARD_WIDTH))
 
 
-def normalize(cells: set[tuple[int, int]]) -> tuple[tuple[int, int], ...]:
-    min_x = min(x for x, _ in cells)
-    min_y = min(y for _, y in cells)
-    return tuple(sorted((x - min_x, y - min_y) for x, y in cells))
+def normalize(cells: int) -> int:
+    """Translate a 16-by-16 bitboard so its lower-left cell is at (1, 1)."""
+    min_x = BOARD_WIDTH
+    min_y = BOARD_WIDTH
+    remaining = cells
+    while remaining:
+        bit = remaining & -remaining
+        index = bit.bit_length() - 1
+        min_x = min(min_x, index % BOARD_WIDTH)
+        min_y = min(min_y, index // BOARD_WIDTH)
+        remaining ^= bit
+    shift = (1 - min_y) * BOARD_WIDTH + (1 - min_x)
+    return cells << shift if shift >= 0 else cells >> -shift
 
 
-def grow(polyominoes: set[tuple[tuple[int, int], ...]]) -> set[tuple[tuple[int, int], ...]]:
+def grow(polyominoes: set[int]) -> set[int]:
     following = set()
-    for poly in polyominoes:
-        cells = set(poly)
-        for x, y in cells:
-            for dx, dy in NEIGHBORS:
-                cell = (x + dx, y + dy)
-                if cell not in cells:
-                    following.add(normalize(cells | {cell}))
+    for cells in polyominoes:
+        neighbors = (
+            (cells << BOARD_WIDTH)
+            | (cells >> BOARD_WIDTH)
+            | ((cells & ~RIGHT_EDGE) << 1)
+            | ((cells & ~LEFT_EDGE) >> 1)
+        )
+        frontier = neighbors & ~cells
+        while frontier:
+            bit = frontier & -frontier
+            following.add(normalize(cells | bit))
+            frontier ^= bit
     return following
 
 
-def edge_perimeter(poly: tuple[tuple[int, int], ...]) -> int:
-    cells = set(poly)
-    return sum(
-        (x + dx, y + dy) not in cells
-        for x, y in cells
-        for dx, dy in NEIGHBORS
-    )
+def edge_perimeter(cells: int) -> int:
+    area = cells.bit_count()
+    horizontal_adjacencies = ((cells & ~RIGHT_EDGE) & (cells >> 1)).bit_count()
+    vertical_adjacencies = (cells & (cells >> BOARD_WIDTH)).bit_count()
+    return 4 * area - 2 * (horizontal_adjacencies + vertical_adjacencies)
 
 
 def log_concavity_failure(coefficients: list[int]) -> dict | None:
@@ -52,10 +66,10 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-n", type=int, default=12)
     args = parser.parse_args()
-    if not 1 <= args.max_n <= 12:
-        raise SystemExit("For reproducible resource use, --max-n must be between 1 and 12.")
+    if not 1 <= args.max_n <= 13:
+        raise SystemExit("For reproducible resource use, --max-n must be between 1 and 13.")
 
-    polyominoes = {((0, 0),)}
+    polyominoes = {1 << (BOARD_WIDTH + 1)}
     rows = {}
     counts = []
     first_failure = None

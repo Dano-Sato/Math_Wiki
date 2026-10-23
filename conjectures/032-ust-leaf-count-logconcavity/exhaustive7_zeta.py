@@ -1,9 +1,9 @@
-"""Exhaustively test every labeled graph on 7 vertices via subset zeta transform.
+"""Exhaustively test leaf counts and root-excluded leaf counts on 7 vertices.
 
-For each leaf count k, store each labeled tree's edge mask in an array. The
-subset zeta transform then gives, for every graph edge mask G, the number of
-trees with k leaves whose edges are contained in G. Disconnected graphs have
-all-zero profiles and do not affect the conjecture.
+For each tree, store both its total leaf count and its leaf count excluding
+root 0. The subset zeta transform then gives both distributions for every
+graph edge mask. A failure in the root-excluded distribution yields an
+ordinary counterexample by attaching a new pendant vertex at root 0.
 Requires NumPy for vectorized exact int64 additions.
 """
 from __future__ import annotations
@@ -26,7 +26,7 @@ def main() -> None:
     edges = list(itertools.combinations(range(n), 2))
     m = len(edges)
     universe = 1 << m
-    profiles = np.zeros((n + 1, universe), dtype=np.int64)
+    profiles = np.zeros((2, n + 1, universe), dtype=np.int64)
 
     tree_count = 0
     for code in itertools.product(range(n), repeat=n - 2):
@@ -46,18 +46,19 @@ def main() -> None:
             mask |= 1 << edge_index(n, u, v)
             degree[u] += 1
             degree[v] += 1
-        profiles[sum(d == 1 for d in degree), mask] += 1
+        leaves = sum(d == 1 for d in degree)
+        profiles[0, leaves, mask] += 1
+        profiles[1, leaves - int(degree[0] == 1), mask] += 1
         tree_count += 1
 
     for bit in range(m):
         stride = 1 << bit
-        blocks = profiles.reshape(n + 1, -1, 2 * stride)
-        blocks[:, :, stride:] += blocks[:, :, :stride]
+        blocks = profiles.reshape(2, n + 1, -1, 2 * stride)
+        blocks[:, :, :, stride:] += blocks[:, :, :, :stride]
 
-    checked_all_graph_masks = 0
+    root_failure = None
     for k in range(2, n - 1):
-        bad = np.flatnonzero(profiles[k] ** 2 < profiles[k - 1] * profiles[k + 1])
-        checked_all_graph_masks += universe
+        bad = np.flatnonzero(profiles[0, k] ** 2 < profiles[0, k - 1] * profiles[0, k + 1])
         if bad.size:
             mask = int(bad[0])
             result = {
@@ -67,21 +68,45 @@ def main() -> None:
                 "counterexample_edge_mask": mask,
                 "counterexample_edges": [list(e) for i, e in enumerate(edges)
                                          if mask >> i & 1],
-                "leaf_coefficients": [int(profiles[j, mask]) for j in range(n + 1)],
+                "leaf_coefficients": [int(profiles[0, j, mask]) for j in range(n + 1)],
                 "failed_index": k,
                 "all_graph_masks_checked_per_inequality": universe,
             }
             break
     else:
-        result = {
-            "n": n,
-            "all_labeled_graph_masks": universe,
-            "trees_enumerated": tree_count,
-            "inequality_indices_checked": list(range(2, n - 1)),
-            "all_graph_masks_checked_per_inequality": universe,
-            "counterexample": None,
-            "method": "exact Prüfer enumeration + subset zeta transform; integer arithmetic",
-        }
+        result = {"counterexample": None}
+
+    for k in range(1, n - 1):
+        bad = np.flatnonzero(profiles[1, k] ** 2 < profiles[1, k - 1] * profiles[1, k + 1])
+        if bad.size:
+            mask = int(bad[0])
+            root_failure = {
+                "n": n,
+                "root": 0,
+                "counterexample_edge_mask": mask,
+                "counterexample_edges": [list(e) for i, e in enumerate(edges)
+                                         if mask >> i & 1],
+                "root_excluded_leaf_coefficients": [
+                    int(profiles[1, j, mask]) for j in range(n + 1)],
+                "failed_index": k,
+                "pendant_extension_edges": [
+                    *[list(e) for i, e in enumerate(edges) if mask >> i & 1], [0, n]],
+                "extended_graph_leaf_coefficients": [
+                    0, *[int(profiles[1, j, mask]) for j in range(n + 1)]],
+            }
+            break
+
+    result.update({
+        "n": n,
+        "all_labeled_graph_masks": universe,
+        "trees_enumerated": tree_count,
+        "inequality_indices_checked": list(range(2, n - 1)),
+        "all_graph_masks_checked_per_inequality": universe,
+        "root_excluded_inequality_indices_checked": list(range(1, n - 1)),
+        "root_excluded_counterexample": root_failure,
+        "method": "exact Prüfer enumeration + subset zeta transform; integer arithmetic",
+        "scope": "Every labeled graph on 7 vertices; a root-excluded failure extends to a graph on 8 vertices by adding one pendant vertex.",
+    })
     Path(__file__).with_name("exhaustive7_experiment.json").write_text(
         json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2))

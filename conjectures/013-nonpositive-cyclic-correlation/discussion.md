@@ -7,7 +7,7 @@
 | 대상 | 현재 판단 | 남은 작업 |
 | --- | --- | --- |
 | 013 | $3\le n\le20$ 각 크기에 대해 증거 순열 존재 | 일반 구성 또는 반례 |
-| L1·L2 | 항등식 증명 | 추가 작업 없음 |
+| L1·L2 | 합 항등식·음의 이동 존재·대칭 등식 Lean 검증 완료 | 모든 이동의 동시 비양성은 별도 문제 |
 | 신규성 | 제한적 검색에서 직접 일치 자료를 찾지 못함 | 더 체계적인 문헌 조사 |
 
 ## D001 / Codex / 013 / 2026-10-24 / 후보 구성
@@ -33,3 +33,26 @@
 **근거:** 조건은 짧고 정수 계산으로 판정할 수 있으며, 총 상관 항등식은 평균 음수만을 보장하므로 문제의 추가 요구가 분명하다. 18개 크기의 유한 증거가 출발점을 준다.
 
 **감점:** 보편 존재를 뒷받침할 구성·점근적 구조는 아직 없다. 자기상관 문헌이 넓고 정확한 관련 결과를 충분히 확인하지 않았으므로 독창성 및 깊이를 높게 평가할 근거가 부족하다. 제안자 본인의 탐색적 점수이지 참일 확률은 아니다. Claude 점수는 실제 검토 전까지 null로 둔다.
+
+## D004 / Codex / 013 / 2026-10-24 / L1·L2 Lean 형식화
+
+**대상 명제:** v0.1의 L1 중 중심화 영합, 총 상관 항등식, 비자명 상관의 음의 총합과 음의 이동 존재, 그리고 L2의 반대 이동 대칭 등식.
+
+**결과:** [MathWiki/Combinatorics/CyclicCorrelation.lean](../../MathWiki/Combinatorics/CyclicCorrelation.lean)에 완성된 증명을 추가하고 `MathWiki.lean`에서 공개했다. 이름공간은 `MathWiki.CyclicCorrelation`이다. 이는 표준 자기상관 항등식의 형식화이며 수학적 신규성을 주장하지 않는다.
+
+일반 부분은 유한 가환군 $G$와 가환환 $R$에서 $C_x(k)=\sum_i x_i x_{i+k}$로 정의했다. `sum_autocorrelation`은 $\sum_k C_x(k)=(\sum_i x_i)^2$, `autocorrelation_neg`는 $C_x(-k)=C_x(k)$, `sum_nonzero_autocorrelation`은 영합 가정에서 $\sum_{k\ne0}C_x(k)=-\sum_i x_i^2$를 증명한다. $R$에 선형 순서와 연산의 호환 조건을 두고 영합이고 영수열이 아니라는 가정을 더하면 `exists_negative_autocorrelation`으로 $k\ne0$인 음의 이동이 존재한다.
+
+원본과의 연결은 `centeredPermutation`으로 명시했다. `p : Equiv.Perm (Fin n)`의 값은 $0,\dots,n-1$이므로 원본 라벨은 `(p i).val + 1`이다. Lean 정의 $2\,(p_i:\mathbb Z)+1-n$은 원본 $2\,\text{label}-(n+1)$과 정확히 같다. `Fin n`의 덧셈은 $n$을 법으로 한 이동이다. `sum_centeredPermutation`은 임의 크기에서 영합을, `centeredPermutation_nonzero_sum_neg`와 `centeredPermutation_exists_negative`는 모든 $n\ge2$에서 각각 음의 총합과 음의 이동 존재를 증명했다. 이때 쓰는 `NeZero n` 인스턴스는 $n\ge2$에서 충족되는 양의 크기 조건이다.
+
+**증명 근거:** Mathlib v4.35.0의 유한합·군 평행이동 API를 확인하고 `Fintype.sum_equiv`, `Equiv.sum_comp`, 유한합 순서 교환, 제곱합의 양성을 사용했다. 순열 중심화의 영합은 순열에 의한 합 불변성과 처음 $n$개 홀수 합의 귀납 증명으로 얻었다. 순열이 영수열이 아니라는 사실은 값 0의 역상을 택해 보였다. 수치 탐색으로 일반 결과를 대신하지 않았다.
+
+**검증:** 아래 두 명령을 실행해 라이브러리 빌드와 공개 API·원본 예제 대조를 확인했다.
+
+```powershell
+.\scripts\lake.ps1 build
+.\scripts\lake.ps1 env lean -DwarningAsError=true conjectures/013-nonpositive-cyclic-correlation/check_lean.lean
+```
+
+첫 명령은 1,005개 빌드 작업을 오류·경고 없이 통과했다. 두 번째 명령의 [check_lean.lean](check_lean.lean)은 `import MathWiki`만으로 일반 정리와 순열 특수화를 사용하고, 원본 $p=(5,4,2,3,1)$에서 $C_1=-12$, $C_2=-8$을 커널 검산 `decide`로 증명한다. 주요 정리의 `#print axioms` 결과는 Lean의 표준 기반 `propext`, `Classical.choice`, `Quot.sound`뿐이다. `sorryAx`나 사용자 정의 가정, `native_decide`는 사용하지 않았다.
+
+**범위와 미해결점:** 일반 결과는 유한 검산 범위에 한정되지 않는 증명이다. 모든 이동을 동시에 비양수로 만드는 순열의 존재는 증명하지 않았고, $3\le n\le20$의 증거 순열 전체를 Lean으로 옮긴 것도 아니다. $1\le k\le\lfloor n/2\rfloor$로 검사 범위를 줄이는 자연수 첨자 따름정리는 별도로 형식화하지 않았다. 본 추측 v0.1과 점수는 유지한다.

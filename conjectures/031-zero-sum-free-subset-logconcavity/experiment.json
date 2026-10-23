@@ -1,9 +1,9 @@
 {
   "conjecture": "For every finite abelian group A, the number z_k(A) of k-element zero-sum-free subsets of A\\{0} is log-concave in k.",
   "method": "Exact enumeration of every subset of A\\{0}; incremental subset-sum sets; canonical invariant-factor types.",
-  "max_group_order": 16,
-  "isomorphism_types_checked": 24,
-  "subsets_checked": 199174,
+  "max_group_order": 18,
+  "isomorphism_types_checked": 27,
+  "subsets_checked": 526854,
   "all_groups_passed": true,
   "groups": [
     {
@@ -522,6 +522,93 @@
       "log_concavity_violations": [],
       "all_inequalities_passed": true,
       "subsets_checked": 32768
+    },
+    {
+      "invariant_factors": [
+        17
+      ],
+      "group_order": 17,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        16,
+        112,
+        416,
+        720,
+        256,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 65536
+    },
+    {
+      "invariant_factors": [
+        3,
+        6
+      ],
+      "group_order": 18,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        17,
+        128,
+        520,
+        1016,
+        496,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 131072
+    },
+    {
+      "invariant_factors": [
+        18
+      ],
+      "group_order": 18,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        17,
+        128,
+        522,
+        1036,
+        500,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 131072
     }
   ],
   "interpretation": "Finite exact computation only; it proves no universal statement beyond the listed groups."

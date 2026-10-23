@@ -2,11 +2,11 @@
   "conjecture": "043 v0.1",
   "range": [
     1,
-    500
+    750
   ],
   "method": "exact integer recurrence; coefficient sums checked against n!; adjacent log-concavity differences checked as integers",
-  "coefficient_rows_checked": 500,
-  "strict_log_concavity_inequalities_checked": 62001,
+  "coefficient_rows_checked": 750,
+  "strict_log_concavity_inequalities_checked": 139876,
   "nonpositive_gaps": [
     {
       "n": 10,

@@ -1,0 +1,708 @@
+{
+  "conjecture": "For every finite abelian group A, the number z_k(A) of k-element zero-sum-free subsets of A\\{0} is log-concave in k.",
+  "method": "Exact enumeration of every subset of A\\{0}; incremental subset-sum sets; canonical invariant-factor types.",
+  "max_group_order": 20,
+  "isomorphism_types_checked": 30,
+  "subsets_checked": 1837574,
+  "all_groups_passed": true,
+  "groups": [
+    {
+      "invariant_factors": [
+        2
+      ],
+      "group_order": 2,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        1
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 2
+    },
+    {
+      "invariant_factors": [
+        3
+      ],
+      "group_order": 3,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        2,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 4
+    },
+    {
+      "invariant_factors": [
+        2,
+        2
+      ],
+      "group_order": 4,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        3,
+        3,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 8
+    },
+    {
+      "invariant_factors": [
+        4
+      ],
+      "group_order": 4,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 8
+    },
+    {
+      "invariant_factors": [
+        5
+      ],
+      "group_order": 5,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        4,
+        4,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 16
+    },
+    {
+      "invariant_factors": [
+        6
+      ],
+      "group_order": 6,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        5,
+        8,
+        2,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 32
+    },
+    {
+      "invariant_factors": [
+        7
+      ],
+      "group_order": 7,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        6,
+        12,
+        6,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 64
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        2
+      ],
+      "group_order": 8,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        7,
+        21,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 128
+    },
+    {
+      "invariant_factors": [
+        2,
+        4
+      ],
+      "group_order": 8,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        7,
+        19,
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 128
+    },
+    {
+      "invariant_factors": [
+        8
+      ],
+      "group_order": 8,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        7,
+        18,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 128
+    },
+    {
+      "invariant_factors": [
+        3,
+        3
+      ],
+      "group_order": 9,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        8,
+        24,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 256
+    },
+    {
+      "invariant_factors": [
+        9
+      ],
+      "group_order": 9,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        8,
+        24,
+        26,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 256
+    },
+    {
+      "invariant_factors": [
+        10
+      ],
+      "group_order": 10,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        9,
+        32,
+        48,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 512
+    },
+    {
+      "invariant_factors": [
+        11
+      ],
+      "group_order": 11,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        10,
+        40,
+        70,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 1024
+    },
+    {
+      "invariant_factors": [
+        2,
+        6
+      ],
+      "group_order": 12,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        11,
+        51,
+        114,
+        78,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 2048
+    },
+    {
+      "invariant_factors": [
+        12
+      ],
+      "group_order": 12,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        11,
+        50,
+        106,
+        68,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 2048
+    },
+    {
+      "invariant_factors": [
+        13
+      ],
+      "group_order": 13,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        12,
+        60,
+        144,
+        120,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 4096
+    },
+    {
+      "invariant_factors": [
+        14
+      ],
+      "group_order": 14,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        13,
+        72,
+        200,
+        216,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 8192
+    },
+    {
+      "invariant_factors": [
+        15
+      ],
+      "group_order": 15,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        14,
+        84,
+        256,
+        322,
+        40,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 16384
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "group_order": 16,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        15,
+        105,
+        420,
+        840,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 32768
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        4
+      ],
+      "group_order": 16,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        15,
+        101,
+        372,
+        648,
+        96,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 32768
+    },
+    {
+      "invariant_factors": [
+        2,
+        8
+      ],
+      "group_order": 16,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        15,
+        99,
+        348,
+        558,
+        118,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 32768
+    },
+    {
+      "invariant_factors": [
+        4,
+        4
+      ],
+      "group_order": 16,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        15,
+        99,
+        348,
+        564,
+        120,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 32768
+    },
+    {
+      "invariant_factors": [
+        16
+      ],
+      "group_order": 16,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        15,
+        98,
+        336,
+        516,
+        120,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 32768
+    },
+    {
+      "invariant_factors": [
+        17
+      ],
+      "group_order": 17,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        16,
+        112,
+        416,
+        720,
+        256,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 65536
+    },
+    {
+      "invariant_factors": [
+        3,
+        6
+      ],
+      "group_order": 18,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        17,
+        128,
+        520,
+        1016,
+        496,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 131072
+    },
+    {
+      "invariant_factors": [
+        18
+      ],
+      "group_order": 18,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        17,
+        128,
+        522,
+        1036,
+        500,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 131072
+    },
+    {
+      "invariant_factors": [
+        19
+      ],
+      "group_order": 19,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        18,
+        144,
+        630,
+        1386,
+        864,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 262144
+    },
+    {
+      "invariant_factors": [
+        2,
+        10
+      ],
+      "group_order": 20,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        19,
+        163,
+        784,
+        1980,
+        1516,
+        48,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 524288
+    },
+    {
+      "invariant_factors": [
+        20
+      ],
+      "group_order": 20,
+      "zero_sum_free_subset_counts_by_size": [
+        1,
+        19,
+        162,
+        768,
+        1896,
+        1456,
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "log_concavity_violations": [],
+      "all_inequalities_passed": true,
+      "subsets_checked": 524288
+    }
+  ],
+  "interpretation": "Finite exact computation only; it proves no universal statement beyond the listed groups."
+}
