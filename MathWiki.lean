@@ -8,3 +8,4 @@ public import MathWiki.Combinatorics.CyclicCorrelation
 
 Public entry point for the library. Import each completed module here.
 -/
+public import MathWiki.Combinatorics.CyclicGeneration

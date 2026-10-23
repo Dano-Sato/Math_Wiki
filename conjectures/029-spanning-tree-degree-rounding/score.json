@@ -1,9 +1,9 @@
 {
   "claude": null,
   "chatgpt": {
-    "score": 55,
+    "score": 63,
     "version": "0.2",
     "date": "2026-10-24",
-    "reason": "UST 평균 차수의 동시 floor/ceiling 실현은 정확하고 자연스러운 문제이며, n≤6 전수검사와 n=7,8의 여러 정확 표본에서 반례가 없다. 다만 유한 계산은 일반 명제의 증거로는 제한적이고, Singh–Lau의 additive-1 degree-bounded tree 정리 및 최신 degree-list spanning-tree 문제와 가까우며 정확한 동시 반올림은 아직 문헌상 확인하지 못했다. 증명 방향이 없고 신규성 조사도 제한적이므로 66점은 높게 잡혔다고 보고 55점으로 조정한다. 참일 확률이 아닌 연구 가치 점수다."
+    "reason": "유한 정확 탐색은 반례를 찾지 못했고, 새로 확인한 엄밀한 귀결로 모든 연결 vertex-transitive 그래프가 Hamilton 경로를 갖는다는 미해결 Lovász 문제를 함의한다: vertex transitivity gives μ_v=2−2/n, so floor/ceiling degrees are 1 or 2 and the realizing tree must be a Hamilton path. 이는 구조적 깊이를 높여 55점에서 63점으로 조정할 근거다. 다만 029 자체의 일반 증명이나 기존 rounding 문헌의 체계적 정리는 없으며, 이 함의는 참의 증거가 아니라 문제의 난도 신호다."
   }
 }
