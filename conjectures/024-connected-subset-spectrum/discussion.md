@@ -104,3 +104,33 @@ D005에서는 연결 그래프의 하한만으로 024가 바로 나오지 않는
 [explore_theta_local.py](explore_theta_local.py)는 세 경로의 내부 정점 수 $1\le a\le b\le c$가 $a+b+c\le15$인 102개 동형류를 모두 생성했다. 각 그래프에서 모든 정점과 모든 $2\le k<n$에 대해 연결 유도 $k$-집합의 점별 참여도를 정확히 셌다. 102개 모두 $d_k(G,v)\ge k$를 만족했다. 정점별·크기별 최솟값은 [theta_local_experiment.json](theta_local_experiment.json)에 기록했다.
 
 이는 세타 그래프의 무한 족에 대한 증명이 아니며, 유한 계산으로 검사한 범위만 넓힌다. 세타 그래프 전 범위에 대한 짧은 구조적 증명도 이번 검토에서는 얻지 못했다. 특히 여러 분기 경로가 함께 참여할 때, 기존의 한 사이클에서 얻는 $k$개 연속 구간만으로는 큰 $k$에서 충분하지 않다.
+
+## D013 / Codex / 024 / 2026-10-24 / $r$-연결 그래프의 강화 계수 하한
+
+$G$를 $r$-연결 그래프, $n=|V(G)|$, $1\le k\le n-r+1$이라 하자. 임의의 $U\subseteq V(G)$, $|U|=r-1$에 대해 $G-U$는 연결이고 정점 수는 $n-r+1$이다. D011에서 인용한 연결 그래프 정리를 적용하면
+
+$$
+c_k(G-U)\ge(n-r+1)-k+1=n-r-k+2.
+$$
+
+모든 $U$에 합산한다. 고정된 연결 $k$-집합 $S$는 $U\subseteq V(G)\setminus S$인 경우에 세어지고, 그런 삭제 집합은 $\binom{n-k}{r-1}$개다. 한편 $U$는 $\binom n{r-1}$개이므로
+
+$$
+\binom{n-k}{r-1}c_k(G)=\sum_{|U|=r-1}c_k(G-U)
+\ge\binom n{r-1}(n-r-k+2).
+$$
+
+따라서
+
+$$
+c_k(G)\ge\left\lceil\frac{\binom n{r-1}(n-r-k+2)}{\binom{n-k}{r-1}}\right\rceil.
+$$
+
+$r=2$이면 D011의 $c_k(G)\ge n$을 되찾는다. $r=3$이면 $2\le k\le n-2$에서
+
+$$
+c_k(G)\ge\left\lceil\frac{\binom n2(n-k-1)}{\binom{n-k}{2}}\right\rceil
+=\left\lceil\frac{n(n-1)}{n-k}\right\rceil.
+$$
+
+$k=n-2$에서는 3-연결성 때문에 모든 $\binom n2$개의 정점 집합이 연결이며, 공식도 그 값을 준다. 이는 기존 질문의 3-연결 경우에 대한 계수별 정량 강화다. $r$-연결성만으로 이 하한이 최선인지, 각 $k$에서 달성 그래프가 무엇인지는 별도 극값 문제로 남는다. 파생 추측 024-1의 점별 참여도 하한은 이 합산 논증만으로 나오지 않는다.

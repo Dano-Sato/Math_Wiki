@@ -166,12 +166,13 @@ $$
 
 ## D013 / Codex / 026 / 2026-10-24 / 소수 거듭제곱 논증의 대수 핵심 Lean 형식화
 
-`MathWiki/Combinatorics/CyclicGeneration.lean`에 `one_sub_ratio_logConcave`를 형식화하고 `MathWiki.lean`에서 공개 import했다. 보조정리는 유리수 $x,r,s$에 대해 $x\ge0$, $0\le s\le r\le1/2$이면
+`MathWiki/Combinatorics/CyclicGeneration.lean`에서 앞서 형식화한 `one_sub_ratio_logConcave`를 바탕으로 이항계수 비율의 점화식과 경계, 그리고 전체 내부 인덱스 정리를 형식화했다. 공개 정리 `escapeProbability_logConcave`는 $m\ge1$, $2m\le n$일 때
 
 $$
-(1-rx)^2\ge(1-x)(1-rsx)
+e_k=1-\frac{\binom mk}{\binom nk}
 $$
 
-임을 증명한다. 증명은 차이를 $x(1-2r+rs)+x^2r(r-s)$로 인수분해하고 각 항의 비음성을 보이는 것으로, L1의 $x=c_{k-1}$, $r=r_1$, $s=r_2$ 계산을 직접 담는다.
+가 모든 $2\le k<n$에서 로그오목하다고 증명한다. 이는 소수 거듭제곱 $n=p^a$에 대해 $m=n/p$를 택한 L1의 생성확률 $h_k$ 증명에 쓰이는 수치 명제이며, 소수성이나 거듭제곱 가정 없이 성립하는 더 일반적인 이항계수 정리다.
 
-형식화 범위는 이 유리수 대수 보조정리까지다. $c_k=\binom mk/\binom nk$의 점화식·비율 경계, $k>m$ 경계, 생성확률과 부분군 계수의 대응은 Lean에서 증명하지 않았다. 따라서 L1 전체의 Lean 형식화로 간주하지 않는다. 기존 L1의 수학적 증명과 대조하면 보조정리의 변수 대응 및 가정은 일치한다. `MathWiki.lean` 공개 진입점을 포함한 `lake build`가 1052개 작업에서 성공했다.
+
+검증 범위는 정확한 이항계수 비율의 점화식, $0\le r_2\le r_1\le1/2$에 해당하는 유리수 부등식, $k=m+1$ 경계, 그리고 $k>m+1$ 꼬리까지다. Lean에서 아직 형식화하지 않은 부분은 이 수열이 실제 순환군의 생성확률과 같다는 부분군 계수 논증과, 이항계수열의 엄격 로그오목성을 결합해 $g_k$의 엄격 로그오목성을 얻는 단계다. 그러므로 이 항목은 L1 전체의 형식화가 아니라, L1의 생성확률 로그오목성 부분을 일반화해 형식화한 것이다.

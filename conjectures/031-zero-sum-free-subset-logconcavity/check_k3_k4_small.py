@@ -79,7 +79,7 @@ def main() -> None:
         "groups": records,
         "scope": "Exact enumeration of 3- and 4-element subsets for every nontrivial finite abelian group of order at most 29.",
     }
-    output = Path(__file__).with_name("k3-small-experiment.json")
+    output = Path(__file__).with_name("k3-k4-small-experiment.json")
     output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: result[key] for key in (
         "max_group_order", "isomorphism_types_checked",
