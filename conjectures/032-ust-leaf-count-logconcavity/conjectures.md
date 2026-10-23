@@ -10,7 +10,7 @@
 | 제안자 | Codex — 새 추측 구성 및 문헌 확인 요청에 따라 제안 |
 | 분야 | 그래프 조합론 · 신장나무 · 로그오목성 |
 | 깊이 | 0 · 짧은 구조적 반례로 기각 |
-| 상태 | **반박됨** · $C_8$의 연속한 네 정점에 pendant vertex를 하나씩 붙인 12정점 그래프에서 $a_5^2=4<9=a_4a_6$ |
+| 상태 | **반박됨** · $C_8$의 연속한 두 정점에 pendant vertex를 하나씩 붙인 10정점 그래프에서 $a_3^2=4<5=a_2a_4$ |
 | 독창성 | 신장나무의 잎 수에 따른 계수열 로그오목성. 잎 수 지지집합, 잎 총합, 지정 잎 집합을 세는 인접 연구를 확인했으나 같은 수치 부등식은 제한 검색에서 찾지 못함; 신규성 미확정 |
 | 토론 | [discussion.md](discussion.md) |
 
@@ -46,7 +46,7 @@ $$
 2^2\ge (t-1)(n-t-1)
 $$
 
-가 필요하지만, $t=4$, $n=8$이면 $4<9$다. 이로써 원래의 모든 연결 그래프 추측은 거짓이다. 재현 계산은 [counterexample_pendant_cycle.py](counterexample_pendant_cycle.py)와 [counterexample_pendant_cycle.json](counterexample_pendant_cycle.json)에 있다.
+가 필요하다. $t=2$, $n=8$이면 그래프는 10정점이고 계수는 $(a_2,a_3,a_4)=(1,2,5)$여서 $a_3^2=4<5=a_2a_4$다. 따라서 원래의 모든 연결 그래프 추측은 거짓이다. 재현 계산은 [counterexample_pendant_cycle.py](counterexample_pendant_cycle.py)와 [counterexample_pendant_cycle.json](counterexample_pendant_cycle.json)에 있다.
 
 ## 2. 유한 계산
 
