@@ -2,7 +2,7 @@
   "conjecture": "040",
   "equivalence": "translations only; rotations and reflections counted separately",
   "perimeter": "number of unit boundary edges; holes allowed",
-  "max_n": 13,
+  "max_n": 14,
   "fixed_polyomino_counts": [
     1,
     2,
@@ -16,7 +16,8 @@
     36446,
     135268,
     505861,
-    1903890
+    1903890,
+    7204874
   ],
   "first_failure": null,
   "rows": {
@@ -227,6 +228,31 @@
         250986,
         633748,
         942651
+      ],
+      "log_concave": true,
+      "support_step_2": true
+    },
+    "14": {
+      "fixed_polyomino_count": 7204874,
+      "perimeters": [
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30
+      ],
+      "coefficients": [
+        22,
+        864,
+        9354,
+        62396,
+        297262,
+        1056608,
+        2448760,
+        3329608
       ],
       "log_concave": true,
       "support_step_2": true

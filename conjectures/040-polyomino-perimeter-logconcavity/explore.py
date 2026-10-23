@@ -66,8 +66,8 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-n", type=int, default=12)
     args = parser.parse_args()
-    if not 1 <= args.max_n <= 13:
-        raise SystemExit("For reproducible resource use, --max-n must be between 1 and 13.")
+    if not 1 <= args.max_n <= 14:
+        raise SystemExit("For reproducible resource use, --max-n must be between 1 and 14.")
 
     polyominoes = {1 << (BOARD_WIDTH + 1)}
     rows = {}

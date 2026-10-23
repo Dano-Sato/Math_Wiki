@@ -131,3 +131,24 @@ $$
 이 배정을 다음 정수 흐름으로 만든다. source에서 각 삼각형 노드로 용량 1의 간선을 두고, 삼각형 노드에서 그 세 꼭짓점 노드로 용량 1의 간선을 둔다. source의 총 공급량은 삼각형 수로 고정한다. 꼭짓점 노드에서 sink로 가는 간선의 하한과 상한은 각각 $\lfloor t_v/3\rfloor$와 $\lceil t_v/3\rceil$로 둔다. 각 삼각형에서 세 꼭짓점으로 $1/3$씩 보내는 분수 흐름은 모든 제약을 만족한다. 네트워크 흐름 다면체의 정수성(정수 하한·상한을 갖는 유향 네트워크에서 분수 가능 흐름이 있으면 정수 가능 흐름이 있다)에 의해, 각 삼각형이 꼭짓점 하나를 선택하고 각 $y_v$가 요구 구간에 드는 정수 흐름이 존재한다. 각 삼각형에서 선택된 꼭짓점 맞은편 간선을 삭제하면 신장나무가 되고, 위 식에 의해 모든 꼭짓점에서 바닥·천장 조건을 만족한다. □
 
 이 증명은 임의 길이 사이클의 선택 간선이 두 끝점을 함께 건드리는 상호작용을 제거하지 못한다. 따라서 모든 사이클이 삼각형이라는 가정은 사용된 이분 네트워크 환원의 핵심이며, 길이 4 이상의 사이클을 포함하는 일반 cactus까지 증명했다고 해석하면 안 된다. 일반 추측과 점수는 바꾸지 않는다. 외부 탐색이나 계산은 사용하지 않았다.
+
+## 2026-10-24 · Codex · factor-tree 결합으로 모든 cactus 그래프 증명
+
+**정리.** 모든 유한 연결 cactus 그래프에서 029의 동시 바닥·천장 차수 반올림이 성립한다.
+
+사이클 $C$의 길이를 $m_C$라 하자. cactus의 모든 신장나무는 각 사이클에서 간선 하나씩 삭제하고 모든 다리는 유지해서 얻으므로, 균등 신장나무에서는 각 사이클의 삭제 간선이 균등하다. 정점 $v$에 대해 삭제 차수의 평균은
+$$
+\lambda_v=\sum_{C\ni v}\frac{2}{m_C},\qquad \mu_v=\deg_G(v)-\lambda_v.
+$$
+사이클 하나에만 속하는 정점은 그 사이클에서 삭제된 간선이 닿는지 여부가 0 또는 1이므로 삭제 차수가 자동으로 $\lfloor\lambda_v\rfloor$ 또는 $\lceil\lambda_v\rceil$다. 사이클에 속하지 않는 정점은 삭제 차수가 0이다. 따라서 제약이 필요한 것은 둘 이상의 사이클에 속하는 articulation vertex뿐이다.
+
+각 사이클을 factor node로, 둘 이상의 사이클에 속하는 각 정점을 vertex node로 하는 incidence graph를 만든다. cactus의 block-cut graph는 나무이므로 이 incidence graph는 forest다. 연결 성분마다 다음 두 종류의 국소 확률분포를 둔다.
+
+1. 사이클 factor $C$에서는 간선 하나를 균등하게 삭제한다. articulation vertex $v\in C$와 incidence variable $X_{C,v}$를 연결하고, 삭제 간선이 $v$에 닿으면 $X_{C,v}=1$로 둔다. 그러면 $\Pr(X_{C,v}=1)=2/m_C$다.
+2. articulation vertex $v$에서는 주변 incidence 변수들의 평균을 보존하면서 합이 $\lfloor\lambda_v\rfloor$ 또는 $\lceil\lambda_v\rceil$인 0-1 벡터의 확률분포를 둔다. 이를 위해 주변확률 벡터 $p$에서 분수 좌표 $p_i,p_j$ 두 개를 잡고, $\alpha=\min(1-p_i,p_j)$, $\beta=\min(p_i,1-p_j)$라 놓는다. 확률 $\beta/(\alpha+\beta)$로 $p+\alpha(e_i-e_j)$를, 확률 $\alpha/(\alpha+\beta)$로 $p-\beta(e_i-e_j)$를 택한다. 조건부 기댓값과 전체 좌표합은 보존되고 각 분기에서 둘 중 적어도 한 좌표가 정수가 된다. 이 과정을 반복하면 분수 좌표는 많아야 하나 남는다. 마지막 좌표가 $\theta$이면 이를 확률 $\theta$로 1, 확률 $1-\theta$로 0으로 정한다. 모든 주변확률은 원래 $p_i=2/m_C$로 유지되고, 최종 합은 $\lfloor\lambda_v\rfloor$ 또는 $\lceil\lambda_v\rceil$다.
+
+두 종류의 국소분포는 각 incidence 변수에서 같은 주변확률 $2/m_C$를 갖는다. incidence graph가 forest이므로 이 국소분포들은 하나의 전역 결합분포로 붙일 수 있다. 이를 직접 보이려면 forest를 뿌리내리고, 뿌리 node의 국소 상태를 뽑은 다음 부모와 공유하는 incidence 변수값을 조건으로 자식 node의 나머지 상태를 순차적으로 뽑으면 된다. 순환이 없으므로 이미 배정한 변수를 다시 맞춰야 하는 충돌이 생기지 않는다.
+
+따라서 양의 확률로 모든 articulation vertex에서 삭제 차수 합이 바닥·천장 중 하나인 전역 선택이 존재한다. 각 cycle factor의 상태가 실제 삭제 간선 하나를 나타내므로, 그 간선들을 삭제해 만든 신장나무 $T$에서 모든 정점에 대해 $\deg_T(v)=\deg_G(v)-d_v$이고 $d_v\in\{\lfloor\lambda_v\rfloor,\lceil\lambda_v\rceil\}$. 정수 $\deg_G(v)$에 대해 이 조건은 $\deg_T(v)\in\{\lfloor\mu_v\rfloor,\lceil\mu_v\rceil\}$와 동치다. 이로써 임의 길이의 사이클이 여러 articulation vertex에서 만나는 경우를 포함해 모든 cactus 그래프가 증명된다. □
+
+이 정리는 이전의 서로소 사이클, 한 공통 꼭짓점에서 만나는 사이클, 삼각형 cactus 결과를 포함한다. 전역 결합 단계는 cactus의 block-cut 구조가 forest라는 점에 의존하므로, 일반 그래프에 대한 029를 해결하지 않는다. 일반 추측과 점수는 변경하지 않는다.

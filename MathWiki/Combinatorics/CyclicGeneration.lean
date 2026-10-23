@@ -14,8 +14,9 @@ import Mathlib.Tactic.Linarith
 Source: conjecture 026, version 0.2, L1, `conjectures/026-cyclic-generation-logconcavity/conjectures.md`.
 This module formalizes the binomial-ratio recurrence, its elementary bounds, and the
 resulting log-concavity theorem for `1 - choose(m,k)/choose(n,k)` when `2*m ≤ n`.
-It does not formalize the correspondence with generating subsets of a cyclic group,
-or the final strict log-concavity deduction for their counting sequence.
+It also proves strict log-concavity of `choose(n,k) - choose(m,k)` and the general
+product lemma used for that deduction. The identification of this arithmetic count
+with generating subsets of a cyclic group is left to the source's subgroup argument.
 -/
 
 @[expose] public section
@@ -228,6 +229,134 @@ theorem escapeProbability_logConcave
         forbiddenRatio_eq_zero_of_lt n m (k + 1) (by omega)
           (by omega)
       simp [escapeProbability, hmidzero, hprevzero, hnextzero]
+
+/-- The binomial coefficient row is strictly log-concave at every internal index.
+This direct proof uses the two adjacent `choose_succ_right_eq` recurrences. -/
+theorem choose_strictLogConcave (n k : ℕ) (hk2 : 2 ≤ k) (hkn : k < n) :
+    (Nat.choose n k) ^ 2 > Nat.choose n (k - 1) * Nat.choose n (k + 1) := by
+  let A := Nat.choose n k
+  let B := Nat.choose n (k - 1)
+  let C := Nat.choose n (k + 1)
+  have hk1 : k - 1 + 1 = k := by omega
+  have hdiff : n - (k - 1) = n - k + 1 := by omega
+  have hrec1 : A * k = B * (n - k + 1) := by
+    have hr := Nat.choose_succ_right_eq n (k - 1)
+    rw [hk1, hdiff] at hr
+    simpa [A, B] using hr
+  have hrec2 : C * (k + 1) = A * (n - k) := by
+    simpa [A, C] using Nat.choose_succ_right_eq n k
+  have hratio : (n - k + 1) * (k + 1) = (n - k) * k + (n + 1) := by
+    calc
+      (n - k + 1) * (k + 1) = (n - k) * k + ((n - k) + k + 1) := by ring
+      _ = (n - k) * k + (n + 1) := by
+        rw [Nat.sub_add_cancel (le_of_lt hkn)]
+  have hA : 0 < A := Nat.choose_pos (by omega)
+  have hB : 0 < B := Nat.choose_pos (by omega)
+  have hterm : 0 < A * B * (n + 1) := by positivity
+  have hfactor : 0 < k * (k + 1) := Nat.mul_pos (by omega) (by omega)
+  have hmul : B * C * (k * (k + 1)) < A ^ 2 * (k * (k + 1)) := by
+    have hident : A ^ 2 * (k * (k + 1)) =
+        B * C * (k * (k + 1)) + A * B * (n + 1) := by
+      calc
+        A ^ 2 * (k * (k + 1)) = (A * k) * (A * (k + 1)) := by ring
+        _ = (B * (n - k + 1)) * (A * (k + 1)) := by rw [hrec1]
+        _ = A * B * ((n - k + 1) * (k + 1)) := by ring
+        _ = A * B * ((n - k) * k + (n + 1)) := by rw [hratio]
+        _ = A * B * (n - k) * k + A * B * (n + 1) := by ring
+        _ = B * (A * (n - k)) * k + A * B * (n + 1) := by ring
+        _ = B * (C * (k + 1)) * k + A * B * (n + 1) := by rw [← hrec2]
+        _ = B * C * (k * (k + 1)) + A * B * (n + 1) := by ring
+    rw [hident]
+    exact Nat.lt_add_of_pos_right hterm
+  exact (Nat.mul_lt_mul_right hfactor).mp hmul
+
+/-- Multiplying a positive log-concave sequence by a strictly log-concave
+sequence preserves strict log-concavity. This is the final product step in 026, L1. -/
+theorem strictLogConcave_mul_at
+    (a b : ℕ → ℚ) (k : ℕ)
+    (ha : a k ^ 2 > a (k - 1) * a (k + 1))
+    (hb : b k ^ 2 ≥ b (k - 1) * b (k + 1))
+    (hbprev : 0 < b (k - 1)) (hbnext : 0 < b (k + 1)) :
+    (a k * b k) ^ 2 >
+      (a (k - 1) * b (k - 1)) * (a (k + 1) * b (k + 1)) := by
+  have hprod : 0 < b (k - 1) * b (k + 1) := mul_pos hbprev hbnext
+  have hleft := mul_lt_mul_of_pos_right ha hprod
+  have hright := mul_le_mul_of_nonneg_left hb (sq_nonneg (a k))
+  calc
+    (a k * b k) ^ 2 = (a k ^ 2) * (b k ^ 2) := by ring
+    _ > (a (k - 1) * a (k + 1)) *
+        (b (k - 1) * b (k + 1)) := lt_of_lt_of_le hleft hright
+    _ = (a (k - 1) * b (k - 1)) * (a (k + 1) * b (k + 1)) := by ring
+
+private theorem choose_lt_choose_of_pos {m n k : ℕ}
+    (hmn : m < n) (hk : 0 < k) (hkn : k ≤ n) :
+    Nat.choose m k < Nat.choose n k := by
+  have hmle : m ≤ n - 1 := by omega
+  have hstep : Nat.choose (n - 1) k < Nat.choose ((n - 1) + 1) k := by
+    have hk1 : k - 1 + 1 = k := by omega
+    have hpascal := Nat.choose_succ_succ' (n - 1) (k - 1)
+    rw [hk1] at hpascal
+    have hpos : 0 < Nat.choose (n - 1) (k - 1) := Nat.choose_pos (by omega)
+    rw [hpascal]
+    exact Nat.lt_add_of_pos_left hpos
+  have hn : (n - 1) + 1 = n := by omega
+  rw [hn] at hstep
+  exact lt_of_le_of_lt (Nat.choose_le_choose k hmle) hstep
+
+private theorem escapeProbability_pos
+    (n m k : ℕ) (hmn : m < n) (hk : 0 < k) (hkn : k ≤ n) :
+    0 < escapeProbability n m k := by
+  have hchoose := choose_lt_choose_of_pos hmn hk hkn
+  have hden : 0 < (Nat.choose n k : ℚ) := by
+    have hp := Nat.choose_pos hkn
+    exact_mod_cast hp
+  have hratio : forbiddenRatio n m k < 1 := by
+    unfold forbiddenRatio
+    rw [div_lt_iff₀ hden]
+    norm_num
+    exact_mod_cast hchoose
+  unfold escapeProbability
+  linarith
+
+/-- Arithmetic count proxy for the `k`-subsets not contained in a fixed
+`m`-element forbidden set. -/
+def generatingCountProxy (n m k : ℕ) : ℚ :=
+  (Nat.choose n k : ℚ) * escapeProbability n m k
+
+theorem generatingCountProxy_eq_choose_sub
+    (n m k : ℕ) (hkn : k ≤ n) :
+    generatingCountProxy n m k =
+      (Nat.choose n k : ℚ) - Nat.choose m k := by
+  have hden : (Nat.choose n k : ℚ) ≠ 0 := by
+    have hp := Nat.choose_pos hkn
+    exact_mod_cast (Nat.ne_of_gt hp)
+  unfold generatingCountProxy escapeProbability forbiddenRatio
+  field_simp [hden]
+
+/-- Under `m ≥ 1` and `2m ≤ n`, the arithmetic sequence
+`choose(n,k) - choose(m,k)` is strictly log-concave on internal indices.
+For prime powers, this is the sequence in L1 after the unique-maximal-subgroup
+counting argument identifies it with the number of generating subsets. -/
+theorem generatingCountProxy_strictLogConcave
+    (n m : ℕ) (hm : 1 ≤ m) (h2m : 2 * m ≤ n) :
+    ∀ k, 2 ≤ k → k < n →
+      generatingCountProxy n m k ^ 2 >
+        generatingCountProxy n m (k - 1) * generatingCountProxy n m (k + 1) := by
+  have hmn : m < n := by omega
+  intro k hk2 hkn
+  have hchooseNat := choose_strictLogConcave n k hk2 hkn
+  have hchoose : (Nat.choose n k : ℚ) ^ 2 >
+      (Nat.choose n (k - 1) : ℚ) * Nat.choose n (k + 1) := by
+    exact_mod_cast hchooseNat
+  have hprob := escapeProbability_logConcave n m hm h2m k hk2 hkn
+  have hprobPrev : 0 < escapeProbability n m (k - 1) :=
+    escapeProbability_pos n m (k - 1) hmn (by omega) (by omega)
+  have hprobNext : 0 < escapeProbability n m (k + 1) :=
+    escapeProbability_pos n m (k + 1) hmn (by omega) (by omega)
+  have hproduct := strictLogConcave_mul_at
+    (fun j => (Nat.choose n j : ℚ)) (escapeProbability n m) k
+    hchoose hprob hprobPrev hprobNext
+  simpa [generatingCountProxy] using hproduct
 
 end CyclicGeneration
 end MathWiki
