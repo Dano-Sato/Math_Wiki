@@ -1,0 +1,191 @@
+{
+  "conjecture": "025",
+  "version": "0.3",
+  "seed": 202610240251,
+  "networkx_version": "3.4.2",
+  "atlas": [
+    {
+      "n": 3,
+      "outerplanar": true,
+      "graphs": 1
+    },
+    {
+      "n": 4,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "n": 4,
+      "outerplanar": true,
+      "graphs": 2
+    },
+    {
+      "n": 5,
+      "outerplanar": false,
+      "graphs": 7
+    },
+    {
+      "n": 5,
+      "outerplanar": true,
+      "graphs": 3
+    },
+    {
+      "n": 6,
+      "outerplanar": false,
+      "graphs": 47
+    },
+    {
+      "n": 6,
+      "outerplanar": true,
+      "graphs": 9
+    },
+    {
+      "n": 7,
+      "outerplanar": false,
+      "graphs": 448
+    },
+    {
+      "n": 7,
+      "outerplanar": true,
+      "graphs": 20
+    }
+  ],
+  "random_samples": [
+    {
+      "n": 8,
+      "kind": "noncrossing_chords",
+      "outerplanar": true,
+      "graphs": 20
+    },
+    {
+      "n": 8,
+      "kind": "open_ears",
+      "outerplanar": false,
+      "graphs": 15
+    },
+    {
+      "n": 8,
+      "kind": "open_ears",
+      "outerplanar": true,
+      "graphs": 5
+    },
+    {
+      "n": 9,
+      "kind": "noncrossing_chords",
+      "outerplanar": true,
+      "graphs": 20
+    },
+    {
+      "n": 9,
+      "kind": "open_ears",
+      "outerplanar": false,
+      "graphs": 16
+    },
+    {
+      "n": 9,
+      "kind": "open_ears",
+      "outerplanar": true,
+      "graphs": 4
+    },
+    {
+      "n": 10,
+      "kind": "noncrossing_chords",
+      "outerplanar": true,
+      "graphs": 20
+    },
+    {
+      "n": 10,
+      "kind": "open_ears",
+      "outerplanar": false,
+      "graphs": 18
+    },
+    {
+      "n": 10,
+      "kind": "open_ears",
+      "outerplanar": true,
+      "graphs": 2
+    },
+    {
+      "n": 11,
+      "kind": "noncrossing_chords",
+      "outerplanar": true,
+      "graphs": 20
+    },
+    {
+      "n": 11,
+      "kind": "open_ears",
+      "outerplanar": false,
+      "graphs": 19
+    },
+    {
+      "n": 11,
+      "kind": "open_ears",
+      "outerplanar": true,
+      "graphs": 1
+    },
+    {
+      "n": 12,
+      "kind": "noncrossing_chords",
+      "outerplanar": true,
+      "graphs": 20
+    },
+    {
+      "n": 12,
+      "kind": "open_ears",
+      "outerplanar": false,
+      "graphs": 20
+    }
+  ],
+  "graphs_checked": 738,
+  "valid_oriented_cut_sets_enumerated": 73374,
+  "failures": 0,
+  "examples": {
+    "cycle_with_one_chord": {
+      "n": 4,
+      "outerplanar": true,
+      "b2": 4,
+      "counts": [
+        4,
+        4,
+        4
+      ],
+      "boundary_cycle": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "K4": {
+      "n": 4,
+      "outerplanar": false,
+      "b2": 6,
+      "counts": [
+        4,
+        6,
+        4
+      ],
+      "boundary_cycle": null
+    },
+    "K2_3": {
+      "n": 5,
+      "outerplanar": false,
+      "b2": 6,
+      "counts": [
+        5,
+        6,
+        6,
+        5
+      ],
+      "boundary_cycle": null
+    }
+  },
+  "checks": [
+    "b2=n iff cone is planar",
+    "all b_k=n iff cone is planar",
+    "good-edge graph is spanning and biconnected",
+    "outerplanar good edges form a noncrossing Hamilton cycle",
+    "outerplanar cuts are exactly cyclic intervals; rooted size-k count is k"
+  ],
+  "scope": "Finite implementation checks only; general proofs and attribution are in equality.md. Atlas is exhaustive on orders 3-7; random samples on orders 8-12 may repeat."
+}

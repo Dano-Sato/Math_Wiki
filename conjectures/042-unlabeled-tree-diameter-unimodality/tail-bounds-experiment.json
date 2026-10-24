@@ -1,0 +1,78 @@
+{
+  "conjecture": "042",
+  "version": "0.3",
+  "date": "2026-10-24",
+  "range": [
+    2,
+    200
+  ],
+  "python_version": "3.10.11",
+  "networkx_version": "3.4.2",
+  "validation": {
+    "previous_exact_row_hashes_matched": 199,
+    "plane_forest_upper_bounds_checked": 19701,
+    "good_family_lower_bounds_checked": 9604,
+    "exceptional_family_bounds_checked": 9604,
+    "T2_comparisons_against_exact_coefficients": 650,
+    "all_T3_tails_checked_from_n": 16,
+    "binomial_threshold_checks_k_2_through_200": 597,
+    "direct_unlabeled_tree_classification": {
+      "range": [
+        6,
+        14
+      ],
+      "trees_enumerated": 5439,
+      "good_family_pairs_matched": 25
+    }
+  },
+  "tail_samples": [
+    {
+      "n": 16,
+      "K": 2,
+      "diameters": [
+        13,
+        15
+      ],
+      "counts": [
+        47,
+        7,
+        1
+      ]
+    },
+    {
+      "n": 100,
+      "K": 5,
+      "diameters": [
+        94,
+        99
+      ],
+      "counts": [
+        39130086,
+        1949174,
+        78254,
+        2399,
+        49,
+        1
+      ]
+    },
+    {
+      "n": 200,
+      "K": 7,
+      "diameters": [
+        192,
+        199
+      ],
+      "counts": [
+        1259004918903,
+        43545441964,
+        1296270171,
+        32295849,
+        646504,
+        9799,
+        99,
+        1
+      ]
+    }
+  ],
+  "scope_note": "Finite checks support implementation and proof auditing. General bounds, growing-width monotonicity and fixed-defect asymptotics are proved in tail_bounds.md; full unimodality remains unresolved."
+}

@@ -115,7 +115,7 @@ def main():
         "ring_size_bound_using_L2": (args.bound + 2) // 2 if excluded else None,
         "scope": "Excludes every period and ring length whose periodic values lie in this finite alphabet. Together with L2, proves 009 and (by L4) 009-1 only for 2 <= n <= the stated ring-size bound. Not a classification of cycles, not a proof for unbounded n, and not Lean-certified.",
     }
-    output = args.output or Path(__file__).with_name("pair_prune_1000.json")
+    output = args.output or Path(__file__).with_name(f"pair_prune_{args.bound}.json")
     output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result, indent=2))
     if not excluded:

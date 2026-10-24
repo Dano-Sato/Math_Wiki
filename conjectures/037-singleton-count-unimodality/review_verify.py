@@ -133,7 +133,7 @@ def main() -> None:
                 right_ok = k == n - 2 or (n - k) * b[n - k - 1] <= (k + 1) * b[n - k]
                 if left_ok and right_ok:
                     modes.append(k)
-            example = {"local_maxima": modes, "tail_starts_at": (n + 0) // 3}
+            example = {"local_maxima": modes, "tail_starts_at": n // 3}
             # ceil((n-2)/3) equals floor(n/3), for integer n.
             if n <= 10:
                 example["row"] = [comb(n, k) * b[n - k] for k in range(n - 1)]

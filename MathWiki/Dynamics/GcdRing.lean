@@ -8,13 +8,15 @@ import Lean.Elab.Tactic.Omega
 /-!
 # Intermediate values on periodic nearest-neighbour orbits
 
-Source: conjecture 009, version 0.2, L4,
+Source: conjecture 009, version 0.2, L4 and L5,
 `conjectures/009-gcd-ring-return/conjectures.md`.
 
 The source's threshold-propagation proof is formalized via a directed path on
 the space-time torus. It only needs the two upper bounds `next ≤ parent + 1`.
 Consequently the support of a periodic gcd-plus-one orbit has no internal gaps,
 and containing 2 is equivalent to having support `{2, ..., M}`.
+The general pair-pruning invariant and the diagonal-only exclusion criterion
+are also proved. The concrete bound-1000 Python computation is not certified here.
 This does NOT prove that a general periodic orbit contains 2 (conjecture 009).
 Time and position are `ZMod p` and `ZMod n`; both moduli must be positive.
 No finite computation or additional axioms are used.
@@ -53,17 +55,20 @@ private theorem reach_add_time (a : ZMod p × ZMod n) (k : ℕ) :
       left
       simp [Nat.cast_add, add_assoc]
 
+omit [NeZero n] in
 private theorem reach_time (a : ZMod p × ZMod n) (t : ZMod p) :
     Relation.ReflTransGen causalEdge a (t, a.2) := by
   have h := reach_add_time a (t - a.1).val
   simpa using h
 
+omit [NeZero n] in
 private theorem reach_left (a : ZMod p × ZMod n) :
     Relation.ReflTransGen causalEdge a (a.1, a.2 - 1) := by
   have hdiag : causalEdge a (a.1 + 1, a.2 - 1) := Or.inr rfl
   exact (Relation.ReflTransGen.single hdiag).trans
     (reach_time (a.1 + 1, a.2 - 1) a.1)
 
+omit [NeZero n] in
 private theorem reach_sub_position (a : ZMod p × ZMod n) (k : ℕ) :
     Relation.ReflTransGen causalEdge a (a.1, a.2 - (k : ZMod n)) := by
   induction k with
@@ -116,8 +121,8 @@ theorem orbit_intermediate_value (x : ZMod p → ZMod n → ℕ)
     rw [hx t i]
     exact Nat.add_le_add_right (Nat.gcd_le_right _ (hpos t (i + 1))) 1
 
-/-- Positivity and periodicity make every value at least two. -/
 omit [NeZero p] [NeZero n] in
+/-- Positivity and periodicity make every value at least two. -/
 theorem orbit_two_le (x : ZMod p → ZMod n → ℕ)
     (hx : IsOrbit x) (hpos : ∀ t i, 0 < x t i) (t : ZMod p) (i : ZMod n) :
     2 ≤ x t i := by
@@ -155,10 +160,10 @@ def prunePairs (E : ℕ → ℕ → Prop) (c d : ℕ) : Prop :=
   E c d ∧ ∃ a b e, E a b ∧ E b e ∧
     c = Nat.gcd a b + 1 ∧ d = Nat.gcd b e + 1
 
+omit [NeZero p] [NeZero n] in
 /-- Every pruning round preserves all pairs of a periodic orbit.
 This is the soundness argument of the bounded-alphabet certificate, not an
 assertion that pruning terminates for every alphabet. -/
-omit [NeZero p] [NeZero n] in
 theorem orbit_pairs_mem_prune (x : ZMod p → ZMod n → ℕ)
     (hx : IsOrbit x) (E : ℕ → ℕ → Prop)
     (hE : ∀ t i, E (x t i) (x t (i + 1))) :
@@ -169,8 +174,8 @@ theorem orbit_pairs_mem_prune (x : ZMod p → ZMod n → ℕ)
   · simpa using hx (t - 1) i
   · simpa using hx (t - 1) (i + 1)
 
-/-- Pair preservation holds after any finite number of exact pruning rounds. -/
 omit [NeZero p] [NeZero n] in
+/-- Pair preservation holds after any finite number of exact pruning rounds. -/
 theorem orbit_pairs_mem_prune_iterate (x : ZMod p → ZMod n → ℕ)
     (hx : IsOrbit x) (E : ℕ → ℕ → Prop)
     (hE : ∀ t i, E (x t i) (x t (i + 1))) (r : ℕ) :
@@ -181,6 +186,7 @@ theorem orbit_pairs_mem_prune_iterate (x : ZMod p → ZMod n → ℕ)
       simpa only [Function.iterate_succ_apply'] using
         orbit_pairs_mem_prune x hx (prunePairs^[r] E) ih
 
+omit [NeZero n] in
 /-- A periodic gcd-plus-one orbit cannot have equal adjacent values at all times. -/
 theorem not_isOrbit_of_diagonal (x : ZMod p → ZMod n → ℕ)
     (hdiag : ∀ t i, x t i = x t (i + 1)) : ¬IsOrbit x := by
@@ -192,12 +198,16 @@ theorem not_isOrbit_of_diagonal (x : ZMod p → ZMod n → ℕ)
     | zero => simp
     | succ k ih =>
         have h := hinc (0 + (k : ZMod p)) 0
-        simpa [Nat.cast_add, add_assoc, ih] using h
+        calc
+          x (0 + ((k + 1 : ℕ) : ZMod p)) 0 = x (0 + (k : ZMod p)) 0 + 1 := by
+            simpa [Nat.cast_add, add_assoc] using h
+          _ = x 0 0 + (k + 1) := by rw [ih]; omega
   have h := hlinear p
   simp only [ZMod.natCast_self, add_zero] at h
   have hp := NeZero.ne p
   omega
 
+omit [NeZero n] in
 /-- A diagonal-only pruning result excludes every periodic orbit whose pairs
 were initially admitted. The concrete alphabet certificate remains separate. -/
 theorem not_isOrbit_of_prune_diagonal (x : ZMod p → ZMod n → ℕ)
