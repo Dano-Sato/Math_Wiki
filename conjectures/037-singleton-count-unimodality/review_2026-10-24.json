@@ -1,0 +1,195 @@
+{
+  "conjecture": "037",
+  "version": "0.2",
+  "max_n": 2000,
+  "method": "Bell triangle integer additions; b[n+1]=B[n]-b[n]",
+  "independent_recurrence_max_n": 80,
+  "actual_set_partition_enumeration_max_n": 8,
+  "growth_bound": {
+    "range": [
+      4,
+      2000
+    ],
+    "failures": []
+  },
+  "threshold_monotonicity": {
+    "range": [
+      4,
+      1999
+    ],
+    "failures": []
+  },
+  "old_q_monotonicity": {
+    "range": [
+      4,
+      1999
+    ],
+    "failures": [
+      5
+    ]
+  },
+  "unimodality": {
+    "range": [
+      2,
+      2000
+    ],
+    "first_failure": null
+  },
+  "decreasing_tail": {
+    "range": [
+      5,
+      2000
+    ],
+    "checked_edges": 1330667,
+    "strict_for_n_at_least": 6,
+    "failures": []
+  },
+  "log_concavity_obstruction": {
+    "range": [
+      4,
+      2000
+    ],
+    "failures": []
+  },
+  "examples": {
+    "2": {
+      "local_maxima": [
+        0
+      ],
+      "tail_starts_at": 0,
+      "row": [
+        1
+      ]
+    },
+    "3": {
+      "local_maxima": [
+        1
+      ],
+      "tail_starts_at": 1,
+      "row": [
+        1,
+        3
+      ]
+    },
+    "4": {
+      "local_maxima": [
+        0,
+        2
+      ],
+      "tail_starts_at": 1,
+      "row": [
+        4,
+        4,
+        6
+      ]
+    },
+    "5": {
+      "local_maxima": [
+        1,
+        3
+      ],
+      "tail_starts_at": 1,
+      "row": [
+        11,
+        20,
+        10,
+        10
+      ]
+    },
+    "6": {
+      "local_maxima": [
+        1
+      ],
+      "tail_starts_at": 2,
+      "row": [
+        41,
+        66,
+        60,
+        20,
+        15
+      ]
+    },
+    "7": {
+      "local_maxima": [
+        1
+      ],
+      "tail_starts_at": 2,
+      "row": [
+        162,
+        287,
+        231,
+        140,
+        35,
+        21
+      ]
+    },
+    "8": {
+      "local_maxima": [
+        1
+      ],
+      "tail_starts_at": 2,
+      "row": [
+        715,
+        1296,
+        1148,
+        616,
+        280,
+        56,
+        28
+      ]
+    },
+    "9": {
+      "local_maxima": [
+        1
+      ],
+      "tail_starts_at": 3,
+      "row": [
+        3425,
+        6435,
+        5832,
+        3444,
+        1386,
+        504,
+        84,
+        36
+      ]
+    },
+    "10": {
+      "local_maxima": [
+        1
+      ],
+      "tail_starts_at": 3,
+      "row": [
+        17722,
+        34250,
+        32175,
+        19440,
+        8610,
+        2772,
+        840,
+        120,
+        45
+      ]
+    },
+    "100": {
+      "local_maxima": [
+        3
+      ],
+      "tail_starts_at": 33
+    },
+    "1000": {
+      "local_maxima": [
+        5
+      ],
+      "tail_starts_at": 333
+    },
+    "2000": {
+      "local_maxima": [
+        5
+      ],
+      "tail_starts_at": 666
+    }
+  },
+  "elapsed_seconds": 2.044,
+  "scope": "Finite checks only. Universal growth/tail/obstruction proofs are in conjectures.md; full unimodality and threshold monotonicity remain unproved."
+}

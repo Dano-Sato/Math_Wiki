@@ -1,0 +1,24 @@
+{
+  "conjecture": "025",
+  "proof": "proof.md; st-ordering and rooted edge-contraction induction",
+  "networkx_version": "3.4.2",
+  "seed": 20261024025,
+  "atlas_graphs_by_order": {
+    "3": 1,
+    "4": 3,
+    "5": 10,
+    "6": 56,
+    "7": 468
+  },
+  "random_ear_graphs_by_order": {
+    "8": 20,
+    "9": 20,
+    "10": 20,
+    "11": 20,
+    "12": 20
+  },
+  "root_size_cases": 30778,
+  "constructed_witnesses_checked": 122317,
+  "failures": 0,
+  "scope": "Finite implementation check, not a replacement for the general proof. All subsets independently enumerated for each graph; every root and size tested. Random samples may repeat and are not all isomorphism classes."
+}

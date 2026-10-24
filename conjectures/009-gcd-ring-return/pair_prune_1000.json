@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-24",
+  "definition_version": "009-0.2",
+  "alphabet": [
+    3,
+    1000
+  ],
+  "update": "gcd(a,b)+1",
+  "recurrence": "E_(r+1) = E_r intersect {(f(a,b), f(b,c)) : (a,b),(b,c) in E_r}",
+  "exact_integer_arithmetic": true,
+  "reference_implementation_checked_bounds": [
+    3,
+    20
+  ],
+  "reference_implementation_rounds_checked": 41,
+  "trace": [
+    {
+      "round": 0,
+      "pairs": 390617,
+      "off_diagonal_pairs": 389620,
+      "sha256_sorted_ascii_pairs": "cc43e2e7de0caa046f2c88fb09fdaa8e1bef042af9e44fbc6936b8bd485bc0f0"
+    },
+    {
+      "round": 1,
+      "pairs": 7429,
+      "off_diagonal_pairs": 6432,
+      "sha256_sorted_ascii_pairs": "5f19fbb9abba2d098a3184e1d39c725d8b72a5dfe6ce24abdbd09171aa4c8f95"
+    },
+    {
+      "round": 2,
+      "pairs": 2369,
+      "off_diagonal_pairs": 1372,
+      "sha256_sorted_ascii_pairs": "3d2762a8c2c8c7e7d4035b2ff9459328177969c308e69e3710398736a609da77"
+    },
+    {
+      "round": 3,
+      "pairs": 1535,
+      "off_diagonal_pairs": 538,
+      "sha256_sorted_ascii_pairs": "3a8532c671870bfdd7ffcbff0ae8a561b46ca6461c7455b12676f44aed9954da"
+    },
+    {
+      "round": 4,
+      "pairs": 1251,
+      "off_diagonal_pairs": 254,
+      "sha256_sorted_ascii_pairs": "e018659620b5cd941a08512c3d9511aabadf69107bece64ff945180d8735b0e3"
+    },
+    {
+      "round": 5,
+      "pairs": 1097,
+      "off_diagonal_pairs": 100,
+      "sha256_sorted_ascii_pairs": "58cf3725f5bda7aca0f307c38335a17c827d83be8a16db5a610e099f6ca63b59"
+    },
+    {
+      "round": 6,
+      "pairs": 1039,
+      "off_diagonal_pairs": 42,
+      "sha256_sorted_ascii_pairs": "fe45044ec0d7e5dd52eb43bc840a24044cfde440dd6b7c7e65c097021dfc46ea"
+    },
+    {
+      "round": 7,
+      "pairs": 1011,
+      "off_diagonal_pairs": 14,
+      "sha256_sorted_ascii_pairs": "98cc5ff5e4cbdd74ed01deb2657adab52e1d9b7b70c9e76236a8fd0c3a357026",
+      "remaining_off_diagonal_pairs": [
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          850
+        ],
+        [
+          6,
+          126
+        ],
+        [
+          6,
+          306
+        ],
+        [
+          7,
+          847
+        ],
+        [
+          8,
+          848
+        ],
+        [
+          9,
+          849
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          126,
+          6
+        ],
+        [
+          306,
+          6
+        ],
+        [
+          847,
+          7
+        ],
+        [
+          848,
+          8
+        ],
+        [
+          849,
+          9
+        ],
+        [
+          850,
+          4
+        ]
+      ]
+    },
+    {
+      "round": 8,
+      "pairs": 1005,
+      "off_diagonal_pairs": 8,
+      "sha256_sorted_ascii_pairs": "afd9937e65f6cd027feb62b3d16febaebc3e3f2c22c91d4eb6b46bf24e0bbce2",
+      "remaining_off_diagonal_pairs": [
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          850
+        ],
+        [
+          8,
+          848
+        ],
+        [
+          9,
+          849
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          848,
+          8
+        ],
+        [
+          849,
+          9
+        ],
+        [
+          850,
+          4
+        ]
+      ]
+    },
+    {
+      "round": 9,
+      "pairs": 1003,
+      "off_diagonal_pairs": 6,
+      "sha256_sorted_ascii_pairs": "4ca6330411453fdf7fb2fc39c37e9965191271d37772a907d9ccb145cc65d176",
+      "remaining_off_diagonal_pairs": [
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          850
+        ],
+        [
+          9,
+          849
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          849,
+          9
+        ],
+        [
+          850,
+          4
+        ]
+      ]
+    },
+    {
+      "round": 10,
+      "pairs": 1001,
+      "off_diagonal_pairs": 4,
+      "sha256_sorted_ascii_pairs": "7d0d1c9ed46ee3a2109755bb24741db864b980df1e226971008c69259d48b48f",
+      "remaining_off_diagonal_pairs": [
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          850
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          850,
+          4
+        ]
+      ]
+    },
+    {
+      "round": 11,
+      "pairs": 997,
+      "off_diagonal_pairs": 0,
+      "sha256_sorted_ascii_pairs": "11221efbf9f9dbf336a28c1ad595d29ff51dcac710b1c39b7e18b330a5096e02",
+      "remaining_off_diagonal_pairs": []
+    }
+  ],
+  "terminal_pairs_all_diagonal": true,
+  "two_free_periodic_orbits_excluded_for_this_alphabet": true,
+  "ring_size_bound_using_L2": 501,
+  "scope": "Excludes every period and ring length whose periodic values lie in this finite alphabet. Together with L2, proves 009 and (by L4) 009-1 only for 2 <= n <= the stated ring-size bound. Not a classification of cycles, not a proof for unbounded n, and not Lean-certified."
+}

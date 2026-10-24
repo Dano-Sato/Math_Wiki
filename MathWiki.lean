@@ -3,6 +3,7 @@ module
 public import MathWiki.Basic
 public import MathWiki.Combinatorics.CyclicCorrelation
 public import MathWiki.Combinatorics.CyclicGeneration
+public import MathWiki.Dynamics.GcdRing
 
 /-!
 # MathWiki

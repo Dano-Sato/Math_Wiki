@@ -18,10 +18,11 @@ from pathlib import Path
 def multiset_coefficients(rooted: list[int], max_n: int) -> list[int]:
     """Return coefficients of exp(sum_{k>=1} R(x^k)/k), through x^max_n."""
     divisor_sums = [0] * (max_n + 1)
-    for j in range(1, max_n + 1):
-        divisor_sums[j] = sum(
-            d * rooted[d] for d in range(1, j + 1) if j % d == 0
-        )
+    for d in range(1, max_n + 1):
+        weight = d * rooted[d]
+        if weight:
+            for j in range(d, max_n + 1, d):
+                divisor_sums[j] += weight
 
     result = [0] * (max_n + 1)
     result[0] = 1
@@ -47,6 +48,8 @@ def is_unimodal(values: list[int]) -> bool:
 
 
 def diameter_rows(max_n: int) -> list[dict[str, object]]:
+    if max_n < 2:
+        raise ValueError("max_n must be at least 2")
     rooted = [[0] * (max_n + 1) for _ in range(max_n + 2)]
     rooted[0][1] = 1  # R_0(x) = x; rooted[-1] is the zero series.
     multisets: list[list[int]] = []
@@ -57,11 +60,11 @@ def diameter_rows(max_n: int) -> list[dict[str, object]]:
 
     one_series = [1] + [0] * max_n  # M_{-1}(x) = 1.
 
-    def exact_height(h: int) -> list[int]:
-        if h < 0:
-            return [0] * (max_n + 1)
-        previous = rooted[h - 1] if h else [0] * (max_n + 1)
-        return [rooted[h][i] - previous[i] for i in range(max_n + 1)]
+    exact_heights = [
+        [rooted[h][i] - (rooted[h - 1][i] if h else 0)
+         for i in range(max_n + 1)]
+        for h in range((max_n + 1) // 2)
+    ]
 
     def multiset_at_height(h: int) -> list[int]:
         return multisets[h] if h >= 0 else one_series
@@ -72,7 +75,7 @@ def diameter_rows(max_n: int) -> list[dict[str, object]]:
         for diameter in range(1, n):
             if diameter % 2:
                 h = (diameter - 1) // 2
-                branches = exact_height(h)
+                branches = exact_heights[h]
                 numerator = convolution_coefficient(branches, branches, n)
                 if n % 2 == 0:
                     numerator += branches[n // 2]  # [x^n] H_h(x^2)
@@ -81,7 +84,7 @@ def diameter_rows(max_n: int) -> list[dict[str, object]]:
                     raise ArithmeticError("unordered-pair count was not integral")
             else:
                 r = diameter // 2
-                branches = exact_height(r - 1)
+                branches = exact_heights[r - 1]
                 broad = multiset_at_height(r - 1)
                 narrow = multiset_at_height(r - 2)
                 count = (
