@@ -1,0 +1,57 @@
+{
+  "method": "independent coordinate-set generation and edge counting",
+  "compared_with": "experiment.json bitboard census",
+  "areas": [
+    {
+      "area": 1,
+      "count": 1,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 2,
+      "count": 2,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 3,
+      "count": 6,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 4,
+      "count": 19,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 5,
+      "count": 63,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 6,
+      "count": 216,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 7,
+      "count": 760,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 8,
+      "count": 2725,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 9,
+      "count": 9910,
+      "perimeter_row_matches": true
+    },
+    {
+      "area": 10,
+      "count": 36446,
+      "perimeter_row_matches": true
+    }
+  ],
+  "conclusion": "all complete rows match for areas 1 through 10"
+}
