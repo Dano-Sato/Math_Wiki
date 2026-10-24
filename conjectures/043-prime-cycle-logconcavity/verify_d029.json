@@ -1,0 +1,35 @@
+{
+  "claim": "043 v0.1, failure of the real-rootedness route at n=13",
+  "coefficients_ascending": [
+    "1173362191",
+    "2735719778",
+    "1513576701",
+    "630644300",
+    "154813945",
+    "18228210",
+    "675675"
+  ],
+  "sturm_signs_at_negative_infinity": [
+    1,
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    1
+  ],
+  "sturm_variations_at_negative_infinity": 4,
+  "sturm_signs_at_positive_infinity": [
+    1,
+    1,
+    1,
+    -1,
+    -1,
+    1,
+    1
+  ],
+  "sturm_variations_at_positive_infinity": 2,
+  "distinct_real_root_count": 2,
+  "degree": 6,
+  "conclusion": "the degree-6 polynomial is not real-rooted"
+}

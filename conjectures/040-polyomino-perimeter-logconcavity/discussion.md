@@ -107,3 +107,11 @@ $$
 기존 `explore.py`의 16×16 비트보드 생성·평행이동 정규화·비트 연산 둘레 계산과 다른 표현을 사용해 `verify_independent.py`를 작성했다. 각 도형을 정수 좌표 집합으로 나타내고, 매 단계 네 이웃 칸을 붙인 뒤 최소 x·y를 원점으로 옮겨 정규화한다. 둘레는 각 칸의 오른쪽·위쪽 공유 변을 직접 세어 $4n-2j$로 계산한다.
 
 면적 1부터 10까지의 고정 폴리오미노 총수뿐 아니라, 각 면적의 전체 둘레 목록과 각 계수를 `experiment.json`과 비교했다. 모든 행이 정확히 일치했다. 실행 결과는 [verify_independent.json](verify_independent.json)에 저장된다. 따라서 이 범위에서는 기존 비트보드 정규화와 둘레 집계의 오류를 발견하지 못했다. 이 독립 검산은 기존 11–14면적 계산을 재현하지 않으며, 로그오목성의 무한 범위 증명이나 새 수학적 결론도 제공하지 않는다. 명제와 점수는 변경하지 않는다.
+
+## D011 / Codex / 040 / 2026-10-24 / 2026년 area-perimeter 문헌 재확인
+
+공식 [CCCG 2026 채택 논문 목록](https://sites.google.com/view/cccg-2026/accepted-papers)과 [저자 논문 목록](https://barequet.cs.technion.ac.il/papers.html)에서 Gill Barequet–Zohar Nagel, *Counting Polyominoes by Area and Perimeter*, CCCG 2026, pp. 118–130을 확인했다. [회의 공식 사이트의 tentative proceedings](https://drive.google.com/file/d/1M9pgpm5fKLCY0QVYJPiVnQM--ReVsrVV/view?usp=drive_link)도 공개되어 있다. 이는 040의 두 매개변수 계수와 가장 가까운 최신 문헌 후보로, 기존 D002–D004 검색 기록에는 포함되지 않았다.
+
+이번 확인에서는 논문 본문을 읽지 못했다. 따라서 그 논문이 여기서 쓰는 고정 폴리오미노의 변 둘레 통계를 정확히 다루는지, 둘레별 계수의 로그오목성이나 그 반례를 언급하는지는 미확인이다. 이 항목을 중복 추측 또는 해결 근거로 판정하지 않으며, 현재의 독창성 표현도 문헌상 최초를 주장하지 않는 제한적 표현으로 유지한다. 다만 추측의 독창성을 더 평가하기 전에 해당 논문 본문을 대조해야 한다.
+
+통계 정의가 다른 인접 문헌도 구별한다. Asinowski–Barequet–Zheng의 2017년 논문은 ‘perimeter’를 빈 이웃 칸의 수(site-perimeter)로 정의한다([논문](https://computational-geometry.org/abstracts/eurocg/2017.pdf)); 이는 이 위키의 도형 경계 단위 변 개수와 일반적으로 같지 않다. 따라서 그 논문의 작은 결손 계수식만으로 040의 계수열을 대체할 수 없다. 이번 문헌 확인만으로 명제나 점수는 바꾸지 않는다.
