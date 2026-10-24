@@ -2,6 +2,7 @@
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 . (Join-Path $PSScriptRoot 'lean_env.ps1')
+. (Join-Path $PSScriptRoot 'mathlib_cache.ps1')
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
     throw 'Git is required. Install Git for Windows before running this script.'
 }
@@ -18,26 +19,14 @@ if (-not (Test-Path -LiteralPath $leanElan)) {
 }
 
 $leanLake = Join-Path $env:ELAN_HOME 'bin/lake.exe'
-$leanPreviousNoCache = $env:MATHLIB_NO_CACHE_ON_UPDATE
 Push-Location $leanProjectRoot
 try {
     & $leanElan toolchain install ((Get-Content -LiteralPath 'lean-toolchain' -Raw).Trim())
     if ($LASTEXITCODE -ne 0) { throw 'Lean toolchain installation failed.' }
-    # Fetch only imports used by this library rather than the entire Mathlib cache.
-    $env:MATHLIB_NO_CACHE_ON_UPDATE = '1'
-    if (Test-Path -LiteralPath 'lake-manifest.json') {
-        & $leanLake env lean --version
-        if ($LASTEXITCODE -ne 0) { throw 'Restoring locked Lake dependencies failed.' }
-    } else {
-        & $leanLake update
-        if ($LASTEXITCODE -ne 0) { throw 'Resolving Lake dependencies failed.' }
-    }
-    & $leanLake exe cache get Mathlib.Data.Finset.Card
-    if ($LASTEXITCODE -ne 0) { throw 'Downloading the Mathlib cache failed.' }
+    Initialize-MathlibCache -Lake $leanLake
     & $leanLake build
     if ($LASTEXITCODE -ne 0) { throw 'Lean library build failed.' }
 } finally {
-    $env:MATHLIB_NO_CACHE_ON_UPDATE = $leanPreviousNoCache
     Pop-Location
 }
 Write-Host 'Lean setup complete. Build with: .\scripts\lake.ps1 build'

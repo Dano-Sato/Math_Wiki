@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-24",
+  "proof_version": "0.2",
+  "exact": {
+    "symbolic_path_identities": 16,
+    "exact_characteristic_polynomial_checks": 35,
+    "example_names": [
+      "isolated_vertex",
+      "edge",
+      "path_4",
+      "cycle_3",
+      "star_3",
+      "triangle_leaf",
+      "complete_4"
+    ],
+    "lengths_for_exact_charpoly_checks": [
+      1,
+      5
+    ],
+    "triangle_leaf_polynomial_P_q_z": "-(q - 1)**2*(q + 1)**2*(z - 1)**2*(z**2 + z + 1)*(-q**4*z**2 - q**4*z - q**4 + 2*q**2*z**4 + 2*q**2*z**3 + 2*q**2*z**2 + 2*q**2*z + 2*q**2 - z**4 - z**3 - z**2)",
+    "triangle_leaf_simple_root_and_zero_linear_term_checked": true,
+    "triangle_leaf_branch_q_minus_sqrt2_leading_coefficient_of_z_squared": "-sqrt(2)/8",
+    "triangle_leaf_rho_minus_3_over_sqrt2_asymptotic": "-1/(8*sqrt(2)) * 2**(-t)"
+  },
+  "numerical": {
+    "atlas_orders": [
+      2,
+      6
+    ],
+    "edge_lengths": [
+      1,
+      8
+    ],
+    "graph_length_cases": 1136,
+    "all_eigenpairs_above_2_checked": 2778,
+    "maximum_relative_reduced_matrix_residual": 1.613754935668643e-13,
+    "residual_threshold": 1e-10,
+    "triangle_leaf_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "triangle_leaf_rho_t_1_through_24": [
+      2.170086486626033,
+      2.135779205069857,
+      2.1244365082940275,
+      2.1210595877055414,
+      2.1204551450003715,
+      2.1206134878112377,
+      2.1208685147626127,
+      2.1210595877055414,
+      2.1211776529918493,
+      2.1212446413397767,
+      2.1212809484239603,
+      2.121300098358061,
+      2.1213100266838025,
+      2.121315116215297,
+      2.1213177054570482,
+      2.121319015850636,
+      2.121319676638366,
+      2.121320009013108,
+      2.121320175902002,
+      2.1213202595948046,
+      2.121320301529101,
+      2.121320322527352,
+      2.1213203330374752,
+      2.12132033829643
+    ],
+    "interpretation": "Floating-point checks of the reduction, not certificates of eventual monotonicity."
+  },
+  "scope": "The general theorem is proved in conjectures.md using convergence and Newton-Puiseux, not inferred from this finite computation."
+}
