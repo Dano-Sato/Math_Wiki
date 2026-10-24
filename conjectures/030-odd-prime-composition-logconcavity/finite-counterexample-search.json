@@ -1,0 +1,8 @@
+{
+  "definition": "ordered compositions into odd prime parts",
+  "max_n": 10000,
+  "method": "exact integer convolution dynamic program for k=0..5",
+  "prime_inputs_checked": 1228,
+  "first_counterexample": null,
+  "conclusion": "no failure in this finite range"
+}
