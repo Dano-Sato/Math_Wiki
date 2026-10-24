@@ -1,0 +1,316 @@
+{
+  "conjecture": "042",
+  "version": "0.4",
+  "date": "2026-10-24",
+  "fresh_exact_range_n": [
+    2,
+    200
+  ],
+  "deficits_checked": [
+    0,
+    30
+  ],
+  "python_version": "3.10.11",
+  "networkx_version": "3.4.2",
+  "sympy_version": "1.13.3",
+  "validation": {
+    "prior_full_row_hashes_matched": 199,
+    "stable_formula_vs_fresh_center_counts": 4774,
+    "stable_formula_vs_larger_cached_rows": 62,
+    "step_two_difference_checks": 3585,
+    "expanded_polynomials_vs_exact_counts": 1484,
+    "rooted_data_direct_enumeration": {
+      "through_n": 13,
+      "free_trees_enumerated": 2288,
+      "rooted_isomorphism_types": 20299,
+      "exact_height_entries_matched": 91
+    },
+    "large_n_two_methods_matched": 6
+  },
+  "base_data": [
+    {
+      "k": 0,
+      "M": [
+        1
+      ],
+      "B": [
+        1
+      ]
+    },
+    {
+      "k": 1,
+      "M": [
+        1,
+        1
+      ],
+      "B": [
+        1,
+        1
+      ]
+    },
+    {
+      "k": 2,
+      "M": [
+        1,
+        1,
+        2
+      ],
+      "B": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "k": 3,
+      "M": [
+        1,
+        1,
+        2,
+        4
+      ],
+      "B": [
+        1,
+        3,
+        8,
+        18
+      ]
+    },
+    {
+      "k": 4,
+      "M": [
+        1,
+        1,
+        2,
+        4,
+        9
+      ],
+      "B": [
+        1,
+        4,
+        13,
+        36,
+        93
+      ]
+    },
+    {
+      "k": 5,
+      "M": [
+        1,
+        1,
+        2,
+        4,
+        9,
+        20
+      ],
+      "B": [
+        1,
+        5,
+        19,
+        61,
+        180,
+        498
+      ]
+    },
+    {
+      "k": 6,
+      "M": [
+        1,
+        1,
+        2,
+        4,
+        9,
+        20,
+        48
+      ],
+      "B": [
+        1,
+        6,
+        26,
+        94,
+        308,
+        941,
+        2744
+      ]
+    },
+    {
+      "k": 7,
+      "M": [
+        1,
+        1,
+        2,
+        4,
+        9,
+        20,
+        48,
+        115
+      ],
+      "B": [
+        1,
+        7,
+        34,
+        136,
+        487,
+        1615,
+        5079,
+        15349
+      ]
+    },
+    {
+      "k": 8,
+      "M": [
+        1,
+        1,
+        2,
+        4,
+        9,
+        20,
+        48,
+        115,
+        286
+      ],
+      "B": [
+        1,
+        8,
+        43,
+        188,
+        728,
+        2593,
+        8706,
+        27961,
+        86802
+      ]
+    }
+  ],
+  "parity_polynomials": [
+    {
+      "k": 1,
+      "valid_from_n": 5,
+      "n_even": {
+        "expression": "n/2 - 1",
+        "latex": "\\frac{n}{2} - 1"
+      },
+      "n_odd": {
+        "expression": "n/2 - 3/2",
+        "latex": "\\frac{n}{2} - \\frac{3}{2}"
+      }
+    },
+    {
+      "k": 2,
+      "valid_from_n": 8,
+      "n_even": {
+        "expression": "n**2/4 - n - 1",
+        "latex": "\\frac{n^{2}}{4} - n - 1"
+      },
+      "n_odd": {
+        "expression": "n**2/4 - n - 1/4",
+        "latex": "\\frac{n^{2}}{4} - n - \\frac{1}{4}"
+      }
+    },
+    {
+      "k": 3,
+      "valid_from_n": 11,
+      "n_even": {
+        "expression": "n**3/12 - n**2/2 - 5*n/6 + 4",
+        "latex": "\\frac{n^{3}}{12} - \\frac{n^{2}}{2} - \\frac{5 n}{6} + 4"
+      },
+      "n_odd": {
+        "expression": "n**3/12 - n**2/2 - 13*n/12 + 7/2",
+        "latex": "\\frac{n^{3}}{12} - \\frac{n^{2}}{2} - \\frac{13 n}{12} + \\frac{7}{2}"
+      }
+    },
+    {
+      "k": 4,
+      "valid_from_n": 14,
+      "n_even": {
+        "expression": "n**4/48 - n**3/8 - 23*n**2/24 + 17*n/4 - 1",
+        "latex": "\\frac{n^{4}}{48} - \\frac{n^{3}}{8} - \\frac{23 n^{2}}{24} + \\frac{17 n}{4} - 1"
+      },
+      "n_odd": {
+        "expression": "n**4/48 - n**3/8 - 23*n**2/24 + 37*n/8 + 7/16",
+        "latex": "\\frac{n^{4}}{48} - \\frac{n^{3}}{8} - \\frac{23 n^{2}}{24} + \\frac{37 n}{8} + \\frac{7}{16}"
+      }
+    },
+    {
+      "k": 5,
+      "valid_from_n": 17,
+      "n_even": {
+        "expression": "n**5/240 - n**4/48 - 23*n**3/48 + 31*n**2/12 + 17*n/20 + 1",
+        "latex": "\\frac{n^{5}}{240} - \\frac{n^{4}}{48} - \\frac{23 n^{3}}{48} + \\frac{31 n^{2}}{12} + \\frac{17 n}{20} + 1"
+      },
+      "n_odd": {
+        "expression": "n**5/240 - n**4/48 - 23*n**3/48 + 121*n**2/48 + 19*n/40 - 3/2",
+        "latex": "\\frac{n^{5}}{240} - \\frac{n^{4}}{48} - \\frac{23 n^{3}}{48} + \\frac{121 n^{2}}{48} + \\frac{19 n}{40} - \\frac{3}{2}"
+      }
+    },
+    {
+      "k": 6,
+      "valid_from_n": 20,
+      "n_even": {
+        "expression": "n**6/1440 - n**5/480 - 43*n**4/288 + 13*n**3/16 + 481*n**2/360 - 103*n/60 - 26",
+        "latex": "\\frac{n^{6}}{1440} - \\frac{n^{5}}{480} - \\frac{43 n^{4}}{288} + \\frac{13 n^{3}}{16} + \\frac{481 n^{2}}{360} - \\frac{103 n}{60} - 26"
+      },
+      "n_odd": {
+        "expression": "n**6/1440 - n**5/480 - 43*n**4/288 + 13*n**3/16 + 2059*n**2/1440 - 389*n/480 - 617/32",
+        "latex": "\\frac{n^{6}}{1440} - \\frac{n^{5}}{480} - \\frac{43 n^{4}}{288} + \\frac{13 n^{3}}{16} + \\frac{2059 n^{2}}{1440} - \\frac{389 n}{480} - \\frac{617}{32}"
+      }
+    },
+    {
+      "k": 7,
+      "valid_from_n": 23,
+      "n_even": {
+        "expression": "n**7/10080 - 5*n**5/144 + n**4/6 + 731*n**3/720 - 13*n**2/24 - 751*n/21 + 103",
+        "latex": "\\frac{n^{7}}{10080} - \\frac{5 n^{5}}{144} + \\frac{n^{4}}{6} + \\frac{731 n^{3}}{720} - \\frac{13 n^{2}}{24} - \\frac{751 n}{21} + 103"
+      },
+      "n_odd": {
+        "expression": "n**7/10080 - 5*n**5/144 + n**4/6 + 1447*n**3/1440 - 2*n**2/3 - 6211*n/168 + 169/2",
+        "latex": "\\frac{n^{7}}{10080} - \\frac{5 n^{5}}{144} + \\frac{n^{4}}{6} + \\frac{1447 n^{3}}{1440} - \\frac{2 n^{2}}{3} - \\frac{6211 n}{168} + \\frac{169}{2}"
+      }
+    },
+    {
+      "k": 8,
+      "valid_from_n": 26,
+      "n_even": {
+        "expression": "n**8/80640 + n**7/20160 - 37*n**6/5760 + n**5/45 + 2351*n**4/5760 - 289*n**3/1440 - 75283*n**2/3360 + 73243*n/840 - 125",
+        "latex": "\\frac{n^{8}}{80640} + \\frac{n^{7}}{20160} - \\frac{37 n^{6}}{5760} + \\frac{n^{5}}{45} + \\frac{2351 n^{4}}{5760} - \\frac{289 n^{3}}{1440} - \\frac{75283 n^{2}}{3360} + \\frac{73243 n}{840} - 125"
+      },
+      "n_odd": {
+        "expression": "n**8/80640 + n**7/20160 - 37*n**6/5760 + n**5/45 + 2351*n**4/5760 - 533*n**3/2880 - 297457*n**2/13440 + 304627*n/3360 - 21189/256",
+        "latex": "\\frac{n^{8}}{80640} + \\frac{n^{7}}{20160} - \\frac{37 n^{6}}{5760} + \\frac{n^{5}}{45} + \\frac{2351 n^{4}}{5760} - \\frac{533 n^{3}}{2880} - \\frac{297457 n^{2}}{13440} + \\frac{304627 n}{3360} - \\frac{21189}{256}"
+      }
+    }
+  ],
+  "large_n_examples": [
+    {
+      "n": 1000000000001,
+      "k": 1,
+      "count": 499999999999
+    },
+    {
+      "n": 1000000000000,
+      "k": 2,
+      "count": 249999999998999999999999
+    },
+    {
+      "n": 1000000000001,
+      "k": 3,
+      "count": 83333333333083333333331500000000002
+    },
+    {
+      "n": 1000000000000,
+      "k": 4,
+      "count": 20833333333208333333332375000000004249999999999
+    },
+    {
+      "n": 1000000000001,
+      "k": 5,
+      "count": 4166666666666666666666145833333334333333333337350000000001
+    },
+    {
+      "n": 1000000000000,
+      "k": 6,
+      "count": 694444444442361111110961805555556368055555556891666666664949999999974
+    }
+  ],
+  "scope_note": "Polynomials are derived symbolically from the stable center identity, not interpolated. Finite comparisons audit the implementation. The general period-two polynomial theorem is proved in fixed_defect.md; full unimodality is unresolved."
+}

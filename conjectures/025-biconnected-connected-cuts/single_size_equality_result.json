@@ -1,0 +1,651 @@
+{
+  "conjecture": "025",
+  "version": "0.4",
+  "networkx_version": "3.4.2",
+  "seed": 202610240252,
+  "graphs_checked": 799,
+  "crossed_chord_certificates_checked": 579,
+  "pruned_edge_instances": 604,
+  "cut_family_reduction_failures": 0,
+  "nonouterplanar_single_middle_equality_counterexamples_found": 0,
+  "open_question_counterexamples": [],
+  "categories": [
+    {
+      "source": "atlas",
+      "n": 3,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 1
+    },
+    {
+      "source": "atlas",
+      "n": 4,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "atlas",
+      "n": 4,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 2
+    },
+    {
+      "source": "atlas",
+      "n": 5,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 2
+    },
+    {
+      "source": "atlas",
+      "n": 5,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 5
+    },
+    {
+      "source": "atlas",
+      "n": 5,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 3
+    },
+    {
+      "source": "atlas",
+      "n": 6,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 8
+    },
+    {
+      "source": "atlas",
+      "n": 6,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 39
+    },
+    {
+      "source": "atlas",
+      "n": 6,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 9
+    },
+    {
+      "source": "atlas",
+      "n": 7,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 85
+    },
+    {
+      "source": "atlas",
+      "n": 7,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 363
+    },
+    {
+      "source": "atlas",
+      "n": 7,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 20
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 8,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 9
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 8,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 11
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 9,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 11
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 9,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 9
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 10,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 13
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 10,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 7
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 11,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 18
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 11,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 2
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 12,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 19
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 12,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 1
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 13,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 19
+    },
+    {
+      "source": "random_hamilton_cycle_with_chords",
+      "n": 13,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 1
+    },
+    {
+      "source": "random_open_ears",
+      "n": 8,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 8
+    },
+    {
+      "source": "random_open_ears",
+      "n": 8,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 7
+    },
+    {
+      "source": "random_open_ears",
+      "n": 8,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 5
+    },
+    {
+      "source": "random_open_ears",
+      "n": 9,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 8
+    },
+    {
+      "source": "random_open_ears",
+      "n": 9,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 10
+    },
+    {
+      "source": "random_open_ears",
+      "n": 9,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 2
+    },
+    {
+      "source": "random_open_ears",
+      "n": 10,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 5
+    },
+    {
+      "source": "random_open_ears",
+      "n": 10,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 14
+    },
+    {
+      "source": "random_open_ears",
+      "n": 10,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 1
+    },
+    {
+      "source": "random_open_ears",
+      "n": 11,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 7
+    },
+    {
+      "source": "random_open_ears",
+      "n": 11,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 11
+    },
+    {
+      "source": "random_open_ears",
+      "n": 11,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 2
+    },
+    {
+      "source": "random_open_ears",
+      "n": 12,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 5
+    },
+    {
+      "source": "random_open_ears",
+      "n": 12,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 15
+    },
+    {
+      "source": "random_open_ears",
+      "n": 13,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 5
+    },
+    {
+      "source": "random_open_ears",
+      "n": 13,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 14
+    },
+    {
+      "source": "random_open_ears",
+      "n": 13,
+      "hamiltonian": true,
+      "outerplanar": true,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 4,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 5,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 6,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 7,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 8,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 9,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 10,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 11,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 12,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 13,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "sharp_crossed_chords",
+      "n": 14,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 5,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 6,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 7,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 8,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 9,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 10,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 2
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 11,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 12,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 1
+    },
+    {
+      "source": "structured_nonhamiltonian",
+      "n": 13,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "graphs": 1
+    }
+  ],
+  "examples": {
+    "sharp_n4": {
+      "n": 4,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "counts": [
+        4,
+        6,
+        4
+      ],
+      "crossed_chord_certificate": {
+        "cycle": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "chords": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "arc_internal_sizes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "q": [
+          1
+        ],
+        "counts": [
+          4,
+          6,
+          4
+        ]
+      },
+      "single_middle_equalities": [],
+      "edges_removed_without_changing_cut_family": 0
+    },
+    "sharp_n8": {
+      "n": 8,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "counts": [
+        8,
+        10,
+        10,
+        10,
+        10,
+        10,
+        8
+      ],
+      "crossed_chord_certificate": {
+        "cycle": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ],
+        "chords": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "arc_internal_sizes": [
+          0,
+          0,
+          0,
+          4
+        ],
+        "q": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "counts": [
+          8,
+          10,
+          10,
+          10,
+          10,
+          10,
+          8
+        ]
+      },
+      "single_middle_equalities": [],
+      "edges_removed_without_changing_cut_family": 0
+    },
+    "sharp_n14": {
+      "n": 14,
+      "hamiltonian": true,
+      "outerplanar": false,
+      "counts": [
+        14,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        14
+      ],
+      "crossed_chord_certificate": {
+        "cycle": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          0,
+          1,
+          2,
+          3
+        ],
+        "chords": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "arc_internal_sizes": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "q": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "counts": [
+          14,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          14
+        ]
+      },
+      "single_middle_equalities": [],
+      "edges_removed_without_changing_cut_family": 0
+    },
+    "Petersen": {
+      "n": 10,
+      "hamiltonian": false,
+      "outerplanar": false,
+      "counts": [
+        10,
+        15,
+        30,
+        70,
+        132,
+        70,
+        30,
+        15,
+        10
+      ],
+      "crossed_chord_certificate": null,
+      "single_middle_equalities": [],
+      "edges_removed_without_changing_cut_family": 0
+    }
+  },
+  "scope": "Finite exact checks. The Hamiltonian strict bound, sharpness, and edge reduction have general proofs in single_size_equality.md. For non-Hamiltonian graphs the single-size equality implication remains unresolved; absence of finite counterexamples is not a proof. Random samples may repeat."
+}

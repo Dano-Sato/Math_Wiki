@@ -1,0 +1,34 @@
+{
+  "conjecture": "037",
+  "version": "0.3",
+  "max_m": 2000,
+  "ratio_step_bound": "b[m]^2+b[m]*b[m-1]>b[m-1]*b[m+1], m>=5",
+  "quadratic_ratio_bound": "b[m]^2+2*b[m]*b[m-1]>m*b[m-1]^2, m>=5",
+  "all_finite_inequality_checks_passed": true,
+  "parity_identity": {
+    "range": [
+      3,
+      2000
+    ],
+    "exact_polynomial_check": true
+  },
+  "positive_kernel_finite_algebra_checks": {
+    "t": [
+      2,
+      30
+    ],
+    "j": [
+      1,
+      30
+    ]
+  },
+  "initial_F_values": {
+    "5": 1,
+    "7": 3571
+  },
+  "initial_H_values": {
+    "6": 21,
+    "9": 1429
+  },
+  "scope": "Finite cross-checks only; the proof for all indices is in proof_unimodality.md. No approximation to e or truncated infinite sum is used."
+}

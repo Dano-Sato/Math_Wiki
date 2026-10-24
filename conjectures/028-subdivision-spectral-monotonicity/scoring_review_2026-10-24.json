@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-24",
+  "reviewer": "Codex / ChatGPT",
+  "target": "028",
+  "rubric": "README.md#점수 (2026-10-24 개정); AGENTS.md 7·9절",
+  "previous_chatgpt": {
+    "score": 32,
+    "version": "0.2",
+    "date": "2026-10-24",
+    "reason": "기존 세분 고유값 극한 정리와 표준 Newton–Puiseux 정리를 결합하면 원래 패리티별 추측보다 강한 전체 수열의 최종 단조성이 증명된다. 경로 소거식과 최대 가지 선택은 유용한 정리이지만, 새 이론이 필요한 열린 연구 후보로 볼 근거는 사라졌다. 문헌상 최초성도 미확정이므로 58점에서 32점으로 낮춘다. 이는 증명의 유용성이나 참일 확률을 매기는 점수가 아니다. 이전 70점·58점의 이유는 discussion.md에 보존했다."
+  },
+  "current_chatgpt": {
+    "score": 54,
+    "version": "0.2",
+    "date": "2026-10-24",
+    "reason": "2026-10-24 가치 기준: 기존 고유값 극한과 Newton–Puiseux를 출발점으로, 원 그래프 크기의 소거행렬·가지의 역매개화·최대 고유값 가지의 고정·대수적 정수에 의한 상수 예외 배제를 결합해 일반 그래프의 최종 엄격 단조성과 지수 수렴률을 얻는다. 단순한 수렴 정리의 재서술보다 실질적인 논증과 재사용 가치가 있어 연구 정리 구간 54점으로 평가한다. 이전 32점의 '열린 연구 후보가 아니게 됨'에 따른 감점은 폐기한다. 신규성·효과적 단조 시작점·광범위한 응용은 미확정이므로 60점 이상 또는 밀레니엄급이라고 판단할 근거는 부족하다."
+  },
+  "assessment": "L1의 극한 정리는 원문 Theorem 3과 대조했다. L2의 내부 경로 해와 양방향 소거, L3의 수렴 가지, T_j 도함수의 주항, f_* > f_j에서 T_* < T_j를 거쳐 역함수와 Q_*의 순서가 보존되는 단계, 상수 극한의 대수적 정수 모순을 문서에서 점검했다. T2에서 지수 수렴으로 t(q_t-q_0)->0을 얻어 q_t^{-t}/q_0^{-t}->1로 바꾸는 단계도 확인했다. 기존 도구를 쓴다는 사실과 열린 문제가 아니라는 사실만으로 20–39점에 배치한 D007의 평가 논리는 새 가치 척도에 맞지 않는다. 32에서 54로 상향하고 깊이를 1에서 2로 조정한다. 80점 이상에 필요한 근본적 난제 해결이나 넓은 이론적 영향의 근거는 현재 없다.",
+  "verification": {
+    "kind": "서술형 일반 증명 재검토·핵심 출처 원문 대조·기존 정확 검산 함수 재실행",
+    "symbolic_path_identities": 16,
+    "exact_characteristic_polynomial_checks": 35,
+    "example_simple_root_zero_linear_term_and_quadratic_coefficient": "정확 검산 통과",
+    "lean": "미수행",
+    "other_model_independent_review": "미수행"
+  },
+  "sources_checked": [
+    {
+      "url": "https://arxiv.org/html/2303.10488",
+      "scope": "Kumar–Mohar–Pragada–Zhan Theorem 3의 극한식 대조"
+    },
+    {
+      "url": "https://webusers.imj-prg.fr/~bernard.teissier/documents/GT99.pdf",
+      "scope": "Goldin–Teissier §2의 수렴 Puiseux 매개화 대조; 최종 단조성 자체는 저장소의 논증"
+    }
+  ],
+  "remaining": "효과적인 단조 시작점, 방향·수렴 지수의 간단한 구조 판정, 임계값 2로 가는 다른 고유값은 미해결이다. 명제와 증명은 바꾸지 않아 v0.2를 유지한다. D007의 32점 평가는 당시 기준의 이력으로 보존하며 현재 평가로 사용하지 않는다.",
+  "other_model_score_entries_preserved": true
+}

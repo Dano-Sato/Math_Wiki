@@ -1,0 +1,16 @@
+import MathWiki
+
+#check MathWiki.SingletonDistribution.UnimodalRow
+#check MathWiki.SingletonDistribution.threshold_step_pos
+#check MathWiki.SingletonDistribution.ratio_threshold_lt
+#check MathWiki.SingletonDistribution.unimodalRow_of_no_down_up
+#check MathWiki.SingletonDistribution.unimodalRow_of_decreasing_sign_thresholds
+#check MathWiki.SingletonDistribution.binomialRow_step_mul
+#check MathWiki.SingletonDistribution.binomialRow_step_difference
+
+#print axioms MathWiki.SingletonDistribution.threshold_step_pos
+#print axioms MathWiki.SingletonDistribution.ratio_threshold_lt
+#print axioms MathWiki.SingletonDistribution.unimodalRow_of_no_down_up
+#print axioms MathWiki.SingletonDistribution.unimodalRow_of_decreasing_sign_thresholds
+#print axioms MathWiki.SingletonDistribution.binomialRow_step_mul
+#print axioms MathWiki.SingletonDistribution.binomialRow_step_difference
