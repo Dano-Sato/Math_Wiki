@@ -1,0 +1,50 @@
+{
+  "limit": 1000000,
+  "target_mean_phi_a_over_a": 0.6079271018540267,
+  "target_sum_a_over_N_squared": 0.3039635509270133,
+  "scope": "Finite recurrence computation; no asymptotic claim proved.",
+  "checkpoints": [
+    {
+      "N": 10,
+      "mean_phi_a_over_a": 0.6357142857142857,
+      "sum_a_over_N_squared": 0.3,
+      "sum_abs_a_minus_phi_over_N_squared": 0.04,
+      "dual_floor_error": -1.857142857142854
+    },
+    {
+      "N": 100,
+      "mean_phi_a_over_a": 0.5377490946393854,
+      "sum_a_over_N_squared": 0.2653,
+      "sum_abs_a_minus_phi_over_N_squared": 0.0413,
+      "dual_floor_error": -34.70675857578817
+    },
+    {
+      "N": 1000,
+      "mean_phi_a_over_a": 0.5784353324196736,
+      "sum_a_over_N_squared": 0.284195,
+      "sum_abs_a_minus_phi_over_N_squared": 0.021041,
+      "dual_floor_error": -141.85362701345002
+    },
+    {
+      "N": 10000,
+      "mean_phi_a_over_a": 0.5782976563035205,
+      "sum_a_over_N_squared": 0.28841999,
+      "sum_abs_a_minus_phi_over_N_squared": 0.01569887,
+      "dual_floor_error": -2269.888433229178
+    },
+    {
+      "N": 100000,
+      "mean_phi_a_over_a": 0.5858778163467439,
+      "sum_a_over_N_squared": 0.2922918699,
+      "sum_abs_a_minus_phi_over_N_squared": 0.0117181685,
+      "dual_floor_error": -19074.654960155487
+    },
+    {
+      "N": 1000000,
+      "mean_phi_a_over_a": 0.5899003522382992,
+      "sum_a_over_N_squared": 0.294550116607,
+      "sum_abs_a_minus_phi_over_N_squared": 0.009423728819,
+      "dual_floor_error": -335752.40368652344
+    }
+  ]
+}

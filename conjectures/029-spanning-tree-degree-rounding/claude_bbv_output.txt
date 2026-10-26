@@ -1,0 +1,6 @@
+L has no Hamilton u-v path: True
+l=1 m=5 n=41 toughness=1.909 hamilton-path-MILP=INFEASIBLE | mean mu by role {'T': 10.659, 'a': 1.732, 'b': 1.732, 'c': 1.732, 'd': 1.732, 't': 1.294, 'u': 2.176, 'v': 2.176, 'w': 1.294} | #mu<2=30/41 | 029 window tree: tree found (38.8s)
+l=2 m=7 n=58 toughness=2.000 hamilton-path-MILP=INFEASIBLE | mean mu by role {'T': 10.912, 'a': 1.594, 'b': 1.594, 'c': 1.594, 'd': 1.594, 't': 1.285, 'u': 2.111, 'v': 2.111, 'w': 1.285} | #mu<2=42/58 | 029 window tree: tree found (259.1s)
+l=3 m=9 n=75 toughness=2.053 hamilton-path-MILP=skipped (Theorem 3) | mean mu by role {'T': 11.209, 'a': 1.507, 'b': 1.507, 'c': 1.507, 'd': 1.507, 't': 1.267, 'u': 2.073, 'v': 2.073, 'w': 1.267} | #mu<2=54/75 | 029 window tree: tree found (2.8s)
+l=4 m=11 n=92 toughness=2.087 hamilton-path-MILP=skipped (Theorem 3) | mean mu by role {'T': 11.471, 'a': 1.446, 'b': 1.446, 'c': 1.446, 'd': 1.446, 't': 1.249, 'u': 2.046, 'v': 2.046, 'w': 1.249} | #mu<2=66/92 | 029 window tree: tree found (3.8s)
+l=6 m=15 n=126 toughness=2.129 hamilton-path-MILP=skipped (Theorem 3) | mean mu by role {'T': 11.878, 'a': 1.365, 'b': 1.365, 'c': 1.365, 'd': 1.365, 't': 1.219, 'u': 2.009, 'v': 2.009, 'w': 1.219} | #mu<2=90/126 | 029 window tree: tree found (26.3s)
