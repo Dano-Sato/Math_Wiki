@@ -1,0 +1,9 @@
+{
+  "claude": null,
+  "chatgpt": {
+    "score": 48,
+    "version": "0.1",
+    "date": "2026-10-27",
+    "reason": "모든 무리수에 대해 선형·이차 다항식 두 개의 동시 작은 분수부분을 거의 무작위 모형의 지수까지 얻는 구체적 sharp-exponent 문제다. 일반 동시 다항식 정리는 훨씬 약한 지수만 보장하고 badly approximable 수가 분명한 시험 대상이다. 다만 exact specialization의 문헌 검색이 제한되고 단일 특수 사례의 파급력은 아직 불확실해 연구 문제 구간의 중간 점수로 둔다."
+  }
+}

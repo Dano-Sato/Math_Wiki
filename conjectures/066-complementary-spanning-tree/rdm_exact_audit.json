@@ -1,0 +1,36 @@
+{
+  "claim": "For every simple graph F on m vertices, deg(u)>deg(v) implies ((m+1)I-L(F))^{-1}[u,u] > ((m+1)I-L(F))^{-1}[v,v].",
+  "status": "COMPUTATIONALLY VERIFIED on all labelled simple F with 2<=m<=5 only",
+  "method": "Exhaust all adjacency masks and compare SymPy exact rationals; no floating-point decisions.",
+  "graphs_total": 1098,
+  "by_order": [
+    {
+      "vertices": 2,
+      "labelled_graphs": 2,
+      "strict_degree_comparisons": 0,
+      "result": "all exact rational comparisons passed"
+    },
+    {
+      "vertices": 3,
+      "labelled_graphs": 8,
+      "strict_degree_comparisons": 12,
+      "result": "all exact rational comparisons passed"
+    },
+    {
+      "vertices": 4,
+      "labelled_graphs": 64,
+      "strict_degree_comparisons": 240,
+      "result": "all exact rational comparisons passed"
+    },
+    {
+      "vertices": 5,
+      "labelled_graphs": 1024,
+      "strict_degree_comparisons": 7040,
+      "result": "all exact rational comparisons passed"
+    }
+  ],
+  "limitations": [
+    "Does not prove RDM for arbitrary m.",
+    "Does not audit a Schur-complement proof not supplied in this task."
+  ]
+}
