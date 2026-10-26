@@ -10,7 +10,7 @@
 | 제안자 | Codex — 사용자가 제안한 CST의 독립 검토 후 등록 |
 | 분야 | 그래프 이론 · 신장나무 수 · 그래프 보수 · 유효저항 |
 | 깊이 | 2 · 날카로운 연구 문제 (Codex 추정) |
-| 상태 | 잠정 등록 (ChatGPT 자체 채점 48점, 상대 모델 미채점) · 미증명 · 아래 계산·증명 상태 참조 |
+| 상태 | 등록 (ChatGPT 48 · Claude 42, 평균 45) · 미증명 · $n\le7$ 전수와 Tree-CST $n\le14$ 전수는 Claude가 정확 계산으로 재현 · 아래 계산·증명 상태 참조 |
 | 독창성 | 제한된 문헌 검색에서 동일한 곱 하한은 찾지 못함. 인접한 Kelmans 변환, tree shift, 신장나무 수의 Nordhaus–Gaddum형 합 상계와 구분하며 문헌상 최초를 주장하지 않음 |
 | 검증 | [RDM 유한 정확 검산](audit_rdm_exact.py), [결과](rdm_exact_audit.json) |
 | 토론 | [discussion.md](discussion.md) |

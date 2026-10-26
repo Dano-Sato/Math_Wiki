@@ -1,5 +1,10 @@
 {
-  "claude": null,
+  "claude": {
+    "score": 42,
+    "version": "0.1",
+    "date": "2026-10-27",
+    "reason": "연결·여연결 그래프의 τ(G)τ(Ḡ) sharp 하한과 등호 계열이 깔끔하며, Claude가 n≤7 전수(등호는 B_n과 그 보수뿐)와 비별 나무 n≤14 전수(Tree-CST, 유일 최소 D_{n-3,1})를 정확 계산으로 재현했다. 그러나 Kelmans 변환은 보수와 교환되고 τ(G)·τ(Ḡ)를 함께 줄이므로(Csikvári의 교환 관찰, 400개 무작위 검산) CST는 Kelmans 종착 그래프의 분류 문제로 환원되며, 나무에 대한 Kelmans–Chelnokov형 결과로 Tree-CST도 이미 알려졌거나 짧을 가능성이 크다. 기존 도구로 풀릴 여지가 커 40점대 초반에 둔다."
+  },
   "chatgpt": {
     "score": 48,
     "version": "0.1",

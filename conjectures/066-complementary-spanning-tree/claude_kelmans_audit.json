@@ -1,0 +1,462 @@
+{
+ "cst": {
+  "4": {
+   "pairs": 1,
+   "min": 1,
+   "bound": 1,
+   "violations": [],
+   "equality_graph6": [
+    "Ck"
+   ]
+  },
+  "5": {
+   "pairs": 8,
+   "min": 8,
+   "bound": 8,
+   "violations": [],
+   "equality_graph6": [
+    "DBc",
+    "Db["
+   ]
+  },
+  "6": {
+   "pairs": 68,
+   "min": 75,
+   "bound": 75,
+   "violations": [],
+   "equality_graph6": [
+    "EhP?",
+    "En}?"
+   ]
+  },
+  "7": {
+   "pairs": 662,
+   "min": 864,
+   "bound": 864,
+   "violations": [],
+   "equality_graph6": [
+    "FhG`?",
+    "Fz~{?"
+   ]
+  }
+ },
+ "tree_cst": {
+  "5": {
+   "nonstar_trees": 2,
+   "min": 8,
+   "bound": 8,
+   "argmin_degree_sequences": [
+    [
+     3,
+     2,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 11
+  },
+  "6": {
+   "nonstar_trees": 5,
+   "min": 75,
+   "bound": 75,
+   "argmin_degree_sequences": [
+    [
+     4,
+     2,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 100
+  },
+  "7": {
+   "nonstar_trees": 10,
+   "min": 864,
+   "bound": 864,
+   "argmin_degree_sequences": [
+    [
+     5,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 1296
+  },
+  "8": {
+   "nonstar_trees": 22,
+   "min": 12005,
+   "bound": 12005,
+   "argmin_degree_sequences": [
+    [
+     6,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 19208
+  },
+  "9": {
+   "nonstar_trees": 46,
+   "min": 196608,
+   "bound": 196608,
+   "argmin_degree_sequences": [
+    [
+     7,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 327680
+  },
+  "10": {
+   "nonstar_trees": 105,
+   "min": 3720087,
+   "bound": 3720087,
+   "argmin_degree_sequences": [
+    [
+     8,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 6377292
+  },
+  "11": {
+   "nonstar_trees": 234,
+   "min": 80000000,
+   "bound": 80000000,
+   "argmin_degree_sequences": [
+    [
+     9,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 140000000
+  },
+  "12": {
+   "nonstar_trees": 550,
+   "min": 1929229929,
+   "bound": 1929229929,
+   "argmin_degree_sequences": [
+    [
+     10,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 3429742096
+  },
+  "13": {
+   "nonstar_trees": 1300,
+   "min": 51597803520,
+   "bound": 51597803520,
+   "argmin_degree_sequences": [
+    [
+     11,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 92876046336
+  },
+  "14": {
+   "nonstar_trees": 3158,
+   "min": 1516443410339,
+   "bound": 1516443410339,
+   "argmin_degree_sequences": [
+    [
+     12,
+     2,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   ],
+   "second_value": 2757169836980
+  }
+ },
+ "kelmans_complement": {
+  "seed": 1,
+  "trials": 400,
+  "complement_isomorphic": 400,
+  "both_tau_nonincreasing": 400
+ },
+ "kelmans_terminal": {
+  "4": {
+   "count": 1,
+   "min_product": 1,
+   "graphs": [
+    {
+     "graph6": "Ck",
+     "edges": 3,
+     "product": 1
+    }
+   ]
+  },
+  "5": {
+   "count": 3,
+   "min_product": 8,
+   "graphs": [
+    {
+     "graph6": "DBc",
+     "edges": 4,
+     "product": 8
+    },
+    {
+     "graph6": "Dx_",
+     "edges": 5,
+     "product": 9
+    },
+    {
+     "graph6": "Db[",
+     "edges": 6,
+     "product": 8
+    }
+   ]
+  },
+  "6": {
+   "count": 10,
+   "min_product": 75,
+   "graphs": [
+    {
+     "graph6": "EhP?",
+     "edges": 5,
+     "product": 75
+    },
+    {
+     "graph6": "EsCO",
+     "edges": 5,
+     "product": 100
+    },
+    {
+     "graph6": "EC{O",
+     "edges": 6,
+     "product": 120
+    },
+    {
+     "graph6": "EhX_",
+     "edges": 7,
+     "product": 128
+    },
+    {
+     "graph6": "EJwG",
+     "edges": 7,
+     "product": 160
+    },
+    {
+     "graph6": "E~_O",
+     "edges": 8,
+     "product": 128
+    },
+    {
+     "graph6": "Ez`_",
+     "edges": 8,
+     "product": 160
+    },
+    {
+     "graph6": "E~`_",
+     "edges": 9,
+     "product": 120
+    },
+    {
+     "graph6": "En}?",
+     "edges": 10,
+     "product": 75
+    },
+    {
+     "graph6": "E^mG",
+     "edges": 10,
+     "product": 100
+    }
+   ]
+  },
+  "7": {
+   "count": 24,
+   "min_product": 864,
+   "graphs": [
+    {
+     "graph6": "FhG`?",
+     "edges": 6,
+     "product": 864
+    },
+    {
+     "graph6": "FiO`?",
+     "edges": 6,
+     "product": 1296
+    },
+    {
+     "graph6": "FItA?",
+     "edges": 7,
+     "product": 1620
+    },
+    {
+     "graph6": "F?Bcw",
+     "edges": 7,
+     "product": 2160
+    },
+    {
+     "graph6": "FupA?",
+     "edges": 8,
+     "product": 2400
+    },
+    {
+     "graph6": "FMtA?",
+     "edges": 8,
+     "product": 2592
+    },
+    {
+     "graph6": "F~a@?",
+     "edges": 9,
+     "product": 2880
+    },
+    {
+     "graph6": "FzWa?",
+     "edges": 9,
+     "product": 2500
+    },
+    {
+     "graph6": "Fz`c?",
+     "edges": 9,
+     "product": 4800
+    },
+    {
+     "graph6": "F~Ha?",
+     "edges": 10,
+     "product": 3000
+    },
+    {
+     "graph6": "F~`c?",
+     "edges": 10,
+     "product": 3840
+    },
+    {
+     "graph6": "F?~y?",
+     "edges": 10,
+     "product": 3600
+    },
+    {
+     "graph6": "Fn{OO",
+     "edges": 11,
+     "product": 3000
+    },
+    {
+     "graph6": "Fn{`?",
+     "edges": 11,
+     "product": 3600
+    },
+    {
+     "graph6": "F_~y?",
+     "edges": 11,
+     "product": 3840
+    },
+    {
+     "graph6": "F~{OO",
+     "edges": 12,
+     "product": 2500
+    },
+    {
+     "graph6": "F~Xo_",
+     "edges": 12,
+     "product": 2880
+    },
+    {
+     "graph6": "FhxxG",
+     "edges": 12,
+     "product": 4800
+    },
+    {
+     "graph6": "F@\\|w",
+     "edges": 13,
+     "product": 2400
+    },
+    {
+     "graph6": "FC\\zw",
+     "edges": 13,
+     "product": 2592
+    },
+    {
+     "graph6": "FB\\|w",
+     "edges": 14,
+     "product": 1620
+    },
+    {
+     "graph6": "F~{sO",
+     "edges": 14,
+     "product": 2160
+    },
+    {
+     "graph6": "Fz~{?",
+     "edges": 15,
+     "product": 864
+    },
+    {
+     "graph6": "Fdn]w",
+     "edges": 15,
+     "product": 1296
+    }
+   ]
+  }
+ }
+}

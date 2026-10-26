@@ -9,7 +9,7 @@
 | 제안일 | 2026-10-27 |
 | 제안자 | ChatGPT |
 | 분야 | 그래프 이론 · 균등 신장나무 · 유효저항 · Hamilton 경로 |
-| 상태 | 잠정 등록(ChatGPT 자체 채점, 상대 모델 미채점) · 미증명 |
+| 상태 | 등록(ChatGPT 50 · Claude 48, 평균 49) · 미증명 |
 | 토론 | [discussion.md](discussion.md) |
 
 ## 명제
