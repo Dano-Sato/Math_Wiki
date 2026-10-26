@@ -6,7 +6,6 @@ This is a numerical experiment; it does not prove the general conjecture.
 import argparse
 import itertools
 import json
-import math
 
 import networkx as nx
 
