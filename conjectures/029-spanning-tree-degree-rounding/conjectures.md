@@ -9,7 +9,7 @@
 | 깊이 | 3 · 연결 꼭짓점-추이 그래프의 Hamilton 경로 존재 문제를 함의하는 강한 후보 (잠정) |
 | 상태 | 일반 그래프는 미증명 · 모든 cactus 그래프, 세타 그래프, 블록 그래프에서는 증명 · 더 일반적으로 각 블록이 꼭짓점-추이·Hamilton-연결인 경우 증명 |
 | 독창성 | 정확한 바닥·천장 명제는 제한 검색에서 찾지 못함. 인접한 일반 차수 반올림 정리와 구분되며 문헌상 최초를 주장하지 않음 |
-| 검증 | [기본 유한 탐색](floor_ceil_experiment.json), [구조적 그래프 탐색](structured_experiment.json), [밀도별 무작위 탐색](density_experiment.json), [Claude n=8 전수](claude_n8_exhaustive.json), [Claude 구조·세분 탐색](claude_search.json) |
+| 검증 | [기본 유한 탐색](floor_ceil_experiment.json), [구조적 그래프 탐색](structured_experiment.json), [밀도별 무작위 탐색](density_experiment.json), [Claude n=8 전수](claude_n8_exhaustive.json), [Claude 구조·세분 탐색](claude_search.json), [Codex 최대 2-나무 표본](codex_2tree_scan.json) |
 | 토론 | [토론 기록](discussion.md) |
 
 ## 정의 및 추측
