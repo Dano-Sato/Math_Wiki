@@ -1,0 +1,135 @@
+{
+  "conjecture": "047",
+  "method": "exact triangular recurrence over affine flats",
+  "brute_force_cross_checks": [
+    {
+      "q": 2,
+      "d": 1,
+      "k": 1,
+      "matched": true
+    },
+    {
+      "q": 2,
+      "d": 1,
+      "k": 2,
+      "matched": true
+    },
+    {
+      "q": 2,
+      "d": 2,
+      "k": 1,
+      "matched": true
+    },
+    {
+      "q": 2,
+      "d": 2,
+      "k": 2,
+      "matched": true
+    },
+    {
+      "q": 2,
+      "d": 2,
+      "k": 3,
+      "matched": true
+    },
+    {
+      "q": 2,
+      "d": 2,
+      "k": 4,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 1,
+      "k": 1,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 1,
+      "k": 2,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 1,
+      "k": 3,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 2,
+      "k": 1,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 2,
+      "k": 2,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 2,
+      "k": 3,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 2,
+      "k": 4,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 2,
+      "k": 5,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 2,
+      "k": 6,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 2,
+      "k": 7,
+      "matched": true
+    },
+    {
+      "q": 3,
+      "d": 2,
+      "k": 8,
+      "matched": true
+    }
+  ],
+  "configurations": [
+    {
+      "q": 2,
+      "max_d": 14,
+      "max_k": 100
+    },
+    {
+      "q": 3,
+      "max_d": 10,
+      "max_k": 100
+    },
+    {
+      "q": 4,
+      "max_d": 8,
+      "max_k": 100
+    },
+    {
+      "q": 5,
+      "max_d": 7,
+      "max_k": 100
+    }
+  ],
+  "parameter_cases_checked": 2760,
+  "strict_log_concavity_inequalities_checked": 5572,
+  "equalities": 0,
+  "all_checked_inequalities_strict": true,
+  "first_failure_or_equality": null
+}

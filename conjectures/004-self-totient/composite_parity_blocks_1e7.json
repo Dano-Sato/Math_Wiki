@@ -1,0 +1,205 @@
+{
+  "terms": 10000000,
+  "literal_check_terms": 3000,
+  "scope": "Finite exact recurrence calculation; no limiting claim proved.",
+  "rows": [
+    {
+      "n": 4,
+      "Q": 1,
+      "composite_odd_before_n": 0,
+      "composite_count_before_n": 0,
+      "discrepancy": 0.5,
+      "discrepancy_over_n_over_log_n": 0.17328679513998632,
+      "last_dyadic_block_composite_odd_density": 0.0
+    },
+    {
+      "n": 8,
+      "Q": 1,
+      "composite_odd_before_n": 0,
+      "composite_count_before_n": 2,
+      "discrepancy": -0.5,
+      "discrepancy_over_n_over_log_n": -0.12996509635498973,
+      "last_dyadic_block_composite_odd_density": 0.0
+    },
+    {
+      "n": 16,
+      "Q": 5,
+      "composite_odd_before_n": 4,
+      "composite_count_before_n": 8,
+      "discrepancy": 0.5,
+      "discrepancy_over_n_over_log_n": 0.08664339756999316,
+      "last_dyadic_block_composite_odd_density": 0.6666666666666666
+    },
+    {
+      "n": 32,
+      "Q": 7,
+      "composite_odd_before_n": 6,
+      "composite_count_before_n": 19,
+      "discrepancy": -3.0,
+      "discrepancy_over_n_over_log_n": -0.32491274088747435,
+      "last_dyadic_block_composite_odd_density": 0.18181818181818182
+    },
+    {
+      "n": 64,
+      "Q": 22,
+      "composite_odd_before_n": 21,
+      "composite_count_before_n": 44,
+      "discrepancy": -0.5,
+      "discrepancy_over_n_over_log_n": -0.032491274088747434,
+      "last_dyadic_block_composite_odd_density": 0.6
+    },
+    {
+      "n": 128,
+      "Q": 49,
+      "composite_odd_before_n": 48,
+      "composite_count_before_n": 95,
+      "discrepancy": 1.0,
+      "discrepancy_over_n_over_log_n": 0.03790648643687201,
+      "last_dyadic_block_composite_odd_density": 0.5294117647058824
+    },
+    {
+      "n": 256,
+      "Q": 93,
+      "composite_odd_before_n": 92,
+      "composite_count_before_n": 200,
+      "discrepancy": -7.5,
+      "discrepancy_over_n_over_log_n": -0.16245637044373717,
+      "last_dyadic_block_composite_odd_density": 0.41904761904761906
+    },
+    {
+      "n": 512,
+      "Q": 198,
+      "composite_odd_before_n": 197,
+      "composite_count_before_n": 413,
+      "discrepancy": -9.0,
+      "discrepancy_over_n_over_log_n": -0.1096580500495226,
+      "last_dyadic_block_composite_odd_density": 0.49295774647887325
+    },
+    {
+      "n": 1024,
+      "Q": 429,
+      "composite_odd_before_n": 428,
+      "composite_count_before_n": 850,
+      "discrepancy": 3.5,
+      "discrepancy_over_n_over_log_n": 0.023691554023045007,
+      "last_dyadic_block_composite_odd_density": 0.528604118993135
+    },
+    {
+      "n": 2048,
+      "Q": 853,
+      "composite_odd_before_n": 852,
+      "composite_count_before_n": 1737,
+      "discrepancy": -16.0,
+      "discrepancy_over_n_over_log_n": -0.0595673358293703,
+      "last_dyadic_block_composite_odd_density": 0.47801578354002255
+    },
+    {
+      "n": 4096,
+      "Q": 1727,
+      "composite_odd_before_n": 1726,
+      "composite_count_before_n": 3530,
+      "discrepancy": -38.5,
+      "discrepancy_over_n_over_log_n": -0.07818212827604851,
+      "last_dyadic_block_composite_odd_density": 0.48745119910764084
+    },
+    {
+      "n": 8192,
+      "Q": 3554,
+      "composite_odd_before_n": 3553,
+      "composite_count_before_n": 7162,
+      "discrepancy": -27.5,
+      "discrepancy_over_n_over_log_n": -0.030249037725852104,
+      "last_dyadic_block_composite_odd_density": 0.5030286343612335
+    },
+    {
+      "n": 16384,
+      "Q": 7196,
+      "composite_odd_before_n": 7195,
+      "composite_count_before_n": 14482,
+      "discrepancy": -45.5,
+      "discrepancy_over_n_over_log_n": -0.026949142701213694,
+      "last_dyadic_block_composite_odd_density": 0.49754098360655735
+    },
+    {
+      "n": 32768,
+      "Q": 14662,
+      "composite_odd_before_n": 14661,
+      "composite_count_before_n": 29254,
+      "discrepancy": 34.5,
+      "discrepancy_over_n_over_log_n": 0.010946767149040883,
+      "last_dyadic_block_composite_odd_density": 0.5054156512320607
+    },
+    {
+      "n": 65536,
+      "Q": 29495,
+      "composite_odd_before_n": 29494,
+      "composite_count_before_n": 58992,
+      "discrepancy": -1.5,
+      "discrepancy_over_n_over_log_n": -0.0002538380788183393,
+      "last_dyadic_block_composite_odd_density": 0.4987894276683032
+    },
+    {
+      "n": 131072,
+      "Q": 59378,
+      "composite_odd_before_n": 59377,
+      "composite_count_before_n": 118819,
+      "discrepancy": -32.0,
+      "discrepancy_over_n_over_log_n": -0.002876831559941179,
+      "last_dyadic_block_composite_odd_density": 0.49949019673391615
+    },
+    {
+      "n": 262144,
+      "Q": 119731,
+      "composite_odd_before_n": 119730,
+      "composite_count_before_n": 239142,
+      "discrepancy": 159.5,
+      "discrepancy_over_n_over_log_n": 0.007591345044660961,
+      "last_dyadic_block_composite_odd_density": 0.5015915494128305
+    },
+    {
+      "n": 524288,
+      "Q": 241195,
+      "composite_odd_before_n": 241194,
+      "composite_count_before_n": 480896,
+      "discrepancy": 746.5,
+      "discrepancy_over_n_over_log_n": 0.01875162703604123,
+      "last_dyadic_block_composite_odd_density": 0.5024280880564541
+    },
+    {
+      "n": 1048576,
+      "Q": 483864,
+      "composite_odd_before_n": 483863,
+      "composite_count_before_n": 966549,
+      "discrepancy": 589.0,
+      "discrepancy_over_n_over_log_n": 0.007787011897083431,
+      "last_dyadic_block_composite_odd_density": 0.4996756943743784
+    },
+    {
+      "n": 2097152,
+      "Q": 971432,
+      "composite_odd_before_n": 971431,
+      "composite_count_before_n": 1941539,
+      "discrepancy": 662.0,
+      "discrepancy_over_n_over_log_n": 0.0045948658486100954,
+      "last_dyadic_block_composite_odd_density": 0.5000748725627955
+    },
+    {
+      "n": 4194304,
+      "Q": 1950303,
+      "composite_odd_before_n": 1950302,
+      "composite_count_before_n": 3898355,
+      "discrepancy": 1125.0,
+      "discrepancy_over_n_over_log_n": 0.004090164355959569,
+      "last_dyadic_block_composite_odd_density": 0.5002366088584721
+    },
+    {
+      "n": 8388608,
+      "Q": 3913524,
+      "composite_odd_before_n": 3913523,
+      "composite_count_before_n": 7824443,
+      "discrepancy": 1302.0,
+      "discrepancy_over_n_over_log_n": 0.0024744254909811166,
+      "last_dyadic_block_composite_odd_density": 0.5000450830444962
+    }
+  ]
+}

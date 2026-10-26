@@ -1,0 +1,27 @@
+feasibility of floor/ceil spanning tree:
+K4 Petersen 36 tree found 0.0s
+K4 J5 76 tree found 0.2s
+K4 J7 108 tree found 0.3s
+K4 Coxeter 108 tree found 0.3s
+prism Petersen 54 tree found 0.3s
+prism J5 114 tree found 0.2s
+prism J7 162 tree found 5.0s
+prism Coxeter 162 tree found 1.4s
+K33 Petersen 54 tree found 0.1s
+K33 J5 114 tree found 1.3s
+K33 J7 162 tree found 2.0s
+K33 Coxeter 162 tree found 0.5s
+cube Petersen 72 tree found 0.3s
+cube J5 152 tree found 0.4s
+cube J7 216 tree found 8.9s
+cube Coxeter 216 tree found 0.5s
+Petersen Petersen 90 tree found 0.3s
+Petersen J5 190 tree found 2.2s
+Petersen J7 270 tree found 18.2s
+Petersen Coxeter 270 tree found 12.6s
+dodeca Petersen 180 tree found 1.3s
+dodeca J5 380 tree found 3.7s
+dodeca J7 540 timeout 300.3s
+dodeca Coxeter 540 timeout 300.3s
+
+[exited with code 0]

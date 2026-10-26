@@ -170,6 +170,12 @@ $$
 a_{n,m-18}^{2}>a_{n,m-19}a_{n,m-17}
 $$
 도 모든 $n\ge38$에서 성립한다. 증명은 토론 D028, 재현 스크립트는 [verify_d028.py](verify_d028.py), 정확 다항식 계수와 초기 정수 차이는 [검증 인증서](verify_d028.json)에 기록했다.
+
+열아홉 번째 경계 부등식
+$$
+a_{n,m-19}^{2}>a_{n,m-20}a_{n,m-18}
+$$
+도 모든 $n\ge40$에서 성립한다. 증명은 토론 D030, 재현 스크립트는 [verify_d030.py](verify_d030.py), 정확 다항식 계수와 초기 정수 차이는 [검증 인증서](verify_d030.json)에 기록했다.
 ## 문헌 확인의 범위와 한계
 
 순열의 순환 길이가 임의의 집합 $I$에 속하는 순환 수의 분포는 이미 연구 주제다. Kevin Ford의 [*Cycle Type of Random Permutations: A Toolkit*](https://doi.org/10.19086/da.38090)는 $I$에 속하는 순환 수의 분포와 그 점근적 확률 구조를 다룬다. A. N. Timashev의 [*Random Permutations with Prime Lengths of Cycles*](https://doi.org/10.1137/S0040585X97T988162)는 모든 순환 길이가 소수인 순열을 표본공간으로 삼아 총 순환 수의 점근 분포를 연구한다. 두 연구는 관련 배경이지만, 이 항목은 **모든 순열**에서 소수 길이 순환 수로 분류한 고정 $n$ 계수열의 엄격 로그오목성을 묻는다.

@@ -1,0 +1,16 @@
+{
+  "method": "Exact incremental enumeration of coprime pairs 1 <= a < b <= N; ordinary Euclidean divisions on ordered input (b,a) are accumulated by denominator b and checked for every prefix N.",
+  "max_denominator_bound": 3000,
+  "unimodality_checks": 2999,
+  "result": "all passed",
+  "logconcavity": {
+    "result": "fails",
+    "first_failure": {
+      "N": 405,
+      "k": 11,
+      "triple": [145, 12, 1],
+      "inequality": "12^2 < 145*1"
+    }
+  },
+  "scope_note": "Finite exact computation only; it does not establish the all-N conjecture."
+}

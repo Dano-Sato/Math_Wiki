@@ -1,0 +1,98 @@
+{
+  "formula_source": "Archer-Lauderdale, Enumeration of cyclic permutations in vector grid classes, Lemma 4.4",
+  "formula_checked_n": [
+    3,
+    150
+  ],
+  "formula_unimodality_verified": true,
+  "direct_permutation_enumeration_n": [
+    3,
+    9
+  ],
+  "direct_counts_match_formula": true,
+  "sample_n10": [
+    0,
+    1,
+    3,
+    9,
+    13,
+    12,
+    8,
+    4,
+    1,
+    0
+  ],
+  "sample_n12": [
+    0,
+    1,
+    5,
+    13,
+    27,
+    39,
+    39,
+    27,
+    13,
+    5,
+    1,
+    0
+  ],
+  "brute_rows": {
+    "3": [
+      0,
+      1,
+      0
+    ],
+    "4": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "5": [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "6": [
+      0,
+      1,
+      1,
+      2,
+      1,
+      0
+    ],
+    "7": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1,
+      0
+    ],
+    "8": [
+      0,
+      1,
+      3,
+      4,
+      4,
+      3,
+      1,
+      0
+    ],
+    "9": [
+      0,
+      1,
+      3,
+      6,
+      8,
+      6,
+      3,
+      1,
+      0
+    ]
+  },
+  "limitation": "Finite exact checks only; no proof for all n."
+}

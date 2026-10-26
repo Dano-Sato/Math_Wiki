@@ -1,0 +1,126 @@
+{
+  "claim": "counts by number of peaks at maximum height are weakly decreasing",
+  "scope": "all Dyck paths of semilength n for each tested n",
+  "semilengths_tested": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "counts_by_semilength": {
+    "1": [
+      1
+    ],
+    "2": [
+      1,
+      1
+    ],
+    "3": [
+      3,
+      1,
+      1
+    ],
+    "4": [
+      8,
+      4,
+      1,
+      1
+    ],
+    "5": [
+      23,
+      12,
+      5,
+      1,
+      1
+    ],
+    "6": [
+      71,
+      36,
+      17,
+      6,
+      1,
+      1
+    ],
+    "7": [
+      229,
+      114,
+      54,
+      23,
+      7,
+      1,
+      1
+    ],
+    "8": [
+      759,
+      377,
+      176,
+      78,
+      30,
+      8,
+      1,
+      1
+    ],
+    "9": [
+      2566,
+      1279,
+      596,
+      263,
+      109,
+      38,
+      9,
+      1,
+      1
+    ],
+    "10": [
+      8817,
+      4408,
+      2070,
+      912,
+      382,
+      148,
+      47,
+      10,
+      1,
+      1
+    ],
+    "11": [
+      30717,
+      15375,
+      7289,
+      3240,
+      1358,
+      541,
+      196,
+      57,
+      11,
+      1,
+      1
+    ],
+    "12": [
+      108278,
+      54195,
+      25886,
+      11662,
+      4931,
+      1975,
+      749,
+      254,
+      68,
+      12,
+      1,
+      1
+    ]
+  },
+  "total_paths_tested": 290511,
+  "first_failure": null,
+  "method": "recursive exact enumeration of Dyck paths and integer counting",
+  "is_proof": false
+}

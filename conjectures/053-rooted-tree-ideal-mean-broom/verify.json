@@ -1,0 +1,404 @@
+[
+  {
+    "n": 1,
+    "rooted_unlabeled_shapes": 1,
+    "maximum_mean": "1/2",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 1,
+        "terminal_leaves": 0
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 2,
+    "rooted_unlabeled_shapes": 1,
+    "maximum_mean": "1/1",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 1,
+        "terminal_leaves": 1
+      },
+      {
+        "stem_vertices": 2,
+        "terminal_leaves": 0
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 3,
+    "rooted_unlabeled_shapes": 2,
+    "maximum_mean": "8/5",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 1,
+        "terminal_leaves": 2
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 4,
+    "rooted_unlabeled_shapes": 4,
+    "maximum_mean": "20/9",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 1,
+        "terminal_leaves": 3
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 5,
+    "rooted_unlabeled_shapes": 9,
+    "maximum_mean": "29/10",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 2,
+        "terminal_leaves": 3
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 6,
+    "rooted_unlabeled_shapes": 20,
+    "maximum_mean": "65/18",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 2,
+        "terminal_leaves": 4
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 7,
+    "rooted_unlabeled_shapes": 48,
+    "maximum_mean": "83/19",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 3,
+        "terminal_leaves": 4
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 8,
+    "rooted_unlabeled_shapes": 115,
+    "maximum_mean": "179/35",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 3,
+        "terminal_leaves": 5
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 9,
+    "rooted_unlabeled_shapes": 286,
+    "maximum_mean": "107/18",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 4,
+        "terminal_leaves": 5
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 10,
+    "rooted_unlabeled_shapes": 719,
+    "maximum_mean": "250/37",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 5,
+        "terminal_leaves": 5
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": null
+  },
+  {
+    "n": 11,
+    "rooted_unlabeled_shapes": 1842,
+    "maximum_mean": "174/23",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 5,
+        "terminal_leaves": 6
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": {
+      "shape": [
+        [
+          [
+            [],
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [
+              [],
+              []
+            ]
+          ]
+        ]
+      ],
+      "profile": [
+        1,
+        1,
+        2,
+        3,
+        6,
+        10,
+        11,
+        10,
+        11,
+        10,
+        5,
+        1
+      ]
+    }
+  },
+  {
+    "n": 12,
+    "rooted_unlabeled_shapes": 4766,
+    "maximum_mean": "591/70",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 6,
+        "terminal_leaves": 6
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": {
+      "shape": [
+        [
+          [
+            [],
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [
+              [
+                [],
+                []
+              ]
+            ]
+          ]
+        ]
+      ],
+      "profile": [
+        1,
+        1,
+        2,
+        3,
+        6,
+        9,
+        11,
+        11,
+        10,
+        11,
+        10,
+        5,
+        1
+      ]
+    }
+  },
+  {
+    "n": 13,
+    "rooted_unlabeled_shapes": 12486,
+    "maximum_mean": "661/71",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 7,
+        "terminal_leaves": 6
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": {
+      "shape": [
+        [
+          [
+            [],
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [
+              [
+                [
+                  [],
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "profile": [
+        1,
+        1,
+        2,
+        3,
+        6,
+        9,
+        10,
+        11,
+        11,
+        10,
+        11,
+        10,
+        5,
+        1
+      ]
+    }
+  },
+  {
+    "n": 14,
+    "rooted_unlabeled_shapes": 32973,
+    "maximum_mean": "61/6",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 8,
+        "terminal_leaves": 6
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": {
+      "shape": [
+        [
+          [
+            [],
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [
+              [
+                [
+                  [
+                    [],
+                    []
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "profile": [
+        1,
+        1,
+        2,
+        3,
+        6,
+        9,
+        10,
+        10,
+        11,
+        11,
+        10,
+        11,
+        10,
+        5,
+        1
+      ]
+    }
+  },
+  {
+    "n": 15,
+    "rooted_unlabeled_shapes": 87811,
+    "maximum_mean": "375/34",
+    "broom_parameters_attaining_maximum": [
+      {
+        "stem_vertices": 8,
+        "terminal_leaves": 7
+      }
+    ],
+    "maximizing_shapes": 1,
+    "all_maximizers_are_brooms": true,
+    "first_nonunimodal_ideal_profile": {
+      "shape": [
+        [],
+        [
+          [
+            [],
+            [],
+            [],
+            []
+          ]
+        ],
+        [
+          [
+            [
+              [
+                [
+                  [],
+                  []
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      "profile": [
+        1,
+        1,
+        3,
+        5,
+        10,
+        20,
+        30,
+        36,
+        38,
+        37,
+        38,
+        41,
+        36,
+        21,
+        7,
+        1
+      ]
+    }
+  }
+]

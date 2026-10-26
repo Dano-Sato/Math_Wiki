@@ -1,0 +1,482 @@
+[
+  {
+    "n": 1,
+    "total": 2,
+    "counts": [
+      1,
+      1
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 2,
+    "total": 3,
+    "counts": [
+      1,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 3,
+    "total": 6,
+    "counts": [
+      1,
+      3,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 4,
+    "total": 9,
+    "counts": [
+      1,
+      4,
+      4
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 5,
+    "total": 16,
+    "counts": [
+      1,
+      5,
+      8,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 6,
+    "total": 24,
+    "counts": [
+      1,
+      6,
+      12,
+      5
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 7,
+    "total": 42,
+    "counts": [
+      1,
+      7,
+      18,
+      14,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 8,
+    "total": 61,
+    "counts": [
+      1,
+      8,
+      24,
+      24,
+      4
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 9,
+    "total": 108,
+    "counts": [
+      1,
+      9,
+      32,
+      45,
+      19,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 10,
+    "total": 151,
+    "counts": [
+      1,
+      10,
+      40,
+      65,
+      32,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 11,
+    "total": 253,
+    "counts": [
+      1,
+      11,
+      50,
+      100,
+      72,
+      17,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 12,
+    "total": 369,
+    "counts": [
+      1,
+      12,
+      60,
+      137,
+      121,
+      35,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 13,
+    "total": 607,
+    "counts": [
+      1,
+      13,
+      72,
+      191,
+      216,
+      94,
+      18,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 14,
+    "total": 847,
+    "counts": [
+      1,
+      14,
+      84,
+      245,
+      314,
+      155,
+      31,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 15,
+    "total": 1400,
+    "counts": [
+      1,
+      15,
+      98,
+      323,
+      503,
+      337,
+      103,
+      18,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 16,
+    "total": 1954,
+    "counts": [
+      1,
+      16,
+      112,
+      401,
+      696,
+      527,
+      170,
+      28,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 17,
+    "total": 3139,
+    "counts": [
+      1,
+      17,
+      128,
+      505,
+      1009,
+      941,
+      412,
+      104,
+      20,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 18,
+    "total": 4398,
+    "counts": [
+      1,
+      18,
+      144,
+      610,
+      1335,
+      1395,
+      683,
+      178,
+      31,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 19,
+    "total": 6976,
+    "counts": [
+      1,
+      19,
+      162,
+      745,
+      1828,
+      2246,
+      1366,
+      468,
+      117,
+      22,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 20,
+    "total": 9583,
+    "counts": [
+      1,
+      20,
+      180,
+      881,
+      2335,
+      3142,
+      2076,
+      735,
+      178,
+      32,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 21,
+    "total": 15456,
+    "counts": [
+      1,
+      21,
+      200,
+      1052,
+      3081,
+      4793,
+      3863,
+      1743,
+      541,
+      135,
+      24,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 22,
+    "total": 20982,
+    "counts": [
+      1,
+      22,
+      220,
+      1222,
+      3818,
+      6408,
+      5582,
+      2654,
+      820,
+      197,
+      35,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 23,
+    "total": 32816,
+    "counts": [
+      1,
+      23,
+      242,
+      1431,
+      4853,
+      9096,
+      9161,
+      5213,
+      1988,
+      622,
+      158,
+      26,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 24,
+    "total": 45417,
+    "counts": [
+      1,
+      24,
+      264,
+      1642,
+      5923,
+      11989,
+      13181,
+      8074,
+      3122,
+      929,
+      227,
+      38,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 25,
+    "total": 70109,
+    "counts": [
+      1,
+      25,
+      288,
+      1894,
+      7335,
+      16288,
+      20161,
+      14268,
+      6527,
+      2363,
+      747,
+      182,
+      28,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 26,
+    "total": 94499,
+    "counts": [
+      1,
+      26,
+      312,
+      2146,
+      8755,
+      20669,
+      27374,
+      20595,
+      9741,
+      3496,
+      1078,
+      262,
+      41,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 27,
+    "total": 148234,
+    "counts": [
+      1,
+      27,
+      338,
+      2446,
+      10649,
+      27408,
+      40654,
+      35142,
+      19350,
+      8089,
+      2968,
+      920,
+      210,
+      30,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 28,
+    "total": 200768,
+    "counts": [
+      1,
+      28,
+      364,
+      2746,
+      12549,
+      34220,
+      54213,
+      49956,
+      28700,
+      12017,
+      4306,
+      1318,
+      303,
+      44,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 29,
+    "total": 308213,
+    "counts": [
+      1,
+      29,
+      392,
+      3096,
+      14973,
+      43881,
+      76163,
+      78455,
+      51211,
+      24579,
+      10235,
+      3795,
+      1129,
+      240,
+      32,
+      2
+    ],
+    "log_concavity_failures_at_k": []
+  },
+  {
+    "n": 30,
+    "total": 415543,
+    "counts": [
+      1,
+      30,
+      420,
+      3447,
+      17423,
+      53785,
+      99079,
+      108527,
+      74388,
+      36282,
+      14815,
+      5359,
+      1592,
+      345,
+      47,
+      3
+    ],
+    "log_concavity_failures_at_k": []
+  }
+]

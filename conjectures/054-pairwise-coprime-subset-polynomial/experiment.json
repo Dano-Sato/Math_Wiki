@@ -1,0 +1,13 @@
+{
+  "object": "Q[n,k] = number of k-element pairwise-coprime subsets of [n], including the empty set at k=0",
+  "method": "Exact memoized independence-polynomial recurrence on the coprimality graph, with a separate direct recursive enumeration for small n.",
+  "computed_n": [2, 100],
+  "log_concavity_checks": "all passed",
+  "unimodality_checks": "all passed",
+  "independent_brute_force_crosschecks": {
+    "n": [2, 18],
+    "status": "all passed"
+  },
+  "external_crosscheck": "Coefficients agree with the Q[n,k] table in Goh and Saks (2024) for the overlapping n<=17 range.",
+  "scope_note": "Exact finite computation only; it does not establish the all-n conjecture."
+}
