@@ -1,0 +1,29 @@
+{
+  "method": "Compare direct admissible Kelmans moves with the derived distance criterion on graph-atlas isomorphism representatives.",
+  "orders": {
+    "4": {
+      "connected_complementary_isomorphism_classes": 1,
+      "terminal_classes": 1,
+      "graph6_sets_equal": true
+    },
+    "5": {
+      "connected_complementary_isomorphism_classes": 8,
+      "terminal_classes": 3,
+      "graph6_sets_equal": true
+    },
+    "6": {
+      "connected_complementary_isomorphism_classes": 68,
+      "terminal_classes": 10,
+      "graph6_sets_equal": true
+    },
+    "7": {
+      "connected_complementary_isomorphism_classes": 662,
+      "terminal_classes": 24,
+      "graph6_sets_equal": true
+    }
+  },
+  "limitations": [
+    "Graph atlas covers these orders only.",
+    "The cross-check validates the implementation of the criterion, not its general mathematical proof."
+  ]
+}

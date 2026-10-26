@@ -1,0 +1,399 @@
+{
+  "conjecture": "031",
+  "group_order_range": [
+    23,
+    40
+  ],
+  "isomorphism_types_checked": 35,
+  "subset_sizes_counted": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "all_k5_inequalities_passed": true,
+  "minimum_k5_margin": 22194304,
+  "groups": [
+    {
+      "invariant_factors": [
+        23
+      ],
+      "group_order": 23,
+      "z4": 3960,
+      "z5": 4928,
+      "z6": 528,
+      "k5_margin": 22194304
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        6
+      ],
+      "group_order": 24,
+      "z4": 5460,
+      "z5": 7938,
+      "z6": 1176,
+      "k5_margin": 56590884
+    },
+    {
+      "invariant_factors": [
+        2,
+        12
+      ],
+      "group_order": 24,
+      "z4": 5164,
+      "z5": 7398,
+      "z6": 1256,
+      "k5_margin": 48244420
+    },
+    {
+      "invariant_factors": [
+        24
+      ],
+      "group_order": 24,
+      "z4": 5016,
+      "z5": 7112,
+      "z6": 1180,
+      "k5_margin": 44661664
+    },
+    {
+      "invariant_factors": [
+        5,
+        5
+      ],
+      "group_order": 25,
+      "z4": 6120,
+      "z5": 9600,
+      "z6": 1920,
+      "k5_margin": 80409600
+    },
+    {
+      "invariant_factors": [
+        25
+      ],
+      "group_order": 25,
+      "z4": 6120,
+      "z5": 9664,
+      "z6": 2112,
+      "k5_margin": 80467456
+    },
+    {
+      "invariant_factors": [
+        26
+      ],
+      "group_order": 26,
+      "z4": 7572,
+      "z5": 13344,
+      "z6": 3840,
+      "k5_margin": 148985856
+    },
+    {
+      "invariant_factors": [
+        3,
+        3,
+        3
+      ],
+      "group_order": 27,
+      "z4": 8892,
+      "z5": 16848,
+      "z6": 5616,
+      "k5_margin": 233917632
+    },
+    {
+      "invariant_factors": [
+        3,
+        9
+      ],
+      "group_order": 27,
+      "z4": 9006,
+      "z5": 17280,
+      "z6": 6324,
+      "k5_margin": 241644456
+    },
+    {
+      "invariant_factors": [
+        27
+      ],
+      "group_order": 27,
+      "z4": 9044,
+      "z5": 17424,
+      "z6": 6444,
+      "k5_margin": 245316240
+    },
+    {
+      "invariant_factors": [
+        2,
+        14
+      ],
+      "group_order": 28,
+      "z4": 11202,
+      "z5": 23922,
+      "z6": 10272,
+      "k5_margin": 457195140
+    },
+    {
+      "invariant_factors": [
+        28
+      ],
+      "group_order": 28,
+      "z4": 10980,
+      "z5": 23256,
+      "z6": 10456,
+      "k5_margin": 426034656
+    },
+    {
+      "invariant_factors": [
+        29
+      ],
+      "group_order": 29,
+      "z4": 12936,
+      "z5": 29568,
+      "z6": 16128,
+      "k5_margin": 665634816
+    },
+    {
+      "invariant_factors": [
+        30
+      ],
+      "group_order": 30,
+      "z4": 15404,
+      "z5": 38096,
+      "z6": 24232,
+      "k5_margin": 1078035488
+    },
+    {
+      "invariant_factors": [
+        31
+      ],
+      "group_order": 31,
+      "z4": 17940,
+      "z5": 47520,
+      "z6": 35280,
+      "k5_margin": 1625227200
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "group_order": 32,
+      "z4": 26040,
+      "z5": 83328,
+      "z6": 0,
+      "k5_margin": 6943555584
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        2,
+        4
+      ],
+      "group_order": 32,
+      "z4": 23352,
+      "z5": 70336,
+      "z6": 39424,
+      "k5_margin": 4026523648
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        8
+      ],
+      "group_order": 32,
+      "z4": 22044,
+      "z5": 64260,
+      "z6": 48488,
+      "k5_margin": 3060478128
+    },
+    {
+      "invariant_factors": [
+        2,
+        4,
+        4
+      ],
+      "group_order": 32,
+      "z4": 22056,
+      "z5": 64512,
+      "z6": 47808,
+      "k5_margin": 3107344896
+    },
+    {
+      "invariant_factors": [
+        2,
+        16
+      ],
+      "group_order": 32,
+      "z4": 21402,
+      "z5": 61378,
+      "z6": 50152,
+      "k5_margin": 2693905780
+    },
+    {
+      "invariant_factors": [
+        4,
+        8
+      ],
+      "group_order": 32,
+      "z4": 21408,
+      "z5": 61508,
+      "z6": 49984,
+      "k5_margin": 2713176592
+    },
+    {
+      "invariant_factors": [
+        32
+      ],
+      "group_order": 32,
+      "z4": 21084,
+      "z5": 59976,
+      "z6": 50320,
+      "k5_margin": 2536173696
+    },
+    {
+      "invariant_factors": [
+        33
+      ],
+      "group_order": 33,
+      "z4": 24250,
+      "z5": 73104,
+      "z6": 70164,
+      "k5_margin": 3642717816
+    },
+    {
+      "invariant_factors": [
+        34
+      ],
+      "group_order": 34,
+      "z4": 28176,
+      "z5": 90560,
+      "z6": 96256,
+      "k5_margin": 5489004544
+    },
+    {
+      "invariant_factors": [
+        35
+      ],
+      "group_order": 35,
+      "z4": 32130,
+      "z5": 108896,
+      "z6": 129168,
+      "k5_margin": 7708170976
+    },
+    {
+      "invariant_factors": [
+        2,
+        18
+      ],
+      "group_order": 36,
+      "z4": 37328,
+      "z5": 134706,
+      "z6": 173652,
+      "k5_margin": 11663624580
+    },
+    {
+      "invariant_factors": [
+        3,
+        12
+      ],
+      "group_order": 36,
+      "z4": 36848,
+      "z5": 131904,
+      "z6": 173168,
+      "k5_margin": 11017770752
+    },
+    {
+      "invariant_factors": [
+        6,
+        6
+      ],
+      "group_order": 36,
+      "z4": 37272,
+      "z5": 134208,
+      "z6": 175344,
+      "k5_margin": 11476365696
+    },
+    {
+      "invariant_factors": [
+        36
+      ],
+      "group_order": 36,
+      "z4": 36904,
+      "z5": 132376,
+      "z6": 172428,
+      "k5_margin": 11160122464
+    },
+    {
+      "invariant_factors": [
+        37
+      ],
+      "group_order": 37,
+      "z4": 41760,
+      "z5": 157248,
+      "z6": 224640,
+      "k5_margin": 15345967104
+    },
+    {
+      "invariant_factors": [
+        38
+      ],
+      "group_order": 38,
+      "z4": 47556,
+      "z5": 188604,
+      "z6": 291888,
+      "k5_margin": 21690443088
+    },
+    {
+      "invariant_factors": [
+        39
+      ],
+      "group_order": 39,
+      "z4": 53382,
+      "z5": 221112,
+      "z6": 372000,
+      "k5_margin": 29032412544
+    },
+    {
+      "invariant_factors": [
+        2,
+        2,
+        10
+      ],
+      "group_order": 40,
+      "z4": 61992,
+      "z5": 273672,
+      "z6": 482272,
+      "k5_margin": 44999357760
+    },
+    {
+      "invariant_factors": [
+        2,
+        20
+      ],
+      "group_order": 40,
+      "z4": 60888,
+      "z5": 266072,
+      "z6": 476816,
+      "k5_margin": 41761936576
+    },
+    {
+      "invariant_factors": [
+        40
+      ],
+      "group_order": 40,
+      "z4": 60336,
+      "z5": 262240,
+      "z6": 473024,
+      "k5_margin": 40229441536
+    }
+  ],
+  "scope": "Exact recursive subset-sum enumeration for every finite abelian group of order 23 through 40; no claim outside this finite range."
+}

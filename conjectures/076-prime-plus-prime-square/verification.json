@@ -1,0 +1,85 @@
+{
+  "claim": "For sufficiently large even N, if N is not a square and N != 1 (mod 3), then N = p + q^2 for primes p,q.",
+  "limit_inclusive": 1000000,
+  "eligible_even_inputs": 333166,
+  "represented_inputs": 333154,
+  "unrepresented_inputs": [
+    8,
+    18,
+    24,
+    74,
+    170,
+    614,
+    704,
+    1010,
+    1164,
+    15054,
+    21774,
+    24476
+  ],
+  "last_unrepresented_input": 24476,
+  "sample_representations": [
+    {
+      "N": 6,
+      "p": 2,
+      "q": 2
+    },
+    {
+      "N": 12,
+      "p": 3,
+      "q": 3
+    },
+    {
+      "N": 14,
+      "p": 5,
+      "q": 3
+    },
+    {
+      "N": 20,
+      "p": 11,
+      "q": 3
+    },
+    {
+      "N": 26,
+      "p": 17,
+      "q": 3
+    },
+    {
+      "N": 30,
+      "p": 5,
+      "q": 5
+    },
+    {
+      "N": 32,
+      "p": 23,
+      "q": 3
+    },
+    {
+      "N": 38,
+      "p": 29,
+      "q": 3
+    },
+    {
+      "N": 42,
+      "p": 17,
+      "q": 5
+    },
+    {
+      "N": 44,
+      "p": 19,
+      "q": 5
+    },
+    {
+      "N": 48,
+      "p": 23,
+      "q": 5
+    },
+    {
+      "N": 50,
+      "p": 41,
+      "q": 3
+    }
+  ],
+  "method": "Exact Eratosthenes sieve and exhaustive prime-q search for every eligible even N in range.",
+  "scope_note": "Finite verification only; does not prove the eventual conjecture."
+}

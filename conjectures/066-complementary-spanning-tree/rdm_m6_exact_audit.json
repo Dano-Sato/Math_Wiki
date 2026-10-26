@@ -1,0 +1,10 @@
+{
+  "claim": "For every simple graph F on six vertices, deg(u)>deg(v) implies ((7)I-L(F))^{-1}[u,u] > ((7)I-L(F))^{-1}[v,v].",
+  "status": "COMPUTATIONALLY VERIFIED for all labelled simple graphs on six vertices only",
+  "method": "Exhaust all 2^15 adjacency masks; compare exact integer principal cofactors over a common positive determinant.",
+  "labelled_graphs": 32768,
+  "strict_degree_comparisons": 357120,
+  "limitations": [
+    "Finite verification only; does not prove RDM for arbitrary m."
+  ]
+}

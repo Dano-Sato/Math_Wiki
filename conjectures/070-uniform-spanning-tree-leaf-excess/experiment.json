@@ -1,0 +1,43 @@
+{
+  "conjecture": "070",
+  "verification": "exact Pr\u00fcfer-code and supergraph-mask enumeration",
+  "scope": "all connected labeled simple graphs with 2 through 6 vertices",
+  "orders": [
+    {
+      "vertices": 2,
+      "connected_labeled_graphs_checked": 1,
+      "all_inequalities_passed": true,
+      "minimum_integer_slack": 0,
+      "equality_labeled_graphs": 1
+    },
+    {
+      "vertices": 3,
+      "connected_labeled_graphs_checked": 4,
+      "all_inequalities_passed": true,
+      "minimum_integer_slack": 0,
+      "equality_labeled_graphs": 4
+    },
+    {
+      "vertices": 4,
+      "connected_labeled_graphs_checked": 38,
+      "all_inequalities_passed": true,
+      "minimum_integer_slack": 0,
+      "equality_labeled_graphs": 16
+    },
+    {
+      "vertices": 5,
+      "connected_labeled_graphs_checked": 728,
+      "all_inequalities_passed": true,
+      "minimum_integer_slack": 0,
+      "equality_labeled_graphs": 72
+    },
+    {
+      "vertices": 6,
+      "connected_labeled_graphs_checked": 26704,
+      "all_inequalities_passed": true,
+      "minimum_integer_slack": 0,
+      "equality_labeled_graphs": 420
+    }
+  ],
+  "general_proof": false
+}

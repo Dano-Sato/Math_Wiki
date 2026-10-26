@@ -172,7 +172,7 @@ $n\le13$에서는 비동형 트리 2,288개에서 뿌리 동형류 20,299개를 
 
 ## 문헌 확인 범위와 한계
 
-지름별 트리 열거 자체는 새로운 주제가 아니다. Riordan의 1960년 논문은 트리를 높이와 지름으로 열거하는 방법을 다루며, OEIS [A001851](https://oeis.org/A001851)은 비동형 트리들의 지름 합과 관련 참고문헌을 정리한다. 비동형 트리의 점근 통계 문헌도 지름 분포를 연구한다. 이번 검색에서는 `unlabeled trees diameter distribution unimodal`, `number of trees of order n by diameter unimodality`, `unlabeled tree counts by diameter unimodal` 등의 검색어로 관련 문헌과 색인 자료를 살폈지만, 본 추측과 같은 전칭 단봉성 진술은 찾지 못했다.
+지름별 트리 열거 자체는 새로운 주제가 아니다. Riordan의 1960년 논문은 트리를 높이와 지름으로 열거하는 방법을 다루며, OEIS [A001851](https://oeis.org/A001851)은 비동형 트리들의 지름 합과 관련 참고문헌을 정리한다. Stufler는 균등 무작위 비동형 비루트 트리의 연속체 나무 스케일 극한을 증명했고, 따라서 지름이 $\sqrt n$ 크기인 중앙 영역을 점근적으로 연구할 기반은 알려져 있다([학위논문](https://edoc.ub.uni-muenchen.de/18812/)). Broutin–Flajolet은 비평면 비라벨 이진 트리에서 지름 분포의 국소 극한 법칙까지 다루지만, 이는 여기의 모든 비동형 트리와 다른 모형이다([논문](https://arxiv.org/abs/1009.1515)). 약한 극한이나 다른 모형의 국소 극한은 본 계수열의 유한 $n$ 단봉성을 직접 주지 않는다. 이번 검색에서는 `unlabeled trees diameter distribution unimodal`, `number of trees of order n by diameter unimodality`, `unlabeled tree counts by diameter unimodal` 등의 검색어로 관련 문헌과 색인 자료를 살폈지만, 본 추측과 같은 전칭 단봉성 진술은 찾지 못했다.
 
 이는 제한된 웹 검색 결과다. 논문 전문·인용망·서지 데이터베이스 전부를 조사한 것이 아니며, 이미 알려진 정리와의 중복 부재를 보증하지 않는다. 따라서 “이 위키에서 새로 구성한 후보”라고만 기록하며, 문헌상 최초라고 주장하지 않는다. 이미 같은 명제가 문헌에 있거나 일반 정리의 직접 귀결임을 확인하면 위키 규칙에 따라 이 번호 항목을 철회한다.
 

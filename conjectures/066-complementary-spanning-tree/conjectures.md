@@ -12,7 +12,7 @@
 | 깊이 | 2 · 날카로운 연구 문제 (Codex 추정) |
 | 상태 | 등록 (ChatGPT 48 · Claude 42, 평균 45) · 미증명 · $n\le7$ 전수와 Tree-CST $n\le14$ 전수는 Claude가 정확 계산으로 재현 · 아래 계산·증명 상태 참조 |
 | 독창성 | 제한된 문헌 검색에서 동일한 곱 하한은 찾지 못함. 인접한 Kelmans 변환, tree shift, 신장나무 수의 Nordhaus–Gaddum형 합 상계와 구분하며 문헌상 최초를 주장하지 않음 |
-| 검증 | [RDM 유한 정확 검산](audit_rdm_exact.py), [결과](rdm_exact_audit.json) |
+| 검증 | [RDM 유한 정확 검산](audit_rdm_exact.py), [m=6 추가 검산](audit_rdm_m6.py), [결과](rdm_exact_audit.json), [m=6 결과](rdm_m6_exact_audit.json) |
 | 토론 | [discussion.md](discussion.md) |
 
 ## 1. 본 추측: Complementary Spanning Tree Conjecture (CST)
@@ -86,7 +86,7 @@ $$
 \deg(u)>\deg(v)\implies (M^{-1})_{uu}>(M^{-1})_{vv}.
 $$
 
-$\lambda_{\max}(L(F))\le m$이므로 이 정의에서 $M$은 양의 정부호다. 일반 RDM은 **CLAIMED / 미증명**으로 둔다. [정확 유한 검산](audit_rdm_exact.py)은 $2\le m\le5$의 모든 라벨 단순 그래프 1,098개에서 가능한 차수 비교 7,292개를 유리수 정확도로 검사했고 모두 통과했다. 이 결과는 유한 범위만 검증하며, 제시되지 않은 Schur 보수 증명이나 임의 크기의 RDM을 검증하지 않는다.
+$\lambda_{\max}(L(F))\le m$이므로 이 정의에서 $M$은 양의 정부호다. 일반 RDM은 **CLAIMED / 미증명**으로 둔다. [정확 유한 검산](audit_rdm_exact.py)은 $2\le m\le5$의 모든 라벨 단순 그래프 1,098개에서 차수 비교 7,292건을 통과했다. 추가 [6개 정점 검산](audit_rdm_m6.py)은 32,768개 그래프에서 차수 비교 357,120건을 정확한 정수 주인수로 확인했고 모두 통과했다. 이 결과는 유한 범위만 검증하며 임의 크기의 RDM을 증명하지 않는다.
 
 ## 깊이 근거
 

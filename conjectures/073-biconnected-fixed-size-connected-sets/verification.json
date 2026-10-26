@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-27",
+  "claim": "For every 2-connected simple graph G of order n and every 2 <= k < n, the number a_k(G) of k-vertex sets inducing a connected subgraph is at least n.",
+  "exact_exhaustive": {
+    "method": "NetworkX graph_atlas_g; all non-isomorphic graphs in the atlas filtered for 2-connectivity; each vertex subset counted exactly.",
+    "graphs_by_order": {"3": 1, "4": 3, "5": 10, "6": 56, "7": 468},
+    "counterexamples": 0
+  },
+  "random_screen": {
+    "method": "Fixed-seed G(n,p) sampling, p uniform in [0.2,0.6], retaining only 2-connected graphs, exact subset counts.",
+    "orders": [8, 9, 10],
+    "2_connected_graphs_checked": 480,
+    "counterexamples": 0,
+    "seed": 20261027
+  },
+  "limitations": "Finite computation only; it does not prove the conjecture. Random screening is not exhaustive. NetworkX 3.4.2 was used for graph generation and connectivity checks."
+}

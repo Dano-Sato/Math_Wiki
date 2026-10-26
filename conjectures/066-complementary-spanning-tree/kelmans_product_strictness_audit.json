@@ -1,0 +1,77 @@
+{
+  "method": "Enumerate all ordered Kelmans moves with strict degree-square increase that preserve connectivity of graph and complement; compute tree counts by exact Bareiss determinants.",
+  "orders": {
+    "4": {
+      "connected_complementary_isomorphism_classes": 1,
+      "admissible_strict_potential_moves": 0,
+      "graph_tree_count_equal_moves": 0,
+      "complement_tree_count_equal_moves": 0,
+      "both_tree_counts_equal_moves": 0,
+      "samples": {
+        "graph_count_equal": null,
+        "complement_count_equal": null
+      }
+    },
+    "5": {
+      "connected_complementary_isomorphism_classes": 8,
+      "admissible_strict_potential_moves": 40,
+      "graph_tree_count_equal_moves": 10,
+      "complement_tree_count_equal_moves": 10,
+      "both_tree_counts_equal_moves": 0,
+      "samples": {
+        "graph_count_equal": {
+          "graph6": "Dh_",
+          "beneficiary": 0,
+          "co_beneficiary": 1
+        },
+        "complement_count_equal": {
+          "graph6": "DbW",
+          "beneficiary": 2,
+          "co_beneficiary": 3
+        }
+      }
+    },
+    "6": {
+      "connected_complementary_isomorphism_classes": 68,
+      "admissible_strict_potential_moves": 612,
+      "graph_tree_count_equal_moves": 126,
+      "complement_tree_count_equal_moves": 126,
+      "both_tree_counts_equal_moves": 0,
+      "samples": {
+        "graph_count_equal": {
+          "graph6": "EiGO",
+          "beneficiary": 1,
+          "co_beneficiary": 2
+        },
+        "complement_count_equal": {
+          "graph6": "E]a?",
+          "beneficiary": 1,
+          "co_beneficiary": 2
+        }
+      }
+    },
+    "7": {
+      "connected_complementary_isomorphism_classes": 662,
+      "admissible_strict_potential_moves": 11136,
+      "graph_tree_count_equal_moves": 1244,
+      "complement_tree_count_equal_moves": 1244,
+      "both_tree_counts_equal_moves": 0,
+      "samples": {
+        "graph_count_equal": {
+          "graph6": "FiOG_",
+          "beneficiary": 1,
+          "co_beneficiary": 3
+        },
+        "complement_count_equal": {
+          "graph6": "FMpA?",
+          "beneficiary": 0,
+          "co_beneficiary": 3
+        }
+      }
+    }
+  },
+  "limitations": [
+    "The enumeration covers graph-atlas representatives for orders 4 through 7 only.",
+    "The standard Kelmans theorem gives nonincrease of each tree count; the finite audit does not prove that at least one count strictly decreases in every admissible move for arbitrary order."
+  ]
+}

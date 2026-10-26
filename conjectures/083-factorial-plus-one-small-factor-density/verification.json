@@ -1,0 +1,32 @@
+{
+  "X_inclusive": 20000,
+  "threshold_counts": [
+    {
+      "C": "11/10",
+      "count": 2424,
+      "normalized_by_X_over_log_X": 1.2003026913673787,
+      "predicted_constant": 1.095310179804325
+    },
+    {
+      "C": "5/4",
+      "count": 2644,
+      "normalized_by_X_over_log_X": 1.309241054445276,
+      "predicted_constant": 1.2231435513142097
+    },
+    {
+      "C": "3/2",
+      "count": 3013,
+      "normalized_by_X_over_log_X": 1.4919603997895676,
+      "predicted_constant": 1.4054651081081644
+    },
+    {
+      "C": "2/1",
+      "count": 3513,
+      "normalized_by_X_over_log_X": 1.7395475886029708,
+      "predicted_constant": 1.6931471805599454
+    }
+  ],
+  "wilson_forced_inputs_n_plus_1_prime": 2261,
+  "method": "For every prime r <= 2X, exact recurrence for n! modulo r; mark n when n! = -1 (mod r).",
+  "scope_note": "Exact finite modular check only; it provides no asymptotic proof."
+}
