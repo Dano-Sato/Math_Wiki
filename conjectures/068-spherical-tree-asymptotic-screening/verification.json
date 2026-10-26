@@ -1,0 +1,144 @@
+{
+  "id": "068",
+  "version": "0.1",
+  "arithmetic": "exact integers and fractions; Python standard library",
+  "source_sha256": "1f296b8766367a8e7e42f8581c79f3d590e7c3bb201b0879928e39b1853fad58",
+  "checks": {
+    "A_and_B_mobius_matrices": "passed",
+    "W_k_rational_function_identity": {
+      "k_min": 1,
+      "k_max": 16
+    },
+    "bootstrap": {
+      "word": [
+        5,
+        4,
+        3,
+        5,
+        3,
+        3,
+        4,
+        4,
+        5,
+        3,
+        3,
+        4,
+        5,
+        4,
+        3,
+        4,
+        3
+      ],
+      "q_states": [
+        "4",
+        "3",
+        "8",
+        "7/3",
+        "16/5",
+        "11",
+        "10",
+        "9",
+        "32/13",
+        "19/5",
+        "56",
+        "55",
+        "216/59",
+        "157/59",
+        "392/79",
+        "313/79",
+        "312"
+      ],
+      "minimum_q": "7/3",
+      "exit_q": "312"
+    },
+    "telescoping_product_identity_prefixes": 17,
+    "ldl_last_pivot_correction_prefixes": 17,
+    "compressed_seed_cycles": [
+      {
+        "k": 1,
+        "background_run_length": 188,
+        "prefix_length": 212,
+        "distance_below_pole": "8/9",
+        "minimum_q_inside_W": "359/278",
+        "exit_q": "517/2",
+        "next_pole": "5692/27"
+      },
+      {
+        "k": 2,
+        "background_run_length": 48,
+        "prefix_length": 269,
+        "distance_below_pole": "17/54",
+        "minimum_q_inside_W": "14444/11183",
+        "exit_q": "20932/17",
+        "next_pole": "28676/81"
+      },
+      {
+        "k": 3,
+        "background_run_length": 878,
+        "prefix_length": 1158,
+        "distance_below_pole": "1006/1377",
+        "minimum_q_inside_W": "306746/237497",
+        "exit_q": "444238/503",
+        "next_pole": "144028/243"
+      },
+      {
+        "k": 4,
+        "background_run_length": 291,
+        "prefix_length": 1462,
+        "distance_below_pole": "64889/122229",
+        "minimum_q_inside_W": "90872648/70355111",
+        "exit_q": "131777944/64889",
+        "next_pole": "722084/729"
+      },
+      {
+        "k": 5,
+        "background_run_length": 1041,
+        "prefix_length": 2518,
+        "distance_below_pole": "32735821/47304081",
+        "minimum_q_inside_W": "58626823072/45389564179",
+        "exit_q": "85035869216/32735821",
+        "next_pole": "3616252/2187"
+      },
+      {
+        "k": 6,
+        "background_run_length": 945,
+        "prefix_length": 3480,
+        "distance_below_pole": "63144485515/71593240527",
+        "minimum_q_inside_W": "29581799624696/22902445802897",
+        "exit_q": "42915249474088/12628897103",
+        "next_pole": "18098756/6561"
+      },
+      {
+        "k": 7,
+        "background_run_length": 640,
+        "prefix_length": 4139,
+        "distance_below_pole": "29619508193620/82858193892783",
+        "minimum_q_inside_W": "14271310112740217/11048803989715319",
+        "exit_q": "20713360407970651/1480975409681",
+        "next_pole": "90546268/19683"
+      },
+      {
+        "k": 8,
+        "background_run_length": 9387,
+        "prefix_length": 13547,
+        "distance_below_pole": "27139423706088476/29150038988751123",
+        "minimum_q_inside_W": "41836222262511642383/32389552230845352881",
+        "exit_q": "60715992613991177149/6784855926522119",
+        "next_pole": "452888804/59049"
+      }
+    ],
+    "finite_barrier_witness": {
+      "word": "bootstrap",
+      "endpoint_defect": "1/312",
+      "eta": "1/1048576",
+      "background_before_lower_bound": 1048576,
+      "background_after_lower_bound": 626
+    }
+  },
+  "limitations": [
+    "No finite calculation proves the infinite screening equivalence.",
+    "No finite calculation proves absence of every infinite alternative parsing.",
+    "Tree/Jacobi essential norms and the infinite construction require proof review.",
+    "No Lean proof or independent model review is included."
+  ]
+}

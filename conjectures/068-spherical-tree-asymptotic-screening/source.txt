@@ -1,0 +1,596 @@
+We study a bounded-integer spherically symmetric tree with branching sequence \((b_n)\), branching number \(b=\operatorname{br}(T)\), and radial Jacobi off-diagonals \(\sqrt{b_n}\).
+
+For a finite block \(w=(c_1,\dots,c_m)\), define
+\[
+K_b(w)=
+\begin{pmatrix}
+\sqrt b & \sqrt{c_1} & &\\
+\sqrt{c_1}&0&\ddots&\\
+&\ddots&0&\sqrt{c_m}\\
+&&\sqrt{c_m}&\sqrt b
+\end{pmatrix}.
+\]
+Call \(w\) screened if
+\[
+\lambda_{\max}(K_b(w))\le 2\sqrt b.
+\]
+
+### Finite Screening Conjecture (FSC)
+\[
+\boxed{
+\rho_{\rm ess}(T)=2\sqrt b
+\iff
+(b_n)_{n\gg1}\in\mathcal C_b^\omega
+}
+\]
+where \(\mathcal C_b\) is the set of screened finite blocks.
+
+Normalize \(\beta_n=b_n/b\). At threshold \(2\sqrt b\),
+\[
+x_{n+1}=2-\frac{\beta_n}{x_n},
+\qquad
+\beta_n=x_n(2-x_{n+1}).
+\]
+A block started at \(x_0=1\) is screened iff
+\[
+x_j>0\ (j<m),\qquad x_m\ge1.
+\]
+
+Useful identity:
+\[
+\prod_{j=0}^{m-1}\beta_j
+=
+(2-x_m)\prod_{j=1}^{m-1}\bigl[1-(1-x_j)^2\bigr].
+\]
+
+Known:
+- screened tail factorization \(\Rightarrow \rho_{\rm ess}=2\sqrt b\);
+- nonconstant periodic branching gives \(\rho_{\rm ess}>2\sqrt{\operatorname{br}(T)}\);
+- minimal spectral edge does **not** force the distinguished Riccati orbit from \(x_0=1\) to return to \(1\).
+
+Indeed, for \(b=4\), with
+\[
+q=(1-x)^{-1},\qquad
+F_c(q)=\frac{4(q-1)}{(c-4)q+4},
+\]
+one can construct a bounded-integer infinite word with
+\[
+0<x_n<1\ \forall n,\qquad \limsup x_n=1,\qquad \operatorname{br}(T)=4,
+\]
+and still \(\rho_{\rm ess}(T)=4\).
+
+This is **not** an FSC counterexample because the same word admits another parsing into screened blocks such as
+\[
+(5,3),\qquad(7,1),\qquad(4).
+\]
+
+Therefore the true hard direction is:
+\[
+\boxed{
+\rho_{\rm ess}(T)=2\sqrt b
+\Longrightarrow
+\text{existence of some screened tail factorization}.
+}
+\]
+
+Promising proof route:
+show that a tail with no screened factorization yields a recurrent irreducible bad pattern/right limit whose Jacobi spectral radius is \(>2\sqrt b\).
+
+Counterexample route:
+for \(b=6\), let
+\[
+y=\frac1{1-x},\qquad
+T_c(y)=\frac{6(y-1)}{(c-6)y+6}.
+\]
+Background digit \(6\) acts by \(y\mapsto y-1\).
+
+Search for admissible words \(W\) with
+\[
+5\xrightarrow{W}Y\in\mathbb Z
+\]
+and large
+\[
+\frac{Y}{|W|}.
+\]
+Then
+\[
+5\xrightarrow{W}Y\xrightarrow{6^{Y-5}}5
+\]
+is an exact Riccati cycle.
+
+Define the Reachability Growth problem:
+\[
+\boxed{
+\sup\left\{
+\frac{Y}{|W|}:
+5\xrightarrow{W}Y\in\mathbb Z,\ W\text{ admissible}
+\right\}
+\stackrel{?}{=}\infty.
+}
+\]
+
+A YES gives strong candidates for critical aperiodic examples, but to refute FSC one must additionally prove that the resulting infinite word has **no alternative screened factorization**.
+
+Current status: FSC and the weaker asymptotic version remain open. The core issue is now a language/factorization problem, not finite return of one Riccati orbit.
+
+Factorization-graph reformulation:
+
+Let tail positions n be vertices, with an edge
+
+n -> m
+
+iff
+
+(b_n,...,b_{m-1}) ∈ C_b.
+
+Then
+
+(b_n)_{n>>1} ∈ C_b^ω
+
+iff this directed graph has an infinite path from some sufficiently large vertex.
+
+Thus failure of screened factorization is stronger than failure of one Riccati orbit: every possible sequence of screened resets eventually dies.
+
+By compactness/König-type reasoning, a non-factorizable tail should yield a right limit with arbitrarily deep finite parsing obstructions. Passing to a minimal subshift reduces the problem to:
+
+Can a uniformly recurrent aperiodic right limit satisfy
+
+rho(J)=2 sqrt(b)
+
+while admitting no screened factorization at any shift?
+
+Periodic minimal right limits are excluded, since nonconstant periodic branching gives
+
+rho > 2 sqrt(b).
+
+Hence any genuine FSC counterexample must contain an aperiodic minimal, uniformly recurrent, non-factorizable right limit.
+
+The natural dynamical object is therefore not one Riccati trajectory, but the set of all surviving Riccati states under arbitrary screened resets. FSC becomes an infinite-path problem in this nondeterministic reset system.
+
+
+
+FSC is false, conditional only on the already-established b=4 seed:
+
+There exists a bounded integer word a=(a_n) such that, with
+β_n=a_n/4 and
+x_0=1,  x_{n+1}=2-β_n/x_n,
+
+we have
+0<x_n<1 for all n≥1,
+and limsup x_n=1.
+
+Choose m_k→∞ with
+δ_k:=1-x_{m_k}→0,
+and let
+w_k=(a_0,...,a_{m_k-1}).
+
+Each w_k has no screened nonempty prefix, since its Riccati orbit started
+from 1 satisfies x_j<1 at every endpoint.
+
+Moreover w_k is asymptotically screened. After normalizing by √b=2,
+let
+A_k:=2I-K_4(w_k)/2.
+The LDL^T pivots are the Riccati pivots, with the only negative final
+pivot equal to x_{m_k}-1=-δ_k. Hence
+
+A_k + δ_k e e^T >= 0,
+
+so
+λ_max(K_4(w_k)) <= 4+2δ_k -> 4.
+
+Now construct
+
+B = 4^{L_1} w_1 4^{L_2} w_2 4^{L_3} w_3 ...
+
+with L_k growing sufficiently fast.
+
+(1) br(T_B)=4:
+the defect blocks have zero asymptotic density, since L_k dominate all
+previous lengths. Hence
+(1/N) Σ log(B_n/4) -> 0.
+
+(2) ρ_ess(T_B)=4:
+constant-4 blocks are exactly screened, while each w_k violates the
+threshold only by a rank-one error of size δ_k.
+Gluing the block quadratic forms gives, for J_B/2,
+
+2I-J_B/2 >= -D,
+
+where D is diagonal, supported at the right ends of w_k, with entries
+δ_k→0. Thus D is compact, so
+
+sup σ_ess(J_B/2) <= 2.
+
+Because arbitrarily long 4-runs occur, Weyl sequences for the constant
+4 Jacobi matrix give 2∈σ_ess(J_B/2). By bipartite symmetry,
+
+ρ_ess(T_B)=4=2√br(T_B).
+
+(3) No screened tail factorization:
+for background digit 4, the Riccati map is
+
+f(x)=2-1/x.
+
+For x>1,
+1/(f(x)-1)=1/(x-1)+1,
+
+so after L background steps every surviving x>1 is uniformly within
+1/L of 1.
+
+For 0<x<1,
+1/(1-f(x))=1/(1-x)-1,
+
+so such an orbit eventually becomes nonpositive.
+
+For each finite w_k, since its orbit from 1 satisfies x_j<1 for every
+prefix, continuity gives η_k>0 such that every entrance state
+
+1 <= z <= 1+η_k
+
+passes through w_k with all relevant endpoint states <1, and exits at
+
+x <= 1-δ_k/2.
+
+Choose the 4-run before w_k long enough that every orbit surviving to
+w_k enters with z<=1+η_k.
+
+Then choose the 4-run after w_k longer than 2/δ_k+1.
+After w_k the state is <1, so the background dynamics keeps it below 1
+and forces it nonpositive before the next defect.
+
+Hence no screened block can cross w_k.
+Each w_k is therefore a cut barrier in the factorization graph.
+
+There are infinitely many such barriers, so no sufficiently late
+position admits an infinite path of screened blocks. Thus
+
+(B_n)_{n>>1} notin C_4^ω,
+
+while
+
+ρ_ess(T_B)=4=2√br(T_B).
+
+Therefore FSC is false.
+
+Core mechanism:
+
+nonreturn + arbitrarily soft near-return
+=> unscreened blocks with spectral excess -> 0
+=> sparse compact spectral defects
+=> critical essential spectrum
+but infinitely many parsing barriers.
+
+## Asymptotic Screening Conjecture — proof candidate
+
+Let \(T\) have bounded integer branching sequence \(b_n\), let
+\[
+b=\operatorname{br}(T),
+\]
+and define
+\[
+\delta_b(w)=\bigl[\lambda_{\max}(K_b(w))-2\sqrt b\bigr]_+.
+\]
+
+Claim:
+\[
+\rho_{\rm ess}(T)=2\sqrt b
+\iff
+(b_n)_{n\gg1}=w_1w_2\cdots,\qquad
+\delta_b(w_k)\to0.
+\]
+
+### Normalize
+
+Set
+\[
+a_n=\sqrt{b_n/b}
+\]
+and \(J=\frac1{\sqrt b}J_T\). Then the threshold is \(2\), and
+\[
+\operatorname{br}(T)=b
+\implies
+\liminf_{N\to\infty}(a_0\cdots a_{N-1})^{1/N}=1.
+\tag{1}
+\]
+
+Assume first
+\[
+\|J\|_{\rm ess}=2.
+\]
+
+Let \(E=\sigma_{\rm ess}(J)\subset[-2,2]\).
+
+For the spectral measure of \(J\), the norm of the degree-\(N\) monic orthogonal polynomial is
+\[
+a_0a_1\cdots a_{N-1}.
+\]
+The monic Chebyshev extremal bound gives
+\[
+\limsup_N(a_0\cdots a_{N-1})^{1/N}
+\le \operatorname{cap}(E).
+\tag{2}
+\]
+Discrete spectrum outside \(E\) is polar and does not change logarithmic capacity.
+
+Since
+\[
+E\subset[-2,2],\qquad \operatorname{cap}([-2,2])=1,
+\]
+(1)–(2) imply
+\[
+1\le \operatorname{cap}(E)\le1.
+\]
+Hence
+\[
+\operatorname{cap}(E)=1.
+\]
+A proper compact subset of \([-2,2]\) has strictly smaller capacity, so
+\[
+E=[-2,2],
+\]
+and
+\[
+(a_0\cdots a_{N-1})^{1/N}\to1.
+\]
+Thus the Jacobi matrix is regular for \([-2,2]\).
+
+By the Cesàro–Nevai theorem for regular Jacobi matrices,
+\[
+\frac1N\sum_{n<N}(a_n-1)^2\to0.
+\tag{3}
+\]
+
+Because \(b_n\) ranges over a finite set of integers, (3) forces
+\[
+b\in\mathbb Z
+\]
+and
+\[
+\frac1N\#\{n<N:b_n\neq b\}\to0.
+\tag{4}
+\]
+
+Therefore arbitrarily long exact \(b\)-runs occur.
+
+Choose disjoint \(b\)-runs of lengths \(L_k\to\infty\), and put a cut at the midpoint of each. Let \(w_k\) be the block between consecutive cuts. Then each \(w_k\) has exact \(b\)-background of length
+\[
+\ell_k\to\infty
+\]
+available outside both endpoints.
+
+We claim
+\[
+\delta_b(w_k)\to0.
+\]
+
+Normalize
+\[
+\widehat K_k=K_b(w_k)/\sqrt b.
+\]
+Suppose not. Then for some \(\varepsilon>0\) and infinitely many \(k\),
+\[
+\lambda_{\max}(\widehat K_k)\ge2+\varepsilon.
+\tag{5}
+\]
+
+Take a normalized Perron eigenvector \(v\ge0\):
+\[
+\widehat K_kv=\mu v,\qquad \mu\ge2+\varepsilon.
+\]
+
+Attach to both endpoints geometric tails in the surrounding constant background:
+\[
+tv_0,t^2v_0,\ldots,
+\qquad
+tv_m,t^2v_m,\ldots,
+\]
+where \(0<t<1\), and put
+\[
+\lambda=t+t^{-1}>2.
+\]
+
+For the infinite geometric extension \(u\), direct calculation gives
+\[
+\langle(J-\lambda)u,u\rangle
+=
+(\mu-\lambda)\|v\|^2
+-(1-t)(v_0^2+v_m^2).
+\]
+Since \(\|v\|=1\),
+\[
+\langle(J-\lambda)u,u\rangle
+\ge
+\mu-\lambda-(1-t).
+\tag{6}
+\]
+
+Choose \(s=1-t>0\) sufficiently small. Since
+\[
+\lambda-2
+=t+t^{-1}-2
+=\frac{s^2}{1-s},
+\]
+we can ensure
+\[
+\varepsilon-s-\frac{s^2}{1-s}>0.
+\]
+Thus (5)–(6) give a uniform \(c(\varepsilon)>0\) such that
+\[
+\frac{\langle Ju,u\rangle}{\|u\|^2}>2+c(\varepsilon).
+\tag{7}
+\]
+
+The actual constant background has finite length \(\ell_k\), but truncating the geometric tails creates only \(O(t^{2\ell_k})\) error. Since \(\ell_k\to\infty\), (7) yields unit vectors supported arbitrarily far out with Rayleigh quotient \(>2+c(\varepsilon)/2\).
+
+Hence
+\[
+\|J\|_{\rm ess}>2,
+\]
+contradiction.
+
+Therefore
+\[
+\delta_b(w_k)\to0.
+\]
+
+This proves
+\[
+\rho_{\rm ess}(T)=2\sqrt b
+\implies
+\text{asymptotically screened factorization}.
+\]
+
+---
+
+For the converse, suppose
+\[
+(b_n)_{n\gg1}=w_1w_2\cdots,
+\qquad
+\delta_b(w_k)\to0.
+\]
+
+After normalization,
+\[
+\lambda_{\max}(\widehat K(w_k))
+\le2+\eta_k,
+\qquad \eta_k\to0.
+\]
+
+Apply the corresponding quadratic-form bound on every block and sum them. At each common cut vertex the two endpoint diagonal contributions \(1+1\) equal exactly the threshold \(2\), so the artificial Robin boundary terms cancel.
+
+Consequently, on sufficiently far tails,
+\[
+\langle Ju,u\rangle
+\le(2+o(1))\|u\|^2,
+\]
+hence
+\[
+\|J\|_{\rm ess}\le2.
+\]
+
+The standard lower bound
+\[
+\rho_{\rm ess}(T)\ge2\sqrt{\operatorname{br}(T)}
+\]
+gives the reverse inequality. Therefore
+\[
+\rho_{\rm ess}(T)=2\sqrt b.
+\]
+
+Hence
+\[
+\boxed{
+\rho_{\rm ess}(T)=2\sqrt{\operatorname{br}(T)}
+\iff
+(b_n)_{n\gg1}=w_1w_2\cdots
+\text{ with }
+\delta_b(w_k)\to0.
+}
+\]
+
+The proof mechanism is
+
+\[
+\text{critical spectrum}
+\Rightarrow
+\text{Jacobi regularity}
+\Rightarrow
+b_n=b\text{ with density }1
+\Rightarrow
+\text{arbitrarily long exact background runs}
+\Rightarrow
+\text{cut between long runs}
+\Rightarrow
+\text{boundary-extension argument}
+\Rightarrow
+\delta_b(w_k)\to0.
+\]
+
+Main point to audit carefully: the capacity/regularity step and the indexing in the geometric-tail boundary-extension calculation.
+
+
+### Audit notes
+
+The two main proof bottlenecks survive direct checking.
+
+1. **Capacity/regularity step.** From
+\[
+\liminf_N(a_0\cdots a_{N-1})^{1/N}=1,\qquad
+\sigma_{\rm ess}(J)\subset[-2,2],
+\]
+the monic orthogonal-polynomial extremal bound gives
+\[
+\limsup_N(a_0\cdots a_{N-1})^{1/N}
+\le \operatorname{cap}(\sigma_{\rm ess}(J))\le1.
+\]
+Hence equality holds, \(\operatorname{cap}(\sigma_{\rm ess}(J))=1\), so
+\[
+\sigma_{\rm ess}(J)=[-2,2],
+\]
+and \(J\) is regular for \([-2,2]\). The Cesàro–Nevai theorem then yields
+\[
+\frac1N\sum_{n<N}(a_n-1)^2\to0.
+\]
+Since \(b_n\) ranges over finitely many integers, this forces \(b\in\mathbb Z\) and \(b_n=b\) with density \(1\).
+
+2. **Geometric-tail extension.** If
+\[
+\widehat K_kv=\mu v,\qquad \mu\ge2+\varepsilon,
+\]
+and geometric tails \(t^jv_0,t^jv_m\) are attached with
+\[
+\lambda=t+t^{-1},
+\]
+then direct calculation gives
+\[
+\langle(J-\lambda)u,u\rangle
+=
+(\mu-\lambda)\|v\|^2-(1-t)(v_0^2+v_m^2).
+\]
+Choosing \(t\) sufficiently close to \(1\) gives a uniform positive Rayleigh gap above \(2\). The extended norm is uniformly bounded for fixed \(t\), and truncating inside \(b\)-runs of length \(\ell_k\to\infty\) produces only exponentially small error.
+
+3. **Converse gluing.** Summing the block quadratic-form inequalities is valid: at every common cut vertex the two artificial endpoint terms \(1+1\) cancel the double counting of the threshold term. Thus
+\[
+\|J\|_{\rm ess}\le2
+\]
+when \(\delta_b(w_k)\to0\).
+
+4. **Explicit \(b=4\) seed.** In
+\[
+q=(1-x)^{-1},
+\qquad
+F_c(q)=\frac{4(q-1)}{(c-4)q+4},
+\]
+let
+\[
+A=(5,3),\qquad B=(7,1,5,3,3),\qquad W_k=A^kB.
+\]
+Then
+\[
+F_A(q)+4=\frac35(q+4),
+\]
+and \(F_{W_k}\) has pole
+\[
+r_k=-4+\frac{232}{3}\left(\frac53\right)^k,
+\]
+with
+\[
+F_{W_k}(r_k-\delta)
+=
+\frac{140(5/3)^k}{\delta}-4,
+\qquad 0<\delta\le1.
+\]
+Starting from a finite bootstrap reaching some \(Q_1>r_1\), recursively use \(4\)-digits to move \(Q_k\) to \(r_k-\delta_k\), then apply \(W_k\). Since
+\[
+140>\frac{1160}{9},
+\]
+the resulting state exceeds \(r_{k+1}\), closing the induction. All intermediate states satisfy \(q>1\), hence
+\[
+0<x_n<1,\qquad \limsup x_n=1,
+\]
+while non-\(4\) digits have zero density, so
+\[
+\operatorname{br}(T)=4.
+\]
+
+Thus the previously assumed \(b=4\) seed can be made explicit; the remaining work is mainly formal bookkeeping, citations, and a fully written barrier/factorization argument.
