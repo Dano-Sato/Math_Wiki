@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-28",
+  "scope": "Exact residue cycles of auxiliary finite-prime recurrences only; original conjecture 004 remains unproved.",
+  "verification": "Integer state recurrence, repeated state, class increments, and separate literal gcd computation.",
+  "models": [
+    {
+      "modulus": 2,
+      "class_order": [
+        1,
+        2
+      ],
+      "cycle_start_index": 3,
+      "repeated_state_index": 5,
+      "period": 2,
+      "phase": 1,
+      "counts_mod_modulus_at_both_indices": [
+        0,
+        0
+      ],
+      "full_counts_at_cycle_start": {
+        "1": 2,
+        "2": 0
+      },
+      "full_counts_at_repeat": {
+        "1": 2,
+        "2": 2
+      },
+      "class_increments_per_cycle": {
+        "1": 0,
+        "2": 2
+      },
+      "cycle_residues": [
+        0,
+        0
+      ],
+      "cycle_residue_counts": {
+        "0": 2,
+        "1": 0
+      },
+      "odd_density": "0",
+      "limit_b_n_over_n_by_gcd_n_modulus": {
+        "1": "1",
+        "2": "0"
+      },
+      "prefix_residues_before_cycle": [
+        1,
+        1
+      ],
+      "first_difference_from_original": {
+        "n": 9,
+        "original_a_n": 7,
+        "truncated_b_n": 8
+      },
+      "literal_gcd_check_terms": 3000
+    },
+    {
+      "modulus": 6,
+      "class_order": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "cycle_start_index": 65,
+      "repeated_state_index": 113,
+      "period": 48,
+      "phase": 5,
+      "counts_mod_modulus_at_both_indices": [
+        4,
+        5,
+        2,
+        5
+      ],
+      "full_counts_at_cycle_start": {
+        "1": 16,
+        "2": 23,
+        "3": 8,
+        "6": 17
+      },
+      "full_counts_at_repeat": {
+        "1": 28,
+        "2": 41,
+        "3": 14,
+        "6": 29
+      },
+      "class_increments_per_cycle": {
+        "1": 12,
+        "2": 18,
+        "3": 6,
+        "6": 12
+      },
+      "cycle_residues": [
+        4,
+        4,
+        0,
+        0,
+        5,
+        1,
+        4,
+        0,
+        0,
+        2,
+        3,
+        3,
+        4,
+        0,
+        0,
+        4,
+        5,
+        5,
+        4,
+        2,
+        0,
+        0,
+        3,
+        1,
+        4,
+        3,
+        0,
+        3,
+        5,
+        5,
+        4,
+        5,
+        0,
+        1,
+        4,
+        2,
+        4,
+        1,
+        0,
+        3,
+        2,
+        4,
+        4,
+        2,
+        0,
+        4,
+        1,
+        5
+      ],
+      "cycle_residue_counts": {
+        "0": 12,
+        "1": 5,
+        "2": 5,
+        "3": 6,
+        "4": 13,
+        "5": 7
+      },
+      "odd_density": "3/8",
+      "limit_b_n_over_n_by_gcd_n_modulus": {
+        "1": "1",
+        "2": "3/8",
+        "3": "5/8",
+        "6": "1/4"
+      },
+      "prefix_residues_before_cycle": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        2,
+        0,
+        2,
+        1,
+        3,
+        4,
+        3,
+        0,
+        5,
+        4,
+        0,
+        4,
+        4,
+        0,
+        0,
+        1,
+        1,
+        4,
+        0,
+        0,
+        2,
+        5,
+        3,
+        4,
+        1,
+        0,
+        5,
+        3,
+        1,
+        4,
+        4,
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        0,
+        5,
+        5,
+        1,
+        4,
+        3,
+        0,
+        3,
+        2,
+        4,
+        4,
+        3,
+        0,
+        5,
+        0,
+        0,
+        4,
+        4,
+        0,
+        0,
+        2,
+        0
+      ],
+      "first_difference_from_original": {
+        "n": 14,
+        "original_a_n": 4,
+        "truncated_b_n": 5
+      },
+      "literal_gcd_check_terms": 3000
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-27",
+  "limit": 100000,
+  "literal_prefix_checked": 1000,
+  "exact_identities_and_finite_inequalities_passed": true,
+  "scope": "Finite checks only; hypothesis (A) and conjecture 004 remain unproved.",
+  "checkpoints": [
+    {
+      "N": 1000,
+      "sum_absolute_error_over_N_squared": 0.021041,
+      "moduli": {
+        "1": {
+          "exact_double_count_verified": true,
+          "floor_error": -141.8536270132172,
+          "proven_finite_error_bound": 4740,
+          "weighted_coprime_mean": 0.5784353324196735,
+          "conditional_target": 0.6079271018540267,
+          "totient_multiple_sum_over_N_squared": 0.304192
+        },
+        "2": {
+          "exact_double_count_verified": true,
+          "floor_error": 84.19633899084874,
+          "proven_finite_error_bound": 1416,
+          "weighted_coprime_mean": 0.34439066156389714,
+          "conditional_target": 0.4052847345693511,
+          "totient_multiple_sum_over_N_squared": 0.101531
+        },
+        "3": {
+          "exact_double_count_verified": true,
+          "floor_error": 98.59375720706885,
+          "proven_finite_error_bound": 2592,
+          "weighted_coprime_mean": 0.43084526363511777,
+          "conditional_target": 0.45594532639052,
+          "totient_multiple_sum_over_N_squared": 0.076178
+        },
+        "6": {
+          "exact_double_count_verified": true,
+          "floor_error": -65.24410564032951,
+          "proven_finite_error_bound": 752,
+          "weighted_coprime_mean": 0.2556908354132561,
+          "conditional_target": 0.3039635509270133,
+          "totient_multiple_sum_over_N_squared": 0.02529
+        },
+        "30": {
+          "exact_double_count_verified": true,
+          "floor_error": 59.177270066418714,
+          "proven_finite_error_bound": 560,
+          "weighted_coprime_mean": 0.21730638683876755,
+          "conditional_target": 0.25330295910584444,
+          "totient_multiple_sum_over_N_squared": 0.004296
+        }
+      },
+      "divisibility_densities": {
+        "1": 1.0,
+        "2": 0.577,
+        "3": 0.337,
+        "6": 0.192,
+        "30": 0.033
+      },
+      "truncated_weight_means": {
+        "2": 0.8124800032754492,
+        "3": 0.9157201589846843,
+        "5": 0.9525971899648179,
+        "7": 0.9721700582108954,
+        "11": 0.9796139112154821
+      }
+    },
+    {
+      "N": 10000,
+      "sum_absolute_error_over_N_squared": 0.01569887,
+      "moduli": {
+        "1": {
+          "exact_double_count_verified": true,
+          "floor_error": -2269.8884332366288,
+          "proven_finite_error_bound": 63200,
+          "weighted_coprime_mean": 0.5782976563035205,
+          "conditional_target": 0.6079271018540267,
+          "totient_multiple_sum_over_N_squared": 0.30397486
+        },
+        "2": {
+          "exact_double_count_verified": true,
+          "floor_error": 860.8211264200509,
+          "proven_finite_error_bound": 18874,
+          "weighted_coprime_mean": 0.35267925655355964,
+          "conditional_target": 0.4052847345693511,
+          "totient_multiple_sum_over_N_squared": 0.10134153
+        },
+        "3": {
+          "exact_double_count_verified": true,
+          "floor_error": 1163.8968191025779,
+          "proven_finite_error_bound": 32676,
+          "weighted_coprime_mean": 0.42723509126678383,
+          "conditional_target": 0.45594532639052,
+          "totient_multiple_sum_over_N_squared": 0.07600998
+        },
+        "6": {
+          "exact_double_count_verified": true,
+          "floor_error": -1109.6882450971752,
+          "proven_finite_error_bound": 10222,
+          "weighted_coprime_mean": 0.264198907916154,
+          "conditional_target": 0.3039635509270133,
+          "totient_multiple_sum_over_N_squared": 0.0253205
+        },
+        "30": {
+          "exact_double_count_verified": true,
+          "floor_error": 403.73460644634906,
+          "proven_finite_error_bound": 7014,
+          "weighted_coprime_mean": 0.2179266856618033,
+          "conditional_target": 0.25330295910584444,
+          "totient_multiple_sum_over_N_squared": 0.00422688
+        }
+      },
+      "divisibility_densities": {
+        "1": 1.0,
+        "2": 0.5647,
+        "3": 0.3511,
+        "6": 0.2059,
+        "30": 0.0407
+      },
+      "truncated_weight_means": {
+        "2": 0.8039160560534903,
+        "3": 0.9107384467715203,
+        "5": 0.9494680964208652,
+        "7": 0.969693699839886,
+        "11": 0.9780115117056409
+      }
+    },
+    {
+      "N": 100000,
+      "sum_absolute_error_over_N_squared": 0.0117181685,
+      "moduli": {
+        "1": {
+          "exact_double_count_verified": true,
+          "floor_error": -19074.65496826172,
+          "proven_finite_error_bound": 775544,
+          "weighted_coprime_mean": 0.5858778163467439,
+          "conditional_target": 0.6079271018540267,
+          "totient_multiple_sum_over_N_squared": 0.3039650754
+        },
+        "2": {
+          "exact_double_count_verified": true,
+          "floor_error": 12378.91485965252,
+          "proven_finite_error_bound": 237500,
+          "weighted_coprime_mean": 0.36688331635769195,
+          "conditional_target": 0.4052847345693511,
+          "totient_multiple_sum_over_N_squared": 0.1013236879
+        },
+        "3": {
+          "exact_double_count_verified": true,
+          "floor_error": 11929.350240111351,
+          "proven_finite_error_bound": 395180,
+          "weighted_coprime_mean": 0.43497485406833575,
+          "conditional_target": 0.45594532639052,
+          "totient_multiple_sum_over_N_squared": 0.0759929514
+        },
+        "6": {
+          "exact_double_count_verified": true,
+          "floor_error": -7279.710911214352,
+          "proven_finite_error_bound": 127584,
+          "weighted_coprime_mean": 0.2765354375874326,
+          "conditional_target": 0.3039635509270133,
+          "totient_multiple_sum_over_N_squared": 0.025329777
+        },
+        "30": {
+          "exact_double_count_verified": true,
+          "floor_error": 1948.0366385504603,
+          "proven_finite_error_bound": 89058,
+          "weighted_coprime_mean": 0.23019453802509754,
+          "conditional_target": 0.25330295910584444,
+          "totient_multiple_sum_over_N_squared": 0.00422198
+        }
+      },
+      "divisibility_densities": {
+        "1": 1.0,
+        "2": 0.54821,
+        "3": 0.34845,
+        "6": 0.19991,
+        "30": 0.04263
+      },
+      "truncated_weight_means": {
+        "2": 0.8048723163358011,
+        "3": 0.9106013392291021,
+        "5": 0.9497144542780487,
+        "7": 0.9696120100015122,
+        "11": 0.9777727155040477
+      }
+    }
+  ]
+}

@@ -38,17 +38,53 @@ def parse_meta(text):
     return meta
 
 
-def read_scores(folder):
+def read_score_data(folder):
     try:
         data = json.loads((folder / "score.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
         data = {}
+    return data if isinstance(data, dict) else {}
+
+
+def read_scores(folder, data=None):
+    if data is None:
+        data = read_score_data(folder)
     scores = {}
     for name in SCORERS:
         entry = data.get(name)
         if isinstance(entry, dict) and isinstance(entry.get("score"), (int, float)):
             scores[name] = entry
     return scores
+
+
+def target_ids(value, fallback):
+    if value is None:
+        return list(fallback)
+    if not isinstance(value, list) or not value or any(
+        not isinstance(item, str) or not item.strip() for item in value
+    ):
+        return []
+    return sorted(set(value))
+
+
+def score_assessment(number, data, scores):
+    """Keep old assessments visible, but average only the current target set."""
+    declared = data.get("assessment")
+    declared = declared if isinstance(declared, dict) else {}
+    targets = target_ids(declared.get("targets"), [number])
+    scopes = {name: target_ids(entry.get("targets"), [number])
+              for name, entry in scores.items()}
+    eligible = [name for name in scores if targets and scopes[name] == targets]
+    values = [scores[name]["score"] for name in eligible]
+    label = declared.get("label")
+    if not isinstance(label, str) or not label.strip():
+        label = " · ".join(targets) if targets else "평가 대상 확인 필요"
+    return {
+        "assessment": {"targets": targets, "label": label},
+        "score_targets": scopes,
+        "eligible_scorers": eligible,
+        "average": sum(values) / len(values) if values else None,
+    }
 
 
 def tree():
@@ -64,8 +100,8 @@ def tree():
             meta = parse_meta((folder / "conjectures.md").read_text(encoding="utf-8"))
         except OSError:
             meta = parse_meta("")
-        scores = read_scores(folder)
-        values = [entry["score"] for entry in scores.values()]
+        score_data = read_score_data(folder)
+        scores = read_scores(folder, score_data)
         conjectures.append({
             "id": number,
             "slug": slug,
@@ -73,7 +109,7 @@ def tree():
             "files": files,
             **meta,
             "scores": scores,
-            "average": sum(values) / len(values) if values else None,
+            **score_assessment(number, score_data, scores),
         })
     return {"readme": "README.md", "scorers": SCORERS, "conjectures": conjectures}
 

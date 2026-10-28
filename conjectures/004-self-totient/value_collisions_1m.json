@@ -1,0 +1,148 @@
+{
+  "limit": 1000000,
+  "literal_check_terms": 3000,
+  "coprime_position_rank_checks": 608781,
+  "scope": "Finite exact computation; no asymptotic bound proved.",
+  "rows": [
+    {
+      "N": 1000,
+      "max_value_multiplicity": 7,
+      "one_value_attaining_max": 166,
+      "collision_energy_sum_multiplicity_squared": 2438,
+      "collision_energy_over_N": 2.438,
+      "max_multiplicity_over_log_N": 1.0133537911075876,
+      "prime_samples_2p_le_N": 94,
+      "max_R": 3,
+      "max_R_examples_up_to_ten": [
+        {
+          "p": 239,
+          "R": 3
+        }
+      ]
+    },
+    {
+      "N": 10000,
+      "max_value_multiplicity": 8,
+      "one_value_attaining_max": 533,
+      "collision_energy_sum_multiplicity_squared": 26050,
+      "collision_energy_over_N": 2.605,
+      "max_multiplicity_over_log_N": 0.8685889638065035,
+      "prime_samples_2p_le_N": 668,
+      "max_R": 3,
+      "max_R_examples_up_to_ten": [
+        {
+          "p": 239,
+          "R": 3
+        },
+        {
+          "p": 839,
+          "R": 3
+        },
+        {
+          "p": 1423,
+          "R": 3
+        },
+        {
+          "p": 1549,
+          "R": 3
+        },
+        {
+          "p": 2087,
+          "R": 3
+        },
+        {
+          "p": 3593,
+          "R": 3
+        },
+        {
+          "p": 3923,
+          "R": 3
+        },
+        {
+          "p": 3947,
+          "R": 3
+        }
+      ]
+    },
+    {
+      "N": 100000,
+      "max_value_multiplicity": 10,
+      "one_value_attaining_max": 5936,
+      "collision_energy_sum_multiplicity_squared": 255086,
+      "collision_energy_over_N": 2.55086,
+      "max_multiplicity_over_log_N": 0.8685889638065036,
+      "prime_samples_2p_le_N": 5132,
+      "max_R": 4,
+      "max_R_examples_up_to_ten": [
+        {
+          "p": 20107,
+          "R": 4
+        },
+        {
+          "p": 35869,
+          "R": 4
+        },
+        {
+          "p": 37831,
+          "R": 4
+        },
+        {
+          "p": 44491,
+          "R": 4
+        },
+        {
+          "p": 45841,
+          "R": 4
+        },
+        {
+          "p": 48761,
+          "R": 4
+        }
+      ]
+    },
+    {
+      "N": 1000000,
+      "max_value_multiplicity": 11,
+      "one_value_attaining_max": 54120,
+      "collision_energy_sum_multiplicity_squared": 2544378,
+      "collision_energy_over_N": 2.544378,
+      "max_multiplicity_over_log_N": 0.7962065501559618,
+      "prime_samples_2p_le_N": 41537,
+      "max_R": 5,
+      "max_R_examples_up_to_ten": [
+        {
+          "p": 173629,
+          "R": 5
+        },
+        {
+          "p": 221281,
+          "R": 5
+        },
+        {
+          "p": 264601,
+          "R": 5
+        },
+        {
+          "p": 334783,
+          "R": 5
+        },
+        {
+          "p": 354553,
+          "R": 5
+        },
+        {
+          "p": 385537,
+          "R": 5
+        },
+        {
+          "p": 388963,
+          "R": 5
+        },
+        {
+          "p": 487603,
+          "R": 5
+        }
+      ]
+    }
+  ]
+}

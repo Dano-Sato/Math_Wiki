@@ -1,0 +1,67 @@
+{
+  "limit": 1000000,
+  "literal_check_terms": 3000,
+  "scope": "Exact finite identities verified; no limiting parity density proved.",
+  "rows": [
+    {
+      "N": 1000,
+      "odd_terms_up_to_N": 423,
+      "odd_density": 0.423,
+      "odd_count_minus_N_over_2": -77,
+      "equal_defect_bit_pairs": 269,
+      "equal_defect_bit_fraction": 0.538,
+      "odd_prime_indices_before_N": 167,
+      "prime_equal_defect_bit_pairs": 90,
+      "prime_equal_defect_bit_fraction": 0.5389221556886228,
+      "signed_odd_composite_contribution": 12,
+      "signed_odd_composite_contribution_over_odd_primes": 0.0718562874251497,
+      "initial_contribution": 1,
+      "crude_absolute_bound_equal_pairs": 269
+    },
+    {
+      "N": 10000,
+      "odd_terms_up_to_N": 4353,
+      "odd_density": 0.4353,
+      "odd_count_minus_N_over_2": -647,
+      "equal_defect_bit_pairs": 2565,
+      "equal_defect_bit_fraction": 0.513,
+      "odd_prime_indices_before_N": 1228,
+      "prime_equal_defect_bit_pairs": 642,
+      "prime_equal_defect_bit_fraction": 0.5228013029315961,
+      "signed_odd_composite_contribution": -6,
+      "signed_odd_composite_contribution_over_odd_primes": -0.004885993485342019,
+      "initial_contribution": 1,
+      "crude_absolute_bound_equal_pairs": 2565
+    },
+    {
+      "N": 100000,
+      "odd_terms_up_to_N": 45179,
+      "odd_density": 0.45179,
+      "odd_count_minus_N_over_2": -4821,
+      "equal_defect_bit_pairs": 24873,
+      "equal_defect_bit_fraction": 0.49746,
+      "odd_prime_indices_before_N": 9591,
+      "prime_equal_defect_bit_pairs": 4854,
+      "prime_equal_defect_bit_fraction": 0.5060994682514858,
+      "signed_odd_composite_contribution": 32,
+      "signed_odd_composite_contribution_over_odd_primes": 0.0033364612657699926,
+      "initial_contribution": 1,
+      "crude_absolute_bound_equal_pairs": 24873
+    },
+    {
+      "N": 1000000,
+      "odd_terms_up_to_N": 461371,
+      "odd_density": 0.461371,
+      "odd_count_minus_N_over_2": -38629,
+      "equal_defect_bit_pairs": 249721,
+      "equal_defect_bit_fraction": 0.499442,
+      "odd_prime_indices_before_N": 78497,
+      "prime_equal_defect_bit_pairs": 38979,
+      "prime_equal_defect_bit_fraction": 0.4965667477738003,
+      "signed_odd_composite_contribution": 349,
+      "signed_odd_composite_contribution_over_odd_primes": 0.004446029784577755,
+      "initial_contribution": 1,
+      "crude_absolute_bound_equal_pairs": 249721
+    }
+  ]
+}

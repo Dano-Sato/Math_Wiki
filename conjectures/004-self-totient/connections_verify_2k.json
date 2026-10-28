@@ -1,0 +1,50 @@
+{
+  "literal_terms": 2000,
+  "scope": "Finite exact identities only; no asymptotic assumptions verified.",
+  "repeated_EKG_style_crossings_at_threshold_10": [
+    {
+      "index": 13,
+      "previous": 3,
+      "value": 12,
+      "common_prime": 3
+    },
+    {
+      "index": 19,
+      "previous": 3,
+      "value": 18,
+      "common_prime": 3
+    }
+  ],
+  "rows": [
+    {
+      "z": 2,
+      "exact_large_prime_pair_loss": 376256,
+      "weighted_main_term": 376682.4688292802,
+      "floor_error": -426.46882928015464,
+      "floor_error_bound": 6738,
+      "small_prime_error_sum": 88317,
+      "uniform_large_prime_defect_sum": 282913,
+      "mean_absolute_error_sum": 73144
+    },
+    {
+      "z": 5,
+      "exact_large_prime_pair_loss": 96795,
+      "weighted_main_term": 97172.26429209035,
+      "floor_error": -377.2642920903389,
+      "floor_error_bound": 4496,
+      "small_prime_error_sum": 75934,
+      "uniform_large_prime_defect_sum": 63479,
+      "mean_absolute_error_sum": 73144
+    },
+    {
+      "z": 11,
+      "exact_large_prime_pair_loss": 41890,
+      "weighted_main_term": 42150.84990113369,
+      "floor_error": -260.8499011336909,
+      "floor_error_bound": 3780,
+      "small_prime_error_sum": 73930,
+      "uniform_large_prime_defect_sum": 27166,
+      "mean_absolute_error_sum": 73144
+    }
+  ]
+}

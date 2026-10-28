@@ -1,0 +1,17 @@
+{
+  "source": "parity_mean_bound.go 30000000 (Claude, 2026-10-29)",
+  "definition_check": "Möbius 갱신(selftot.go와 같은 방식). 첫 3000항 정의 대조는 기존 selftot.go 기록에 의존",
+  "rows": [
+    {"N": 1000,     "O_over_N": 0.423000, "B_over_N": 0.578435, "avg_b_even_values": 0.405623, "avg_b_odd_values": 0.814162},
+    {"N": 10000,    "O_over_N": 0.435300, "B_over_N": 0.578298, "avg_b_even_values": 0.399537, "avg_b_odd_values": 0.810198},
+    {"N": 100000,   "O_over_N": 0.451790, "B_over_N": 0.585878, "avg_b_even_values": 0.399472, "avg_b_odd_values": 0.812066},
+    {"N": 1000000,  "O_over_N": 0.461371, "B_over_N": 0.589900, "avg_b_even_values": 0.400714, "avg_b_odd_values": 0.810767},
+    {"N": 10000000, "O_over_N": 0.466834, "B_over_N": 0.592464, "avg_b_even_values": 0.401436, "avg_b_odd_values": 0.810634},
+    {"N": 30000000, "O_over_N": 0.468926, "B_over_N": 0.593424, "avg_b_even_values": 0.401665, "avg_b_odd_values": 0.810598}
+  ],
+  "reference_values": {"12/pi^2-1": 0.215854, "6/pi^2": 0.607927, "8/pi^2": 0.810569, "4/pi^2": 0.405285, "1/2-pi(N)/(2N) at N=3e7": 0.469036},
+  "parity_correlations_n_gt_1000": {
+    "odd_composite": {"count": 13141809, "P_odd": 0.49975, "lambda": -0.00028, "mu": 0.00001, "(-1)^omega": 0.00019, "n%4==1": 0.00003, "3|n": -0.00051, "(-1)^O(n)": -0.00005, "(-1)^a_(n-1)": 0.00016},
+    "even": {"count": 14999501, "P_odd": 0.50000, "lambda": -0.00026, "mu": -0.00006, "(-1)^omega": 0.00041, "n%4==1": 0.00001, "3|n": -0.00001, "(-1)^O(n)": 0.02192, "(-1)^a_(n-1)": 0.00046}
+  }
+}

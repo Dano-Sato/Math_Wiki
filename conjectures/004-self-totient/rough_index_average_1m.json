@@ -1,0 +1,277 @@
+{
+  "limit": 1000000,
+  "literal_check_terms": 3000,
+  "note": "Finite verification only. Cutoffs 10, 30, 100 are computational examples; the asymptotic proof uses y=(log X)^4.",
+  "rows": [
+    {
+      "N": 10000,
+      "almost_prime_rows": [
+        {
+          "Omega": 1,
+          "count": 1229,
+          "bad_counts": {
+            "1/10": 0,
+            "1/20": 0,
+            "1/50": 0
+          },
+          "bad_fractions": {
+            "1/10": 0.0,
+            "1/20": 0.0,
+            "1/50": 0.0
+          }
+        },
+        {
+          "Omega": 2,
+          "count": 2625,
+          "bad_counts": {
+            "1/10": 671,
+            "1/20": 676,
+            "1/50": 939
+          },
+          "bad_fractions": {
+            "1/10": 0.25561904761904763,
+            "1/20": 0.25752380952380954,
+            "1/50": 0.3577142857142857
+          }
+        },
+        {
+          "Omega": 3,
+          "count": 2569,
+          "bad_counts": {
+            "1/10": 1368,
+            "1/20": 1374,
+            "1/50": 1807
+          },
+          "bad_fractions": {
+            "1/10": 0.5325029194239004,
+            "1/20": 0.5348384585441807,
+            "1/50": 0.7033865317244063
+          }
+        },
+        {
+          "Omega": 4,
+          "count": 1712,
+          "bad_counts": {
+            "1/10": 1274,
+            "1/20": 1277,
+            "1/50": 1533
+          },
+          "bad_fractions": {
+            "1/10": 0.7441588785046729,
+            "1/20": 0.7459112149532711,
+            "1/50": 0.8954439252336449
+          }
+        }
+      ],
+      "loss_bound_rows": [
+        {
+          "y": 10,
+          "total_large_prime_union_loss": 1502958,
+          "sum_of_individual_prime_losses": 1519172,
+          "intermediate_integer_upper_bound": 10513494,
+          "final_integer_upper_bound": 27270000,
+          "rough_index_count": 2284,
+          "rough_index_loss_sum": 343021
+        },
+        {
+          "y": 30,
+          "total_large_prime_union_loss": 347073,
+          "sum_of_individual_prime_losses": 347397,
+          "intermediate_integer_upper_bound": 2575356,
+          "final_integer_upper_bound": 6440000,
+          "rough_index_count": 1573,
+          "rough_index_loss_sum": 61158
+        },
+        {
+          "y": 100,
+          "total_large_prime_union_loss": 81008,
+          "sum_of_individual_prime_losses": 81008,
+          "intermediate_integer_upper_bound": 526086,
+          "final_integer_upper_bound": 990000,
+          "rough_index_count": 1204,
+          "rough_index_loss_sum": 0
+        }
+      ]
+    },
+    {
+      "N": 100000,
+      "almost_prime_rows": [
+        {
+          "Omega": 1,
+          "count": 9592,
+          "bad_counts": {
+            "1/10": 0,
+            "1/20": 0,
+            "1/50": 0
+          },
+          "bad_fractions": {
+            "1/10": 0.0,
+            "1/20": 0.0,
+            "1/50": 0.0
+          }
+        },
+        {
+          "Omega": 2,
+          "count": 23378,
+          "bad_counts": {
+            "1/10": 4126,
+            "1/20": 5140,
+            "1/50": 8276
+          },
+          "bad_fractions": {
+            "1/10": 0.1764907177688425,
+            "1/20": 0.2198648301822226,
+            "1/50": 0.3540080417486526
+          }
+        },
+        {
+          "Omega": 3,
+          "count": 25556,
+          "bad_counts": {
+            "1/10": 8212,
+            "1/20": 12119,
+            "1/50": 17879
+          },
+          "bad_fractions": {
+            "1/10": 0.3213335420253561,
+            "1/20": 0.47421349193927065,
+            "1/50": 0.6996008765064955
+          }
+        },
+        {
+          "Omega": 4,
+          "count": 18744,
+          "bad_counts": {
+            "1/10": 7490,
+            "1/20": 12798,
+            "1/50": 16813
+          },
+          "bad_fractions": {
+            "1/10": 0.39959453691848057,
+            "1/20": 0.6827784891165173,
+            "1/50": 0.8969803670507895
+          }
+        }
+      ],
+      "loss_bound_rows": [
+        {
+          "y": 10,
+          "total_large_prime_union_loss": 151894446,
+          "sum_of_individual_prime_losses": 153849380,
+          "intermediate_integer_upper_bound": 1287198540,
+          "final_integer_upper_bound": 3636000000,
+          "rough_index_count": 22856,
+          "rough_index_loss_sum": 34712844
+        },
+        {
+          "y": 30,
+          "total_large_prime_union_loss": 35782251,
+          "sum_of_individual_prime_losses": 35879278,
+          "intermediate_integer_upper_bound": 341163075,
+          "final_integer_upper_bound": 967500000,
+          "rough_index_count": 15804,
+          "rough_index_loss_sum": 5577872
+        },
+        {
+          "y": 100,
+          "total_large_prime_union_loss": 8928880,
+          "sum_of_individual_prime_losses": 8930824,
+          "intermediate_integer_upper_bound": 78224850,
+          "final_integer_upper_bound": 198000000,
+          "rough_index_count": 11830,
+          "rough_index_loss_sum": 1269806
+        }
+      ]
+    },
+    {
+      "N": 1000000,
+      "almost_prime_rows": [
+        {
+          "Omega": 1,
+          "count": 78498,
+          "bad_counts": {
+            "1/10": 0,
+            "1/20": 0,
+            "1/50": 0
+          },
+          "bad_fractions": {
+            "1/10": 0.0,
+            "1/20": 0.0,
+            "1/50": 0.0
+          }
+        },
+        {
+          "Omega": 2,
+          "count": 210035,
+          "bad_counts": {
+            "1/10": 4126,
+            "1/20": 41545,
+            "1/50": 63321
+          },
+          "bad_fractions": {
+            "1/10": 0.019644344990120695,
+            "1/20": 0.19780036660556574,
+            "1/50": 0.3014783250410646
+          }
+        },
+        {
+          "Omega": 3,
+          "count": 250853,
+          "bad_counts": {
+            "1/10": 8212,
+            "1/20": 108335,
+            "1/50": 156914
+          },
+          "bad_fractions": {
+            "1/10": 0.03273630373166755,
+            "1/20": 0.4318664715989045,
+            "1/50": 0.6255217198917294
+          }
+        },
+        {
+          "Omega": 4,
+          "count": 198062,
+          "bad_counts": {
+            "1/10": 7490,
+            "1/20": 126266,
+            "1/50": 168047
+          },
+          "bad_fractions": {
+            "1/10": 0.03781644131635548,
+            "1/20": 0.6375074471630096,
+            "1/50": 0.8484565439104926
+          }
+        }
+      ],
+      "loss_bound_rows": [
+        {
+          "y": 10,
+          "total_large_prime_union_loss": 15230761361,
+          "sum_of_individual_prime_losses": 15433377802,
+          "intermediate_integer_upper_bound": 147569034249,
+          "final_integer_upper_bound": 454545000000,
+          "rough_index_count": 228570,
+          "rough_index_loss_sum": 3481332582
+        },
+        {
+          "y": 30,
+          "total_large_prime_union_loss": 3612744323,
+          "sum_of_individual_prime_losses": 3624697077,
+          "intermediate_integer_upper_bound": 40780595858,
+          "final_integer_upper_bound": 129032000000,
+          "rough_index_count": 157938,
+          "rough_index_loss_sum": 570736821
+        },
+        {
+          "y": 100,
+          "total_large_prime_union_loss": 909102947,
+          "sum_of_individual_prime_losses": 909738810,
+          "intermediate_integer_upper_bound": 9848351700,
+          "final_integer_upper_bound": 19800000000,
+          "rough_index_count": 120759,
+          "rough_index_loss_sum": 113770546
+        }
+      ]
+    }
+  ]
+}
